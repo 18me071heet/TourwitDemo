@@ -1,0 +1,58 @@
+16:00:51.528 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is able to search blogs
+16:00:54.785 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify Edit Blog screen is displaying by clicking Edit icon
+16:01:46.173 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:01:46.231 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:01:54.346 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+16:01:57.526 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+16:02:00.669 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+16:02:07.820 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the blogs page by clicking on Blogs
+16:02:12.945 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is able to search blogs
+16:02:19.275 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify Edit Blog screen is displaying by clicking Edit icon
+16:02:19.448 [main] INFO  tc_Tr.Blogs_Tr - TC-05 --> Verify User is able to change the blog title
+16:02:22.719 [main] INFO  tc_Tr.Blogs_Tr - TC-06 --> Verify Blog is getting edited or not by clicking Publish button
+16:23:38.576 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:23:38.633 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:23:42.375 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+16:23:45.726 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+16:23:48.873 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+16:23:52.022 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the blogs page by clicking on Blogs
+16:23:56.241 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify Create Blog screen is displaying by clicking on Create Blog
+16:24:02.886 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to select the blog category
+16:24:17.342 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the blogs page by clicking on Blogs
+16:24:22.522 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is able to search blogs
+16:24:29.260 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify blog is displaying according to search and blogs details is displaying or not by clicking on it
+16:24:33.274 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the blogs page by clicking on Blogs
+16:24:36.168 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:24:36.225 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:24:38.302 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the blogs page by clicking on Blogs
+16:24:44.741 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+16:24:47.924 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+16:24:51.043 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+16:24:54.195 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the blogs page by clicking on Blogs
+16:24:59.358 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify Blogs are displaying according to select filter 
+16:25:59.517 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:25:59.577 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:26:02.906 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+16:26:06.160 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+16:26:09.324 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+16:26:12.487 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the blogs page by clicking on Blogs
+16:26:17.652 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify Blogs are displaying according to select filter 
+17:16:16.023 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:16:16.092 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:16:26.301 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+17:16:29.541 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+17:16:32.670 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+17:16:35.828 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the blogs page by clicking on Blogs
+17:18:47.130 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
