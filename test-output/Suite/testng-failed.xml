@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utilityTr.ExtentReportTR"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="tc_Tr.Blogs_Tr">
+      <class name="tc_Tr.ContactUs_Tr">
         <methods>
-          <include name="logInDetails"/>
           <include name="signUp"/>
-          <include name="deleteBlog"/>
+          <include name="logInDetails"/>
+          <include name="contactUs"/>
         </methods>
-      </class> <!-- tc_Tr.Blogs_Tr -->
+      </class> <!-- tc_Tr.ContactUs_Tr -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

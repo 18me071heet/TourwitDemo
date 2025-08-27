@@ -3,12 +3,10 @@ package tc_Tr;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
-
 import baseClassTr.BaseClassTr;
 import pageObjectTr.Blogs_TR;
 import pageObjectTr.Login_TR;
@@ -19,33 +17,6 @@ import pageObjectTr.Login_TR;
     	   
     	   Thread.sleep(3000);
         }
-    
-    public void applyReactSelectFilter(By filterIconLocator, String placeholderId, String optionText) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-
-        // 1️⃣ Click the filter icon
-        WebElement filterIcon = wait.until(ExpectedConditions.elementToBeClickable(filterIconLocator));
-        js.executeScript("arguments[0].scrollIntoView(true);", filterIcon);
-        js.executeScript("arguments[0].click();", filterIcon);
-
-        // 2️⃣ Click the placeholder to open dropdown
-        WebElement placeholder = wait.until(ExpectedConditions.presenceOfElementLocated(By.id(placeholderId)));
-        js.executeScript("arguments[0].scrollIntoView(true);", placeholder);
-        js.executeScript("arguments[0].click();", placeholder);
-
-        // 3️⃣ Type the option in input field
-        WebElement input = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//input[contains(@id,'react-select') and @type='text']")));
-        input.sendKeys(optionText);
-
-        // 4️⃣ Wait for the option to appear and click
-        WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
-                By.xpath("//div[contains(@id,'react-select') and text()='" + optionText + "']")));
-        js.executeScript("arguments[0].scrollIntoView(true);", option);
-        js.executeScript("arguments[0].click();", option);
-    }
-
     
     @Test(priority=1)
    	void logInDetails() throws InterruptedException {
@@ -66,7 +37,7 @@ import pageObjectTr.Login_TR;
    		
    	}
    	
-   // @Test(priority=2,dependsOnMethods= {"logInDetails"})
+    @Test(priority=2,dependsOnMethods= {"logInDetails"})
     void createBlog() throws InterruptedException {
    	 
    	 Blogs_TR blogs = new Blogs_TR(driver);
@@ -84,13 +55,13 @@ import pageObjectTr.Login_TR;
    	 
    	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     	
-   	WebElement categoryInput = wait.until(
+   	 WebElement categoryInput = wait.until(
    	    ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-category-input"))
-   	);
+    	);
    	categoryInput.click();
    	categoryInput.sendKeys("Adventure"); 
    	
-   	WebElement option = wait.until(
+    	WebElement option = wait.until(
    	    ExpectedConditions.visibilityOfElementLocated(
    	        By.xpath("//div[contains(@id,'react-select-lazy-category-option') and text()='Adventure']")
    	    )
@@ -111,13 +82,12 @@ import pageObjectTr.Login_TR;
    	 threadTime();
    	 
    	 Thread.sleep(10000);
-   	 
    	 logger.info("TC-07 --> Verify Blog is getting created or not by clicking Publish button");
    	 blogs.publishBlog();
    	 
     }
        
-   //  @Test(priority=3,dependsOnMethods= {"logInDetails"})
+     @Test(priority=3,dependsOnMethods= {"logInDetails"})
     void searchBlog() throws InterruptedException {
    	 
    	 Thread.sleep(4000);
@@ -125,7 +95,6 @@ import pageObjectTr.Login_TR;
      Blogs_TR blogs = new Blogs_TR(driver);
    	 
    	 logger.info("TC-01 --> Verify User is navigate to the blogs page by clicking on Blogs");
-   	 
    	 Thread.sleep(5000);
    	 blogs.blogNavigation(); 
    	 
@@ -148,7 +117,7 @@ import pageObjectTr.Login_TR;
    
     }
     
-  //   @Test(priority=4,dependsOnMethods= {"logInDetails"})
+    @Test(priority=4,dependsOnMethods= {"logInDetails"})
     void editBlog() throws InterruptedException {
    	
    	 Thread.sleep(4000);
@@ -194,11 +163,7 @@ import pageObjectTr.Login_TR;
    	 blogs.blogNavigation(); 
    	 
    	 Blogs_TR blogSearch = new Blogs_TR(driver);
-   	 
- 
-   	 By filterIcon = By.xpath("//span[contains(@class,'filter-icon')]");
- 	 applyReactSelectFilter(filterIcon, "react-select-19-placeholder", "Newest to Oldest");
-   	
+  
    	 logger.info("TC-02 --> Verify User is able to search blogs");
    	 blogSearch.searchBlogs("Automation Blog");
    	 threadTime();

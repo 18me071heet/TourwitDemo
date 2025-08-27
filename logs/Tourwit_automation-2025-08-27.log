@@ -1,0 +1,58 @@
+17:10:00.017 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking on Forum 
+17:10:05.334 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is navigate to my forum page
+17:10:08.462 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to search forum name
+17:10:11.674 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify Edit Forum screen is displaying by clicking edit icon
+17:12:04.519 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:12:04.569 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:12:13.443 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+17:12:16.669 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+17:12:19.789 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:12:22.955 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking on Forum 
+17:12:28.153 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is navigate to my forum page
+17:12:31.340 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to search forum name
+17:12:34.563 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify Edit Forum screen is displaying by clicking edit icon
+17:15:50.625 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:15:50.680 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:15:59.168 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+17:16:02.383 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+17:16:05.496 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:16:08.684 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking on Forum 
+17:16:13.895 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is navigate to my forum page
+17:16:17.085 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to search forum name
+17:16:20.283 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify Edit Forum screen is displaying by clicking edit icon
+17:20:21.308 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:20:21.376 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:20:35.346 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+17:20:38.530 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+17:20:41.640 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:20:44.783 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking on Forum 
+17:20:50.010 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is navigate to my forum page
+17:20:53.180 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to search forum name
+17:20:56.344 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify Edit Forum screen is displaying by clicking edit icon
+17:23:01.242 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:23:01.304 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:23:19.282 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+17:23:22.492 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+17:23:25.634 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:23:28.828 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking on Forum 
+17:23:34.029 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is navigate to my forum page
+17:23:37.196 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to search forum name
+17:23:40.389 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify Edit Forum screen is displaying by clicking edit icon
+17:45:03.217 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:45:03.566 [main] INFO  tc_Tr.ContactUs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:45:15.696 [main] INFO  tc_Tr.ContactUs_Tr - Verify User is able to add email
+17:45:18.885 [main] INFO  tc_Tr.ContactUs_Tr - Verify User is able to add password
+17:45:22.006 [main] INFO  tc_Tr.ContactUs_Tr - Verify User is able to login by clicking on Login Button
+17:49:35.328 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
