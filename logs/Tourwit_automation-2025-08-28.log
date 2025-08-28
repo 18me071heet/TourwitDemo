@@ -1,0 +1,49 @@
+14:34:01.193 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+14:34:01.516 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+14:34:13.235 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+14:34:16.522 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+14:34:19.655 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+14:34:22.844 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the blogs page by clicking on Blogs
+14:34:27.328 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify Create Blog screen is displaying by clicking on Create Blog
+14:34:33.675 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to select the blog category
+14:34:36.007 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify User is able to fill the blog read time
+14:34:36.107 [main] INFO  tc_Tr.Blogs_Tr - TC-05 --> Verify User is able to fill the blog title
+14:34:36.461 [main] INFO  tc_Tr.Blogs_Tr - TC-06 --> Verify User is able to fill the blog description
+14:34:51.975 [main] INFO  tc_Tr.Blogs_Tr - TC-07 --> Verify Blog is getting created or not by clicking Publish button
+14:48:27.056 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+14:48:27.369 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+14:48:31.029 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+14:48:34.289 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+14:48:37.470 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+14:48:40.666 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking on Forum 
+14:48:44.118 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify Create Forum screen is displaying or not by clicking Create Forum
+14:48:47.260 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to select forum category and Selected category is displaying or not
+14:48:55.481 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to add forum title
+14:48:58.770 [main] INFO  tc_Tr.Forums_Tr - TC-05 --> Verify User is able to add forum description
+14:49:02.379 [main] INFO  tc_Tr.Forums_Tr - TC-06 --> Verify Forum is getting created or not by clicking Publish
+15:17:17.250 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 1 ms.
+15:17:17.256 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 2 ms.
+15:17:17.257 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+15:17:17.257 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+15:17:17.258 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+15:17:17.258 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+15:17:17.258 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+15:17:17.258 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+15:17:17.264 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 5 ms.
+15:17:17.273 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 9 ms.
+15:17:17.274 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+15:17:17.274 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+15:17:17.274 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+15:17:17.274 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+15:17:17.275 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+15:17:17.275 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+15:17:17.277 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+15:17:17.277 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+15:17:17.278 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+15:17:17.278 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+15:17:17.279 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+15:17:17.279 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.

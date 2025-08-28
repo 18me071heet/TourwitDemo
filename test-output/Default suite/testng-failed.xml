@@ -5,8 +5,8 @@
     <classes>
       <class name="tc_Tr.SignUp_Tr">
         <methods>
+          <include name="signUp"/>
           <include name="signUpDetails"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- tc_Tr.SignUp_Tr -->
     </classes>

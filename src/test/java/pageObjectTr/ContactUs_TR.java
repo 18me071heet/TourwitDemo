@@ -32,6 +32,7 @@ public class ContactUs_TR {
 		btnContactUs.click();
 		
 	}
+	
 	public void addFname(String fname) {
 		
 		txtName.sendKeys(fname);
@@ -41,8 +42,7 @@ public class ContactUs_TR {
 		
 		txtEmail.sendKeys(email);
 	}
-	
-	
+		
 	public void saveContactUs() {
 		
 		btnSave.click();

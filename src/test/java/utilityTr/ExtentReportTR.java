@@ -28,7 +28,7 @@ public class ExtentReportTR implements ITestListener {
 		 
 		 String timeStemp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		 
-		 rep = "AirBnB-Report-" + timeStemp + ".html";
+		 rep = "Tourwit-Report-" + timeStemp + ".html";
 		 
 		 
 		 sparkReporter = new ExtentSparkReporter(".//reports//" + rep);

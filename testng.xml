@@ -16,11 +16,13 @@
    
     <classes>
     
-         <!-- <class name="tc_Tr.SignUp_Tr"/>-->
-         <!--  <class name="tc_Tr.LogIn_Tr"/> -->
+       <class name="tc_Tr.SignUp_Tr"/>
+        <!--  <class name="tc_Tr.LogIn_Tr"/> -->
          <!--  <class name="tc_Tr.ForgotPassword_Tr">-->
-        <!-- <class name="tc_Tr.Blogs_Tr"/>-->
-         <class name="tc_Tr.ContactUs_Tr"></class>
+          <!--  <class name="tc_Tr.Blogs_Tr"/>-->
+       <!--   <class name="tc_Tr.Forums_Tr"/>-->
+        <!-- <class name="tc_Tr.ContactUs_Tr">-->
+      <!--   <class name="tc_Tr.BottomNavigation_Tr">-->
  
     </classes>
     

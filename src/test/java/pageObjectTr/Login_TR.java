@@ -24,6 +24,18 @@ public class Login_TR {
 	@FindBy(xpath=" //button[normalize-space()='Login to your account']")
 	WebElement btnLogin;
 	
+	@FindBy(xpath="//img[@alt='Profile']")
+	WebElement profileIcon;
+	
+	@FindBy(xpath="//button[normalize-space()='Log out']")
+	WebElement btnLogOut;
+	
+	@FindBy(xpath="//button[contains(text(),'Logout')]")
+	WebElement logOutConfirmation;
+	
+	@FindBy(xpath="//a[normalize-space()='Sign up']")
+	WebElement signUpLink ;
+	
 	public void addEmail(String email) {
 		
 		txtEmail.sendKeys(email);
@@ -37,6 +49,25 @@ public class Login_TR {
 	public void loginBtn() {
 		
 		btnLogin.click();
+	}
+	
+	public void profileIconClick() {
+		
+		profileIcon.click();
+	}
+	public void logOut() {
+		
+		btnLogOut.click();
+	}
+	
+	public void logOutConfirm() {
+		
+		logOutConfirmation.click();
+	}
+	
+	public void clickSignUpLink() {
+		
+		signUpLink.click();
 	}
 	
 }
