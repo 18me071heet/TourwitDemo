@@ -1,0 +1,59 @@
+17:16:47.325 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify User is navigate to the profile page
+17:17:35.768 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:17:36.127 [main] INFO  tc_Tr.ResetPassword_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:17:47.963 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+17:17:48.365 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+17:17:48.548 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+17:17:53.033 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify User is navigate to the profile page
+17:17:53.373 [main] INFO  tc_Tr.ResetPassword_Tr - TC-02 --> Verify Reset Password screen is displaying by clicking Reset Password
+17:21:22.930 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:21:23.275 [main] INFO  tc_Tr.ResetPassword_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:21:34.214 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+17:21:34.533 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+17:21:34.985 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+17:21:39.398 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify User is navigate to the profile page
+17:21:39.744 [main] INFO  tc_Tr.ResetPassword_Tr - TC-02 --> Verify Reset Password screen is displaying by clicking Reset Password
+17:25:09.327 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:25:09.686 [main] INFO  tc_Tr.ResetPassword_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:25:13.506 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+17:25:13.950 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+17:25:14.447 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+17:25:40.328 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:25:40.646 [main] INFO  tc_Tr.ResetPassword_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:25:48.403 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+17:25:48.690 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+17:25:49.033 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+17:25:53.595 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify User is navigate to the profile page
+17:25:53.864 [main] INFO  tc_Tr.ResetPassword_Tr - TC-02 --> Verify Reset Password screen is displaying by clicking Reset Password
+17:27:38.678 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:27:39.039 [main] INFO  tc_Tr.ResetPassword_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:27:48.489 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+17:27:48.871 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+17:27:49.164 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+17:27:53.909 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify User is navigate to the profile page
+17:27:54.222 [main] INFO  tc_Tr.ResetPassword_Tr - TC-02 --> Verify Reset Password screen is displaying by clicking Reset Password
+17:28:50.811 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:28:51.138 [main] INFO  tc_Tr.ResetPassword_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:28:59.035 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+17:28:59.407 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+17:28:59.554 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+17:29:04.079 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify User is navigate to the profile page
+17:29:08.286 [main] INFO  tc_Tr.ResetPassword_Tr - TC-02 --> Verify Reset Password screen is displaying by clicking Reset Password
+17:29:12.497 [main] INFO  tc_Tr.ResetPassword_Tr - Tc-03 --> Verify User is able to add old password
+17:29:12.642 [main] INFO  tc_Tr.ResetPassword_Tr - TC-04 --> Verify User is able to add new password
+17:29:12.784 [main] INFO  tc_Tr.ResetPassword_Tr - TC-05 --> Verify User is able to add confirm password
+17:31:08.357 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+

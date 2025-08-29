@@ -64,7 +64,7 @@ public class ExtentReportTR implements ITestListener {
 		  }
 
 		
-	 public void onTestSuccess(ITestResult result) {
+	   public void onTestSuccess(ITestResult result) {
 			  
 		    test=extent.createTest(result.getMethod().getMethodName());
 		    test.assignCategory(result.getMethod().getGroups());

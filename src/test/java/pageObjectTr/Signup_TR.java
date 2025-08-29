@@ -87,7 +87,7 @@ public class Signup_TR {
 		txtInstaId.sendKeys(id);
 	}
 	
-	public void checkTerms() {
+	public void checkTermsClick() {
 		
 		checkTerms.click();
 	}
@@ -95,6 +95,11 @@ public class Signup_TR {
 	public void btnSignUp() {
 		
 		btnCreateAccount.click();
+	}
+	
+	public void clearPassword() {
+		
+		txtCpass.clear();
 	}
 	
 }

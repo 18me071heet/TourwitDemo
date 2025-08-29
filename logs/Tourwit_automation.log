@@ -1,34 +1,10 @@
-15:17:17.279 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-15:17:17.288 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-15:17:17.289 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-15:17:17.290 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-15:17:17.292 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-15:17:17.293 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-15:17:17.293 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
-15:17:17.293 [main] INFO  org.testng.internal.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
-15:17:17.303 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\AppData\Local\Temp\testng-eclipse--1919134247\testng-customsuite.xml
-
-15:17:17.330 [main] INFO  org.testng.internal.Utils - [Utils] DynamicGraphHelper.createDynamicGraph() took 4 ms.
-15:17:17.584 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.jq.Main@2488b073: 101 ms
-15:17:17.605 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.FailedReporter@631e06ab: 20 ms
-15:17:17.626 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.XMLReporter@6d366c9b: 20 ms
-15:17:17.637 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.EmailableReporter2@76ba13c: 11 ms
-15:17:17.656 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.reporters.JUnitReportReporter@410ae9a3: 18 ms
-15:17:17.656 [main] INFO  org.testng.internal.Utils - [TestNG] Time taken by org.testng.internal.ExitCodeListener@319988b0: 0 ms
-17:09:52.075 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-17:09:52.448 [main] INFO  tc_Tr.SignUp_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-17:10:05.593 [main] INFO  tc_Tr.SignUp_Tr - TC-01 --> Verify Sign up screen is displaying or not by clicking on Signup button
-17:10:08.785 [main] INFO  tc_Tr.SignUp_Tr - TC-02 --> Verify User is able to fill the first name
-17:10:11.988 [main] INFO  tc_Tr.SignUp_Tr - TC-03 --> Verify User is able to fill the last name
-17:10:15.004 [main] ERROR tc_Tr.SignUp_Tr - Failed:org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
-  (Session info: chrome=139.0.7258.139)
-Build info: version: '4.32.0', revision: 'd17c8aa950'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [e2084fa9aeea81d2cb2dc0f9fd2c6ffa, findElement {using=xpath, value=//input[@id='lastName']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.139, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49987}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49987/devtoo..., se:cdpVersion: 139.0.7258.139, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: e2084fa9aeea81d2cb2dc0f9fd2c6ffa
+17:31:08.665 [main] INFO  tc_Tr.ResetPassword_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:31:19.575 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+17:31:20.148 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+17:31:20.415 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+17:31:24.957 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify User is navigate to the profile page
+17:31:29.241 [main] INFO  tc_Tr.ResetPassword_Tr - TC-02 --> Verify Reset Password screen is displaying by clicking Reset Password
+17:31:33.432 [main] INFO  tc_Tr.ResetPassword_Tr - Tc-03 --> Verify User is able to add old password
+17:31:33.578 [main] INFO  tc_Tr.ResetPassword_Tr - TC-04 --> Verify User is able to add new password
+17:31:33.727 [main] INFO  tc_Tr.ResetPassword_Tr - TC-05 --> Verify User is able to add confirm password
+17:31:33.868 [main] INFO  tc_Tr.ResetPassword_Tr - TC-06 --> Verify Password is getting reset by clicking reset button

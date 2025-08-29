@@ -29,45 +29,24 @@ import pageObjectTr.Signup_TR;
 	
 	try {
 		
-	
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		
 		logger.info("TC-01 --> Verify Sign up screen is displaying or not by clicking on Signup button");
 		login.clickSignUpLink();
 		//signup.SignUpScreen();
 		logger.info("TC-02 --> Verify User is able to fill the first name");
 
 		signup.addFname(p.getProperty("firstname_tr"));
-		threadTime();
-
+		
 		logger.info("TC-03 --> Verify User is able to fill the last name");
-		threadTime();
 		signup.addLname(p.getProperty("lastname_tr"));
 
 		logger.info("TC-04 --> Verify User is able to fill email field");
-		threadTime();
-	    signup.addEmail(p.getProperty("emailSignUp_tr"));
+	    signup.addEmail(p.getProperty("emailExist_tr"));
 
-		logger.info("TC-05 --> Verify User is able to fill Insta Id");
-		threadTime();
-		signup.addInstaId(p.getProperty("insta_tr"));
-
-		logger.info("TC-06 --> Verify User is able to fill the Password");
-		threadTime();
-		signup.addPassword(p.getProperty("password_tr"));
-
-		logger.info("TC-07 --> Verify User is able to fill the Confirm Password");
-		threadTime();
-		signup.addConfirmPassword(p.getProperty("confirmPassword_tr"));
-		
-		Assert.assertEquals(p.getProperty("password_tr"),p.getProperty("confirmPassword_tr"),"Password and Confirm Password not same");
-		
-		
-		logger.info("TC-08 --> Verify User is able to select terms and conditions");
-		threadTime();
-		signup.checkTerms();
-
-		  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-		       WebElement countryInput = wait.until(ExpectedConditions
+	    logger.info("TC-05 --> Verify User is able to select country");
+	    
+	    WebElement countryInput = wait.until(ExpectedConditions
 		           .elementToBeClickable(By.id("react-select-lazy-country-input")));
 		       countryInput.click();
 		       countryInput.sendKeys("India");
@@ -75,16 +54,66 @@ import pageObjectTr.Signup_TR;
 		       WebElement countryOption = wait.until(ExpectedConditions
 		           .visibilityOfElementLocated(By.xpath("//div[contains(@id,'react-select-lazy-country-option') and text()='India']")));
 		       countryOption.click();
+		       
+		       
+		logger.info("TC-06 --> Verify User is able to fill Insta Id");
+		signup.addInstaId(p.getProperty("insta_tr"));
 
+		
+		logger.info("TC-07 --> Verify User is able to fill the Password");
+		signup.addPassword(p.getProperty("password_tr"));
 
-		logger.info("TC-09 --> Verify User is able to Sign up by clicking Sign up button");
-		threadTime();
+	/*  logger.info("TC-09 --> Verify validation message is displaying while entering different password");
+	  signup.addConfirmPassword(p.getProperty("differentPassword_tr"));
+	  signup.btnSignUp();
+	
+	    
+	 WebElement errorMessagePassword = wait.until(
+			    ExpectedConditions.visibilityOfElementLocated(
+			        By.xpath("//*[contains(text(),'Passwords must match')]")
+			    )
+			);
+			Assert.assertTrue(errorMessagePassword.isDisplayed(), "Validation message not displayed");
+			logger.info("Validation message displayed: " + errorMessagePassword.getText());
+			
+	   threadTime();
+	 */
+	   
+		logger.info("TC-08--> Verify User is able to fill the Confirm Password");
+		signup.addConfirmPassword(p.getProperty("confirmPassword_tr"));
+		
+	/*	logger.info("Verify Validation message is displaying without selecting terms and conditions");
+		
 		signup.btnSignUp();
+     WebElement clickTerms = wait.until(ExpectedConditions.visibilityOfElementLocated(
+    	  By.xpath("//*[contains(text(),'You must agree to the Terms & Conditions')]")));
+  	Assert.assertTrue(clickTerms.isDisplayed(), "Terms validation message not displayed");
+  	
+  	*/
+    		
+		
+	 logger.info("TC-09 --> Verify User is able to select terms and conditions");
+			threadTime();
+		    WebElement terms = wait.until(ExpectedConditions.elementToBeClickable(By.id("ToCAgreed")));
+		    terms.click();
+	
+	    Thread.sleep(3000);
+	    
+		logger.info("TC-10 --> Verify User is able to Sign up by clicking Sign up button");
+		signup.btnSignUp();
+	
 
-	}catch(Exception e) {
+	//	WebElement errorEmail = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'User with email user23@yopmail.com is already verified and registered.')]")));
+	//	Assert.assertTrue(errorEmail.isDisplayed(),"User with email user23@yopmail.com is already verified and registered.");
+		
+	//	logger.info("Verify Validation message is displayed while entering existing email address:"+errorEmail.getText());
+		
+
+	   } catch(Exception e) {
 		
 		logger.error("Failed:"+e);
 		Assert.fail("Failed due to:"+e.getMessage());
+		
 	}
 	
 	}

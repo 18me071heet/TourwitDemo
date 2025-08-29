@@ -3,6 +3,7 @@ package tc_Tr;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import baseClassTr.BaseClassTr;
 import pageObjectTr.BottomNavigation_TR;
@@ -54,27 +55,36 @@ public class BottomNavigation_Tr extends BaseClassTr{
 		
 		BottomNavigation_TR  bottomNavigation = new BottomNavigation_TR(driver);
 		
-		logger.info("TC-01 --> Verify User is navigate to Privacy policy");
-		((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
-		bottomNavigation.privacyPolicy();
-		
-		logger.info("TC-02 --> Verify User is navigate to the Home page");
-		Thread.sleep(3000);
-		bottomNavigation.homePage();
-		
-		logger.info("TC-03 --> Verify User is navigate to the Terms and Condition");
-		((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
-		bottomNavigation.termsAndCondition();
-		
-		logger.info("TC-04 --> Verify User is navigate to the About Us page");
-		bottomNavigation.aboutUs();
-		smoothScrollToBottom(driver);
-		
-		logger.info("TC-05 --> Verify User is navigate to FAQ page");
-		((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
-		threadTime();
-		bottomNavigation.faqClick();
-		smoothScrollToBottom(driver);
+		try {
+			
+			logger.info("TC-01 --> Verify User is navigate to Privacy policy");
+			((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+			bottomNavigation.privacyPolicy();
+			
+			logger.info("TC-02 --> Verify User is navigate to the Home page");
+			Thread.sleep(3000);
+			bottomNavigation.homePage();
+			
+			logger.info("TC-03 --> Verify User is navigate to the Terms and Condition");
+			((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+			bottomNavigation.termsAndCondition();
+			
+			logger.info("TC-04 --> Verify User is navigate to the About Us page");
+			bottomNavigation.aboutUs();
+			smoothScrollToBottom(driver);
+			
+			logger.info("TC-05 --> Verify User is navigate to FAQ page");
+			((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
+			threadTime();
+			bottomNavigation.faqClick();
+			smoothScrollToBottom(driver);
+			
+		}catch(Exception e) {
+			
+			logger.error("Failed:"+e);
+			Assert.fail("Failed due to:"+e.getMessage());
+		}
+	
 		
 	}
 
