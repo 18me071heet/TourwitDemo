@@ -1,10 +1,16 @@
-17:31:08.665 [main] INFO  tc_Tr.ResetPassword_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-17:31:19.575 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
-17:31:20.148 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
-17:31:20.415 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
-17:31:24.957 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify User is navigate to the profile page
-17:31:29.241 [main] INFO  tc_Tr.ResetPassword_Tr - TC-02 --> Verify Reset Password screen is displaying by clicking Reset Password
-17:31:33.432 [main] INFO  tc_Tr.ResetPassword_Tr - Tc-03 --> Verify User is able to add old password
-17:31:33.578 [main] INFO  tc_Tr.ResetPassword_Tr - TC-04 --> Verify User is able to add new password
-17:31:33.727 [main] INFO  tc_Tr.ResetPassword_Tr - TC-05 --> Verify User is able to add confirm password
-17:31:33.868 [main] INFO  tc_Tr.ResetPassword_Tr - TC-06 --> Verify Password is getting reset by clicking reset button
+18:02:25.880 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+18:02:34.110 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
+18:02:34.612 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
+18:02:34.944 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+18:02:35.250 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
+18:02:39.447 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify profile screen is displaying by clicking edit profile
+18:02:39.624 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify Address screen is displaying by clicking saved address
+18:02:48.804 [main] INFO  tc_Tr.EditAddress_Tr - TC-04 --> Verify User is able to change first name
+18:02:49.100 [main] INFO  tc_Tr.EditAddress_Tr - TC-05 --> Verify User is able to change last name
+18:02:49.391 [main] INFO  tc_Tr.EditAddress_Tr - TC-06 --> Verify User is able to change phone
+18:02:49.710 [main] INFO  tc_Tr.EditAddress_Tr - TC-07 --> Verify User is able to change email address
+18:02:50.044 [main] INFO  tc_Tr.EditAddress_Tr - TC-08 --> Verify User is able to change address
+18:02:50.564 [main] INFO  tc_Tr.EditAddress_Tr - TC-09 --> Verify User is able to change and select state from the list 
+18:02:52.440 [main] INFO  tc_Tr.EditAddress_Tr - TC-10 --> Verify User is able to change city and select city from the list
+18:02:54.400 [main] INFO  tc_Tr.EditAddress_Tr - TC-11 --> Verify User is able to change zip code
+18:02:54.585 [main] INFO  tc_Tr.EditAddress_Tr - TC-12 --> Verify change details are getting saved or not

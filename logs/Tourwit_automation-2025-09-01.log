@@ -1,0 +1,54 @@
+17:36:23.160 [main] INFO  tc_Tr.EditAddress_Tr - TC-09 --> Verify User is able to change city and select city from the list
+17:36:25.299 [main] INFO  tc_Tr.EditAddress_Tr - TC-10 --> Verify User is able to change zip code
+17:36:25.712 [main] INFO  tc_Tr.EditAddress_Tr - TC-11 --> Verify change details are getting saved or not
+17:45:35.004 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:45:35.305 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:45:43.586 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
+17:45:43.867 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
+17:45:44.177 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:45:44.534 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
+17:45:48.741 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify profile screen is displaying by clicking edit profile
+17:45:48.922 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify Address screen is displaying by clicking saved address
+17:45:56.061 [main] INFO  tc_Tr.EditAddress_Tr - TC-04 --> Verify User is able to change first name
+17:45:56.324 [main] INFO  tc_Tr.EditAddress_Tr - TC-05 --> Verify User is able to change last name
+17:45:56.579 [main] INFO  tc_Tr.EditAddress_Tr - TC-06 --> Verify User is able to change phone
+17:45:56.904 [main] INFO  tc_Tr.EditAddress_Tr - TC-06 --> Verify User is able to change email address
+17:45:57.233 [main] INFO  tc_Tr.EditAddress_Tr - TC-07 --> Verify User is able to change address
+17:45:57.911 [main] INFO  tc_Tr.EditAddress_Tr - TC-08 --> Verify User is able to change and select state from the list 
+17:47:06.312 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:47:06.571 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:47:09.922 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
+17:47:10.148 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
+17:47:10.359 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:47:10.754 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
+17:47:46.140 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:47:46.363 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:47:53.965 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
+17:47:54.272 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
+17:47:54.408 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:47:54.601 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
+17:47:58.853 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify profile screen is displaying by clicking edit profile
+17:47:59.003 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify Address screen is displaying by clicking saved address
+17:48:09.214 [main] INFO  tc_Tr.EditAddress_Tr - TC-04 --> Verify User is able to change first name
+17:48:09.572 [main] INFO  tc_Tr.EditAddress_Tr - TC-05 --> Verify User is able to change last name
+17:48:09.822 [main] INFO  tc_Tr.EditAddress_Tr - TC-06 --> Verify User is able to change phone
+17:48:10.114 [main] INFO  tc_Tr.EditAddress_Tr - TC-06 --> Verify User is able to change email address
+17:48:10.473 [main] INFO  tc_Tr.EditAddress_Tr - TC-07 --> Verify User is able to change address
+17:48:10.979 [main] INFO  tc_Tr.EditAddress_Tr - TC-08 --> Verify User is able to change and select state from the list 
+17:48:13.445 [main] INFO  tc_Tr.EditAddress_Tr - TC-09 --> Verify User is able to change city and select city from the list
+18:01:42.605 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+18:01:42.949 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+18:01:49.840 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
+18:01:50.089 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
+18:01:50.251 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+18:02:25.547 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+

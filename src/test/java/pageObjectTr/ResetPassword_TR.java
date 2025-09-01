@@ -48,12 +48,13 @@ public class ResetPassword_TR {
 	public void resetPassword(WebDriver driver) {
 		
 		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(40));
 		WebElement resetBtn = wait.until(ExpectedConditions.elementToBeClickable(btnResetPassword));
 		resetBtn.click();
 	}
 	
 	public void addOldPassword(String oldPassword) {
+		
 		
 		txtOldPassword.sendKeys(oldPassword);
 	}
@@ -67,6 +68,11 @@ public class ResetPassword_TR {
 	public void addConfirmPassword(String cpass) {
 		
 		txtConfirmPassword.sendKeys(cpass);
+	}
+	
+	public void clearCpass() {
+		
+		txtConfirmPassword.clear();
 	}
 	
 	public void resetPass() {

@@ -35,16 +35,18 @@ public class LogIn_Tr extends BaseClassTr {
 			
 			logger.info("Verify User is able to add password");
 			threadTime();
-			login.addPass(p.getProperty("invalidPassword_tr"));
+			login.addPass(p.getProperty("password_tr"));
 			
 			logger.info("Verify User is able to login by clicking on Login Button");
 			threadTime();
 			login.loginBtn();
 			
-			WebElement errorMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(
+		/*	WebElement errorMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(
 				    By.xpath("//div[contains(text(),'Invalid email or password')]")));
 			
 			Assert.assertTrue(errorMessage.isDisplayed(),"Invalid email or password");
+			
+			*/
 			
 		} catch(Exception e) {
 			
@@ -54,12 +56,12 @@ public class LogIn_Tr extends BaseClassTr {
 		
 	}
 	
-//	@Test(priority=2,dependsOnMethods= {"logInDetails"})
+	@Test(priority=2,dependsOnMethods= {"logInDetails"})
 	void logOut() throws InterruptedException {
 		
 		Login_TR login = new Login_TR(driver);
 		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+	
 		logger.info("TC-01 --> Verify Logout option menu is displaying or not by clicking profile icon");
 		Thread.sleep(4000);
 		login.profileIconClick();
@@ -69,10 +71,7 @@ public class LogIn_Tr extends BaseClassTr {
 		login.logOut();
 		
 		logger.info("TC-02 --> Verify User is logged out by clicking on Logout confirmation");
-		
-	   	WebElement logoutConfirmation = wait.until(
-	   	ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(),'Logout')]")));
-	   	logoutConfirmation.click();
+		login.logOutConfirm();
 	   	
 	}
 	

@@ -1,9 +1,14 @@
 package pageObjectTr;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Login_TR {
 
@@ -30,7 +35,7 @@ public class Login_TR {
 	@FindBy(xpath="//button[normalize-space()='Log out']")
 	WebElement btnLogOut;
 	
-	@FindBy(xpath="//button[contains(text(),'Logout')]")
+	@FindBy(xpath="(//button[normalize-space()='Logout'])[last()]")
 	WebElement logOutConfirmation;
 	
 	@FindBy(xpath="//a[normalize-space()='Sign up']")
@@ -55,14 +60,32 @@ public class Login_TR {
 		
 		profileIcon.click();
 	}
+	
 	public void logOut() {
 		
-		btnLogOut.click();
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebElement logOut = wait.until(ExpectedConditions.elementToBeClickable(btnLogOut));
+		
+		logOut.click();
 	}
 	
 	public void logOutConfirm() {
 		
-		logOutConfirmation.click();
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebElement logOutConfirm = wait.until(ExpectedConditions.elementToBeClickable(logOutConfirmation));
+		
+		logOutConfirm.click();
+	}
+	
+	public boolean isLoginSuccessful() {
+		
+		  try {
+		        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		        WebElement profileIcon = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='Profile']")));
+		        return profileIcon.isDisplayed();
+		    } catch (Exception e) {
+		        return false; // profile icon not found → login failed
+		    }
 	}
 	
 	public void clickSignUpLink() {
