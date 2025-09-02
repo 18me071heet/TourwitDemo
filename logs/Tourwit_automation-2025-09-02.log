@@ -1,0 +1,54 @@
+14:49:51.024 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to add password
+14:49:56.153 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to login by clicking on Login Button
+14:50:06.327 [main] INFO  tc_Tr.ProductCart_Tr - TC-01 --> Verify search box is displaying by clicking on search icon
+14:50:06.518 [main] INFO  tc_Tr.ProductCart_Tr - TC-02 --> Verify User is able to fill search box
+14:50:07.091 [main] INFO  tc_Tr.ProductCart_Tr - TC-03 --> Verify Product details page is displaying by clicking on specific searched product
+14:50:20.913 [main] INFO  tc_Tr.ProductCart_Tr - TC-05 --> Verify User is navigate to the cart page by clicking Go to cart 
+14:50:21.047 [main] INFO  tc_Tr.ProductCart_Tr - TC-06 --> Verify User is able to procceed the checkout
+14:50:23.228 [main] INFO  tc_Tr.ProductCart_Tr - TC-07 --> Verify User is able to select Terms and Condtions
+14:52:28.693 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+14:52:29.013 [main] INFO  tc_Tr.ProductCart_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+14:52:39.740 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to add email
+14:52:44.935 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to add password
+14:52:50.044 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to login by clicking on Login Button
+14:53:00.203 [main] INFO  tc_Tr.ProductCart_Tr - TC-01 --> Verify search box is displaying by clicking on search icon
+14:54:16.959 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+14:54:17.258 [main] INFO  tc_Tr.ProductCart_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+14:54:25.365 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to add email
+14:54:30.637 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to add password
+14:54:35.780 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to login by clicking on Login Button
+14:54:45.951 [main] INFO  tc_Tr.ProductCart_Tr - TC-01 --> Verify search box is displaying by clicking on search icon
+14:54:46.223 [main] INFO  tc_Tr.ProductCart_Tr - TC-02 --> Verify User is able to fill search box
+14:54:48.691 [main] INFO  tc_Tr.ProductCart_Tr - TC-03 --> Verify Product details page is displaying by clicking on specific searched product
+14:55:01.504 [main] INFO  tc_Tr.ProductCart_Tr - TC-05 --> Verify User is navigate to the cart page by clicking Go to cart 
+14:55:01.753 [main] INFO  tc_Tr.ProductCart_Tr - TC-06 --> Verify User is able to procceed the checkout
+14:55:04.309 [main] INFO  tc_Tr.ProductCart_Tr - TC-07 --> Verify User is able to select Terms and Condtions
+14:55:06.701 [main] INFO  tc_Tr.ProductCart_Tr - TC-08 --> Verify User is do final checkout by clicking checkout button on cart page
+14:55:10.878 [main] INFO  tc_Tr.ProductCart_Tr - TC-09 --> Verify User is able to add mobile number
+14:56:55.238 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+14:56:55.550 [main] INFO  tc_Tr.ProductCart_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+14:57:03.372 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to add email
+14:57:08.599 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to add password
+14:57:13.732 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to login by clicking on Login Button
+14:57:23.901 [main] INFO  tc_Tr.ProductCart_Tr - TC-01 --> Verify search box is displaying by clicking on search icon
+14:57:24.121 [main] INFO  tc_Tr.ProductCart_Tr - TC-02 --> Verify User is able to fill search box
+14:57:24.644 [main] INFO  tc_Tr.ProductCart_Tr - TC-03 --> Verify Product details page is displaying by clicking on specific searched product
+14:57:37.155 [main] INFO  tc_Tr.ProductCart_Tr - TC-05 --> Verify User is navigate to the cart page by clicking Go to cart 
+14:57:37.343 [main] INFO  tc_Tr.ProductCart_Tr - TC-06 --> Verify User is able to procceed the checkout
+14:57:39.539 [main] INFO  tc_Tr.ProductCart_Tr - TC-07 --> Verify User is able to select Terms and Condtions
+14:57:41.871 [main] INFO  tc_Tr.ProductCart_Tr - TC-08 --> Verify User is do final checkout by clicking checkout button on cart page
+14:57:48.029 [main] INFO  tc_Tr.ProductCart_Tr - TC-09 --> Verify User is able to add mobile number
+14:58:33.523 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+
+C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+14:58:33.832 [main] INFO  tc_Tr.ProductCart_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+14:58:37.219 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to add email
+14:58:42.528 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to add password
+14:58:47.757 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to login by clicking on Login Button

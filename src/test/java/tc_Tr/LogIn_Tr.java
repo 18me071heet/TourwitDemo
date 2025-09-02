@@ -66,11 +66,11 @@ public class LogIn_Tr extends BaseClassTr {
 		Thread.sleep(4000);
 		login.profileIconClick();
 		
-		logger.info("TC-01 --> Verify log out confirmation popup is displaying by clicking logout button");
+		logger.info("TC-02 --> Verify log out confirmation popup is displaying by clicking logout button");
 		threadTime();
 		login.logOut();
 		
-		logger.info("TC-02 --> Verify User is logged out by clicking on Logout confirmation");
+		logger.info("TC-03 --> Verify User is logged out by clicking on Logout confirmation");
 		login.logOutConfirm();
 	   	
 	}

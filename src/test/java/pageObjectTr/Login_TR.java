@@ -13,11 +13,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Login_TR {
 
 	public WebDriver driver;
+	WebDriverWait wait;
 	
 	public Login_TR(WebDriver driver){
 		
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
 	}
 	
 	@FindBy(xpath="//input[@id='email']")
@@ -63,15 +66,14 @@ public class Login_TR {
 	
 	public void logOut() {
 		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+	
 		WebElement logOut = wait.until(ExpectedConditions.elementToBeClickable(btnLogOut));
 		
 		logOut.click();
 	}
 	
 	public void logOutConfirm() {
-		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+	
 		WebElement logOutConfirm = wait.until(ExpectedConditions.elementToBeClickable(logOutConfirmation));
 		
 		logOutConfirm.click();
@@ -80,7 +82,7 @@ public class Login_TR {
 	public boolean isLoginSuccessful() {
 		
 		  try {
-		        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		      
 		        WebElement profileIcon = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//img[@alt='Profile']")));
 		        return profileIcon.isDisplayed();
 		    } catch (Exception e) {

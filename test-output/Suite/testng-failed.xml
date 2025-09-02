@@ -7,13 +7,13 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="tc_Tr.EditAddress_Tr">
+      <class name="tc_Tr.ProductCart_Tr">
         <methods>
           <include name="signUp"/>
-          <include name="changeAddress"/>
+          <include name="addProductCart"/>
           <include name="logInDetails"/>
         </methods>
-      </class> <!-- tc_Tr.EditAddress_Tr -->
+      </class> <!-- tc_Tr.ProductCart_Tr -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

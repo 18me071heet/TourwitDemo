@@ -1,14 +1,5 @@
 package tc_Tr;
 
-import java.time.Duration;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -21,23 +12,8 @@ public class ProductCart_Tr extends BaseClassTr{
 	
 	void threadTime() throws InterruptedException {
  	   
- 	   Thread.sleep(3000);
+ 	   Thread.sleep(5000);
      }
-	
-	
-	 public void smoothScrollToBottom(WebDriver driver) throws InterruptedException {
-		    JavascriptExecutor js = (JavascriptExecutor) driver;
-
-		    long lastHeight = (long) js.executeScript("return document.body.scrollHeight");
-
-		    for (int y = 200; y < lastHeight; y += 200) {   // scroll 200px each step
-		        js.executeScript("window.scrollTo(0, arguments[0]);", y);
-		        Thread.sleep(200);  // wait 0.3s between scrolls for smooth effect
-		    }
-
-		  
-		    js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-		}
 		
 	 @Test(priority=1)
 	 void logInDetails() {
@@ -58,42 +34,107 @@ public class ProductCart_Tr extends BaseClassTr{
 	   	   		threadTime();
 	   	   		login.loginBtn();
 	   	   		
-	   		}catch(Exception e) {
+	   		} catch(Exception e) {
 	   			
 	   			logger.error("Failed:"+e);
 	   			Assert.fail("It is failed due to:"+e.getMessage());
 	   		}
-		 
 
 	 }
+	 
 	 
 	 @Test(priority=2,dependsOnMethods= {"logInDetails"})
 	 void addProductCart() throws InterruptedException{
 		 
-		 ProductCart_TR productCart = new ProductCart_TR(driver);
+		 ProductCart_TR products = new ProductCart_TR(driver);
 		 
-		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+	     threadTime();
+		 logger.info("TC-01 --> Verify search box is displaying by clicking on search icon");
+		 products.search();
 		 
-		 logger.info("TC-01 --> Verify User is able to add product into the cart");
+		 logger.info("TC-02 --> Verify User is able to fill search box");
+		 products.searchBoxPro("Heritage Doll");
 		 
+		 logger.info("TC-03 --> Verify Product details page is displaying by clicking on specific searched product");
+		 products.productClick();
 		 
-		 WebElement productCarts = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h5[text()='Heritage Doll']/ancestor::div[contains(@class,'product')]//button[contains(text(),'Add to cart')]")));
+		 threadTime();
 		 
-		 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", productCarts);
+   /*    logger.info("TC-04 --> Verify Product is added into the cart by clicking on Add to Cart button");
+   
+		 WebElement addToCartBtn = driver.findElement(By.xpath("//button[normalize-space()='Add to cart']"));
+		 ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", addToCartBtn);
 
-		 Actions actions = new Actions(driver);
-		 actions.moveToElement(productCarts).pause(Duration.ofSeconds(1)).perform();
-		 productCarts.click();
+		 wait.until(ExpectedConditions.elementToBeClickable(addToCartBtn));
+
+		 addToCartBtn.click();
 		 
-		 logger.info("TC-02 --> Verify User is navigate to the Cart page by clicking on Cart icon");
+		 */
 		 
-		 productCart.cartPage(driver);
+		 logger.info("TC-05 --> Verify User is navigate to the cart page by clicking Go to cart ");
 		 
-		 logger.info("TC-03 --> Verify User is navigate to the next page by clicking processed to checkout");
+		 products.goToCart();
 		 
-		 productCart.checkOut(driver);
+		 logger.info("TC-06 --> Verify User is able to procceed the checkout");
+		 
+		 products.checkOut();
+		 
+		 logger.info("TC-07 --> Verify User is able to select Terms and Condtions");
+		 
+		 products.checkT();
+		 
+		 logger.info("TC-08 --> Verify User is do final checkout by clicking checkout button on cart page");
+		 
+		 products.lastCheckOutBtn();
+		 
 		
-	
+		//logger.info("TC-09 --> Verify User is able to add mobile number");
+		 
+	    //products.numberAdd("9911991199");
+		 
+	/*	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		  
+	  WebElement razorpayFrame = wait.until(
+		         ExpectedConditions.presenceOfElementLocated(By.cssSelector("iframe.razorpay-checkout-frame"))
+		 );
+	  
+		 driver.switchTo().frame(razorpayFrame);
+
+
+		 WebElement cardFrame = wait.until(
+			        ExpectedConditions.presenceOfElementLocated(By.cssSelector("iframe[name*='card.number']"))
+			);
+			
+			driver.switchTo().frame(cardFrame);
+			
+			wait.until(ExpectedConditions.elementToBeClickable(By.name("card.number"))).sendKeys("4242424242424242");
+
+		
+		driver.switchTo().parentFrame();
+		
+		*/
+
+		 
+		logger.info("TC-10 --> Verify User is able to add card number");
+		 
+		 products.cardN(p.getProperty("cardNumber_tr"));
+		 
+		 logger.info("TC-11 --> Verify User is able to add Cvv number");
+		 
+		 products.cVV(p.getProperty("cardCvv_tr"));
+		 
+		 logger.info("TC-12 --> Verify User is able to add Date");
+		 
+		 products.addDateN(p.getProperty("cardDate_tr"));
+		 
+		 logger.info("TC-13 --> Verify User is able to select Terms and Conditions of Bank");
+		 
+		 products.checkTerms();
+		 
+		 logger.info("TC-14 --> Verify Payment is successfull or not by clicking continue");
+		 
+		 products.Save();
+
 		 
 	 }
 }

@@ -13,10 +13,13 @@ public class ResetPassword_TR {
 
 	public WebDriver driver;
 	
+	WebDriverWait wait;
+	
 	public ResetPassword_TR(WebDriver driver) {
 		
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 	
 	@FindBy(xpath="//a[normalize-space()='My Profile']")
@@ -39,16 +42,12 @@ public class ResetPassword_TR {
 	
 	public void profileClicks(WebDriver driver) {
 		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
-		WebElement profileBtn = wait.until(ExpectedConditions.elementToBeClickable(btnProfile));
-		
+       WebElement profileBtn = wait.until(ExpectedConditions.elementToBeClickable(btnProfile));
 		profileBtn.click();
 	}
 	
 	public void resetPassword(WebDriver driver) {
 		
-		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(40));
 		WebElement resetBtn = wait.until(ExpectedConditions.elementToBeClickable(btnResetPassword));
 		resetBtn.click();
 	}

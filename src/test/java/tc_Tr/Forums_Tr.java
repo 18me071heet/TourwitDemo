@@ -69,7 +69,7 @@ public class Forums_Tr extends BaseClassTr {
 		    	
 		    	logger.info("TC-03 --> Verify User is able to select forum category and Selected category is displaying or not");
 		    	
-		    	threadTime();
+		    
 		    	WebElement forumCategory = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-category-input")));
 		    	forumCategory.click();
 		    	forumCategory.sendKeys("My Food");
@@ -107,8 +107,10 @@ public class Forums_Tr extends BaseClassTr {
 	        void searchForum() throws InterruptedException {
 	    	
 	    	Forums_TR createForums = new Forums_TR(driver);
-	       	
-	    	try {
+	    	
+		    	try {
+	    		
+	    		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	    		
 	    		logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
 		    	Thread.sleep(5000);
@@ -122,7 +124,6 @@ public class Forums_Tr extends BaseClassTr {
 		    	threadTime();
 		    	createForums.searchForum("Automation Forum");
 		    	
-		    	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		            WebElement forumLink = wait.until(ExpectedConditions
 		   	        .elementToBeClickable(By.xpath("//a[contains(text(),'Automation Forum')]")));
 		            forumLink.click();
@@ -168,7 +169,6 @@ public class Forums_Tr extends BaseClassTr {
    	    	wait.until(ExpectedConditions.elementToBeClickable(editIcon)).click(); */
 
    	    	logger.info("TC-05 --> Verify User is able to Edit forum Title");
-   	    	threadTime();
    	    	createForums.updateForumName();
    	    	threadTime();
    	    	
@@ -180,7 +180,6 @@ public class Forums_Tr extends BaseClassTr {
    	    	createForums.forumDescriptionAdd("This is Update Automation Forum");
    	    	
    	    	logger.info("TC-07 --> Verify Forum details are getting updated by clicking publish button");
-   	    	threadTime();
    	    	createForums.forumPublishBtn();
    	    	
            }catch(Exception e) {

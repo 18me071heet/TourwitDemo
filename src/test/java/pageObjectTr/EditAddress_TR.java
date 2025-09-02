@@ -15,10 +15,13 @@ public class EditAddress_TR {
 
 	public WebDriver driver;
 	
+	WebDriverWait wait;
+	
 	public EditAddress_TR(WebDriver driver) {
 		
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 	
 	@FindBy(xpath="//a[normalize-space()='My Profile']")
@@ -88,9 +91,10 @@ public class EditAddress_TR {
     public void changeAddress(String address) {
    
     	   
-    	txtAddress.sendKeys(Keys.CONTROL + "a");
+       txtAddress.sendKeys(Keys.CONTROL + "a");
  	   txtAddress.sendKeys(Keys.DELETE);
-    	txtAddress.sendKeys(address);
+       txtAddress.sendKeys(address);
+       
     }
    
    
@@ -124,9 +128,6 @@ public class EditAddress_TR {
 	   if(name.equalsIgnoreCase("Smith")) {
 		   
 		   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", btnDefault);
-		   
-		   WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		   
 		   wait.until(ExpectedConditions.elementToBeClickable(btnDefault)).click();
 	       
 	      

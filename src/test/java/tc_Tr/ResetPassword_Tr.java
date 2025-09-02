@@ -34,7 +34,7 @@ public class ResetPassword_Tr extends BaseClassTr{
          		login.loginBtn();
          		Thread.sleep(4000);
 	   	   		
-	   		}catch(Exception e) {
+	   		} catch(Exception e) {
 	   			
 	   			logger.error("Failed:"+e);
 	   			Assert.fail("It is failed due to:"+e.getMessage());

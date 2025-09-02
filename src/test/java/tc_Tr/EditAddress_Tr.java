@@ -47,10 +47,10 @@ public class EditAddress_Tr extends BaseClassTr {
 	void changeAddress() throws InterruptedException {
 		
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		
 		Login_TR login = new Login_TR(driver);
 		
 		EditAddress_TR address = new EditAddress_TR(driver);
-		
 		
 		logger.info("TC-01 --> Verify options are dispalying by clicking on profile icon");
 		Thread.sleep(4000);
@@ -62,9 +62,8 @@ public class EditAddress_Tr extends BaseClassTr {
 		logger.info("TC-03 --> Verify Address screen is displaying by clicking saved address");
 		Thread.sleep(5000);
 		address.clickAddress();
-		
-		Thread.sleep(4000);
-		address.clickDefault();
+				
+    	//	address.clickDefault();
 		
 		logger.info("TC-04 --> Verify User is able to change first name");
 		address.changeFname("Smith");

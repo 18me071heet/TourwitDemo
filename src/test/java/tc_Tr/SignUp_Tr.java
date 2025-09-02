@@ -33,7 +33,7 @@ import pageObjectTr.Signup_TR;
 		
 		logger.info("TC-01 --> Verify Sign up screen is displaying or not by clicking on Signup button");
 		login.clickSignUpLink();
-		//signup.SignUpScreen();
+		
 		logger.info("TC-02 --> Verify User is able to fill the first name");
 
 		signup.addFname(p.getProperty("firstname_tr"));
@@ -68,7 +68,7 @@ import pageObjectTr.Signup_TR;
 	  signup.btnSignUp();
 	
 	    
-	 WebElement errorMessagePassword = wait.until(
+	  WebElement errorMessagePassword = wait.until(
 			    ExpectedConditions.visibilityOfElementLocated(
 			        By.xpath("//*[contains(text(),'Passwords must match')]")
 			    )
@@ -77,6 +77,7 @@ import pageObjectTr.Signup_TR;
 			logger.info("Validation message displayed: " + errorMessagePassword.getText());
 			
 	   threadTime();
+	   
 	 */
 	   
 		logger.info("TC-08--> Verify User is able to fill the Confirm Password");
@@ -112,8 +113,7 @@ import pageObjectTr.Signup_TR;
 	   } catch(Exception e) {
 		
 		logger.error("Failed:"+e);
-		Assert.fail("Failed due to:"+e.getMessage());
-		
+		Assert.fail("It is failed due to:"+e.getMessage());
 	}
 	
 	}
