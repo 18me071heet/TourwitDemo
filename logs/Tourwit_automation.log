@@ -1,44 +1,9 @@
-14:58:57.949 [main] INFO  tc_Tr.ProductCart_Tr - TC-01 --> Verify search box is displaying by clicking on search icon
-14:58:58.263 [main] INFO  tc_Tr.ProductCart_Tr - TC-02 --> Verify User is able to fill search box
-14:59:01.397 [main] INFO  tc_Tr.ProductCart_Tr - TC-03 --> Verify Product details page is displaying by clicking on specific searched product
-14:59:13.763 [main] INFO  tc_Tr.ProductCart_Tr - TC-05 --> Verify User is navigate to the cart page by clicking Go to cart 
-14:59:14.149 [main] INFO  tc_Tr.ProductCart_Tr - TC-06 --> Verify User is able to procceed the checkout
-14:59:16.644 [main] INFO  tc_Tr.ProductCart_Tr - TC-07 --> Verify User is able to select Terms and Condtions
-14:59:19.196 [main] INFO  tc_Tr.ProductCart_Tr - TC-08 --> Verify User is do final checkout by clicking checkout button on cart page
-14:59:25.427 [main] INFO  tc_Tr.ProductCart_Tr - TC-10 --> Verify User is able to add card number
-15:11:35.104 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-15:11:35.408 [main] INFO  tc_Tr.ProductCart_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-15:11:45.257 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to add email
-15:11:50.451 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to add password
-15:11:55.563 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to login by clicking on Login Button
-15:12:05.708 [main] INFO  tc_Tr.ProductCart_Tr - TC-01 --> Verify search box is displaying by clicking on search icon
-17:17:28.731 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-17:17:29.049 [main] INFO  tc_Tr.ProductCart_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-17:17:35.375 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to add email
-17:17:40.672 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to add password
-17:17:45.812 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to login by clicking on Login Button
-17:17:56.017 [main] INFO  tc_Tr.ProductCart_Tr - TC-01 --> Verify search box is displaying by clicking on search icon
-17:17:56.162 [main] INFO  tc_Tr.ProductCart_Tr - TC-02 --> Verify User is able to fill search box
-17:18:00.046 [main] INFO  tc_Tr.ProductCart_Tr - TC-03 --> Verify Product details page is displaying by clicking on specific searched product
-17:18:12.883 [main] INFO  tc_Tr.ProductCart_Tr - TC-05 --> Verify User is navigate to the cart page by clicking Go to cart 
-17:18:13.068 [main] INFO  tc_Tr.ProductCart_Tr - TC-06 --> Verify User is able to procceed the checkout
-17:18:15.386 [main] INFO  tc_Tr.ProductCart_Tr - TC-07 --> Verify User is able to select Terms and Condtions
-17:18:18.036 [main] INFO  tc_Tr.ProductCart_Tr - TC-08 --> Verify User is do final checkout by clicking checkout button on cart page
-17:21:41.982 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-17:21:42.336 [main] INFO  tc_Tr.ProductCart_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-17:21:53.395 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to add email
-17:21:58.677 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to add password
-17:22:03.846 [main] INFO  tc_Tr.ProductCart_Tr - Verify User is able to login by clicking on Login Button
-17:22:14.063 [main] INFO  tc_Tr.ProductCart_Tr - TC-01 --> Verify search box is displaying by clicking on search icon
-17:22:14.364 [main] INFO  tc_Tr.ProductCart_Tr - TC-02 --> Verify User is able to fill search box
-17:22:17.356 [main] INFO  tc_Tr.ProductCart_Tr - TC-03 --> Verify Product details page is displaying by clicking on specific searched product
-17:22:30.292 [main] INFO  tc_Tr.ProductCart_Tr - TC-05 --> Verify User is navigate to the cart page by clicking Go to cart 
-17:22:32.667 [main] INFO  tc_Tr.ProductCart_Tr - TC-06 --> Verify User is able to procceed the checkout
-17:22:35.154 [main] INFO  tc_Tr.ProductCart_Tr - TC-07 --> Verify User is able to select Terms and Condtions
-17:22:37.832 [main] INFO  tc_Tr.ProductCart_Tr - TC-08 --> Verify User is do final checkout by clicking checkout button on cart page
+17:39:13.219 [main] INFO  tc_Tr.UserProfile_Tr - TC-04 --> Verify Update name is getting saved by clicking on Save
+17:39:18.642 [main] INFO  tc_Tr.UserProfile_Tr - TC-05 --> Verify User is able to Edit their last name
+17:39:22.262 [main] INFO  tc_Tr.UserProfile_Tr - TC-06 --> Verify User is able to Edit their Insta Id
+17:39:23.290 [main] INFO  tc_Tr.UserProfile_Tr - TC-07 --> Verify User is able to Edit their Country from Country dropdown
+17:39:26.840 [main] INFO  tc_Tr.UserProfile_Tr - TC-08 --> Verify Selected country is displaying in the country field
+17:39:31.445 [main] INFO  tc_Tr.UserProfile_Tr - TC-09 --> Verify User is able to view their followers list
+17:39:34.446 [main] INFO  tc_Tr.UserProfile_Tr - TC-10 --> Verify User is able to search specific follower
+17:39:34.446 [main] INFO  tc_Tr.UserProfile_Tr - TC-11 --> Verify User is able to view their following list
+17:39:34.664 [main] INFO  tc_Tr.UserProfile_Tr - TC-12 --> Verify User is able to search specific following

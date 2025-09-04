@@ -1,0 +1,50 @@
+17:18:21.994 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify User is able to add email
+17:18:22.306 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is able to add password
+17:18:22.533 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:18:26.881 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
+17:18:27.071 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is navigate to the profile page by clicking on My profile
+17:18:32.409 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to Edit their first name
+17:18:34.413 [main] INFO  tc_Tr.UserProfile_Tr - TC-04 --> Verify Update name is getting saved by clicking on Save
+17:18:39.888 [main] INFO  tc_Tr.UserProfile_Tr - TC-05 --> Verify User is able to Edit their last name
+17:18:42.801 [main] INFO  tc_Tr.UserProfile_Tr - TC-06 --> Verify User is able to Edit their Insta Id
+17:18:43.935 [main] INFO  tc_Tr.UserProfile_Tr - TC-07 --> Verify User is able to Edit their Country from Country dropdown
+17:18:47.557 [main] INFO  tc_Tr.UserProfile_Tr - TC-08 --> Verify Selected country is displaying in the country field
+17:18:52.229 [main] INFO  tc_Tr.UserProfile_Tr - TC-09 --> Verify User is able to view their followers list
+17:18:55.439 [main] INFO  tc_Tr.UserProfile_Tr - TC-10 --> Verify User is able to search specific follower
+17:34:11.983 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:34:12.370 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:34:22.499 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify User is able to add email
+17:34:23.145 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is able to add password
+17:34:23.294 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:34:27.495 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
+17:34:27.685 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is navigate to the profile page by clicking on My profile
+17:34:33.025 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to Edit their first name
+17:34:34.503 [main] INFO  tc_Tr.UserProfile_Tr - TC-04 --> Verify Update name is getting saved by clicking on Save
+17:34:40.219 [main] INFO  tc_Tr.UserProfile_Tr - TC-05 --> Verify User is able to Edit their last name
+17:34:43.100 [main] INFO  tc_Tr.UserProfile_Tr - TC-06 --> Verify User is able to Edit their Insta Id
+17:34:44.119 [main] INFO  tc_Tr.UserProfile_Tr - TC-07 --> Verify User is able to Edit their Country from Country dropdown
+17:34:47.598 [main] INFO  tc_Tr.UserProfile_Tr - TC-08 --> Verify Selected country is displaying in the country field
+17:34:52.507 [main] INFO  tc_Tr.UserProfile_Tr - TC-09 --> Verify User is able to view their followers list
+17:34:55.725 [main] INFO  tc_Tr.UserProfile_Tr - TC-10 --> Verify User is able to search specific follower
+17:34:55.878 [main] INFO  tc_Tr.UserProfile_Tr - TC-11 --> Verify User is able to view their following list
+17:38:15.256 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:38:15.607 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:38:26.568 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify User is able to add email
+17:38:26.884 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is able to add password
+17:38:27.051 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:38:31.348 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
+17:38:31.471 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is navigate to the profile page by clicking on My profile
+17:38:50.322 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:38:50.651 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:38:59.770 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify User is able to add email
+17:39:00.145 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is able to add password
+17:39:00.316 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:39:04.575 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
+17:39:05.323 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is navigate to the profile page by clicking on My profile
+17:39:10.599 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to Edit their first name

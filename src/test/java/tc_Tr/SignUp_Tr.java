@@ -93,7 +93,7 @@ import pageObjectTr.Signup_TR;
   	*/
     		
 		
-	 logger.info("TC-09 --> Verify User is able to select terms and conditions");
+	      logger.info("TC-09 --> Verify User is able to select terms and conditions");
 			threadTime();
 		    WebElement terms = wait.until(ExpectedConditions.elementToBeClickable(By.id("ToCAgreed")));
 		    terms.click();

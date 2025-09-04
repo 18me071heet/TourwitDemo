@@ -137,13 +137,11 @@ public class ProductCart_TR {
 	
    public void cardN(String number) {
 		
-		
 	cardNo.sendKeys(number);
 	
 	}
    
-   public void cVV(String number) {
-	
+   public void cvv(String number) {
 	
 	txtCvv.sendKeys(number);
 	

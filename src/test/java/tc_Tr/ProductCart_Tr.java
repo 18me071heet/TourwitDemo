@@ -92,7 +92,7 @@ public class ProductCart_Tr extends BaseClassTr{
 		 
 	    //products.numberAdd("9911991199");
 		 
-	/*	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	  /*	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		  
 	  WebElement razorpayFrame = wait.until(
 		         ExpectedConditions.presenceOfElementLocated(By.cssSelector("iframe.razorpay-checkout-frame"))
@@ -115,13 +115,13 @@ public class ProductCart_Tr extends BaseClassTr{
 		*/
 
 		 
-		logger.info("TC-10 --> Verify User is able to add card number");
+		 logger.info("TC-10 --> Verify User is able to add card number");
 		 
 		 products.cardN(p.getProperty("cardNumber_tr"));
 		 
 		 logger.info("TC-11 --> Verify User is able to add Cvv number");
 		 
-		 products.cVV(p.getProperty("cardCvv_tr"));
+		 products.cvv(p.getProperty("cardCvv_tr"));
 		 
 		 logger.info("TC-12 --> Verify User is able to add Date");
 		 
