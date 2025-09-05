@@ -15,7 +15,13 @@ import pageObjectTr.Login_TR;
 import pageObjectTr.UserProfile_TR;
 
 public class UserProfile_Tr extends BaseClassTr{
-
+ 
+	
+	 void threadTime() throws InterruptedException {
+		 
+		 Thread.sleep(4000);
+	 }
+	 
 	 @Test(priority=1)
  	   void logInDetails() throws InterruptedException {
  		
@@ -50,7 +56,7 @@ public class UserProfile_Tr extends BaseClassTr{
 		 
 		 UserProfile_TR profile = new UserProfile_TR(driver);
 		 
-		 Thread.sleep(4000);
+		 threadTime();
 		 logger.info("TC-01 --> Verify Options are displaying by clicking on profile icon");
 		 
 		 login.profileIconClick();
@@ -58,7 +64,7 @@ public class UserProfile_Tr extends BaseClassTr{
 		 logger.info("TC-02 --> Verify User is navigate to the profile page by clicking on My profile");
 		 profile.myProfileClick();
 		 
-		 Thread.sleep(5000);
+		 threadTime();
 		 logger.info("TC-03 --> Verify User is able to Edit their first name");
 		 
 		 profile.editFirstName();
@@ -68,7 +74,7 @@ public class UserProfile_Tr extends BaseClassTr{
 		 logger.info("TC-04 --> Verify Update name is getting saved by clicking on Save");
 		 
 		 profile.btnSaveClick();
-		 Thread.sleep(3000);
+		 threadTime();
 		 
 		 logger.info("TC-05 --> Verify User is able to Edit their last name");
 		 
@@ -88,7 +94,7 @@ public class UserProfile_Tr extends BaseClassTr{
 		 
 		 logger.info("TC-07 --> Verify User is able to Edit their Country from Country dropdown");
 		 
-		 Thread.sleep(3000);
+		 threadTime();
 		 profile.editCountry();
 		 
 		 WebElement country = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-country-input")));
@@ -111,7 +117,7 @@ public class UserProfile_Tr extends BaseClassTr{
 		 
 		 logger.info("TC-10 --> Verify User is able to search specific follower");
 	
-	//	 profile.search("Lisa Menon");
+	    //	 profile.search("Lisa Menon");
 		 
 		 logger.info("TC-11 --> Verify User is able to view their following list");
 		 
@@ -119,10 +125,11 @@ public class UserProfile_Tr extends BaseClassTr{
 		 
 		 logger.info("TC-12 --> Verify User is able to search specific following");
 		 
-		 profile.search("Tourwit QAA");
+		 profile.search(p.getProperty("followingSearch_Tr"));
 		 
+		 logger.info("TC-13 --> Verify User is able to unfollow user by clicking on Unfollow");
 		 
-		 
-		 
+		 profile.unfollowUser();
+		 		 
 	 }
 }

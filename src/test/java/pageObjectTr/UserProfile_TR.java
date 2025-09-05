@@ -42,7 +42,9 @@ public class UserProfile_TR {
 	@FindBy(xpath=" //input[@placeholder='Search...']")
 	WebElement txtSearch;
 	
-	 
+	@FindBy(xpath="//button[normalize-space()='Unfollow']")
+	WebElement unFollowUser;
+	
 	public void myProfileClick() {
 		
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
@@ -177,6 +179,14 @@ public class UserProfile_TR {
 		
 		txtSearch.sendKeys(name);
 		
+	}
+	
+	public void unfollowUser() {
+		
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		
+		WebElement unFollowUser = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Unfollow']")));
+		unFollowUser.click();
 	}
 	
 }

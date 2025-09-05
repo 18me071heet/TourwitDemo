@@ -1,0 +1,54 @@
+16:51:32.940 [main] INFO  tc_Tr.BlockUser_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:51:47.367 [main] INFO  tc_Tr.BlockUser_Tr - TC-01 --> Verify User is able to add email
+16:51:47.597 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is able to add password
+16:51:47.710 [main] INFO  tc_Tr.BlockUser_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+16:51:47.874 [main] INFO  tc_Tr.BlockUser_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
+16:51:52.020 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is navigate to profile screen by clicking My Profile
+16:51:52.180 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is navigate to the block memeber screen 
+16:51:56.672 [main] INFO  tc_Tr.BlockUser_Tr - TC-03 --> Verify User is able to search any block memeber
+16:51:56.799 [main] INFO  tc_Tr.BlockUser_Tr - TC-04 --> Verify Unblock user confirm popup is displaying by clicking UnBlock
+16:52:01.008 [main] INFO  tc_Tr.BlockUser_Tr - TC-05 --> Verify User is able to Unblock user by clicking confirm
+16:52:37.406 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:52:37.725 [main] INFO  tc_Tr.BlockUser_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:52:45.866 [main] INFO  tc_Tr.BlockUser_Tr - TC-01 --> Verify User is able to add email
+16:52:46.162 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is able to add password
+16:52:46.518 [main] INFO  tc_Tr.BlockUser_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+16:52:46.818 [main] INFO  tc_Tr.BlockUser_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
+16:52:51.068 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is navigate to profile screen by clicking My Profile
+16:52:51.300 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is navigate to the block memeber screen 
+16:53:32.614 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:53:32.903 [main] INFO  tc_Tr.BlockUser_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:53:36.352 [main] INFO  tc_Tr.BlockUser_Tr - TC-01 --> Verify User is able to add email
+16:53:36.704 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is able to add password
+16:53:37.028 [main] INFO  tc_Tr.BlockUser_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+16:53:37.401 [main] INFO  tc_Tr.BlockUser_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
+16:54:20.696 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:54:21.075 [main] INFO  tc_Tr.BlockUser_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:54:29.423 [main] INFO  tc_Tr.BlockUser_Tr - TC-01 --> Verify User is able to add email
+16:54:29.787 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is able to add password
+16:54:30.036 [main] INFO  tc_Tr.BlockUser_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+16:54:30.313 [main] INFO  tc_Tr.BlockUser_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
+16:54:34.549 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is navigate to profile screen by clicking My Profile
+16:54:34.804 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is navigate to the block memeber screen 
+16:55:35.734 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:55:36.069 [main] INFO  tc_Tr.BlockUser_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:55:44.312 [main] INFO  tc_Tr.BlockUser_Tr - TC-01 --> Verify User is able to add email
+16:55:44.629 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is able to add password
+16:55:44.801 [main] INFO  tc_Tr.BlockUser_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+16:55:45.280 [main] INFO  tc_Tr.BlockUser_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
+16:55:49.520 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is navigate to profile screen by clicking My Profile
+16:55:49.854 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is navigate to the block memeber screen 
+16:57:20.752 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:57:21.023 [main] INFO  tc_Tr.BlockUser_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:57:24.096 [main] INFO  tc_Tr.BlockUser_Tr - TC-01 --> Verify User is able to add email
+16:57:24.346 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is able to add password
