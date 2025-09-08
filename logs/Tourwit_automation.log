@@ -1,14 +1,5 @@
-16:57:24.515 [main] INFO  tc_Tr.BlockUser_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-16:57:24.839 [main] INFO  tc_Tr.BlockUser_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
-16:57:49.820 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-16:57:50.088 [main] INFO  tc_Tr.BlockUser_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-16:57:57.553 [main] INFO  tc_Tr.BlockUser_Tr - TC-01 --> Verify User is able to add email
-16:57:58.025 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is able to add password
-16:57:58.222 [main] INFO  tc_Tr.BlockUser_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-16:57:58.400 [main] INFO  tc_Tr.BlockUser_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
-16:58:02.656 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is navigate to profile screen by clicking My Profile
-16:58:02.841 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is navigate to the block memeber screen 
-16:58:07.316 [main] INFO  tc_Tr.BlockUser_Tr - TC-03 --> Verify User is able to search any block memeber
-16:58:07.446 [main] INFO  tc_Tr.BlockUser_Tr - TC-04 --> Verify Unblock user confirm popup is displaying by clicking UnBlock
+15:32:32.005 [main] INFO  tc_Tr.MyBookings_Tr - TC-08 --> Verify User is able to filter the bookings by Newest to Oldest / Oldest to Newest
+15:32:36.426 [main] INFO  tc_Tr.MyBookings_Tr - TC-09 --> Verify User is navigate to the home page by clicking on Home logo
+15:32:36.561 [main] INFO  tc_Tr.MyBookings_Tr - TC-10 --> Verify User is navigate to the Notification page by clicking on Notification icon
+15:32:40.855 [main] INFO  tc_Tr.MyBookings_Tr - TC-11 --> Verify User is able to see more notifications by clicking on show more
+15:33:01.487 [main] INFO  tc_Tr.MyBookings_Tr - TC-12 --> Verify Notification is getting cleared by clicking Clear All

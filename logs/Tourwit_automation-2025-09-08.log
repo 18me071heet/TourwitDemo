@@ -1,0 +1,47 @@
+15:22:59.791 [main] INFO  tc_Tr.MyBookings_Tr - TC-05 --> Verify User is navigate to the booking listing page by clicking on Back arrow
+15:23:02.682 [main] INFO  tc_Tr.MyBookings_Tr - TC-06 --> Verify User is able to search another order
+15:23:06.839 [main] INFO  tc_Tr.MyBookings_Tr - TC-07 --> Verify User is able to see another order details by clicking on view details
+15:23:13.826 [main] INFO  tc_Tr.MyBookings_Tr - TC-08 --> Verify User is able to filter the bookings by Newest to Oldest / Oldest to Newest
+15:23:18.149 [main] INFO  tc_Tr.MyBookings_Tr - TC-09 --> Verify User is navigate to the home page by clicking on Home logo
+15:23:18.272 [main] INFO  tc_Tr.MyBookings_Tr - TC-10 --> Verify User is navigate to the Notification page by clicking on Notification icon
+15:23:22.540 [main] INFO  tc_Tr.MyBookings_Tr - TC-11 --> Verify User is able to see more notifications by clicking on show more
+15:24:39.153 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+15:24:39.470 [main] INFO  tc_Tr.MyBookings_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+15:24:48.177 [main] INFO  tc_Tr.MyBookings_Tr - TC-01 --> Verify User is able to add email
+15:24:48.492 [main] INFO  tc_Tr.MyBookings_Tr - TC-02 --> Verify User is able to add password
+15:24:48.698 [main] INFO  tc_Tr.MyBookings_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+15:24:49.205 [main] INFO  tc_Tr.MyBookings_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
+15:24:53.840 [main] INFO  tc_Tr.MyBookings_Tr - TC-02 --> Verify User is navigate to the booking screen by clicking on My Bookings
+15:24:54.115 [main] INFO  tc_Tr.MyBookings_Tr - TC-03 --> Verify User is able to search their booking by their order id
+15:25:01.205 [main] INFO  tc_Tr.MyBookings_Tr - TC-04 --> Verify User is able to see their searched order details by clicking on view details 
+15:25:04.661 [main] INFO  tc_Tr.MyBookings_Tr - TC-05 --> Verify User is navigate to the booking listing page by clicking on Back arrow
+15:25:08.768 [main] INFO  tc_Tr.MyBookings_Tr - TC-06 --> Verify User is able to search another order
+15:25:12.943 [main] INFO  tc_Tr.MyBookings_Tr - TC-07 --> Verify User is able to see another order details by clicking on view details
+15:25:20.671 [main] INFO  tc_Tr.MyBookings_Tr - TC-08 --> Verify User is able to filter the bookings by Newest to Oldest / Oldest to Newest
+15:25:25.047 [main] INFO  tc_Tr.MyBookings_Tr - TC-09 --> Verify User is navigate to the home page by clicking on Home logo
+15:25:25.166 [main] INFO  tc_Tr.MyBookings_Tr - TC-10 --> Verify User is navigate to the Notification page by clicking on Notification icon
+15:25:29.392 [main] INFO  tc_Tr.MyBookings_Tr - TC-11 --> Verify User is able to see more notifications by clicking on show more
+15:31:24.323 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+15:31:24.713 [main] INFO  tc_Tr.MyBookings_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+15:31:28.800 [main] INFO  tc_Tr.MyBookings_Tr - TC-01 --> Verify User is able to add email
+15:31:29.152 [main] INFO  tc_Tr.MyBookings_Tr - TC-02 --> Verify User is able to add password
+15:31:29.382 [main] INFO  tc_Tr.MyBookings_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+15:31:29.870 [main] INFO  tc_Tr.MyBookings_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
+15:31:57.441 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+15:31:57.747 [main] INFO  tc_Tr.MyBookings_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+15:32:05.949 [main] INFO  tc_Tr.MyBookings_Tr - TC-01 --> Verify User is able to add email
+15:32:06.250 [main] INFO  tc_Tr.MyBookings_Tr - TC-02 --> Verify User is able to add password
+15:32:06.435 [main] INFO  tc_Tr.MyBookings_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+15:32:06.661 [main] INFO  tc_Tr.MyBookings_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
+15:32:11.077 [main] INFO  tc_Tr.MyBookings_Tr - TC-02 --> Verify User is navigate to the booking screen by clicking on My Bookings
+15:32:11.378 [main] INFO  tc_Tr.MyBookings_Tr - TC-03 --> Verify User is able to search their booking by their order id
+15:32:12.023 [main] INFO  tc_Tr.MyBookings_Tr - TC-04 --> Verify User is able to see their searched order details by clicking on view details 
+15:32:17.458 [main] INFO  tc_Tr.MyBookings_Tr - TC-05 --> Verify User is navigate to the booking listing page by clicking on Back arrow
+15:32:20.368 [main] INFO  tc_Tr.MyBookings_Tr - TC-06 --> Verify User is able to search another order
+15:32:24.543 [main] INFO  tc_Tr.MyBookings_Tr - TC-07 --> Verify User is able to see another order details by clicking on view details
