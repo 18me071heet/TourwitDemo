@@ -54,46 +54,55 @@ public class ResetPassword_Tr extends BaseClassTr{
 		Thread.sleep(3000);
 		login.profileIconClick();
 		
-		logger.info("TC-01 --> Verify User is navigate to the profile page");
-	    resetPass.profileClicks(driver);
-		
-		logger.info("TC-02 --> Verify Reset Password screen is displaying by clicking Reset Password");
-		Thread.sleep(3000);
-        resetPass.resetPassword(driver);
-		
-		//logger.info("Tc-03 --> Verify User is able to add old password");
-    	//resetPass.addOldPassword(p.getProperty("password_tr"));
-    	
-    	logger.info("TC-04 --> Verify Validation message is displaying by entering incorrect old password");
-	    resetPass.addOldPassword(p.getProperty("invalidPassword_tr"));
-		
-		logger.info("TC-05 --> Verify User is able to add new password");
-		resetPass.addNewPassword(p.getProperty("resetNewPassword_tr"));
-		
-		logger.info("TC-06 --> Verify validation message is displaying by entering different confirm password");
-		resetPass.addConfirmPassword(p.getProperty("resetConfirmPassword_tr"));
-		resetPass.resetPass();
-		
-	    WebElement errorOldMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'Old password is incorrect')]")));
-	    
-	    Assert.assertTrue(errorOldMsg.isDisplayed(), "No Validation message is displaying");
-	    logger.info("Validation message is displaying:"+errorOldMsg.getText());
-	    
-	/*	WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'Passwords must match')]")));
-		
-		Assert.assertTrue(errorMsg.isDisplayed(), "No Validation Message displaying");
-		logger.info("Validation message is displaying:"+errorMsg.getText());
-		
-		*/
-		
-	/*	resetPass.clearCpass();
-		
-		logger.info("TC-07 --> Verify User is able to add confirm password");
-		resetPass.addConfirmPassword(p.getProperty("resetConfirmPassword_tr"));
-		
-		logger.info("TC-08 --> Verify Password is getting reset by clicking reset button");
-		resetPass.resetPass();
-				
-		*/
+		try {
+			
+			logger.info("TC-01 --> Verify User is navigate to the profile page");
+		    resetPass.profileClicks(driver);
+			
+			logger.info("TC-02 --> Verify Reset Password screen is displaying by clicking Reset Password");
+			Thread.sleep(3000);
+	        resetPass.resetPassword(driver);
+			
+			//logger.info("Tc-03 --> Verify User is able to add old password");
+	    	//resetPass.addOldPassword(p.getProperty("password_tr"));
+	    	
+	    	logger.info("TC-04 --> Verify Validation message is displaying by entering incorrect old password");
+		    resetPass.addOldPassword(p.getProperty("invalidPassword_tr"));
+			
+			logger.info("TC-05 --> Verify User is able to add new password");
+			resetPass.addNewPassword(p.getProperty("resetNewPassword_tr"));
+			
+			logger.info("TC-06 --> Verify validation message is displaying by entering different confirm password");
+			resetPass.addConfirmPassword(p.getProperty("resetConfirmPassword_tr"));
+			resetPass.resetPass();
+			
+		    WebElement errorOldMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'Old password is incorrect')]")));
+		    
+		    Assert.assertTrue(errorOldMsg.isDisplayed(), "No Validation message is displaying");
+		    logger.info("Validation message is displaying:"+errorOldMsg.getText());
+		    
+		/*	WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'Passwords must match')]")));
+			
+			Assert.assertTrue(errorMsg.isDisplayed(), "No Validation Message displaying");
+			logger.info("Validation message is displaying:"+errorMsg.getText());
+			
+			*/
+			
+		/*	resetPass.clearCpass();
+			
+			logger.info("TC-07 --> Verify User is able to add confirm password");
+			resetPass.addConfirmPassword(p.getProperty("resetConfirmPassword_tr"));
+			
+			logger.info("TC-08 --> Verify Password is getting reset by clicking reset button");
+			resetPass.resetPass();
+					
+			*/
+		    
+		}catch(Exception e) {
+			
+			logger.error("Test case is failed");
+			Assert.fail("Failed due to:"+e.getMessage());
+		}
+	
 	}
 }

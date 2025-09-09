@@ -31,7 +31,9 @@
             <!--     <class name="tc_Tr.UserProfile_Tr"></class>-->
                <!--  <class name="tc_Tr.BlockUser_Tr"></class>-->
                     
-                     <class name="tc_Tr.MyBookings_Tr"></class>
+                     <!--    <class name="tc_Tr.MyBookings_Tr"></class>-->
+             
+                     <class name="tc_Tr.HomePage_Tr"></class>
  
     </classes>
     

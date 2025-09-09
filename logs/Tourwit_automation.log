@@ -1,5 +1,60 @@
-15:32:32.005 [main] INFO  tc_Tr.MyBookings_Tr - TC-08 --> Verify User is able to filter the bookings by Newest to Oldest / Oldest to Newest
-15:32:36.426 [main] INFO  tc_Tr.MyBookings_Tr - TC-09 --> Verify User is navigate to the home page by clicking on Home logo
-15:32:36.561 [main] INFO  tc_Tr.MyBookings_Tr - TC-10 --> Verify User is navigate to the Notification page by clicking on Notification icon
-15:32:40.855 [main] INFO  tc_Tr.MyBookings_Tr - TC-11 --> Verify User is able to see more notifications by clicking on show more
-15:33:01.487 [main] INFO  tc_Tr.MyBookings_Tr - TC-12 --> Verify Notification is getting cleared by clicking Clear All
+12:27:42.767 [main] INFO  tc_Tr.HomePage_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+12:27:43.084 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to select country
+12:30:04.008 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+12:30:04.354 [main] INFO  tc_Tr.HomePage_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:30:08.212 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to add email
+12:30:08.763 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify User is able to add password
+12:30:09.531 [main] INFO  tc_Tr.HomePage_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+12:30:10.388 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to select country
+12:30:15.042 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify selected country is displaying or not
+12:30:45.142 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+12:30:45.447 [main] INFO  tc_Tr.HomePage_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:30:48.701 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to add email
+12:30:48.969 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify User is able to add password
+12:30:49.138 [main] INFO  tc_Tr.HomePage_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+12:30:49.527 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to select country
+12:30:54.017 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify selected country is displaying or not
+12:31:13.420 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+12:31:13.713 [main] INFO  tc_Tr.HomePage_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:31:22.306 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to add email
+12:31:22.579 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify User is able to add password
+12:31:22.980 [main] INFO  tc_Tr.HomePage_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+12:31:23.288 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to select country
+12:33:18.431 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+12:33:18.826 [main] INFO  tc_Tr.HomePage_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:33:22.512 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to add email
+12:33:22.950 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify User is able to add password
+12:33:23.364 [main] INFO  tc_Tr.HomePage_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+12:33:23.615 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to select country
+12:34:59.966 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+12:35:00.309 [main] INFO  tc_Tr.HomePage_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:35:11.214 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to add email
+12:35:11.511 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify User is able to add password
+12:35:11.696 [main] INFO  tc_Tr.HomePage_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+12:35:11.928 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to select country
+12:37:37.084 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+12:37:37.571 [main] INFO  tc_Tr.HomePage_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:37:46.371 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to add email
+12:37:46.803 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify User is able to add password
+12:37:47.275 [main] INFO  tc_Tr.HomePage_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+12:37:47.594 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to select country
+12:40:14.539 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+12:40:14.994 [main] INFO  tc_Tr.HomePage_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:40:27.223 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to add email
+12:40:27.560 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify User is able to add password
+12:40:27.743 [main] INFO  tc_Tr.HomePage_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+12:40:28.010 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to select country

@@ -12,7 +12,7 @@ public class ForgotPassword_Tr extends BaseClassTr{
 	 	   Thread.sleep(3000);
 	     }
 	 
-	 @Test
+	 @Test()
 	 void forgotPassword() throws InterruptedException {
 		 
 		 ForgotPassword_TR forgot = new ForgotPassword_TR(driver);

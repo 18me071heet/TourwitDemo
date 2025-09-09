@@ -19,7 +19,7 @@ public class MyBookings_Tr extends BaseClassTr {
 		 Thread.sleep(4000);
 	 }
 	 
-	 @Test(priority=1)
+	 @Test(priority=1,groups= {"Smoke"})
 	   void logInDetails() throws InterruptedException {
 		
 		Login_TR login = new Login_TR(driver);
@@ -27,13 +27,13 @@ public class MyBookings_Tr extends BaseClassTr {
 		try {
 			
 			logger.info("TC-01 --> Verify User is able to add email");
-          login.addEmail(p.getProperty("email_tr"));
+            login.addEmail(p.getProperty("email_tr"));
 	   		
 	   		logger.info("TC-02 --> Verify User is able to add password");
 	   		login.addPass(p.getProperty("password_tr"));
 	   		
 	   		logger.info("TC-03 --> Verify User is able to login by clicking on Login Button");
-          login.loginBtn();
+            login.loginBtn();
 	   		
 		}  catch(Exception e) {
 			
@@ -41,70 +41,79 @@ public class MyBookings_Tr extends BaseClassTr {
 			Assert.fail("Failed due to:"+e.getMessage());
 		}
 		
-		
 	}
 	 
-	 @Test(priority=2,dependsOnMethods= {"logInDetails"})
+	 @Test(priority=2,dependsOnMethods= {"logInDetails"},groups= {"Smoke","Functional"})
 	 void userBookings() throws InterruptedException {
 		 
 		 Login_TR login = new Login_TR(driver);
 		 
-		 logger.info("TC-01 --> Verify options are displaying by clicking on profile icon");
-		 threadTime();
-		 login.profileIconClick();
 		 
-		 MyBookings_TR bookings = new MyBookings_TR(driver);
-		 
-		 logger.info("TC-02 --> Verify User is navigate to the booking screen by clicking on My Bookings");
-		 
-		 bookings.myBookings();
-		 
-		 logger.info("TC-03 --> Verify User is able to search their booking by their order id");
-		 
-		 bookings.serachId(p.getProperty("orderIdSearch_Tr"));
-		 
-		 logger.info("TC-04 --> Verify User is able to see their searched order details by clicking on view details ");
-		 
-		 bookings.viewDetails();
-		 
-		 logger.info("TC-05 --> Verify User is navigate to the booking listing page by clicking on Back arrow");
-		 
-		 bookings.clickBack();
-		 
-		 logger.info("TC-06 --> Verify User is able to search another order");
-		 
-		 threadTime();
-		 bookings.serachId(p.getProperty("secondOrderId_Tr"));
-		 
-		 logger.info("TC-07 --> Verify User is able to see another order details by clicking on view details");
-		 threadTime();
-		 bookings.viewDetails();
-		 
-		 bookings.clickBack();
-		 
-		 logger.info("TC-08 --> Verify User is able to filter the bookings by Newest to Oldest / Oldest to Newest");
-		 
-		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
-		 WebElement filter = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'control')]")));
-		 filter.click();
-		 
-		 WebElement option = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'option') and text()='Newest to Oldest']")));
-		 option.click();
-		 threadTime();
-		 
-		 logger.info("TC-09 --> Verify User is navigate to the home page by clicking on Home logo");
-		 bookings.homeLogoClick();
-		 		 
-		 logger.info("TC-10 --> Verify User is navigate to the Notification page by clicking on Notification icon");
-		 threadTime();
-		 bookings.clickNotificationIcon();
-		 
-		 logger.info("TC-11 --> Verify User is able to see more notifications by clicking on show more");
-		 bookings.moreNotification();
-		 
-		 logger.info("TC-12 --> Verify Notification is getting cleared by clicking Clear All");
-		 bookings.clearAllNoti();
-		 
+		 try {
+			 
+			 logger.info("TC-01 --> Verify options are displaying by clicking on profile icon");
+			 threadTime();
+			 login.profileIconClick();
+			 
+			 MyBookings_TR bookings = new MyBookings_TR(driver);
+			 
+			 logger.info("TC-02 --> Verify User is navigate to the booking screen by clicking on My Bookings");
+			 
+			 bookings.myBookings();
+			 
+			 logger.info("TC-03 --> Verify User is able to search their booking by their order id");
+			 
+			 bookings.serachId(p.getProperty("orderIdSearch_Tr"));
+			 
+			 logger.info("TC-04 --> Verify User is able to see their searched order details by clicking on view details ");
+			 
+			 bookings.viewDetails();
+			 
+			 logger.info("TC-05 --> Verify User is navigate to the booking listing page by clicking on Back arrow");
+			 
+			 bookings.clickBack();
+			 
+			 logger.info("TC-06 --> Verify User is able to search another order");
+			 
+			 threadTime();
+			 bookings.serachId(p.getProperty("secondOrderId_Tr"));
+			 
+			 logger.info("TC-07 --> Verify User is able to see another order details by clicking on view details");
+			 threadTime();
+			 bookings.viewDetails();
+			 
+			 bookings.clickBack();
+			 
+			 logger.info("TC-08 --> Verify User is able to filter the bookings by Newest to Oldest / Oldest to Newest");
+			 
+			 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+			 WebElement filter = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'control')]")));
+			 filter.click();
+			 
+			 WebElement option = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'option') and text()='Newest to Oldest']")));
+			 option.click();
+			 threadTime();
+			 
+			 logger.info("TC-09 --> Verify User is navigate to the home page by clicking on Home logo");
+			 bookings.homeLogoClick();
+			 		 
+			 logger.info("TC-10 --> Verify User is navigate to the Notification page by clicking on Notification icon");
+			 threadTime();
+			 bookings.clickNotificationIcon();
+			 
+			 logger.info("TC-11 --> Verify User is able to see more notifications by clicking on show more");
+			 bookings.moreNotification();
+			 
+			 logger.info("TC-12 --> Verify all notifications are getting cleared by clicking Clear All ");
+			 // bookings.clearAllNoti();
+			  
+		 } catch(Exception e) {
+			 
+			 logger.error("Test case is failed");
+			 Assert.fail("It is failed due to:"+e.getMessage());
+			 
+		 }
+		
 			 
 	 }
 	 

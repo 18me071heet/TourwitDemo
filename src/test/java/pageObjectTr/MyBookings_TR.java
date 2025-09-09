@@ -84,11 +84,11 @@ public class MyBookings_TR {
 			
 			WebElement showMore = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //button[normalize-space()='Load More']")));
 			
-			JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("arguments[0].scrollBy(0,200);", showMore);
-			Thread.sleep(2000);
+			 JavascriptExecutor js = (JavascriptExecutor) driver;
+			 js.executeScript("arguments[0].scrollIntoView({behavior:'smooth', block:'center'});", showMore);
 			
-			if(showMore.isDisplayed()) {
+			
+		  	if(showMore.isDisplayed()) {
 				showMore.click();	
 			} else {
 				
