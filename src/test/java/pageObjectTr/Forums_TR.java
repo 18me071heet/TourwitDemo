@@ -1,18 +1,26 @@
 package pageObjectTr;
 
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Forums_TR {
 
 	public WebDriver driver;
+	WebDriverWait wait;
 	
 	public Forums_TR(WebDriver driver) {
 		
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
+		 wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		
 	}
 	
@@ -40,13 +48,24 @@ public class Forums_TR {
 	@FindBy(xpath="//span[contains(@class,'filter')]/svg")
 	WebElement editForumIcon;
 	
+	@FindBy(xpath="//button[normalize-space()='All Posts']")
+	WebElement allPostForum;
 	
+	@FindBy(xpath=" //textarea[@placeholder='What are your thoughts?']")
+	WebElement txtComment;
 	
 	public void forumNavigation() {
 		
 		forumLink.click();
 	}
 	
+	public void allForum() {
+		
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		WebElement allPostForum = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='All Posts']")));	
+		allPostForum.click();
+		
+	}
 	public void createForumClick() {
 		
 		createForum.click();
@@ -94,5 +113,59 @@ public class Forums_TR {
 		forumDescription.clear();
 	}
 	
+	
+	public void txtComment(WebDriver driver,String comment) {
+		
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		
+		WebElement commentForum = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[@placeholder='What are your thoughts?']")));
+		
+		commentForum.sendKeys(comment);
+	}
+	
+	public void searchedNdClick(WebDriver driver,String forumTitle) {
+		
+		WebElement searchForum = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@placeholder='Search by keywords...']")));
+		
+		searchForum.sendKeys(forumTitle);
+		
+		WebElement searchedForum = wait.until( ExpectedConditions.elementToBeClickable(By.xpath("//td[contains(normalize-space(.),'" + forumTitle + "')]")));
+
+		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", searchedForum);
+		
+		searchedForum.click();
+			
+	}
+	
+	public void addEmoji(WebDriver driver) {
+		
+		WebElement emojiClick = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[name()='svg' and contains(@class,'lucide-smile')]")));
+		
+		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",emojiClick);
+		
+		emojiClick.click();
+		
+		WebElement searchEmoji = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@placeholder='Search']")));
+		
+		searchEmoji.sendKeys("Blush");
+		
+		WebElement blushEmoji = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//img[@alt='blush']")));
+		
+		blushEmoji.click();
+		
+		  WebElement sendButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='button']/*[name()='svg']")));
+	     	 ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", sendButton);
+	    	   sendButton.click();
+	       	 
+	}
+	
+	public void sendComment() {
+		
+		WebElement sendIcon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='button']/*[name()='svg']")));
+		
+		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",sendIcon);
+		
+		sendIcon.click();
+	}
 	
 }

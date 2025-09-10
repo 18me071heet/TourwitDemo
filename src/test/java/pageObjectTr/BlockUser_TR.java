@@ -39,6 +39,7 @@ public class BlockUser_TR {
 		
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		WebElement btnProfile = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='My Profile']")));
+		
 		btnProfile.click();
 	}
 	

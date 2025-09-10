@@ -1,18 +1,25 @@
 package pageObjectTr;
 
+import java.time.Duration;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Blogs_TR {
 
 	public WebDriver driver;
+	WebDriverWait wait;
 	
 	public Blogs_TR(WebDriver driver) {
 		
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
+		 wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		
 	}
 	
@@ -49,9 +56,13 @@ public class Blogs_TR {
 	@FindBy(xpath="//button[normalize-space()='Confirm']")
 	WebElement deleteConfirm;
  
-	public void blogNavigation() {
+	@FindBy(xpath=" //textarea[@placeholder='What are your thoughts?']")
+	WebElement txtCommentField;
+	
+	public void blogNavigation(WebDriver driver) {
 		
-		blogsLink.click();
+		    WebElement blogElement = wait.until(ExpectedConditions.elementToBeClickable(blogsLink));
+		    blogElement.click();
 	}
 	
 	public void createBlog() {
@@ -90,7 +101,7 @@ public class Blogs_TR {
 	}
 	
 	public void myBlogs() {
-		
+
 		myBlogLink.click();
 	}
 	
@@ -110,6 +121,65 @@ public class Blogs_TR {
 		deleteConfirm.click();
 	}
 	
+	public void txtComment(WebDriver driver,String comment) {
+		
+	WebElement txtCommentField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[@placeholder='What are your thoughts?']")));
+		
+	txtCommentField.sendKeys(comment);
+		
+	}
+	
+     public void searchandClickedBlog(WebDriver driver,String blogTitle) {
+		
+		
+		WebElement searchBlog = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Search by keywords...']")));
+		
+		searchBlog.sendKeys(blogTitle);
+		
+		WebElement searchedBlogClick = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(normalize-space(.),'" + blogTitle + "')]")));
+		
+		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", searchedBlogClick);
+		
+		searchedBlogClick.click();
+		
+	}
+     
+     public void emojiSelect(WebDriver driver) throws InterruptedException {
+    	 
+     	 
+    	  WebElement smileIcon = wait.until(ExpectedConditions.elementToBeClickable(
+    		        By.xpath("//*[name()='svg' and contains(@class,'lucide-smile')]")));
+    	  
+    	  ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", smileIcon);
+    	  smileIcon.click();
+    	  
+    	  WebElement blush = driver.findElement(By.xpath(" //input[@placeholder='Search']"));
+    	  blush.sendKeys("Blush");
+    	  
+    	  WebElement smileEmoji = wait.until(ExpectedConditions.elementToBeClickable(
+    		        By.xpath("//img[@alt='blush']")));
+    	  
+  		  ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", smileEmoji);
+    	  smileEmoji.click();
+	 
+    	  WebElement sendButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='button']/*[name()='svg']")));
+     	 ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", sendButton);
+    	   sendButton.click();
+       	 
+       	 Thread.sleep(3000);
+       	 
+     }
+     
+     public void sendComment() {
+    	 
+    
+   	  WebElement sendButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='button']/*[name()='svg']")));
+  	 ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", sendButton);
+ 	   sendButton.click();
+    	 
+     }
+	
+
 	
 }
 

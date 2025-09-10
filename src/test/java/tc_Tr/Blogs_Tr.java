@@ -1,7 +1,6 @@
 package tc_Tr;
 
 import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -17,7 +16,8 @@ import pageObjectTr.Login_TR;
 
 	void threadTime() throws InterruptedException {
     	   
-    	   Thread.sleep(3000);
+    	   Thread.sleep(5000);
+    	   
         }
     
     @Test(priority=1)
@@ -39,7 +39,7 @@ import pageObjectTr.Login_TR;
    	   		threadTime();
    	   		login.loginBtn();
    	   		
-   		}catch(Exception e) {
+   		} catch(Exception e) {
    			
    			logger.error("Failed:"+e);
    			Assert.fail("It is failed due to:"+e.getMessage());
@@ -47,19 +47,18 @@ import pageObjectTr.Login_TR;
    		
    	}
    	
-    @Test(priority=2,dependsOnMethods= {"logInDetails"})
+   //@Test(priority=2,dependsOnMethods= {"logInDetails"})
     void createBlog() throws InterruptedException {
-   	 
-    	
+   	 	
     	try {
     		
     		 Blogs_TR blogs = new Blogs_TR(driver);
     	   	 
+    	   	 threadTime();
     	   	 
     	   	 logger.info("TC-01 --> Verify User is navigate to the blogs page by clicking on Blogs");
     	   	 
-    	   	 Thread.sleep(4000);
-    	   	 blogs.blogNavigation();
+    	   	 blogs.blogNavigation(driver);
     	   	 
     	   	 logger.info("TC-02 --> Verify Create Blog screen is displaying by clicking on Create Blog");
     	   	 blogs.createBlog();
@@ -72,30 +71,31 @@ import pageObjectTr.Login_TR;
     	   	 WebElement categoryInput = wait.until(
     	   	    ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-category-input"))
     	    	);
-    	   	categoryInput.click();
-    	   	categoryInput.sendKeys("Adventure"); 
+    	   	 
+    	     categoryInput.click();
+    	   	 categoryInput.sendKeys("Adventure"); 
     	   	
     	    	WebElement option = wait.until(
     	   	    ExpectedConditions.visibilityOfElementLocated(
     	   	        By.xpath("//div[contains(@id,'react-select-lazy-category-option') and text()='Adventure']")));
     	   	
-    	   	option.click();
+    	   	 option.click();
     	         
     	   	 logger.info("TC-04 --> Verify User is able to fill the blog read time");
     	   	 blogs.blogReadTime("10");
     	   	 
     	   	 logger.info("TC-05 --> Verify User is able to fill the blog title");
-    	   	 blogs.blogTitleAdd("New Updated Automation Testing Blog");
+    	   	 blogs.blogTitleAdd(p.getProperty("blogTitle_Tr"));
     	   	 
     	   	 logger.info("TC-06 --> Verify User is able to fill the blog description");
-    	   	 blogs.blogDescription("Please go through our new updated automation testing blog");
+    	   	 blogs.blogDescription(p.getProperty("blogDescription_Tr"));
     	   	 
     	   	 
     	   	 Thread.sleep(15000);
     	   	 logger.info("TC-07 --> Verify Blog is getting created or not by clicking Publish button");
     	   	 blogs.publishBlog();
     	   	 
-    	   	WebElement toastMsg = wait.until(
+    	   	 WebElement toastMsg = wait.until(
     	   		    ExpectedConditions.visibilityOfElementLocated(
     	   		        By.xpath("//div[contains(text(),'Blog verification sent to the admin.')]")));
     	   	 
@@ -108,7 +108,7 @@ import pageObjectTr.Login_TR;
     	   	 
     	} catch(Exception e) {
     		
-    		 logger.error("Test failed due to exception: ", e);
+    	     logger.error("Test failed due to exception: ", e);
     		 throw e;
     	}
    	
@@ -125,7 +125,7 @@ import pageObjectTr.Login_TR;
       	 
       	 logger.info("TC-01 --> Verify User is navigate to the blogs page by clicking on Blogs");
       	 Thread.sleep(5000);
-      	 blogs.blogNavigation(); 
+      	 blogs.blogNavigation(driver); 
       	 
       	 Blogs_TR blogSearch = new Blogs_TR(driver);
       	 
@@ -167,7 +167,7 @@ import pageObjectTr.Login_TR;
     	 logger.info("TC-01 --> Verify User is navigate to the blogs page by clicking on Blogs");
        	 
        	 Thread.sleep(5000);
-       	 blogs.blogNavigation(); 
+       	 blogs.blogNavigation(driver); 
        	 
        	 Blogs_TR blogSearch = new Blogs_TR(driver);
        	 
@@ -209,7 +209,7 @@ import pageObjectTr.Login_TR;
     	 logger.info("TC-01 --> Verify User is navigate to the blogs page by clicking on Blogs");
        	 
        	 Thread.sleep(5000);
-       	 blogs.blogNavigation(); 
+       	 blogs.blogNavigation(driver); 
        	 
        	 Blogs_TR blogSearch = new Blogs_TR(driver);
       
@@ -236,5 +236,44 @@ import pageObjectTr.Login_TR;
      }
    	 
     }
+    
+   @Test(priority=3,dependsOnMethods= {"logInDetails"})
+     void searchedandCommentBlog() throws InterruptedException {
+    	 
+    	 Blogs_TR blogs = new Blogs_TR(driver);
+    	 
+         threadTime();
+    	 blogs.blogNavigation(driver);
+    	 
+    	// blogs.myBlogs();
+    	 
+    	 logger.info("TC-01 --> Verify User is able to search the specific blog");
+    	 
+    	 logger.info("TC-02 --> Verify User is blog is displaying according to searching ");
+    	 
+    	 logger.info("TC-03 --> Verify User is able to view searched blog");
+    	 
+    	 threadTime();
+    	 
+         blogs.searchandClickedBlog(driver, p.getProperty("blogTitle_Tr"));
+       
+         logger.info("TC-04 --> Verify User is able to add text in comment field");
+         
+         logger.info("TC-05 --> Verify Emoji picker is getting open by clicking on Emoji icon");
+         
+         logger.info("TC-06 --> Verify User is able to search specific emoji ");
+         
+         logger.info("TC-07  --. Verify selected emoji is displaying in the comment text field");
+         
+         blogs.txtComment(driver, "Good Work , Keep it Up");
+         
+         threadTime();
+         blogs.emojiSelect(driver);
+         
+         logger.info("TC-08 --> Verify Comment is getting send by clicking on send icon");
+         blogs.sendComment();
+       
+       	 
+     }
    	
 }

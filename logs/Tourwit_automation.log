@@ -1,60 +1,11 @@
-12:27:42.767 [main] INFO  tc_Tr.HomePage_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-12:27:43.084 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to select country
-12:30:04.008 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-12:30:04.354 [main] INFO  tc_Tr.HomePage_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-12:30:08.212 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to add email
-12:30:08.763 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify User is able to add password
-12:30:09.531 [main] INFO  tc_Tr.HomePage_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-12:30:10.388 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to select country
-12:30:15.042 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify selected country is displaying or not
-12:30:45.142 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-12:30:45.447 [main] INFO  tc_Tr.HomePage_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-12:30:48.701 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to add email
-12:30:48.969 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify User is able to add password
-12:30:49.138 [main] INFO  tc_Tr.HomePage_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-12:30:49.527 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to select country
-12:30:54.017 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify selected country is displaying or not
-12:31:13.420 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-12:31:13.713 [main] INFO  tc_Tr.HomePage_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-12:31:22.306 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to add email
-12:31:22.579 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify User is able to add password
-12:31:22.980 [main] INFO  tc_Tr.HomePage_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-12:31:23.288 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to select country
-12:33:18.431 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-12:33:18.826 [main] INFO  tc_Tr.HomePage_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-12:33:22.512 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to add email
-12:33:22.950 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify User is able to add password
-12:33:23.364 [main] INFO  tc_Tr.HomePage_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-12:33:23.615 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to select country
-12:34:59.966 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-12:35:00.309 [main] INFO  tc_Tr.HomePage_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-12:35:11.214 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to add email
-12:35:11.511 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify User is able to add password
-12:35:11.696 [main] INFO  tc_Tr.HomePage_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-12:35:11.928 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to select country
-12:37:37.084 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-12:37:37.571 [main] INFO  tc_Tr.HomePage_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-12:37:46.371 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to add email
-12:37:46.803 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify User is able to add password
-12:37:47.275 [main] INFO  tc_Tr.HomePage_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-12:37:47.594 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to select country
-12:40:14.539 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-12:40:14.994 [main] INFO  tc_Tr.HomePage_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-12:40:27.223 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to add email
-12:40:27.560 [main] INFO  tc_Tr.HomePage_Tr - TC-02 --> Verify User is able to add password
-12:40:27.743 [main] INFO  tc_Tr.HomePage_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-12:40:28.010 [main] INFO  tc_Tr.HomePage_Tr - TC-01 --> Verify User is able to select country
+16:28:19.710 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+16:28:26.929 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking on Forum 
+16:28:27.339 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the All post
+16:28:32.914 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to search the specific forum
+16:28:32.914 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is forum is displaying according to searching 
+16:28:32.914 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to view searched forum
+16:28:42.335 [main] INFO  tc_Tr.Forums_Tr - TC-05 --> Verify User is able to add text in comment field
+16:28:42.335 [main] INFO  tc_Tr.Forums_Tr - TC-06 --> Verify Emoji picker is getting open by clicking on Emoji icon
+16:28:42.335 [main] INFO  tc_Tr.Forums_Tr - TC-07 --> Verify User is able to search specific emoji 
+16:28:42.335 [main] INFO  tc_Tr.Forums_Tr - TC-08 --> Verify selected emoji is displaying in the comment text field
+16:28:53.006 [main] INFO  tc_Tr.Forums_Tr - TC-09 --> Verify Comment is getting send to the specific forum by clicking on send icon

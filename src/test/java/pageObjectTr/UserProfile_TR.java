@@ -22,6 +22,7 @@ public class UserProfile_TR {
 		
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 	}
 	
 	@FindBy(xpath="//a[normalize-space()='My Profile']")

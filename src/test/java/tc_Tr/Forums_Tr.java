@@ -1,11 +1,7 @@
 package tc_Tr;
 
-import static org.testng.Assert.fail;
-
 import java.time.Duration;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -52,7 +48,7 @@ public class Forums_Tr extends BaseClassTr {
 	   		
 	   	}
 	    
-          @Test(priority=2,dependsOnMethods= {"logInDetails"})
+     //     @Test(priority=2,dependsOnMethods= {"logInDetails"})
 	        void createForum() throws InterruptedException {
 	    	
 	    	Forums_TR createForums = new Forums_TR(driver);
@@ -182,11 +178,56 @@ public class Forums_Tr extends BaseClassTr {
    	    	logger.info("TC-07 --> Verify Forum details are getting updated by clicking publish button");
    	    	createForums.forumPublishBtn();
    	    	
-           }catch(Exception e) {
+           } catch(Exception e) {
         	   
         	   logger.error("Failed:"+e);
         	   Assert.fail("It is failed due to:"+e.getMessage());
            }
 	    	
 	    }
+	    
+	    @Test(priority=3,dependsOnMethods= {"logInDetails"})
+	    void searchedndClickForum() throws InterruptedException {
+	    	
+	    	   Forums_TR createForums = new Forums_TR(driver);
+		       
+	    	    Thread.sleep(4000);
+	    	    
+	    	    logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
+		    	createForums.forumNavigation();
+		    	
+	    	   logger.info("TC-01 --> Verify User is navigate to the All post");
+	    	   
+	    	   createForums.allForum();
+	    	   
+	    	   logger.info("TC-02 --> Verify User is able to search the specific forum");
+	      	 
+	      	   logger.info("TC-03 --> Verify User is forum is displaying according to searching ");
+	      	 
+	      	   logger.info("TC-04 --> Verify User is able to view searched forum");
+	      	 
+	      	   threadTime();
+	    	   
+	    	   createForums.searchedNdClick(driver, "New Mountain");
+	    	   
+	    	   logger.info("TC-05 --> Verify User is able to add text in comment field");
+	           
+	           logger.info("TC-06 --> Verify Emoji picker is getting open by clicking on Emoji icon");
+	           
+	           logger.info("TC-07 --> Verify User is able to search specific emoji ");
+	           
+	           logger.info("TC-08 --> Verify selected emoji is displaying in the comment text field");
+	           
+	           createForums.txtComment(driver, "Amazing work");
+	           threadTime();
+	           createForums.addEmoji(driver);
+	                      
+	           logger.info("TC-09 --> Verify Comment is getting send to the specific forum by clicking on send icon");
+	           
+	           createForums.sendComment();
+	           
+	    	
+	    }
+	    
+	    
 }

@@ -12,7 +12,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ResetPassword_TR {
 
 	public WebDriver driver;
-	
 	WebDriverWait wait;
 	
 	public ResetPassword_TR(WebDriver driver) {
