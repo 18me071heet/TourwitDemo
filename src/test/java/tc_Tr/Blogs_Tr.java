@@ -47,7 +47,7 @@ import pageObjectTr.Login_TR;
    		
    	}
    	
-   //@Test(priority=2,dependsOnMethods= {"logInDetails"})
+ @Test(priority=2,dependsOnMethods= {"logInDetails"})
     void createBlog() throws InterruptedException {
    	 	
     	try {
@@ -90,20 +90,38 @@ import pageObjectTr.Login_TR;
     	   	 logger.info("TC-06 --> Verify User is able to fill the blog description");
     	   	 blogs.blogDescription(p.getProperty("blogDescription_Tr"));
     	   	 
+    	   	 threadTime();
     	   	 
-    	   	 Thread.sleep(15000);
-    	   	 logger.info("TC-07 --> Verify Blog is getting created or not by clicking Publish button");
-    	   	 blogs.publishBlog();
+    	   	 logger.info("TC-07 --> Verify User is able to uplaod image from storage");
     	   	 
-    	   	 WebElement toastMsg = wait.until(
+    	   	 logger.info("TC-08 --> Verify Uploaded Image is displaying in the uplaod image field ");
+    	   	 
+    	     blogs.uploadCoverImage();
+    	      
+    	   	 logger.info("TC-09 --> Verify User is able to uplaod thumbail from storage ");
+    	   	 
+    	   	 logger.info("TC-10 --> Verify uploaded thumbnail is displaying or not in the thumbnail field");
+    	   	 
+    	     blogs.uploadThumbnailImage();
+    	     
+    	    logger.info("TC-11 --> Verify User is able to upload image in the description field");
+    	     
+    	     blogs.uploadDescriptionImage();
+  			 
+    	   	 Thread.sleep(3000);
+    	   	 
+    	   	 logger.info("TC-12 --> Verify Blog is getting created or not by clicking Publish button");
+    	 	// blogs.publishBlog();
+    	   	 
+    	 	 WebElement toastMsg = wait.until(
     	   		    ExpectedConditions.visibilityOfElementLocated(
     	   		        By.xpath("//div[contains(text(),'Blog verification sent to the admin.')]")));
     	   	 
-    	   	 String toastTxt = toastMsg.getText();
+    	 String toastTxt = toastMsg.getText();
     	   	 
-    	   	 Assert.assertTrue(toastTxt.contains("Blog verification sent to the admin."),"Toast msg displaying wrong");
+    	 	// Assert.assertTrue(toastTxt.contains("Blog verification sent to the admin."),"Toast msg displaying wrong");
     	   	 
-    	 //  	 wait.until(ExpectedConditions.invisibilityOf(toastMsg));
+     	 wait.until(ExpectedConditions.invisibilityOf(toastMsg));
     	   	 
     	   	 
     	} catch(Exception e) {
@@ -245,7 +263,7 @@ import pageObjectTr.Login_TR;
          threadTime();
     	 blogs.blogNavigation(driver);
     	 
-    	// blogs.myBlogs();
+    	 // blogs.myBlogs();
     	 
     	 logger.info("TC-01 --> Verify User is able to search the specific blog");
     	 

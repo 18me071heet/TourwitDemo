@@ -16,13 +16,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class UserProfile_TR {
 
 	public WebDriver driver;
+	WebDriverWait wait;
 
 	
 	public UserProfile_TR(WebDriver driver) {
 		
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+	
 	}
 	
 	@FindBy(xpath="//a[normalize-space()='My Profile']")
@@ -48,16 +50,12 @@ public class UserProfile_TR {
 	
 	public void myProfileClick() {
 		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		WebElement profileBtn = wait.until(ExpectedConditions.elementToBeClickable(btnProfile));
 		profileBtn.click();
 	}
 	
 	public void editFirstName() {
 		
-		
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-
 	    WebElement editBtn = wait.until(ExpectedConditions.presenceOfElementLocated(
 	        By.xpath("//h3[normalize-space()='First Name']/following::button[normalize-space()='Edit'][1]")
 	    ));
@@ -74,9 +72,7 @@ public class UserProfile_TR {
 	
 	public void editLastName() {
 		
-		  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-
-		    WebElement editBtn = wait.until(ExpectedConditions.presenceOfElementLocated(
+	    WebElement editBtn = wait.until(ExpectedConditions.presenceOfElementLocated(
 		        By.xpath("//h3[normalize-space()='Last Name']/following::button[normalize-space()='Edit'][1]")
 		    ));
 
@@ -88,8 +84,6 @@ public class UserProfile_TR {
 
 	public void editInsta() {
 		
-		  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-
 		    WebElement editBtn = wait.until(ExpectedConditions.presenceOfElementLocated(
 		        By.xpath("//h3[normalize-space()='Instagram ID']/following::button[normalize-space()='Edit'][1]")
 		    ));
@@ -104,9 +98,7 @@ public class UserProfile_TR {
 	}
 	
 	public void editCountry() {
-		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
-		
+			
 		WebElement editBtn = wait.until(ExpectedConditions.presenceOfElementLocated(
 				By.xpath("//h3[normalize-space()='Country']/following::button[normalize-space()='Edit'][1]")));
 		
@@ -142,9 +134,8 @@ public class UserProfile_TR {
 	public void btnSaveClick() {
 		
 		 btnSave.click();
-		 
-           WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		    wait.until(ExpectedConditions.visibilityOfElementLocated(
+		    
+		  wait.until(ExpectedConditions.visibilityOfElementLocated(
 		        By.xpath("//*[contains(text(),'Profile updated successfully')]")
 		    ));
 	}
@@ -152,9 +143,7 @@ public class UserProfile_TR {
 	
 	public void clickFollowersView() {
 		
-     WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
-		
-		WebElement editBtn = wait.until(ExpectedConditions.presenceOfElementLocated(
+   	WebElement editBtn = wait.until(ExpectedConditions.presenceOfElementLocated(
 				By.xpath("//h3[normalize-space()='Followers']/following::span[normalize-space()='View'][1]")));
 		
 		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView({block:'center'});", editBtn);
@@ -164,9 +153,7 @@ public class UserProfile_TR {
 	}
 	
 	public void clickFollowingView() {
-		
-	     WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
-			
+				
 			WebElement editBtn = wait.until(ExpectedConditions.presenceOfElementLocated(
 					By.xpath("//h3[normalize-space()='Following']/following::span[normalize-space()='View'][1]")));
 			
@@ -183,9 +170,7 @@ public class UserProfile_TR {
 	}
 	
 	public void unfollowUser() {
-		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
-		
+			
 		WebElement unFollowUser = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Unfollow']")));
 		unFollowUser.click();
 	}

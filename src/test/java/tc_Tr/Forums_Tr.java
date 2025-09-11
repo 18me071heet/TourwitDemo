@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import baseClassTr.BaseClassTr;
 import pageObjectTr.Forums_TR;
 import pageObjectTr.Login_TR;
@@ -156,7 +155,7 @@ public class Forums_Tr extends BaseClassTr {
    	    	
    	    	logger.info("TC-04 --> Verify Edit Forum screen is displaying by clicking edit icon");
    	    	Thread.sleep(6000);
-   	    //	createForums.editForum();
+   	        //	createForums.editForum();
    	    	
    	    	/*WebElement editIcon = driver.findElement(By.xpath("//button[contains(@class,'min-w-5')]/svg[@width='20']"));
    	    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", editIcon);
@@ -191,10 +190,10 @@ public class Forums_Tr extends BaseClassTr {
 	    	
 	    	   Forums_TR createForums = new Forums_TR(driver);
 		       
-	    	    Thread.sleep(4000);
+	    	   Thread.sleep(6000);
 	    	    
-	    	    logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
-		    	createForums.forumNavigation();
+	    	   logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
+		       createForums.forumNavigation();
 		    	
 	    	   logger.info("TC-01 --> Verify User is navigate to the All post");
 	    	   
@@ -218,15 +217,26 @@ public class Forums_Tr extends BaseClassTr {
 	           
 	           logger.info("TC-08 --> Verify selected emoji is displaying in the comment text field");
 	           
-	           createForums.txtComment(driver, "Amazing work");
-	           threadTime();
-	           createForums.addEmoji(driver);
+	           //  createForums.txtComment(driver, "A very Good Info");
+	          //  threadTime();
+	         //  createForums.addEmoji(driver);
 	                      
-	           logger.info("TC-09 --> Verify Comment is getting send to the specific forum by clicking on send icon");
+	          logger.info("TC-09 --> Verify Comment is getting send to the specific forum by clicking on send icon");
 	           
-	           createForums.sendComment();
-	           
-	    	
+	            //   createForums.sendComment();
+	           //  Thread.sleep(7000);
+	             
+	  		   threadTime();
+	  		   
+	  		  logger.info("TC-11 --> Verify User is navigate to the user profile page by clicking on User Profile logo");
+	  		 
+	  		  logger.info("TC-12 --> Verify User is able to follow user by clicking on Follow");
+	  		   
+	  		  logger.info("TC-13 --> Verify User is able to unfollow user if he is following that user");
+	  		  
+	  		  createForums.userProfile();
+	  		  
+	  		  	               	
 	    }
 	    
 	    

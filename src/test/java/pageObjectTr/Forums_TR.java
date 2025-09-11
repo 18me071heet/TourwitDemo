@@ -1,9 +1,11 @@
 package pageObjectTr;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -20,7 +22,7 @@ public class Forums_TR {
 		
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
-		 wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		
 	}
 	
@@ -61,7 +63,6 @@ public class Forums_TR {
 	
 	public void allForum() {
 		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		WebElement allPostForum = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='All Posts']")));	
 		allPostForum.click();
 		
@@ -116,8 +117,6 @@ public class Forums_TR {
 	
 	public void txtComment(WebDriver driver,String comment) {
 		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
-		
 		WebElement commentForum = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[@placeholder='What are your thoughts?']")));
 		
 		commentForum.sendKeys(comment);
@@ -154,18 +153,96 @@ public class Forums_TR {
 		blushEmoji.click();
 		
 		  WebElement sendButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='button']/*[name()='svg']")));
-	     	 ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", sendButton);
-	    	   sendButton.click();
-	       	 
+		  	 ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", sendButton);
+		 	   sendButton.click();
+		       	 
 	}
 	
 	public void sendComment() {
+   	 
+	    
+	   	  WebElement sendButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='button']/*[name()='svg']")));
+	  	 ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", sendButton);
+	 	   sendButton.click();
+	    	 
+	     }
 		
-		WebElement sendIcon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='button']/*[name()='svg']")));
+	public void editIcon() {
 		
-		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",sendIcon);
+		WebElement editIcon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//svg[@width='24' and @height='24' and @viewBox='0 0 24 24'])[1]")));
 		
-		sendIcon.click();
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", editIcon);
+
+		editIcon.click();
+		
+		List<WebElement> icons = driver.findElements(By.xpath("//svg[@width='24' and @height='24']"));
+		System.out.println("Found icons: " + icons.size());
+		
 	}
+	
+	public void userProfile() throws InterruptedException {
+		
+	
+		WebElement profile = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //div[contains(@class,'rounded-full') and span]")));
+		
+		profile.click();
+		
+		
+		try {
+			
+			WebElement followUser = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Follow']")));
+			
+			Thread.sleep(1000);
+			
+            if(followUser.isDisplayed()) {
+            	
+            	((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", followUser);
+    			
+    			followUser.click();
+            }
+			
+				
+		} catch(TimeoutException e) {
+			
+			WebElement unfollowUser = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Following']")));
+			
+			Thread.sleep(1000);
+			
+			if(unfollowUser.isDisplayed()) {
+				
+             ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", unfollowUser);
+    			
+             unfollowUser.click();
+             
+			}
+		}
+		
+		
+	}
+	
+	public void blockUser() throws InterruptedException {
+		
+	/*	WebElement editIcon = wait.until(ExpectedConditions.presenceOfElementLocated(
+			    By.xpath("//div[contains(@class,'cursor-pointer') and .//svg[@width='32' and @height='32']]")
+			));
+		
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", editIcon);
+		
+		editIcon.click();
+			*/
+		
+		Thread.sleep(1000);
+		
+		WebElement blockOption = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='Block User']")));
+		blockOption.click();
+		
+		WebElement confirmBlock = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //button[normalize-space()='Confirm']")));
+		confirmBlock.click();
+		
+	}
+	
+	
+	
+
 	
 }

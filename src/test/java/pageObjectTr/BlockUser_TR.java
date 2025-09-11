@@ -15,11 +15,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class BlockUser_TR {
 
 	public WebDriver driver;
+	WebDriverWait wait;
 	
 	public BlockUser_TR(WebDriver driver) {
 		
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
+		wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		
 	}
 		
@@ -37,25 +39,18 @@ public class BlockUser_TR {
 	
 	public void clickMyProfile() {
 		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		WebElement btnProfile = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='My Profile']")));
-		
 		btnProfile.click();
 	}
 	
 	
 	public void blockMembers() {
 		
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-
-	    
 	    WebElement clickBlockMembers = wait.until(
 	        ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Blocked Members']"))
 	    );
 
-	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", clickBlockMembers);
-
-	     
+	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", clickBlockMembers);	     
 	        wait.until(ExpectedConditions.elementToBeClickable(clickBlockMembers)).click();
 	}
 
@@ -75,7 +70,7 @@ public class BlockUser_TR {
 	*/
 	
 	public void unBlockUser(String userName) {
-	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	   
 
 	    WebElement userElement = wait.until(
 		    ExpectedConditions.presenceOfElementLocated(
@@ -97,7 +92,6 @@ public class BlockUser_TR {
 	
 	public void confirmUnBlock() {
 		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		WebElement btnConfirm = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Confirm']")));
 		btnConfirm.click();
 		

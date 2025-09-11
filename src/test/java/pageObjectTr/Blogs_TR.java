@@ -147,8 +147,7 @@ public class Blogs_TR {
      public void emojiSelect(WebDriver driver) throws InterruptedException {
     	 
      	 
-    	  WebElement smileIcon = wait.until(ExpectedConditions.elementToBeClickable(
-    		        By.xpath("//*[name()='svg' and contains(@class,'lucide-smile')]")));
+    	  WebElement smileIcon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[name()='svg' and contains(@class,'lucide-smile')]")));
     	  
     	  ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", smileIcon);
     	  smileIcon.click();
@@ -166,16 +165,39 @@ public class Blogs_TR {
      	 ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", sendButton);
     	   sendButton.click();
        	 
-       	 Thread.sleep(3000);
+       	  Thread.sleep(3000);
        	 
      }
      
      public void sendComment() {
     	 
-    
-   	  WebElement sendButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='button']/*[name()='svg']")));
-  	 ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", sendButton);
- 	   sendButton.click();
+     
+   	    WebElement sendButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='button']/*[name()='svg']")));
+  	    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", sendButton);
+ 	    sendButton.click();
+    	 
+     }
+     
+     public void uploadCoverImage() {
+    	 
+    	 WebElement uploadImage = driver.findElement(By.xpath("//label[normalize-space()='Add Image for your blog']//following::input[@type='file']"));
+  		 uploadImage.sendKeys("C:\\Users\\INX\\OneDrive\\Documents\\Saved Pictures\\testing.png");
+  	 
+     }
+     
+     public void uploadThumbnailImage() {
+    	
+    	 WebElement thumbnailImage = driver.findElement(By.xpath("//label[normalize-space()='Add thumbnail image for your blog']//following::input[@type='file']"));
+    	 thumbnailImage.sendKeys("C:\\Users\\INX\\OneDrive\\Documents\\Saved Pictures\\test.jpg");
+
+     }
+     
+     public void uploadDescriptionImage() {
+    	 
+
+    	 WebElement fileInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("input[type='file']")));
+
+    	 fileInput.sendKeys("C:\\Users\\INX\\OneDrive\\Documents\\Saved Pictures\\test.jpg");
     	 
      }
 	

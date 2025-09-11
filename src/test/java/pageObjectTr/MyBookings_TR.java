@@ -15,11 +15,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class MyBookings_TR {
 
 	public WebDriver driver;
+	WebDriverWait wait;
 	
 	public MyBookings_TR(WebDriver driver) {
 		
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
+		wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 	}
 	
 	@FindBy(xpath="//input[@id='search']")
@@ -30,7 +32,6 @@ public class MyBookings_TR {
 
 	public void myBookings() {
 		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		WebElement btnBookings= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='My Bookings']")));
 		btnBookings.click();
 		
@@ -43,7 +44,7 @@ public class MyBookings_TR {
 	
 	public void viewDetails() {
 		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		
 		WebElement viewDetailsLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//a[contains(text(),'View Details')]")));
 		viewDetailsLink.click();
 		
@@ -51,7 +52,6 @@ public class MyBookings_TR {
 	
 	public void clickBack() {
 		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		WebElement clickBackArrow = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[local-name()='svg' and @class='h-6 w-6']")));
 		clickBackArrow.click();
 	}
@@ -62,8 +62,7 @@ public class MyBookings_TR {
 	}
 	
 	public void clickNotificationIcon() {
-		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+
 		WebElement notiIcon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/notification']")));
 		notiIcon.click();
 			
@@ -71,14 +70,12 @@ public class MyBookings_TR {
 	
 	public void clearAllNoti() {
 		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		WebElement notiClear = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //button[normalize-space()='Clear All']")));
 		notiClear.click();
 	}
 	
 	public void moreNotification() throws InterruptedException {
 		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		
 		try {
 			
