@@ -7,14 +7,13 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="tc_Tr.Blogs_Tr">
+      <class name="tc_Tr.Forums_Tr">
         <methods>
-          <include name="logInDetails"/>
+          <include name="searchedAndDelete"/>
           <include name="signUp"/>
-          <include name="createBlog"/>
-          <include name="searchedandCommentBlog"/>
+          <include name="logInDetails"/>
         </methods>
-      </class> <!-- tc_Tr.Blogs_Tr -->
+      </class> <!-- tc_Tr.Forums_Tr -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

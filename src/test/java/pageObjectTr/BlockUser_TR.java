@@ -1,8 +1,6 @@
 package pageObjectTr;
 
 import java.time.Duration;
-import java.util.concurrent.TimeoutException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -47,8 +45,7 @@ public class BlockUser_TR {
 	public void blockMembers() {
 		
 	    WebElement clickBlockMembers = wait.until(
-	        ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Blocked Members']"))
-	    );
+	        ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Blocked Members']")));
 
 	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", clickBlockMembers);	     
 	        wait.until(ExpectedConditions.elementToBeClickable(clickBlockMembers)).click();
@@ -74,14 +71,11 @@ public class BlockUser_TR {
 
 	    WebElement userElement = wait.until(
 		    ExpectedConditions.presenceOfElementLocated(
-		        By.xpath("//h3[normalize-space()='" + userName + "']")
-		    )
-		);
+		        By.xpath("//h3[normalize-space()='" + userName + "']")));
 
       
 		WebElement unblockButton = userElement.findElement(
-			    By.xpath("following::button[normalize-space()='Unblock'][1]")
-			);
+			    By.xpath("following::button[normalize-space()='Unblock'][1]"));
 
     
 		wait.until(ExpectedConditions.elementToBeClickable(unblockButton)).click();

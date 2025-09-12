@@ -47,7 +47,7 @@ import pageObjectTr.Login_TR;
    		
    	}
    	
- @Test(priority=2,dependsOnMethods= {"logInDetails"})
+    @Test(priority=2,dependsOnMethods= {"logInDetails"})
     void createBlog() throws InterruptedException {
    	 	
     	try {
@@ -111,28 +111,28 @@ import pageObjectTr.Login_TR;
     	   	 Thread.sleep(3000);
     	   	 
     	   	 logger.info("TC-12 --> Verify Blog is getting created or not by clicking Publish button");
-    	 	// blogs.publishBlog();
+    	 	 blogs.publishBlog();
     	   	 
     	 	 WebElement toastMsg = wait.until(
     	   		    ExpectedConditions.visibilityOfElementLocated(
     	   		        By.xpath("//div[contains(text(),'Blog verification sent to the admin.')]")));
     	   	 
-    	 String toastTxt = toastMsg.getText();
+    	     String toastTxt = toastMsg.getText();
     	   	 
-    	 	// Assert.assertTrue(toastTxt.contains("Blog verification sent to the admin."),"Toast msg displaying wrong");
+    	     Assert.assertTrue(toastTxt.contains("Blog verification sent to the admin."),"Toast msg displaying wrong");
     	   	 
-     	 wait.until(ExpectedConditions.invisibilityOf(toastMsg));
+     	     wait.until(ExpectedConditions.invisibilityOf(toastMsg));
     	   	 
     	   	 
-    	} catch(Exception e) {
+    	   } catch(Exception e) {
     		
     	     logger.error("Test failed due to exception: ", e);
     		 throw e;
-    	}
+    	 }
    	
-    }
+       }
        
- //   @Test(priority=3,dependsOnMethods= {"logInDetails"})
+    //@Test(priority=3,dependsOnMethods= {"logInDetails"})
     void searchBlog() throws InterruptedException {
    	 
    	 Thread.sleep(4000);
@@ -147,7 +147,8 @@ import pageObjectTr.Login_TR;
       	 
       	 Blogs_TR blogSearch = new Blogs_TR(driver);
       	 
-      	 logger.info("TC-02 --> Verify User is able to search blogs");
+    	 logger.info("TC-02 --> Verify User is able to search blogs");
+      	 
       	 blogSearch.searchBlogs("Automation Blog");
       	 threadTime();
       	 
@@ -161,10 +162,18 @@ import pageObjectTr.Login_TR;
       	        .elementToBeClickable(By.xpath("//a[contains(text(),'Automation Blog')]")));
       
       	 blogLink.click();
+      	 
+      	
+      	 
+      /*	 logger.info("TC-02 --> Verify User is able to filter the blog by selecting blog cateogry");
+       	threadTime();
+      	 blogSearch.sortestFilter();
+      	 
+      	 */
        
    	 }
    	 
-   	 catch(Exception e)
+   	  catch(Exception e)
    	 
    	 {
    		 logger.error("Test failed due to exception: ", e);
@@ -213,8 +222,7 @@ import pageObjectTr.Login_TR;
     	 logger.error("Failed:"+e);
     	 Assert.fail("It is failed due to:"+e.getMessage());
      }
-   	 
-   	 
+   	  	 
     }
     
   //   @Test(priority=5,dependsOnMethods= {"logInDetails"})
@@ -232,6 +240,7 @@ import pageObjectTr.Login_TR;
        	 Blogs_TR blogSearch = new Blogs_TR(driver);
       
        	 logger.info("TC-02 --> Verify User is able to search blogs");
+       	
        	 blogSearch.searchBlogs("Automation Blog");
        	 threadTime();
        	 
@@ -255,7 +264,7 @@ import pageObjectTr.Login_TR;
    	 
     }
     
-   @Test(priority=3,dependsOnMethods= {"logInDetails"})
+  // @Test(priority=3,dependsOnMethods= {"logInDetails"})
      void searchedandCommentBlog() throws InterruptedException {
     	 
     	 Blogs_TR blogs = new Blogs_TR(driver);
@@ -290,8 +299,7 @@ import pageObjectTr.Login_TR;
          
          logger.info("TC-08 --> Verify Comment is getting send by clicking on send icon");
          blogs.sendComment();
-       
-       	 
+           	 
      }
    	
 }

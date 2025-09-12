@@ -1,0 +1,40 @@
+17:09:34.587 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+17:09:37.808 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+17:09:40.944 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:11:17.636 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:11:17.940 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:11:26.223 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+17:11:29.429 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+17:11:32.576 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:11:35.805 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking on Forum 
+17:11:41.030 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is navigate to my forum page
+17:11:41.485 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to search forum name
+17:11:44.490 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to delete searched forum by clicking on delete icon
+17:12:05.472 [main] ERROR tc_Tr.Forums_Tr - Failed:org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //h3[normalize-space()='The future of automation forum'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49681}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49681/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d890c3e78a6d96bb6aaad49ebb159994
+17:14:01.549 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:14:01.855 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:14:13.132 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+17:14:16.320 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+17:14:19.421 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:14:22.594 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking on Forum 
+17:14:27.796 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is navigate to my forum page
+17:14:27.982 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to search forum name
+17:14:30.983 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to delete searched forum by clicking on delete icon
+17:14:51.967 [main] ERROR tc_Tr.Forums_Tr - Failed:org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //h3[normalize-space()='The future of automation forum']/following::button[contains(@class,'min-w-5')] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52354}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52354/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 29d35d0936805118b272cc3470e01dc6
+17:16:21.777 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+

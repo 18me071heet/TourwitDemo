@@ -19,7 +19,7 @@ public class Blogs_TR {
 		
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
-		 wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		
 	}
 	
@@ -130,8 +130,7 @@ public class Blogs_TR {
 	}
 	
      public void searchandClickedBlog(WebDriver driver,String blogTitle) {
-		
-		
+			
 		WebElement searchBlog = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Search by keywords...']")));
 		
 		searchBlog.sendKeys(blogTitle);
@@ -145,8 +144,7 @@ public class Blogs_TR {
 	}
      
      public void emojiSelect(WebDriver driver) throws InterruptedException {
-    	 
-     	 
+    	 	 
     	  WebElement smileIcon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[name()='svg' and contains(@class,'lucide-smile')]")));
     	  
     	  ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", smileIcon);
@@ -165,7 +163,7 @@ public class Blogs_TR {
      	 ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", sendButton);
     	   sendButton.click();
        	 
-       	  Thread.sleep(3000);
+       	  Thread.sleep(2000);
        	 
      }
      
@@ -196,9 +194,37 @@ public class Blogs_TR {
     	 
 
     	 WebElement fileInput = wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("input[type='file']")));
-
     	 fileInput.sendKeys("C:\\Users\\INX\\OneDrive\\Documents\\Saved Pictures\\test.jpg");
     	 
+     }
+     
+     public void categoriesFilter() throws InterruptedException {
+    	 
+    	   
+ 	    WebElement categories = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='Categories:']/following::div[contains(@class,'placeholder')][1]")));
+ 	    categories.click();
+ 	    
+ 	   WebElement adventureOption = wait.until(ExpectedConditions.presenceOfElementLocated(
+ 			    By.xpath("//li[normalize-space()='Adventure']"))
+ 			);
+
+ 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", adventureOption);
+		
+ 			wait.until(ExpectedConditions.elementToBeClickable(adventureOption)).click();
+ 	    
+ 	    Thread.sleep(1000);
+ 	    
+ 		      
+     }
+     
+     public void sortestFilter() {
+    	 
+    	 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		 WebElement filter = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='Sort by:']/following::div[contains(@class,'placeholder')][1]")));
+		 filter.click();
+		 
+		 WebElement option = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'option') and text()='Newest to Oldest']")));
+		 option.click();
      }
 	
 

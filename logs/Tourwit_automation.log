@@ -1,73 +1,25 @@
-17:57:35.790 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-17:57:36.191 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-17:57:39.967 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
-17:57:45.361 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
-17:57:50.483 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
-17:58:00.644 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the blogs page by clicking on Blogs
-17:58:00.948 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify Create Blog screen is displaying by clicking on Create Blog
-17:58:06.200 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to select the blog category
-17:58:09.330 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify User is able to fill the blog read time
-17:58:09.435 [main] INFO  tc_Tr.Blogs_Tr - TC-05 --> Verify User is able to fill the blog title
-17:58:09.738 [main] INFO  tc_Tr.Blogs_Tr - TC-06 --> Verify User is able to fill the blog description
-17:58:15.942 [main] INFO  tc_Tr.Blogs_Tr - TC-07 --> Verify User is able to uplaod image from storage
-17:58:15.942 [main] INFO  tc_Tr.Blogs_Tr - TC-08 --> Verify Uploaded Image is displaying in the uplaod image field 
-17:58:16.025 [main] INFO  tc_Tr.Blogs_Tr - TC-09 --> Verify User is able to uplaod thumbail from storage 
-17:58:16.029 [main] INFO  tc_Tr.Blogs_Tr - TC-10 --> Verify uploaded thumbnail is displaying or not in the thumbnail field
-17:58:16.073 [main] INFO  tc_Tr.Blogs_Tr - TC-11 --> Verify User is able to upload image in the description field
-17:58:19.137 [main] INFO  tc_Tr.Blogs_Tr - TC-12 --> Verify Blog is getting created or not by clicking Publish button
-17:58:24.087 [main] ERROR tc_Tr.Blogs_Tr - Test failed due to exception: 
-org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
-from disconnected: unable to send message to renderer
-  (Session info: chrome=139.0.7258.155)
+17:16:22.064 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:16:35.765 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+17:16:38.947 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+17:16:42.077 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:16:45.242 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking on Forum 
+17:16:50.481 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is navigate to my forum page
+17:16:55.351 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to search forum name
+17:16:58.362 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to delete searched forum by clicking on delete icon
+17:17:24.745 [main] ERROR tc_Tr.Forums_Tr - Failed:org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[normalize-space()='Confirm Removal'] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '4.32.0', revision: 'd17c8aa950'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [90d08a40b36da341c9be3f9251ea6306, findElement {using=xpath, value=//div[contains(text(),'Blog verification sent to the admin.')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49221}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49221/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 90d08a40b36da341c9be3f9251ea6306
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167) ~[selenium-remote-driver-4.32.0.jar:?]
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138) ~[selenium-remote-driver-4.32.0.jar:?]
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50) ~[selenium-remote-driver-4.32.0.jar:?]
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215) ~[selenium-remote-driver-4.32.0.jar:?]
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216) ~[selenium-remote-driver-4.32.0.jar:?]
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174) ~[selenium-remote-driver-4.32.0.jar:?]
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545) ~[selenium-remote-driver-4.32.0.jar:?]
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165) ~[selenium-remote-driver-4.32.0.jar:?]
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59) ~[selenium-remote-driver-4.32.0.jar:?]
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368) ~[selenium-remote-driver-4.32.0.jar:?]
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362) ~[selenium-remote-driver-4.32.0.jar:?]
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194) ~[selenium-support-4.32.0.jar:?]
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190) ~[selenium-support-4.32.0.jar:?]
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203) ~[selenium-support-4.32.0.jar:?]
-	at tc_Tr.Blogs_Tr.createBlog(Blogs_Tr.java:116) ~[test-classes/:?]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139) ~[testng-7.9.0.jar:7.9.0]
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664) ~[testng-7.9.0.jar:7.9.0]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228) ~[testng-7.9.0.jar:7.9.0]
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63) ~[testng-7.9.0.jar:7.9.0]
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961) ~[testng-7.9.0.jar:7.9.0]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201) ~[testng-7.9.0.jar:7.9.0]
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148) ~[testng-7.9.0.jar:7.9.0]
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128) ~[testng-7.9.0.jar:7.9.0]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) [?:?]
-	at org.testng.TestRunner.privateRun(TestRunner.java:819) [testng-7.9.0.jar:7.9.0]
-	at org.testng.TestRunner.run(TestRunner.java:619) [testng-7.9.0.jar:7.9.0]
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443) [testng-7.9.0.jar:7.9.0]
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437) [testng-7.9.0.jar:7.9.0]
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397) [testng-7.9.0.jar:7.9.0]
-	at org.testng.SuiteRunner.run(SuiteRunner.java:336) [testng-7.9.0.jar:7.9.0]
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52) [testng-7.9.0.jar:7.9.0]
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95) [testng-7.9.0.jar:7.9.0]
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301) [testng-7.9.0.jar:7.9.0]
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1228) [testng-7.9.0.jar:7.9.0]
-	at org.testng.TestNG.runSuites(TestNG.java:1134) [testng-7.9.0.jar:7.9.0]
-	at org.testng.TestNG.run(TestNG.java:1101) [testng-7.9.0.jar:7.9.0]
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115) [testng-remote.jar:?]
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293) [testng-remote.jar:?]
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91) [testng-remote.jar:?]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64366}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64366/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7fddbb77b8171b29d74434ba9b250194
+17:18:16.886 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:18:17.202 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:18:24.807 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+17:18:27.974 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+17:18:31.082 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:18:34.219 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking on Forum 
+17:18:39.448 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is navigate to my forum page
+17:18:39.619 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to search forum name
+17:18:42.630 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to delete searched forum by clicking on delete icon

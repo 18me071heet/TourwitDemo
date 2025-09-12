@@ -79,7 +79,7 @@ public class BottomNavigation_Tr extends BaseClassTr{
 			bottomNavigation.faqClick();
 			smoothScrollToBottom(driver);
 			
-		}catch(Exception e) {
+		} catch(Exception e) {
 			
 			logger.error("Failed:"+e);
 			Assert.fail("Failed due to:"+e.getMessage());

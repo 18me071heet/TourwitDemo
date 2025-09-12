@@ -11,7 +11,7 @@ import baseClassTr.BaseClassTr;
 import pageObjectTr.Forums_TR;
 import pageObjectTr.Login_TR;
 
-public class Forums_Tr extends BaseClassTr {
+     public class Forums_Tr extends BaseClassTr {
 
 	 void threadTime() throws InterruptedException {
   	   
@@ -42,19 +42,20 @@ public class Forums_Tr extends BaseClassTr {
 	   			
 	   			logger.error("Failed:"+e);
 	   			Assert.fail("Failed due to:"+e.getMessage());
-	   		}
-	   		
+	   		}   		
 	   		
 	   	}
 	    
-     //     @Test(priority=2,dependsOnMethods= {"logInDetails"})
+     //  @Test(priority=2,dependsOnMethods= {"logInDetails"})
 	        void createForum() throws InterruptedException {
 	    	
 	    	Forums_TR createForums = new Forums_TR(driver);
 	    	
 	    	try {
 	    		
+	    		
 	    		logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
+	    		Thread.sleep(5000);
 		    	createForums.forumNavigation();
 		    	
 		    	logger.info("TC-02 --> Verify Create Forum screen is displaying or not by clicking Create Forum");
@@ -129,50 +130,45 @@ public class Forums_Tr extends BaseClassTr {
 	    		
 	    		logger.error("Failed:"+e);
 	    		Assert.fail("Failed due to:"+e.getMessage());
-	    	}
-	    	
+	    	}	    	
 	    	
 	    }
 	    
-	  //  @Test(priority=2,dependsOnMethods= {"logInDetails"})
+	 //  @Test(priority=2,dependsOnMethods= {"logInDetails"})
 	    void editForum() throws InterruptedException {
 	    	
            Forums_TR createForums = new Forums_TR(driver);
 	       	
            try {
         	   
-        	   logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
+        	logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
    	    	Thread.sleep(5000);
-   	    	createForums.forumNavigation();
+   	    	//createForums.forumNavigation();
    	    	
    	    	logger.info("TC-02 --> Verify User is navigate to my forum page");
-   	    	threadTime();
    	    	createForums.myForumNavigation();
    	    	
    	    	logger.info("TC-03 --> Verify User is able to search forum name");
    	    	threadTime();
-   	    	createForums.searchForum("Automation Forum");
+   	    	//createForums.searchForum("Automation Forum");
+   	    	
    	    	
    	    	logger.info("TC-04 --> Verify Edit Forum screen is displaying by clicking edit icon");
-   	    	Thread.sleep(6000);
-   	        //	createForums.editForum();
    	    	
-   	    	/*WebElement editIcon = driver.findElement(By.xpath("//button[contains(@class,'min-w-5')]/svg[@width='20']"));
-   	    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", editIcon);
-
-   	    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-   	    	wait.until(ExpectedConditions.elementToBeClickable(editIcon)).click(); */
+   	    	createForums.searchAndEdit(driver, "Sangam Hills");
+   	    	threadTime();
+   	        
 
    	    	logger.info("TC-05 --> Verify User is able to Edit forum Title");
-   	    	createForums.updateForumName();
    	    	threadTime();
    	    	
-   	    	createForums.createTitle("Update Automation Forum");
-   	    
+   	    	createForums.updateTitle();
    	    	
+   	    	createForums.createTitle(p.getProperty("forumTitle_Tr"));
+   	    	    	
    	    	logger.info("TC-06 --> Verify User is able to Edit forum description");
-   	    	createForums.updateForumDescription();
-   	    	createForums.forumDescriptionAdd("This is Update Automation Forum");
+   	    	
+   	    	createForums.forumDescriptionAdd(p.getProperty("forumDescription_Tr"));
    	    	
    	    	logger.info("TC-07 --> Verify Forum details are getting updated by clicking publish button");
    	    	createForums.forumPublishBtn();
@@ -185,7 +181,7 @@ public class Forums_Tr extends BaseClassTr {
 	    	
 	    }
 	    
-	    @Test(priority=3,dependsOnMethods= {"logInDetails"})
+	  //  @Test(priority=3,dependsOnMethods= {"logInDetails"})
 	    void searchedndClickForum() throws InterruptedException {
 	    	
 	    	   Forums_TR createForums = new Forums_TR(driver);
@@ -235,9 +231,36 @@ public class Forums_Tr extends BaseClassTr {
 	  		  logger.info("TC-13 --> Verify User is able to unfollow user if he is following that user");
 	  		  
 	  		  createForums.userProfile();
-	  		  
-	  		  	               	
+	  		  	  		  	               	
 	    }
 	    
-	    
+	     @Test(priority=3,dependsOnMethods= {"logInDetails"})
+	    void searchedAndDelete() throws InterruptedException {
+	    	
+	    	Forums_TR createForums = new Forums_TR(driver);
+	    	try {
+	          	   
+	    	        	logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
+	    	   	    	Thread.sleep(5000);
+	    	   	    	createForums.forumNavigation();
+	    	   	    	
+	    	   	    	logger.info("TC-02 --> Verify User is navigate to my forum page");
+	    	   	    	createForums.myForumNavigation();
+	    	   	    	
+	    	   	    	logger.info("TC-03 --> Verify User is able to search forum name");
+	    	   	    	threadTime();
+	    	   	    
+	    	   	    	logger.info("TC-04 --> Verify User is able to delete searched forum by clicking on delete icon");
+	    	   	    	
+	    	   	    	createForums.searchAndDelete(driver, "The Future of Automation Forum");
+	    	   	    	
+	    	   	        
+	    	}catch(Exception e) {
+	    		
+	    		 logger.error("Failed:"+e);
+	        	   Assert.fail("It is failed due to:"+e.getMessage());
+	    	}
+	    	
+	    }
+	        
 }

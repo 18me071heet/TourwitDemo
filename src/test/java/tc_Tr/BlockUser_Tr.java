@@ -2,7 +2,6 @@ package tc_Tr;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import baseClassTr.BaseClassTr;
 import pageObjectTr.BlockUser_TR;
 import pageObjectTr.Login_TR;

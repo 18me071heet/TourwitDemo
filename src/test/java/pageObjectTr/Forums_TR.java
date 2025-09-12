@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -47,9 +48,6 @@ public class Forums_TR {
 	@FindBy(xpath="//input[@placeholder='Search by keywords...']")
 	WebElement searchBox;
 	
-	@FindBy(xpath="//span[contains(@class,'filter')]/svg")
-	WebElement editForumIcon;
-	
 	@FindBy(xpath="//button[normalize-space()='All Posts']")
 	WebElement allPostForum;
 	
@@ -74,17 +72,26 @@ public class Forums_TR {
 	
 	public void createTitle(String title) {
 		
-		forumTitle.sendKeys(title);
+	forumTitle.sendKeys(title);
+		
+	}
+	
+	public void updateTitle() {
+		
+		forumTitle.sendKeys(Keys.CONTROL+"a");
+		forumTitle.sendKeys(Keys.DELETE);
 		
 	}
 	
 	public void forumDescriptionAdd(String description) {
 		
+		forumDescription.clear();
 		forumDescription.sendKeys(description);
 	}
 	
 	public void forumPublishBtn() {
 		
+		WebElement forumPublish = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Publish']")));
 		forumPublish.click();
 	}
 	
@@ -98,23 +105,8 @@ public class Forums_TR {
 		searchBox.sendKeys(name);
 	}
 	
-	public void editForum() {
-		
-		editForumIcon.click();
-	}
 	
-	public void updateForumName() {
-		
-		forumTitle.clear();
-		
-	}
-	
-	public void updateForumDescription() {
-		
-		forumDescription.clear();
-	}
-	
-	
+
 	public void txtComment(WebDriver driver,String comment) {
 		
 		WebElement commentForum = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[@placeholder='What are your thoughts?']")));
@@ -178,6 +170,43 @@ public class Forums_TR {
 		List<WebElement> icons = driver.findElements(By.xpath("//svg[@width='24' and @height='24']"));
 		System.out.println("Found icons: " + icons.size());
 		
+	}
+	
+	public void searchAndEdit(WebDriver driver,String forumTitle) {
+		
+       WebElement searchForum = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@placeholder='Search by keywords...']")));
+		
+		searchForum.sendKeys(forumTitle);
+		searchForum.sendKeys(Keys.ENTER);
+		
+		WebElement searchedRecord = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h3[normalize-space()='" + forumTitle + "']")));
+		
+		   WebElement editButton = wait.until(ExpectedConditions.elementToBeClickable(
+			        By.xpath("//h3[normalize-space()='" + forumTitle + "']/following::button[contains(@class,'min-w-5')][1]")
+			    ));
+		   
+		 	    editButton.click();
+	}
+	
+	
+	public void searchAndDelete(WebDriver driver,String forumTitle) {
+		
+		 WebElement searchForum = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@placeholder='Search by keywords...']")));
+			
+			searchForum.sendKeys(forumTitle);
+			searchForum.sendKeys(Keys.ENTER);
+			
+	
+			WebElement deleteButton = wait.until(ExpectedConditions.elementToBeClickable(
+				    By.xpath("//h3[normalize-space()='" + forumTitle + "']/following::button[contains(@class,'min-w-5')][2]")
+				));
+			
+			 	    deleteButton.click();
+			 	    
+			 	    WebElement confirmDelete = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Confirm Removal']")));
+			 	    
+			 	    confirmDelete.click();
+			
 	}
 	
 	public void userProfile() throws InterruptedException {
