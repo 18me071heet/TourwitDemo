@@ -178,16 +178,13 @@ public class Forums_TR {
 		
 		searchForum.sendKeys(forumTitle);
 		searchForum.sendKeys(Keys.ENTER);
-		
-		WebElement searchedRecord = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h3[normalize-space()='" + forumTitle + "']")));
-		
+				
 		   WebElement editButton = wait.until(ExpectedConditions.elementToBeClickable(
 			        By.xpath("//h3[normalize-space()='" + forumTitle + "']/following::button[contains(@class,'min-w-5')][1]")
 			    ));
 		   
 		 	    editButton.click();
 	}
-	
 	
 	public void searchAndDelete(WebDriver driver,String forumTitle) {
 		

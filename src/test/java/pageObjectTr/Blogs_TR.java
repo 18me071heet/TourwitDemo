@@ -3,6 +3,7 @@ package pageObjectTr;
 import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -80,14 +81,25 @@ public class Blogs_TR {
 		txtTitle.sendKeys(title);
 	}
 	
-	public void clearTitle() {
+	public void updateBlogTitle(String blogTitle) {
 		
-		txtTitle.clear();
+		txtTitle.sendKeys(Keys.CONTROL+"a");
+		txtTitle.sendKeys(Keys.DELETE);
+		txtTitle.sendKeys(blogTitle);
+		
 	}
 	
 	public void blogDescription(String description) {
 		
 		txtDescription.sendKeys(description);
+	}
+	
+	public void updateBlogDescription(String blogDescription) {
+		
+		txtDescription.sendKeys(Keys.CONTROL+"a");
+		txtDescription.sendKeys(Keys.DELETE);
+		txtDescription.sendKeys(blogDescription);
+		
 	}
 	
 	public void publishBlog() {
@@ -112,8 +124,7 @@ public class Blogs_TR {
 	
 	public void deleteBlog() {
 		
-		deleteBlogIcon.click();
-		
+		deleteBlogIcon.click();	
 	}
 	
 	public void deleteConfirmBlog() {
@@ -205,15 +216,13 @@ public class Blogs_TR {
  	    categories.click();
  	    
  	   WebElement adventureOption = wait.until(ExpectedConditions.presenceOfElementLocated(
- 			    By.xpath("//li[normalize-space()='Adventure']"))
- 			);
+ 			    By.xpath("//li[normalize-space()='Adventure']")));
 
- 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", adventureOption);
+ 	   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", adventureOption);
 		
  			wait.until(ExpectedConditions.elementToBeClickable(adventureOption)).click();
  	    
  	    Thread.sleep(1000);
- 	    
  		      
      }
      
@@ -225,6 +234,27 @@ public class Blogs_TR {
 		 
 		 WebElement option = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'option') and text()='Newest to Oldest']")));
 		 option.click();
+     }
+     
+     public void searchNdEditBlog(WebDriver driver,String blogTitle) throws InterruptedException {
+    	 
+    	  WebElement searchBox = wait.until(ExpectedConditions.elementToBeClickable(
+    		        By.xpath("//input[@placeholder='Search by keywords...']")));
+    		    searchBox.clear();
+    		    searchBox.sendKeys(blogTitle, Keys.ENTER);
+    		    
+            wait.until(ExpectedConditions.presenceOfElementLocated(
+    		        By.xpath("//a[normalize-space()='" + blogTitle + "']")));
+            
+            WebElement editBlogIcon = wait.until(
+            	    ExpectedConditions.elementToBeClickable(
+            	        By.xpath("//a[normalize-space()='Taam Jhaam']/ancestor::div[2]//span[contains(@class,'bg-primary')]")
+            	    ));
+            
+            	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", editBlogIcon);
+            	editBlogIcon.click();
+
+    	 
      }
 	
 

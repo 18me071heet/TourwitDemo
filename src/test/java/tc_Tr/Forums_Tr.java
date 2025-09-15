@@ -46,7 +46,7 @@ import pageObjectTr.Login_TR;
 	   		
 	   	}
 	    
-     //  @Test(priority=2,dependsOnMethods= {"logInDetails"})
+       @Test(priority=2,dependsOnMethods= {"logInDetails"})
 	        void createForum() throws InterruptedException {
 	    	
 	    	Forums_TR createForums = new Forums_TR(driver);
@@ -99,43 +99,8 @@ import pageObjectTr.Login_TR;
 	    		    	
 	    }
 	    
-	       //@Test(priority=2,dependsOnMethods= {"logInDetails"})
-	        void searchForum() throws InterruptedException {
-	    	
-	    	Forums_TR createForums = new Forums_TR(driver);
-	    	
-		    	try {
-	    		
-	    		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-	    		
-	    		logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
-		    	Thread.sleep(5000);
-		    	createForums.forumNavigation();
-		    	
-		    	logger.info("TC-02 --> Verify User is navigate to my forum page");
-		    	threadTime();
-		    	createForums.myForumNavigation();
-		    	
-		    	logger.info("TC-03 --> Verify User is able to search forum name");
-		    	threadTime();
-		    	createForums.searchForum("Automation Forum");
-		    	
-		            WebElement forumLink = wait.until(ExpectedConditions
-		   	        .elementToBeClickable(By.xpath("//a[contains(text(),'Automation Forum')]")));
-		            forumLink.click();
-		    	
-	    	}
-	    	
-	    	catch(Exception e) {
-	    		
-	    		logger.error("Failed:"+e);
-	    		Assert.fail("Failed due to:"+e.getMessage());
-	    	}	    	
-	    	
-	    }
-	    
 	 //  @Test(priority=2,dependsOnMethods= {"logInDetails"})
-	    void editForum() throws InterruptedException {
+	    void searchNdEdit() throws InterruptedException {
 	    	
            Forums_TR createForums = new Forums_TR(driver);
 	       	
@@ -181,8 +146,44 @@ import pageObjectTr.Login_TR;
 	    	
 	    }
 	    
+	    
+	    //@Test(priority=2,dependsOnMethods= {"logInDetails"})
+        void searchForum() throws InterruptedException {
+    	
+    	Forums_TR createForums = new Forums_TR(driver);
+    	
+	    	try {
+    		
+    		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    		
+    		logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
+	    	Thread.sleep(5000);
+	    	createForums.forumNavigation();
+	    	
+	    	logger.info("TC-02 --> Verify User is navigate to my forum page");
+	    	threadTime();
+	    	createForums.myForumNavigation();
+	    	
+	    	logger.info("TC-03 --> Verify User is able to search forum name");
+	    	threadTime();
+	    	createForums.searchForum("Automation Forum");
+	    	
+	            WebElement forumLink = wait.until(ExpectedConditions
+	   	        .elementToBeClickable(By.xpath("//a[contains(text(),'Automation Forum')]")));
+	            forumLink.click();
+	    	
+    	}
+    	
+    	catch(Exception e) {
+    		
+    		logger.error("Failed:"+e);
+    		Assert.fail("Failed due to:"+e.getMessage());
+    	}	    	
+    	
+    }
+	    
 	  //  @Test(priority=3,dependsOnMethods= {"logInDetails"})
-	    void searchedndClickForum() throws InterruptedException {
+	    void searchNdComment() throws InterruptedException {
 	    	
 	    	   Forums_TR createForums = new Forums_TR(driver);
 		       
@@ -234,11 +235,12 @@ import pageObjectTr.Login_TR;
 	  		  	  		  	               	
 	    }
 	    
-	     @Test(priority=3,dependsOnMethods= {"logInDetails"})
+	     @Test(priority=4,dependsOnMethods= {"logInDetails"})
 	    void searchedAndDelete() throws InterruptedException {
 	    	
 	    	Forums_TR createForums = new Forums_TR(driver);
-	    	try {
+	    	
+	        	try {
 	          	   
 	    	        	logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
 	    	   	    	Thread.sleep(5000);
@@ -254,13 +256,22 @@ import pageObjectTr.Login_TR;
 	    	   	    	
 	    	   	    	createForums.searchAndDelete(driver, "The Future of Automation Forum");
 	    	   	    	
-	    	   	        
-	    	}catch(Exception e) {
+	    	   	    	//Removal request submitted for admin approval.
+	    	   	    
+	    	   	    	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+	    	   	    	
+	    	   	 	WebElement toastMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Removal request submitted for admin approval.')]")));
+			    	
+			    	String toastTxt = toastMsg.getText();
+			  
+			    	Assert.assertTrue(toastTxt.contains("Removal request submitted for admin approval."), "No similiar toast message is found");
+
+  	   	        
+	         	} catch(Exception e) {
 	    		
-	    		 logger.error("Failed:"+e);
+	    		   logger.error("Failed:"+e);
 	        	   Assert.fail("It is failed due to:"+e.getMessage());
 	    	}
 	    	
-	    }
-	        
+	    }	        
 }

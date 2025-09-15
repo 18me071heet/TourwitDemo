@@ -47,7 +47,7 @@ import pageObjectTr.Login_TR;
    		
    	}
    	
-    @Test(priority=2,dependsOnMethods= {"logInDetails"})
+   // @Test(priority=2,dependsOnMethods= {"logInDetails"})
     void createBlog() throws InterruptedException {
    	 	
     	try {
@@ -104,7 +104,7 @@ import pageObjectTr.Login_TR;
     	   	 
     	     blogs.uploadThumbnailImage();
     	     
-    	    logger.info("TC-11 --> Verify User is able to upload image in the description field");
+    	     logger.info("TC-11 --> Verify User is able to upload image in the description field");
     	     
     	     blogs.uploadDescriptionImage();
   			 
@@ -130,7 +130,7 @@ import pageObjectTr.Login_TR;
     		 throw e;
     	 }
    	
-       }
+   }
        
     //@Test(priority=3,dependsOnMethods= {"logInDetails"})
     void searchBlog() throws InterruptedException {
@@ -162,14 +162,6 @@ import pageObjectTr.Login_TR;
       	        .elementToBeClickable(By.xpath("//a[contains(text(),'Automation Blog')]")));
       
       	 blogLink.click();
-      	 
-      	
-      	 
-      /*	 logger.info("TC-02 --> Verify User is able to filter the blog by selecting blog cateogry");
-       	threadTime();
-      	 blogSearch.sortestFilter();
-      	 
-      	 */
        
    	 }
    	 
@@ -210,7 +202,6 @@ import pageObjectTr.Login_TR;
        	 blogSearch.editBlogScreen();
        	 
        	 logger.info("TC-05 --> Verify User is able to change the blog title");
-       	 blogs.clearTitle();
        	 blogs.blogTitleAdd("Updated Automation Blog");
        	 threadTime();
        	 
@@ -300,6 +291,39 @@ import pageObjectTr.Login_TR;
          logger.info("TC-08 --> Verify Comment is getting send by clicking on send icon");
          blogs.sendComment();
            	 
+     }
+     
+     @Test(priority=4,dependsOnMethods= {"logInDetails"})
+     void searchNdEdit() throws InterruptedException {
+    	 
+    	  Blogs_TR blogs = new Blogs_TR(driver);
+    	 
+    	  threadTime();
+    	  
+    	  logger.info("TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs from Header");
+     	  blogs.blogNavigation(driver);
+     	  
+     	  logger.info("TC-02 --> Verify User is navigate to the My Blogs by clicking on My Blogs");
+     	  blogs.myBlogs();
+          
+     	  logger.info("TC-03 --> Verify User is able to search specific blog");
+     	  
+     	  logger.info("TC-04 --> Verify Blog is displaying according to searching");
+     	  
+     	  logger.info("TC-05 --> Verify Edit blog screen is displaying by clicking on Edit icon on the searched blog");
+     	  blogs.searchNdEditBlog(driver, "Taam Jhaam");
+     	  
+     	  logger.info("TC-06 --> Verify User is able to change blog name");
+     	  blogs.updateBlogTitle(p.getProperty("blogTitleUpdated_Tr"));
+     	  threadTime();
+     	  
+     	  logger.info("TC-07 --> Verify User is able to update blog description");
+     	  blogs.updateBlogDescription(p.getProperty("blogDescriptionUpdated_Tr"));
+     	  threadTime();
+     	  
+     	  logger.info("TC-08 --> Verify blog is getting update by clicking publish button");
+     	  blogs.publishBlog();
+     	 	 
      }
    	
 }
