@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-15T15:09:00 IST" name="Suite" finished-at="2025-09-15T15:09:49 IST" duration-ms="49150">
+  <suite started-at="2025-09-16T17:07:53 IST" name="Suite" finished-at="2025-09-16T17:08:19 IST" duration-ms="25384">
     <groups>
     </groups>
-    <test started-at="2025-09-15T15:09:00 IST" name="Test" finished-at="2025-09-15T15:09:49 IST" duration-ms="49150">
-      <class name="tc_Tr.Blogs_Tr">
-        <test-method is-config="true" signature="signUp(java.lang.String)[pri:0, instance:tc_Tr.Blogs_Tr@7ac2e39b]" started-at="2025-09-15T15:09:00 IST" name="signUp" finished-at="2025-09-15T15:09:11 IST" duration-ms="10501" status="PASS">
+    <test started-at="2025-09-16T17:07:53 IST" name="Test" finished-at="2025-09-16T17:08:19 IST" duration-ms="25384">
+      <class name="tc_Tr.UserProfile_Tr">
+        <test-method is-config="true" signature="signUp(java.lang.String)[pri:0, instance:tc_Tr.UserProfile_Tr@7ac2e39b]" started-at="2025-09-16T17:07:53 IST" name="signUp" finished-at="2025-09-16T17:08:01 IST" duration-ms="7434" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUp -->
-        <test-method signature="logInDetails()[pri:1, instance:tc_Tr.Blogs_Tr@7ac2e39b]" started-at="2025-09-15T15:09:11 IST" name="logInDetails" finished-at="2025-09-15T15:09:26 IST" duration-ms="15703" status="PASS">
+        <test-method signature="logInDetails()[pri:1, instance:tc_Tr.UserProfile_Tr@7ac2e39b]" started-at="2025-09-16T17:08:01 IST" name="logInDetails" finished-at="2025-09-16T17:08:02 IST" duration-ms="841" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logInDetails -->
-        <test-method signature="searchNdEdit()[pri:4, instance:tc_Tr.Blogs_Tr@7ac2e39b]" started-at="2025-09-15T15:09:26 IST" name="searchNdEdit" finished-at="2025-09-15T15:09:49 IST" depends-on-methods="tc_Tr.Blogs_Tr.logInDetails" duration-ms="22858" status="PASS">
+        <test-method signature="deleteMyAccount()[pri:3, instance:tc_Tr.UserProfile_Tr@7ac2e39b]" started-at="2025-09-16T17:08:02 IST" name="deleteMyAccount" finished-at="2025-09-16T17:08:19 IST" depends-on-methods="tc_Tr.UserProfile_Tr.logInDetails" duration-ms="17049" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchNdEdit -->
-      </class> <!-- tc_Tr.Blogs_Tr -->
+        </test-method> <!-- deleteMyAccount -->
+      </class> <!-- tc_Tr.UserProfile_Tr -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

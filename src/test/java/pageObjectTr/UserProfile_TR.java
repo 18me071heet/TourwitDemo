@@ -54,6 +54,7 @@ public class UserProfile_TR {
 		profileBtn.click();
 	}
 	
+	
 	public void editFirstName() {
 		
 	    WebElement editBtn = wait.until(ExpectedConditions.presenceOfElementLocated(
@@ -173,6 +174,29 @@ public class UserProfile_TR {
 			
 		WebElement unFollowUser = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Unfollow']")));
 		unFollowUser.click();
+	}
+	
+	public void profileImage() {
+		
+		WebElement profileIcon = wait.until(ExpectedConditions.elementToBeClickable(
+			    By.xpath("//div[contains(@class,'rounded-full') and contains(@class,'h-7') and contains(@class,'w-7')]")
+			));
+		
+		profileIcon.click();
+	}
+	
+	public void deleteAccount() throws InterruptedException {
+		
+		WebElement deleteAccountLink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Delete my account']")));
+		
+		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", deleteAccountLink);
+		Thread.sleep(2000);
+		deleteAccountLink.click();
+		
+		WebElement confirmBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(@class,'bg-primary') and normalize-space()='Delete Account']")));
+		
+		confirmBtn.click();
+		
 	}
 	
 }

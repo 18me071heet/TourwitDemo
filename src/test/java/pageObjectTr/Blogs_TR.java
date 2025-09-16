@@ -54,9 +54,6 @@ public class Blogs_TR {
 	@FindBy(xpath="//span[contains(@class,'bg-red-700') and contains(@class,'rounded-full')]")
 	WebElement deleteBlogIcon;
 	
-	@FindBy(xpath="//button[normalize-space()='Confirm']")
-	WebElement deleteConfirm;
- 
 	@FindBy(xpath=" //textarea[@placeholder='What are your thoughts?']")
 	WebElement txtCommentField;
 	
@@ -102,6 +99,14 @@ public class Blogs_TR {
 		
 	}
 	
+	public void updateBlogReadtime(String readTimeBlog) {
+		
+		readTime.sendKeys(Keys.CONTROL+"a");
+		readTime.sendKeys(Keys.DELETE);
+		readTime.sendKeys(readTimeBlog);
+		
+	}
+	
 	public void publishBlog() {
 		
 		btnPublish.click();
@@ -129,7 +134,8 @@ public class Blogs_TR {
 	
 	public void deleteConfirmBlog() {
 		
-		deleteConfirm.click();
+		WebElement confirmBtn =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class,'bg-primary') and normalize-space()='Confirm']")));
+		confirmBtn.click();
 	}
 	
 	public void txtComment(WebDriver driver,String comment) {
@@ -234,6 +240,7 @@ public class Blogs_TR {
 		 
 		 WebElement option = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'option') and text()='Newest to Oldest']")));
 		 option.click();
+		 
      }
      
      public void searchNdEditBlog(WebDriver driver,String blogTitle) throws InterruptedException {
@@ -248,16 +255,32 @@ public class Blogs_TR {
             
             WebElement editBlogIcon = wait.until(
             	    ExpectedConditions.elementToBeClickable(
-            	        By.xpath("//a[normalize-space()='Taam Jhaam']/ancestor::div[2]//span[contains(@class,'bg-primary')]")
-            	    ));
+            	        By.xpath("//a3[normalize-space()='" + blogTitle + "']/ancestor::div[2]//span[contains(@class,'bg-primary')]")));
             
-            	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", editBlogIcon);
+           	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", editBlogIcon);
             	editBlogIcon.click();
-
-    	 
+  	 
      }
-	
-
-	
+     
+     public void searchNdDeleteBlog(WebDriver driver,String blogTitle) {
+    	 
+    	  WebElement searchBox = wait.until(ExpectedConditions.elementToBeClickable(
+  		        By.xpath("//input[@placeholder='Search by keywords...']")));
+  		    searchBox.clear();
+  		    searchBox.sendKeys(blogTitle, Keys.ENTER);
+  		    
+  		     wait.until(ExpectedConditions.presenceOfElementLocated(
+     		        By.xpath("//a[normalize-space()='" + blogTitle + "']")));
+  		     
+  		   WebElement deleteBlogIcon = wait.until(
+  				    ExpectedConditions.elementToBeClickable(
+  				        By.xpath("//a[normalize-space()='" + blogTitle + "']" +
+  				                 "/ancestor::div[2]" +
+  				                 "//span[contains(@class,'bg-red-700') and contains(@class,'rounded-full')]")));
+  			
+  		   ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", deleteBlogIcon);
+  		    deleteBlogIcon.click();
+  		     
+     }	
 }
 

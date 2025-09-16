@@ -56,6 +56,5 @@ public class BottomNavigation_TR {
     	
     	btnFaq.click();
     }
-	
-	
+		
 }

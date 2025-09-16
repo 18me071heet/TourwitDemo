@@ -1,0 +1,40 @@
+12:48:43.394 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+12:48:43.707 [main] INFO  tc_Tr.ContactUs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:48:52.597 [main] INFO  tc_Tr.ContactUs_Tr - TC-01 --> Verify User is able to add email
+12:48:55.793 [main] INFO  tc_Tr.ContactUs_Tr - TC-02 --> Verify User is able to add password
+12:48:58.922 [main] INFO  tc_Tr.ContactUs_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+12:49:07.116 [main] INFO  tc_Tr.ContactUs_Tr - TC-01 --> Verify Contact us page is displaying or not by clicking contact us link
+12:49:07.191 [main] ERROR tc_Tr.ContactUs_Tr - Failed:org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
+  (Session info: chrome=139.0.7258.155)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d173b6e93892b4978638f410d536de6f, findElement {value=, using=id}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52776}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52776/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d173b6e93892b4978638f410d536de6f
+12:50:21.980 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+12:50:22.258 [main] INFO  tc_Tr.ContactUs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:50:30.233 [main] INFO  tc_Tr.ContactUs_Tr - TC-01 --> Verify User is able to add email
+12:50:33.452 [main] INFO  tc_Tr.ContactUs_Tr - TC-02 --> Verify User is able to add password
+12:50:36.614 [main] INFO  tc_Tr.ContactUs_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+12:50:44.788 [main] INFO  tc_Tr.ContactUs_Tr - TC-01 --> Verify Contact us page is displaying or not by clicking contact us link
+12:50:45.025 [main] INFO  tc_Tr.ContactUs_Tr - TC-02 --> Verify User is able to fill description in contact us form
+12:50:52.439 [main] INFO  tc_Tr.ContactUs_Tr - TC-03 --> Verify Query is getting saved or not
+12:50:55.625 [main] ERROR tc_Tr.ContactUs_Tr - Failed:org.openqa.selenium.InvalidSelectorException: invalid selector: Unable to locate an element with the xpath expression //div[contains(text()='Query submitted successfully.')] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//div[contains(text()='Query submitted successfully.')]' is not a valid XPath expression.
+  (Session info: chrome=139.0.7258.155)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalid-selector-exception
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [389b5f1e53946635a69831f10a1543ff, findElement {using=xpath, value=//div[contains(text()='Query submitted successfully.')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61627}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61627/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 389b5f1e53946635a69831f10a1543ff
+12:53:43.630 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+

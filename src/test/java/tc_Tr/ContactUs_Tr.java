@@ -1,8 +1,12 @@
 package tc_Tr;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -47,10 +51,12 @@ public class ContactUs_Tr extends BaseClassTr {
    @Test(priority=2,dependsOnMethods= {"logInDetails"})
    void contactUs() throws InterruptedException {
 	   
-	   Thread.sleep(5000);
+	    Thread.sleep(5000);
 	    ContactUs_TR contact = new ContactUs_TR(driver);
 	    
 	    try {
+	    	
+	    	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 	    	
 	    	  logger.info("TC-01 --> Verify Contact us page is displaying or not by clicking contact us link");
 	   	   ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
@@ -58,16 +64,24 @@ public class ContactUs_Tr extends BaseClassTr {
 	   	
 	   	    logger.info("TC-02 --> Verify User is able to fill description in contact us form");
 	   	    
-	   	    WebElement descriptionBox = driver.findElement(By.id("note"));
+	   	     WebElement descriptionBox = driver.findElement(By.id("note"));
 	          ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", descriptionBox);
-	          descriptionBox.sendKeys("This is Automation Testing description.");
+	          descriptionBox.sendKeys("Query is generated using automation script");
 	          
 	          logger.info("TC-03 --> Verify Query is getting saved or not");
 	      
 	          threadTime();
 	          contact.saveContactUs();
 	          
-	    }catch(Exception e) {
+	          //Query submitted successfully.
+	          
+		    	WebElement queryToast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Query submitted successfully.')]")));
+	          
+	          String toast = queryToast.getText();
+	          
+	          Assert.assertTrue(toast.contains("Query submitted successfully."), "No similiar toast msg is found");
+	          
+	    } catch(Exception e) {
 	    	
 	    	logger.error("Failed:"+e);
 	    	Assert.fail("It is failed:"+e.getMessage());

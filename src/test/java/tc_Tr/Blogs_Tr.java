@@ -20,6 +20,7 @@ import pageObjectTr.Login_TR;
     	   
         }
     
+	
     @Test(priority=1)
    	void logInDetails() throws InterruptedException {
    		
@@ -255,7 +256,7 @@ import pageObjectTr.Login_TR;
    	 
     }
     
-  // @Test(priority=3,dependsOnMethods= {"logInDetails"})
+  // @Test(priority=6,dependsOnMethods= {"logInDetails"})
      void searchedandCommentBlog() throws InterruptedException {
     	 
     	 Blogs_TR blogs = new Blogs_TR(driver);
@@ -293,11 +294,12 @@ import pageObjectTr.Login_TR;
            	 
      }
      
-     @Test(priority=4,dependsOnMethods= {"logInDetails"})
+   //  @Test(priority=7,dependsOnMethods= {"logInDetails"})
      void searchNdEdit() throws InterruptedException {
     	 
     	  Blogs_TR blogs = new Blogs_TR(driver);
     	 
+    	  WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
     	  threadTime();
     	  
     	  logger.info("TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs from Header");
@@ -313,6 +315,9 @@ import pageObjectTr.Login_TR;
      	  logger.info("TC-05 --> Verify Edit blog screen is displaying by clicking on Edit icon on the searched blog");
      	  blogs.searchNdEditBlog(driver, "Taam Jhaam");
      	  
+     	  logger.info("TC-06 --> Verify User is able to update the blog read time");
+     	  blogs.updateBlogReadtime(p.getProperty("blogUpdatedReadTime_Tr"));
+     	  
      	  logger.info("TC-06 --> Verify User is able to change blog name");
      	  blogs.updateBlogTitle(p.getProperty("blogTitleUpdated_Tr"));
      	  threadTime();
@@ -323,7 +328,59 @@ import pageObjectTr.Login_TR;
      	  
      	  logger.info("TC-08 --> Verify blog is getting update by clicking publish button");
      	  blogs.publishBlog();
-     	 	 
+
+     	  WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Blog updated. Awaiting Approval')]")));
+     	  
+     	  String editToast = toast.getText();
+     	  
+     	  Assert.assertTrue(editToast.contains("Blog updated. Awaiting Approval"), "No similiar toast msg is found");
+     	 
+     	  wait.until(ExpectedConditions.invisibilityOf(toast));
+     	  
      }
-   	
-}
+     
+     @Test(priority=8,dependsOnMethods= {"logInDetails"})
+     void searchNdDelete() throws InterruptedException {
+    	 
+    	  Blogs_TR blogs = new Blogs_TR(driver);
+    	  
+    	  WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+    	  
+    	  try {
+    		  	  
+    		  threadTime();
+        	  logger.info("Verify User is navigate to the Blogs page by clicking on Blogs from Header");
+        	  
+        	  blogs.blogNavigation(driver);
+        	  
+        	  logger.info("TC-02 --> Verify User is navigate to the My Blogs by clicking on My Blogs");
+         	  blogs.myBlogs();
+              
+         	  logger.info("TC-03 --> Verify User is able to search specific blog");
+         	  
+         	  logger.info("TC-04 --> Verify Blog is displaying according to searching");
+         	  
+         	  logger.info("TC-05 --> Verify Delete confirmation popup is displaying by clicking Delete icon on searched record");
+         	  
+         	  blogs.searchNdDeleteBlog(driver, "Foodie food");
+         	  
+         	  logger.info("TC-06 --> Verify searched blog is getting deleted or not");
+         	  
+         	  blogs.deleteConfirmBlog();
+         	  
+         	  WebElement deleteToast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Deletion request submitted successfully.')]")));
+         	  
+         	  String toast = deleteToast.getText();
+         	  
+         	  Assert.assertTrue(toast.contains("Deletion request submitted successfully."), "No any similiar toast is found");
+         	  
+    	  } catch(Exception e) {
+    		  
+    		  logger.error("Failed:"+e);
+    	      Assert.fail("It is failed due to:"+e.getMessage());
+    	    	 
+    	     }
+    	  
+    	  }
+     }
+

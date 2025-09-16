@@ -15,7 +15,7 @@ public class ContactUs_TR {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath="")
+	@FindBy(xpath="//a[normalize-space()='Contact Us']")
 	WebElement btnContactUs;
 
 	@FindBy(xpath="//input[@id='userName']")

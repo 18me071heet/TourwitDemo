@@ -30,7 +30,7 @@ public class UserProfile_Tr extends BaseClassTr{
  		try {
  			
  			logger.info("TC-01 --> Verify User is able to add email");
-            login.addEmail(p.getProperty("email_tr"));
+            login.addEmail(p.getProperty("deleteAccountEmail_tr"));
 	   		
 	   		logger.info("TC-02 --> Verify User is able to add password");
 	   		login.addPass(p.getProperty("password_tr"));
@@ -42,12 +42,11 @@ public class UserProfile_Tr extends BaseClassTr{
  			
  			logger.error("Failed:"+e);
  			Assert.fail("Failed due to:"+e.getMessage());
- 		}
- 		
+ 		}		
  		
  	}
 	 
-	 @Test(priority=2,dependsOnMethods= {"logInDetails"})
+	// @Test(priority=2,dependsOnMethods= {"logInDetails"})
 	 void editProfile() throws InterruptedException {
 		 
 		 
@@ -113,11 +112,11 @@ public class UserProfile_Tr extends BaseClassTr{
 		 
 		 Thread.sleep(3000);
 		 
-		// profile.clickFollowersView();
+		 // profile.clickFollowersView();
 		 
 		 logger.info("TC-10 --> Verify User is able to search specific follower");
 	
-	    //	 profile.search("Lisa Menon");
+	     //	 profile.search("Lisa Menon");
 		 
 		 logger.info("TC-11 --> Verify User is able to view their following list");
 		 
@@ -131,5 +130,53 @@ public class UserProfile_Tr extends BaseClassTr{
 		 
 		 profile.unfollowUser();
 		 		 
+	 }
+	 
+	 
+	 @Test(priority=3,dependsOnMethods= {"logInDetails"})
+	 void deleteMyAccount() throws InterruptedException {
+		 
+		 try {
+			 
+			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+			
+			 threadTime();
+			 UserProfile_TR profile = new UserProfile_TR(driver);
+			 
+			 threadTime();
+			 logger.info("TC-01 --> Verify Options are displaying by clicking on profile icon");
+			 
+			 profile.profileImage();
+			 
+			 logger.info("TC-02 --> Verify User is navigate to the profile page by clicking on My profile");
+			 profile.myProfileClick();
+			 
+			 logger.info("TC-03 --> Verify Delete account confirmation popup is displaying by clicking Delete my account");
+			 
+			 threadTime();
+			 profile.deleteAccount();
+			 
+	     	WebElement deleteMsg = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(text(),'User deleted successfully')]")));
+			 
+              String toast = deleteMsg.getText();
+			 
+			  Assert.assertTrue(toast.contains("User deleted successfully"), "No similiar toast msg is found");
+			 
+			 
+	     /*	  WebElement deleteToast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'User deleted successfully')]")));
+			 
+			 String toast = deleteToast.getText();
+			 
+			 Assert.assertTrue(toast.contains("User deleted successfully"), "No similiar toast msg is found");
+			 
+			 */
+			 	 
+		 }  catch(Exception e) {
+			
+			 logger.error("Failed:"+e);
+			 Assert.fail("It is failed due to :"+ e.getMessage());
+			 
+		 }
+		
 	 }
 }
