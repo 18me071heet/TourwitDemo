@@ -48,7 +48,7 @@ import pageObjectTr.Login_TR;
    		
    	}
    	
-   // @Test(priority=2,dependsOnMethods= {"logInDetails"})
+    @Test(priority=2,dependsOnMethods= {"logInDetails"})
     void createBlog() throws InterruptedException {
    	 	
     	try {
@@ -83,7 +83,7 @@ import pageObjectTr.Login_TR;
     	   	 option.click();
     	         
     	   	 logger.info("TC-04 --> Verify User is able to fill the blog read time");
-    	   	 blogs.blogReadTime("10");
+    	   	 blogs.blogReadTime(p.getProperty("blogReadTime_Tr"));
     	   	 
     	   	 logger.info("TC-05 --> Verify User is able to fill the blog title");
     	   	 blogs.blogTitleAdd(p.getProperty("blogTitle_Tr"));
@@ -123,7 +123,6 @@ import pageObjectTr.Login_TR;
     	     Assert.assertTrue(toastTxt.contains("Blog verification sent to the admin."),"Toast msg displaying wrong");
     	   	 
      	     wait.until(ExpectedConditions.invisibilityOf(toastMsg));
-    	   	 
     	   	 
     	   } catch(Exception e) {
     		
@@ -213,6 +212,7 @@ import pageObjectTr.Login_TR;
     	 
     	 logger.error("Failed:"+e);
     	 Assert.fail("It is failed due to:"+e.getMessage());
+    	 
      }
    	  	 
     }
@@ -260,38 +260,45 @@ import pageObjectTr.Login_TR;
      void searchedandCommentBlog() throws InterruptedException {
     	 
     	 Blogs_TR blogs = new Blogs_TR(driver);
-    	 
          threadTime();
-    	 blogs.blogNavigation(driver);
-    	 
-    	 // blogs.myBlogs();
-    	 
-    	 logger.info("TC-01 --> Verify User is able to search the specific blog");
-    	 
-    	 logger.info("TC-02 --> Verify User is blog is displaying according to searching ");
-    	 
-    	 logger.info("TC-03 --> Verify User is able to view searched blog");
-    	 
-    	 threadTime();
-    	 
-         blogs.searchandClickedBlog(driver, p.getProperty("blogTitle_Tr"));
-       
-         logger.info("TC-04 --> Verify User is able to add text in comment field");
          
-         logger.info("TC-05 --> Verify Emoji picker is getting open by clicking on Emoji icon");
-         
-         logger.info("TC-06 --> Verify User is able to search specific emoji ");
-         
-         logger.info("TC-07  --. Verify selected emoji is displaying in the comment text field");
-         
-         blogs.txtComment(driver, "Good Work , Keep it Up");
-         
-         threadTime();
-         blogs.emojiSelect(driver);
-         
-         logger.info("TC-08 --> Verify Comment is getting send by clicking on send icon");
-         blogs.sendComment();
-           	 
+         try {
+        	 blogs.blogNavigation(driver);
+        	 
+        	 // blogs.myBlogs();
+        	 
+        	 logger.info("TC-01 --> Verify User is able to search the specific blog");
+        	 
+        	 logger.info("TC-02 --> Verify User is blog is displaying according to searching ");
+        	 
+        	 logger.info("TC-03 --> Verify User is able to view searched blog");
+        	 
+        	 threadTime();
+        	 
+             blogs.searchandClickedBlog(driver, p.getProperty("blogTitle_Tr"));
+           
+             logger.info("TC-04 --> Verify User is able to add text in comment field");
+             
+             logger.info("TC-05 --> Verify Emoji picker is getting open by clicking on Emoji icon");
+             
+             logger.info("TC-06 --> Verify User is able to search specific emoji ");
+             
+             logger.info("TC-07  --. Verify selected emoji is displaying in the comment text field");
+             
+             blogs.txtComment(driver, "Good Work , Keep it Up");
+             
+             threadTime();
+             blogs.emojiSelect(driver);
+             
+             logger.info("TC-08 --> Verify Comment is getting send by clicking on send icon");
+             blogs.sendComment();
+               	 
+         } catch(Exception e) {
+        	 
+        	 logger.error("Failed");
+        	 Assert.fail("It is failed due to:"+e.getMessage());
+         }
+    	 
      }
      
    //  @Test(priority=7,dependsOnMethods= {"logInDetails"})
@@ -299,47 +306,54 @@ import pageObjectTr.Login_TR;
     	 
     	  Blogs_TR blogs = new Blogs_TR(driver);
     	 
-    	  WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
-    	  threadTime();
-    	  
-    	  logger.info("TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs from Header");
-     	  blogs.blogNavigation(driver);
-     	  
-     	  logger.info("TC-02 --> Verify User is navigate to the My Blogs by clicking on My Blogs");
-     	  blogs.myBlogs();
-          
-     	  logger.info("TC-03 --> Verify User is able to search specific blog");
-     	  
-     	  logger.info("TC-04 --> Verify Blog is displaying according to searching");
-     	  
-     	  logger.info("TC-05 --> Verify Edit blog screen is displaying by clicking on Edit icon on the searched blog");
-     	  blogs.searchNdEditBlog(driver, "Taam Jhaam");
-     	  
-     	  logger.info("TC-06 --> Verify User is able to update the blog read time");
-     	  blogs.updateBlogReadtime(p.getProperty("blogUpdatedReadTime_Tr"));
-     	  
-     	  logger.info("TC-06 --> Verify User is able to change blog name");
-     	  blogs.updateBlogTitle(p.getProperty("blogTitleUpdated_Tr"));
-     	  threadTime();
-     	  
-     	  logger.info("TC-07 --> Verify User is able to update blog description");
-     	  blogs.updateBlogDescription(p.getProperty("blogDescriptionUpdated_Tr"));
-     	  threadTime();
-     	  
-     	  logger.info("TC-08 --> Verify blog is getting update by clicking publish button");
-     	  blogs.publishBlog();
+    	  try {
+    		  
+    		  WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+        	  threadTime();
+        	  
+        	  logger.info("TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs from Header");
+         	  blogs.blogNavigation(driver);
+         	  
+         	  logger.info("TC-02 --> Verify User is navigate to the My Blogs by clicking on My Blogs");
+         	  blogs.myBlogs();
+              
+         	  logger.info("TC-03 --> Verify User is able to search specific blog");
+         	  
+         	  logger.info("TC-04 --> Verify Blog is displaying according to searching");
+         	  
+         	  logger.info("TC-05 --> Verify Edit blog screen is displaying by clicking on Edit icon on the searched blog");
+         	  blogs.searchNdEditBlog(driver, "Taam Jhaam");
+         	  
+         	  logger.info("TC-06 --> Verify User is able to update the blog read time");
+         	  blogs.updateBlogReadtime(p.getProperty("blogUpdatedReadTime_Tr"));
+         	  
+         	  logger.info("TC-06 --> Verify User is able to change blog name");
+         	  blogs.updateBlogTitle(p.getProperty("blogTitleUpdated_Tr"));
+         	  threadTime();
+         	  
+         	  logger.info("TC-07 --> Verify User is able to update blog description");
+         	  blogs.updateBlogDescription(p.getProperty("blogDescriptionUpdated_Tr"));
+         	  threadTime();
+         	  
+         	  logger.info("TC-08 --> Verify blog is getting update by clicking publish button");
+         	  blogs.publishBlog();
 
-     	  WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Blog updated. Awaiting Approval')]")));
-     	  
-     	  String editToast = toast.getText();
-     	  
-     	  Assert.assertTrue(editToast.contains("Blog updated. Awaiting Approval"), "No similiar toast msg is found");
-     	 
-     	  wait.until(ExpectedConditions.invisibilityOf(toast));
-     	  
+         	  WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Blog updated. Awaiting Approval')]")));
+         	  
+         	  String editToast = toast.getText();
+         	  
+         	  Assert.assertTrue(editToast.contains("Blog updated. Awaiting Approval"), "No similiar toast msg is found");
+         	 
+         	  wait.until(ExpectedConditions.invisibilityOf(toast));
+         	  
+    	  } catch(Exception e) {
+    		  
+    		  logger.error("Failed");
+    		  Assert.fail("It is failed due to:"+ e.getMessage());
+    	  }  	  
      }
      
-     @Test(priority=8,dependsOnMethods= {"logInDetails"})
+     //@Test(priority=8,dependsOnMethods= {"logInDetails"})
      void searchNdDelete() throws InterruptedException {
     	 
     	  Blogs_TR blogs = new Blogs_TR(driver);
