@@ -22,19 +22,16 @@ public class HomePage_TR {
 		
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
-		wait = new WebDriverWait(driver,Duration.ofSeconds(20));
-		
+		wait = new WebDriverWait(driver,Duration.ofSeconds(20));		
 	}
-	
-	
+		
 	@FindBy(xpath=" //a[normalize-space()='World of Travel']")
 	WebElement btnTravelHeader;
 	
 	public void travelNavigation() {
 		
 		WebElement btnTravel = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //a[normalize-space()='World of Travel']")));
-		btnTravel.click();
-		
+		btnTravel.click();		
 	}
 	
 	public void countrySelection() {
@@ -46,8 +43,7 @@ public class HomePage_TR {
 	public void countryClick() {
 		
 		WebElement countryClicks = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //span[normalize-space()='Japan']")));
-		countryClicks.click();
-		
+		countryClicks.click();		
 	}
 	
 	public void txtComment(WebDriver driver,String comment) {
@@ -102,13 +98,11 @@ public class HomePage_TR {
    	 ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", sendButton);
   	   sendButton.click();
      	 
-     	 Thread.sleep(3000);
-     	 
+     	 Thread.sleep(3000);    	 
    }
    
    public void sendComment() {
-  	 
-  
+  	   
  	  WebElement sendButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='button']/*[name()='svg']")));
 	 ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", sendButton);
 	   sendButton.click();
@@ -133,11 +127,8 @@ public class HomePage_TR {
 		
 		if(followUser.isDisplayed()) {
 			
-			followUser.click();
-			
+			followUser.click();		
 		}
-	
-	
 		
 	}
 }

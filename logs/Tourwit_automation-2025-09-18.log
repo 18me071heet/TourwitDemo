@@ -1,0 +1,41 @@
+15:05:27.808 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+15:05:36.985 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+15:05:42.336 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+15:05:47.533 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+15:06:03.100 [main] INFO  tc_Tr.Blogs_Tr - TC-XX --> Verify User is able to sort blogs by Newest to Oldest
+15:06:26.032 [main] ERROR tc_Tr.Blogs_Tr - Failed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[contains(@id,'react-select-5-option') and normalize-space()='Newest to Oldest'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '24.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54816}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54816/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee25eeacbadcfc1ec8d20d03316af7c6
+15:22:21.184 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+15:22:21.268 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+15:22:30.353 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+15:22:35.623 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+15:22:40.818 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+15:22:56.299 [main] INFO  tc_Tr.Blogs_Tr - TC-XX --> Verify User is able to sort blogs by Newest to Oldest
+15:23:19.248 [main] ERROR tc_Tr.Blogs_Tr - Failed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[contains(@id,'react-select-5-option') and normalize-space()='Newest to Oldest'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55659}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55659/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a4995c2eeb4575a987ec55edd90189b9
+15:31:15.676 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+15:31:15.752 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+15:31:33.544 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+15:31:38.818 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+15:31:43.992 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+15:31:59.562 [main] INFO  tc_Tr.Blogs_Tr - TC-XX --> Verify User is able to sort blogs by Newest to Oldest
+15:39:47.494 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+15:39:47.570 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+15:39:51.298 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+15:39:56.700 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+15:40:01.813 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+15:40:11.991 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs

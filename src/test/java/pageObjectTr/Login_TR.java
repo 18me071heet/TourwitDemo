@@ -66,16 +66,13 @@ public class Login_TR {
 	
 	public void logOut() {
 		
-	
 		WebElement logOut = wait.until(ExpectedConditions.elementToBeClickable(btnLogOut));
-		
 		logOut.click();
 	}
 	
 	public void logOutConfirm() {
 	
 		WebElement logOutConfirm = wait.until(ExpectedConditions.elementToBeClickable(logOutConfirmation));
-		
 		logOutConfirm.click();
 	}
 	

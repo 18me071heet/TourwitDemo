@@ -1,0 +1,56 @@
+17:36:18.099 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:36:26.906 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+17:36:30.133 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+17:36:33.313 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:36:36.526 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+17:36:40.213 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to follow specific category by clicking Follow 
+17:36:40.213 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow
+17:36:47.177 [main] ERROR tc_Tr.Forums_Tr - It is Failed
+17:37:58.705 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:37:58.768 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:38:10.794 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+17:38:14.048 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+17:38:17.215 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:38:20.406 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+17:38:25.628 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to follow specific category by clicking Follow 
+17:38:25.628 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow
+17:39:06.468 [main] ERROR tc_Tr.Forums_Tr - It is Failed
+17:41:14.928 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:41:14.996 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:41:23.188 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+17:41:26.426 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+17:41:29.571 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:41:32.756 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+17:41:38.021 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to follow specific category by clicking Follow 
+17:41:38.021 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow
+17:42:19.013 [main] ERROR tc_Tr.Forums_Tr - It is Failed
+17:46:17.486 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:46:17.556 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:46:21.255 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+17:46:24.598 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+17:46:27.840 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:46:31.024 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+17:46:36.314 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to follow specific category by clicking Follow 
+17:46:36.314 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow
+17:47:17.155 [main] ERROR tc_Tr.Forums_Tr - It is Failed
+17:48:37.215 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:48:37.272 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:48:41.160 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+17:48:44.519 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+17:48:47.958 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:48:51.197 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+17:48:56.422 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to follow specific category by clicking Follow 
+17:48:56.422 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow
+17:49:37.615 [main] ERROR tc_Tr.Forums_Tr - It is Failed
+17:51:58.029 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:51:58.090 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome

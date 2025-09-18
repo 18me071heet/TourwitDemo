@@ -105,8 +105,6 @@ public class Forums_TR {
 		searchBox.sendKeys(name);
 	}
 	
-	
-
 	public void txtComment(WebDriver driver,String comment) {
 		
 		WebElement commentForum = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//textarea[@placeholder='What are your thoughts?']")));
@@ -164,7 +162,6 @@ public class Forums_TR {
 		WebElement editIcon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//svg[@width='24' and @height='24' and @viewBox='0 0 24 24'])[1]")));
 		
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", editIcon);
-
 		editIcon.click();
 		
 		List<WebElement> icons = driver.findElements(By.xpath("//svg[@width='24' and @height='24']"));
@@ -193,27 +190,23 @@ public class Forums_TR {
 			searchForum.sendKeys(forumTitle);
 			searchForum.sendKeys(Keys.ENTER);
 			
-	
 			WebElement deleteButton = wait.until(ExpectedConditions.elementToBeClickable(
 				    By.xpath("//h3[normalize-space()='" + forumTitle + "']/following::button[contains(@class,'min-w-5')][2]")
 				));
 			
-			 	    deleteButton.click();
+			 deleteButton.click();
 			 	    
-			 	    WebElement confirmDelete = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Confirm Removal']")));
-			 	    
-			 	    confirmDelete.click();
+			 WebElement confirmDelete = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Confirm Removal']")));  
+			 confirmDelete.click();
 			
 	}
 	
 	public void userProfile() throws InterruptedException {
-		
-	
+			
 		WebElement profile = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //div[contains(@class,'rounded-full') and span]")));
 		
 		profile.click();
-		
-		
+				
 		try {
 			
 			WebElement followUser = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Follow']")));
@@ -226,8 +219,7 @@ public class Forums_TR {
     			
     			followUser.click();
             }
-			
-				
+							
 		} catch(TimeoutException e) {
 			
 			WebElement unfollowUser = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Following']")));
@@ -242,8 +234,7 @@ public class Forums_TR {
              
 			}
 		}
-		
-		
+				
 	}
 	
 	public void blockUser() throws InterruptedException {
@@ -267,8 +258,50 @@ public class Forums_TR {
 		
 	}
 	
-	
-	
+	public void followCategory(String categoryName) throws InterruptedException {
+			try {
+				// Try to find the Follow button
+				WebElement followBtn = wait.until(
+					ExpectedConditions.elementToBeClickable(
+						By.xpath("//h3[normalize-space()='" + categoryName + "']" +
+								 "/ancestor::div[contains(@class,'cursor-pointer')]" +
+								 "//button[contains(@class,'lg:inline-flex') and normalize-space()='Follow']")) );
+
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", followBtn);
+				followBtn.click();
+				System.out.println("Now following category: " + categoryName);
+				Thread.sleep(3000);
+
+				// Verify button changed to 'Following'
+				WebElement followingBtn = wait.until(
+					ExpectedConditions.visibilityOfElementLocated(
+						By.xpath("//h3[normalize-space()='" + categoryName + "']" +
+								 "/ancestor::div[contains(@class,'cursor-pointer')]" +
+								 "//button[contains(@class,'lg:inline-flex') and normalize-space()='Following']")) );
+				System.out.println("Button changed to: " + followingBtn.getText());
+
+				// Now click 'Following' to unfollow
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", followingBtn);
+				followingBtn.click();
+				System.out.println("Unfollowed category: " + categoryName);
+				Thread.sleep(2000);
+
+				// Verify button changed back to 'Follow'
+				WebElement followBtnAgain = wait.until(
+					ExpectedConditions.visibilityOfElementLocated(
+						By.xpath("//h3[normalize-space()='" + categoryName + "']" +
+								 "/ancestor::div[contains(@class,'cursor-pointer')]" +
+								 "//button[contains(@class,'lg:inline-flex') and normalize-space()='Follow']")) );
+				System.out.println("Button changed back to: " + followBtnAgain.getText());
+
+			} catch (TimeoutException e) {
+				System.out.println("Category or button not found: " + categoryName);
+			}
+		}
+	    
+}
+
+
 
 	
-}
+

@@ -33,8 +33,7 @@ public class MyBookings_TR {
 	public void myBookings() {
 		
 		WebElement btnBookings= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='My Bookings']")));
-		btnBookings.click();
-		
+		btnBookings.click();		
 	}
 	
 	public void serachId(String id) {

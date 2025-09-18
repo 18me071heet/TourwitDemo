@@ -41,7 +41,7 @@ public class BaseClassTr {
 	
 	@BeforeClass
 	@Parameters({"browser"})
-	public void signUp(String br)throws IOException {
+	public void signUp(@org.testng.annotations.Optional("chrome") String br)throws IOException {
 		
 		logger = LogManager.getLogger(this.getClass());
 	    logger.info(">>> @BeforeClass executed, initializing driver with browser: " + br);

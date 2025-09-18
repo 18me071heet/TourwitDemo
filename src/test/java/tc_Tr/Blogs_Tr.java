@@ -48,7 +48,7 @@ import pageObjectTr.Login_TR;
    		
    	}
    	
-    @Test(priority=2,dependsOnMethods= {"logInDetails"})
+   // @Test(priority=2,dependsOnMethods= {"logInDetails"})
     void createBlog() throws InterruptedException {
    	 	
     	try {
@@ -213,9 +213,10 @@ import pageObjectTr.Login_TR;
     	 logger.error("Failed:"+e);
     	 Assert.fail("It is failed due to:"+e.getMessage());
     	 
-     }
-   	  	 
-    }
+
+	}
+}
+
     
   //   @Test(priority=5,dependsOnMethods= {"logInDetails"})
      void deleteBlog() throws InterruptedException {
@@ -395,6 +396,30 @@ import pageObjectTr.Login_TR;
     	    	 
     	     }
     	  
-    	  }
-     }
+		}
 
+		@Test(priority=3, dependsOnMethods = {"logInDetails"})
+		void sortByNewestToOldest() {
+
+			try {
+				
+				 Blogs_TR blogs = new Blogs_TR(driver);
+                 threadTime();
+                 
+                 logger.info("TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs");
+				 blogs.blogNavigation(driver);
+				 threadTime();
+
+				logger.info("TC-02 --> Verify User is able to sort blogs by Newest to Oldest");
+				
+				logger.info("TC-03 --> Verify User is able to sort blogs by Oldest to Newest");
+				blogs.sortestFilter();
+
+			} catch (Exception e) {
+				
+				logger.error("Failed: " + e);
+				Assert.fail("It is failed due to: " + e.getMessage());
+			}
+		}
+	
+   }

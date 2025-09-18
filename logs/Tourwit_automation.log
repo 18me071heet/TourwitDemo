@@ -1,34 +1,17 @@
-12:53:43.893 [main] INFO  tc_Tr.ContactUs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-12:53:51.662 [main] INFO  tc_Tr.ContactUs_Tr - TC-01 --> Verify User is able to add email
-12:53:54.855 [main] INFO  tc_Tr.ContactUs_Tr - TC-02 --> Verify User is able to add password
-12:53:57.998 [main] INFO  tc_Tr.ContactUs_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-12:54:06.169 [main] INFO  tc_Tr.ContactUs_Tr - TC-01 --> Verify Contact us page is displaying or not by clicking contact us link
-12:54:06.374 [main] INFO  tc_Tr.ContactUs_Tr - TC-02 --> Verify User is able to fill description in contact us form
-12:54:13.142 [main] INFO  tc_Tr.ContactUs_Tr - TC-03 --> Verify Query is getting saved or not
-17:06:59.949 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+15:40:17.289 [main] INFO  tc_Tr.Blogs_Tr - TC-XX --> Verify User is able to sort blogs by Newest to Oldest
+15:51:33.159 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
 
-17:07:00.012 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-17:07:10.810 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify User is able to add email
-17:07:11.132 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is able to add password
-17:07:11.494 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-17:07:19.775 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
-17:07:19.792 [main] ERROR tc_Tr.UserProfile_Tr - Failed:org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
-from disconnected: not connected to DevTools
-  (Session info: chrome=139.0.7258.155)
+15:51:33.634 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+15:51:43.981 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+15:51:49.212 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+15:51:54.342 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+15:52:04.527 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs
+15:52:09.870 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is able to sort blogs by Newest to Oldest
+15:52:09.870 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to sort blogs by Oldest to Newest
+15:52:34.944 [main] ERROR tc_Tr.Blogs_Tr - Failed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@role='option' and normalize-space()='Oldest to Newest'] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '4.32.0', revision: 'd17c8aa950'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [4e1ec46f5fd0fd31c9596138759fafe9, findElement {value=//div[contains(@class,'rounded-full') and contains(@class,'h-7') and contains(@class,'w-7')], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.155, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53785}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53785/devtoo..., se:cdpVersion: 139.0.7258.155, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 4e1ec46f5fd0fd31c9596138759fafe9
-17:07:53.889 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-17:07:53.948 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-17:08:01.429 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify User is able to add email
-17:08:01.747 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is able to add password
-17:08:01.897 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-17:08:10.262 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
-17:08:10.486 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is navigate to the profile page by clicking on My profile
-17:08:10.774 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify Delete account confirmation popup is displaying by clicking Delete my account
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51291}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51291/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 00374ffba1043465e4688b79b288151a

@@ -46,7 +46,7 @@ import pageObjectTr.Login_TR;
 	   		
 	   	}
 	    
-       @Test(priority=2,dependsOnMethods= {"logInDetails"})
+     //  @Test(priority=2,dependsOnMethods= {"logInDetails"})
 	        void createForum() throws InterruptedException {
 	    	
 	    	Forums_TR createForums = new Forums_TR(driver);
@@ -235,12 +235,10 @@ import pageObjectTr.Login_TR;
 	    		   
 	    		   logger.error("Failed");
 	    		   Assert.fail("It is failed due to:"+e.getMessage());
-	    	   }
-	    
-	  		  	  		  	               	
+	    	   } 		  	  		  	               	
 	    }
 	    
-	     @Test(priority=6,dependsOnMethods= {"logInDetails"})
+	  //   @Test(priority=6,dependsOnMethods= {"logInDetails"})
 	     void searchedAndDelete() throws InterruptedException {
 	    	
 	    	Forums_TR createForums = new Forums_TR(driver);
@@ -278,5 +276,30 @@ import pageObjectTr.Login_TR;
 	        	   Assert.fail("It is failed due to:"+e.getMessage());
 	    	}
 	    	
-	    }	        
+	    }	
+	     
+	     @Test(priority=7,dependsOnMethods= {"logInDetails"})
+	     void followCategory() {
+	    	 
+	    	 Forums_TR createForums = new Forums_TR(driver);
+		    	
+	    	 try {
+	    		
+	    		 logger.info("TC-01 --> Verify User is navigate to the forum page by clicking Forums");
+	    		 Thread.sleep(5000);
+	    		 createForums.forumNavigation();
+	    		 
+	    		 logger.info("TC-02 --> Verify User is able to follow specific category by clicking Follow ");
+	    		 
+	    		 logger.info("TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow");
+	    		 
+	    		 createForums.followCategory("My Food");
+	    	 }
+	    	 
+	    	 catch(Exception e) {
+	    		 
+	    		 logger.error("It is Failed");
+	    		 Assert.fail("It is failed due to:" +e.getMessage());
+	    	 }
+	     }
 }

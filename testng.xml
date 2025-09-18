@@ -17,8 +17,8 @@
               <!--    <class name="tc_Tr.SignUp_Tr"/> -->
                <!--  <class name="tc_Tr.LogIn_Tr"/> -->
                <!--  <class name="tc_Tr.ForgotPassword_Tr">-->
-                    <class name="tc_Tr.Blogs_Tr"/>
-               <!-- <class name="tc_Tr.Forums_Tr"/> -->
+                 <class name="tc_Tr.Blogs_Tr"/>
+                  <!--    <class name="tc_Tr.Forums_Tr"/>-->
                  <!--   <class name="tc_Tr.ContactUs_Tr"></class>-->
 	          <!--   <class name="tc_Tr.BottomNavigation_Tr">-->
             <!--     <class name="tc_Tr.ProductCart_Tr"></class>-->
@@ -30,8 +30,8 @@
                   <!--   <class name="tc_Tr.UserProfile_Tr"></class>-->
                <!--  <class name="tc_Tr.BlockUser_Tr"></class>-->
                   
-                     <!--    <class name="tc_Tr.MyBookings_Tr"></class>-->
-                      <!--     <class name="tc_Tr.HomePage_Tr"></class>-->
+               <!--    <class name="tc_Tr.MyBookings_Tr"></class>-->
+               <!--     <class name="tc_Tr.HomePage_Tr"></class>-->
              
  
     </classes>    

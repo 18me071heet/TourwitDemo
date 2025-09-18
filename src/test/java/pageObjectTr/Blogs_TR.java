@@ -232,15 +232,37 @@ public class Blogs_TR {
  		      
      }
      
-     public void sortestFilter() {
-    	 
-    	 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
-		 WebElement filter = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='Sort by:']/following::div[contains(@class,'placeholder')][1]")));
-		 filter.click();
-		 
-		 WebElement option = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'option') and text()='Newest to Oldest']")));
-		 option.click();
-		 
+     public void sortestFilter() throws InterruptedException {
+
+		Thread.sleep(1000);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	
+		WebElement sortDropdownControl = wait.until(ExpectedConditions.elementToBeClickable(
+			By.xpath("//span[normalize-space()='Sort by:']/following-sibling::div//div[contains(@class,'css-kbyv0d-control')]")
+		));
+		
+		sortDropdownControl.click();
+		
+		try {
+			Thread.sleep(1000); 
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+		}
+
+		WebElement newestToOldestOption = wait.until(ExpectedConditions.elementToBeClickable(
+			    By.xpath("//div[@role='option' and normalize-space()='Newest to Oldest']")
+			));
+		
+		newestToOldestOption.click();
+		
+		Thread.sleep(2000);
+		
+		WebElement oldestToOldestOption = wait.until(ExpectedConditions.elementToBeClickable(
+			    By.xpath("//div[@role='option' and normalize-space()='Oldest to Newest']")
+			));
+		
+		oldestToOldestOption.click();
+		
      }
      
      public void searchNdEditBlog(WebDriver driver,String blogTitle) throws InterruptedException {
