@@ -259,45 +259,93 @@ public class Forums_TR {
 	}
 	
 	public void followCategory(String categoryName) throws InterruptedException {
-			try {
-				// Try to find the Follow button
-				WebElement followBtn = wait.until(
-					ExpectedConditions.elementToBeClickable(
-						By.xpath("//h3[normalize-space()='" + categoryName + "']" +
-								 "/ancestor::div[contains(@class,'cursor-pointer')]" +
-								 "//button[contains(@class,'lg:inline-flex') and normalize-space()='Follow']")) );
+		
+	    try {
+	       
+	    	  WebElement loadMore = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(.,'Load More')]")));
+		        
+		        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", loadMore);
+		        
+		        loadMore.click();
+		        
+	        WebElement button = wait.until(ExpectedConditions.refreshed(
+	            ExpectedConditions.elementToBeClickable(By.xpath("//h3[normalize-space()='" + categoryName + "']" +
+	                         "/ancestor::div[contains(@class,'cursor-pointer')]" +
+	                         "//button[contains(@class,'lg:inline-flex')]"))));
 
-				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", followBtn);
-				followBtn.click();
-				System.out.println("Now following category: " + categoryName);
-				Thread.sleep(3000);
+	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", button);
+	        String currentState = button.getText().trim();
 
-				// Verify button changed to 'Following'
-				WebElement followingBtn = wait.until(
-					ExpectedConditions.visibilityOfElementLocated(
-						By.xpath("//h3[normalize-space()='" + categoryName + "']" +
-								 "/ancestor::div[contains(@class,'cursor-pointer')]" +
-								 "//button[contains(@class,'lg:inline-flex') and normalize-space()='Following']")) );
-				System.out.println("Button changed to: " + followingBtn.getText());
+	       
+	        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", button);
 
-				// Now click 'Following' to unfollow
-				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", followingBtn);
-				followingBtn.click();
-				System.out.println("Unfollowed category: " + categoryName);
-				Thread.sleep(2000);
+	       
+	        String expectedState = currentState.equalsIgnoreCase("Follow") ? "Following" : "Follow";
 
-				// Verify button changed back to 'Follow'
-				WebElement followBtnAgain = wait.until(
-					ExpectedConditions.visibilityOfElementLocated(
-						By.xpath("//h3[normalize-space()='" + categoryName + "']" +
-								 "/ancestor::div[contains(@class,'cursor-pointer')]" +
-								 "//button[contains(@class,'lg:inline-flex') and normalize-space()='Follow']")) );
-				System.out.println("Button changed back to: " + followBtnAgain.getText());
+	        wait.until(ExpectedConditions.refreshed(ExpectedConditions.textToBePresentInElementLocated(
+	                By.xpath("//h3[normalize-space()='" + categoryName + "']" +
+	                         "/ancestor::div[contains(@class,'cursor-pointer')]" +
+	                         "//button[contains(@class,'lg:inline-flex')]"),
+	                expectedState)));
 
-			} catch (TimeoutException e) {
-				System.out.println("Category or button not found: " + categoryName);
-			}
-		}
+	        System.out.println("Toggled category: " + categoryName +"→" + expectedState);
+	        
+		    Thread.sleep(3000);
+
+	    } catch (TimeoutException e) {
+	        System.out.println("Category or button not found: " + categoryName);
+	    }
+	}
+
+	 public void categoriesFilter() throws InterruptedException {
+    	 
+  	        Thread.sleep(3000);
+	 	    WebElement categories = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='Categories:']/following::div[contains(@class,'placeholder')][1]")));
+	 	    
+	 	   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", categories);
+	 	    categories.click();
+	 	    
+	 	   WebElement Option = wait.until(ExpectedConditions.presenceOfElementLocated(
+	 			    By.xpath("//li[normalize-space()='My Food']")));
+
+	 	   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Option);
+		   
+	 	  Thread.sleep(3000);
+	 	   wait.until(ExpectedConditions.elementToBeClickable(Option)).click();
+	 	    
+	 	    Thread.sleep(1000);
+	 		      
+	     }
+	 
+	  public void sortestFilter() throws InterruptedException {
+		  
+      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+    
+         WebElement filter = wait.until(ExpectedConditions.elementToBeClickable(
+         By.xpath("//span[normalize-space()='Sort by:']/following::div[contains(@class,'placeholder')][1]")));
+         filter.click();
+    
+         Thread.sleep(2000);
+    
+         WebElement option = wait.until(ExpectedConditions.visibilityOfElementLocated(
+    	 By.xpath("//div[contains(@class,'option') and normalize-space()='Newest']")));
+   
+         option.click();
+     
+         Thread.sleep(2000);
+    
+         WebElement filterAgain = wait.until(ExpectedConditions.elementToBeClickable(
+         By.xpath("//span[normalize-space()='Sort by:']/following::div[contains(@class,'placeholder') or contains(@class,'singleValue')]")));
+         filterAgain.click();
+             
+         Thread.sleep(2000);
+            
+         WebElement option2 = wait.until(ExpectedConditions.visibilityOfElementLocated(
+         By.xpath("//div[contains(@class,'option') and normalize-space()='Most Viewed']")));
+            
+         option2.click();
+     
+}
 	    
 }
 

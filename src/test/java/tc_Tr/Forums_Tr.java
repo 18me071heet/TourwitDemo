@@ -293,13 +293,81 @@ import pageObjectTr.Login_TR;
 	    		 
 	    		 logger.info("TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow");
 	    		 
-	    		 createForums.followCategory("My Food");
+	    		 logger.info("TC-04 --> Verify more fourms categories are displaying by clicking Load more button");
+	    		 
+	    		 createForums.followCategory("TravelForum");
+	    	 }
+	    	 
+	    	  catch(Exception e) {
+	    		 
+	    		 logger.error("It is Failed");
+	    		 Assert.fail("It is failed due to:" + e.getMessage());
+	    		 
+	    	 }
+	     }
+	     
+	   //  @Test(priority=8,dependsOnMethods= {"logInDetails"})
+	     void sortestFilter() {
+	    	 
+	    	 Forums_TR createForums = new Forums_TR(driver);
+	    	 
+	    	 try {
+		    		
+	    		 logger.info("TC-01 --> Verify User is navigate to the forum page by clicking Forums");
+	    		 Thread.sleep(5000);
+	    		 createForums.forumNavigation();
+	    		 
+	    	     logger.info("TC-02 --> Verify User is navigate to All post");
+	    	     threadTime();
+	    	     createForums.allForum();
+	    	     
+	    	     logger.info("TC-03 --> Verify User is able to apply filter by selecting the Newest");
+	    	     
+	    	     logger.info("TC-04 --> Verify User is able to change apply filter and select the new filter from the dropdown");
+	    	     createForums.sortestFilter();
+	    	     
+	    	     threadTime();
+	    	     
 	    	 }
 	    	 
 	    	 catch(Exception e) {
 	    		 
 	    		 logger.error("It is Failed");
 	    		 Assert.fail("It is failed due to:" +e.getMessage());
+	    		 
 	    	 }
+	     }
+	     
+	     @Test(priority=9,dependsOnMethods= {"logInDetails"})
+	     void categoryFilter() {
+	    	 
+          Forums_TR createForums = new Forums_TR(driver);
+	    	 
+	    	 try {
+		    		
+	    		 logger.info("TC-01 --> Verify User is navigate to the forum page by clicking Forums");
+	    		 Thread.sleep(5000);
+	    		 createForums.forumNavigation();
+	    		 
+	    	     logger.info("TC-02 --> Verify User is navigate to All post");
+	    	     threadTime();
+	    	     createForums.allForum();
+	    	     
+	    	     logger.info("TC-03 --> Verify Category filter dropdown is open by clicking on category filter");
+	    	     
+	    	     logger.info("TC-04 --> Verify User is able to select category from the category dropdown");
+	    	     createForums.categoriesFilter();
+	    	     
+	    	     threadTime();
+	    	     
+	    	 }
+	    	 
+	    	 catch(Exception e) {
+	    		 
+	    		 logger.error("It is Failed");
+	    		 Assert.fail("It is failed due to:" +e.getMessage());
+	    		 
+	    	 }
+	    	 
 	     }
 }

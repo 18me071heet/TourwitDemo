@@ -238,28 +238,21 @@ public class Blogs_TR {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 	
 		WebElement sortDropdownControl = wait.until(ExpectedConditions.elementToBeClickable(
-			By.xpath("//span[normalize-space()='Sort by:']/following-sibling::div//div[contains(@class,'css-kbyv0d-control')]")
-		));
+		By.xpath("//span[normalize-space()='Sort by:']/following-sibling::div//div[contains(@class,'css-kbyv0d-control')]")));
 		
 		sortDropdownControl.click();
 		
-		try {
-			Thread.sleep(1000); 
-		} catch (InterruptedException e) {
-			Thread.currentThread().interrupt();
-		}
-
+		Thread.sleep(2000); 
+	
 		WebElement newestToOldestOption = wait.until(ExpectedConditions.elementToBeClickable(
-			    By.xpath("//div[@role='option' and normalize-space()='Newest to Oldest']")
-			));
+		By.xpath("//div[@role='option' and normalize-space()='Newest to Oldest']")));
 		
 		newestToOldestOption.click();
 		
 		Thread.sleep(2000);
 		
 		WebElement oldestToOldestOption = wait.until(ExpectedConditions.elementToBeClickable(
-			    By.xpath("//div[@role='option' and normalize-space()='Oldest to Newest']")
-			));
+		By.xpath("//div[@role='option' and normalize-space()='Oldest to Newest']")));
 		
 		oldestToOldestOption.click();
 		

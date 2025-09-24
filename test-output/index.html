@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tc_Tr.Blogs_Tr" class="method navigator-link" hash-for-method="sortByNewestToOldest">sortByNewestToOldest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tc_Tr.Forums_Tr" class="method navigator-link" hash-for-method="categoryFilter">categoryFilter</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -117,7 +117,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tc_Tr.Blogs_Tr" class="method navigator-link" hash-for-method="logInDetails">logInDetails</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tc_Tr.Forums_Tr" class="method navigator-link" hash-for-method="followCategory">followCategory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tc_Tr.Forums_Tr" class="method navigator-link" hash-for-method="logInDetails">logInDetails</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -135,21 +140,24 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">tc_Tr.Blogs_Tr</span>
+              <span class="class-name">tc_Tr.Forums_Tr</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="sortByNewestToOldest">
-                  </a> <!-- sortByNewestToOldest -->
-                  <span class="method-name">sortByNewestToOldest</span>
-                  <div class="stack-trace">java.lang.AssertionError: It is failed due to: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@role=&apos;option&apos; and normalize-space()=&apos;Oldest to Newest&apos;] (tried for 20 second(s) with 500 milliseconds interval)
+                  <a name="categoryFilter">
+                  </a> <!-- categoryFilter -->
+                  <span class="method-name">categoryFilter</span>
+                  <div class="stack-trace">java.lang.AssertionError: It is failed due to:element click intercepted: Element is not clickable at point (1005, -48)
+  (Session info: chrome=140.0.7339.128)
 Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51291}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51291/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 00374ffba1043465e4688b79b288151a
-	at tc_Tr.Blogs_Tr.sortByNewestToOldest(Blogs_Tr.java:421)
+Command: [89b80ef48870ea5970236f93b40f32f3, clickElement {id=f.E2B3B6884E99583D1B7C75B4B916A92D.d.D2DD155DA93597E07D6E5288684DAB3A.e.166}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52634}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52634/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (89b80ef48870ea5970236f93b40f32f3)] -&gt; xpath: //a[normalize-space()=&apos;Forum&apos;]]
+Session ID: 89b80ef48870ea5970236f93b40f32f3
+	at tc_Tr.Forums_Tr.categoryFilter(Forums_Tr.java:368)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 26 stack frames
 </div> <!-- stack-trace -->
@@ -160,9 +168,16 @@ Session ID: 00374ffba1043465e4688b79b288151a
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tc_Tr.Blogs_Tr</span>
+              <span class="class-name">tc_Tr.Forums_Tr</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="followCategory">
+                  </a> <!-- followCategory -->
+                  <span class="method-name">followCategory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="logInDetails">
@@ -188,7 +203,7 @@ Session ID: 00374ffba1043465e4688b79b288151a
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tc_Tr.Blogs_Tr&quot;/&gt;
+      &lt;class name=&quot;tc_Tr.Forums_Tr&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -228,20 +243,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'sortByNewestToOldest')
-data.setCell(0, 2, 'tc_Tr.Blogs_Tr')
-data.setCell(0, 3, 35431);
+data.setCell(0, 1, 'followCategory')
+data.setCell(0, 2, 'tc_Tr.Forums_Tr')
+data.setCell(0, 3, 25323);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'logInDetails')
-data.setCell(1, 2, 'tc_Tr.Blogs_Tr')
-data.setCell(1, 3, 15566);
+data.setCell(1, 2, 'tc_Tr.Forums_Tr')
+data.setCell(1, 3, 9504);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'categoryFilter')
+data.setCell(2, 2, 'tc_Tr.Forums_Tr')
+data.setCell(2, 3, 6146);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 50 seconds</span>
+              <span class="suite-total-time">Total running time: 40 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -267,20 +286,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tc_Tr.Blogs_Tr</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tc_Tr.Forums_Tr</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">signUp(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">logInDetails</span>
-                <span class="method-start">10319 ms</span>
+                <span class="method-start">9988 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">followCategory</span>
+                <span class="method-start">19515 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">sortByNewestToOldest</span>
-                <span class="method-start">25914 ms</span>
+                <span class="method-name">categoryFilter</span>
+                <span class="method-start">44845 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

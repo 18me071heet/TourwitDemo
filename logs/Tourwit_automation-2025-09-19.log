@@ -1,0 +1,56 @@
+10:52:18.210 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+10:52:21.362 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+10:52:26.577 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to follow specific category by clicking Follow 
+10:52:26.577 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow
+10:56:55.831 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+10:56:56.137 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+10:57:04.087 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+10:57:07.279 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+10:57:10.407 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+10:57:56.240 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+10:57:56.607 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+10:58:04.364 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+10:58:07.579 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+10:58:10.726 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+10:58:13.924 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+10:58:19.182 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to follow specific category by clicking Follow 
+10:58:19.182 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow
+10:59:44.644 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+10:59:44.945 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+10:59:52.727 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+10:59:55.912 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+10:59:59.036 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+11:00:02.218 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+11:00:07.489 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to follow specific category by clicking Follow 
+11:00:07.489 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow
+11:04:11.426 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+11:04:11.765 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+11:04:15.051 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+11:04:18.461 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+11:04:21.791 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+11:04:24.965 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+11:04:30.214 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to follow specific category by clicking Follow 
+11:04:30.214 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow
+11:05:33.038 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+11:05:33.301 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+11:05:41.260 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+11:05:44.451 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+11:05:47.560 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+11:05:50.737 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+11:05:56.155 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to follow specific category by clicking Follow 
+11:05:56.155 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow
+11:17:53.168 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+11:17:53.539 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+11:18:01.686 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email

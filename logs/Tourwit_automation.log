@@ -1,17 +1,21 @@
-15:40:17.289 [main] INFO  tc_Tr.Blogs_Tr - TC-XX --> Verify User is able to sort blogs by Newest to Oldest
-15:51:33.159 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+11:18:04.878 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+11:18:07.991 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+11:18:11.162 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+11:18:16.374 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to follow specific category by clicking Follow 
+11:18:16.375 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow
+11:18:16.375 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify more fourms categories are displaying by clicking Load more button
+11:18:29.408 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+11:18:34.430 [main] ERROR tc_Tr.Forums_Tr - It is Failed
+11:19:31.402 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
 
-15:51:33.634 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-15:51:43.981 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
-15:51:49.212 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
-15:51:54.342 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
-15:52:04.527 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs
-15:52:09.870 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is able to sort blogs by Newest to Oldest
-15:52:09.870 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to sort blogs by Oldest to Newest
-15:52:34.944 [main] ERROR tc_Tr.Blogs_Tr - Failed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@role='option' and normalize-space()='Oldest to Newest'] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '4.32.0', revision: 'd17c8aa950'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.185 (eeea00e459e..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51291}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51291/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 00374ffba1043465e4688b79b288151a
+11:19:31.677 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+11:19:41.691 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+11:19:44.879 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+11:19:47.990 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+11:19:51.184 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+11:19:56.319 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to follow specific category by clicking Follow 
+11:19:56.319 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow
+11:19:56.320 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify more fourms categories are displaying by clicking Load more button
+11:20:16.512 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+11:20:22.647 [main] ERROR tc_Tr.Forums_Tr - It is Failed
