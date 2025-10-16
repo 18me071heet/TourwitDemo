@@ -70,8 +70,7 @@ import pageObjectTr.Login_TR;
     	   	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     	    	
     	   	 WebElement categoryInput = wait.until(
-    	   	    ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-category-input"))
-    	    	);
+    	   	    ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-category-input")));
     	   	 
     	     categoryInput.click();
     	   	 categoryInput.sendKeys("Adventure"); 
@@ -126,8 +125,9 @@ import pageObjectTr.Login_TR;
     	   	 
     	   } catch(Exception e) {
     		
+    		 Assert.fail("It is failed");
     	     logger.error("Test failed due to exception: ", e);
-    		 throw e;
+    		
     	 }
    	
    }
@@ -251,7 +251,7 @@ import pageObjectTr.Login_TR;
      
      catch(Exception e) {
     	 
-    	 logger.error("Failed:"+e);
+    	 logger.error("Failed:"+ e);
     	 Assert.fail("It is failed due to:"+e.getMessage());
      }
    	 
@@ -264,6 +264,7 @@ import pageObjectTr.Login_TR;
          threadTime();
          
          try {
+        	 
         	 blogs.blogNavigation(driver);
         	 
         	 // blogs.myBlogs();
@@ -302,7 +303,7 @@ import pageObjectTr.Login_TR;
     	 
      }
      
-   //  @Test(priority=7,dependsOnMethods= {"logInDetails"})
+     @Test(priority=7,dependsOnMethods= {"logInDetails"})
      void searchNdEdit() throws InterruptedException {
     	 
     	  Blogs_TR blogs = new Blogs_TR(driver);
@@ -311,6 +312,9 @@ import pageObjectTr.Login_TR;
     		  
     		  WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
         	  threadTime();
+        	  
+        	  WebElement closeIcon = driver.findElement(By.xpath("//button[@aria-label='Close popup']//*[name()='svg']"));
+        	  closeIcon.click();
         	  
         	  logger.info("TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs from Header");
          	  blogs.blogNavigation(driver);
@@ -323,7 +327,7 @@ import pageObjectTr.Login_TR;
          	  logger.info("TC-04 --> Verify Blog is displaying according to searching");
          	  
          	  logger.info("TC-05 --> Verify Edit blog screen is displaying by clicking on Edit icon on the searched blog");
-         	  blogs.searchNdEditBlog(driver, "Taam Jhaam");
+         	  blogs.searchNdEditBlog(driver, "raatri bazaar new");
          	  
          	  logger.info("TC-06 --> Verify User is able to update the blog read time");
          	  blogs.updateBlogReadtime(p.getProperty("blogUpdatedReadTime_Tr"));
@@ -336,7 +340,13 @@ import pageObjectTr.Login_TR;
          	  blogs.updateBlogDescription(p.getProperty("blogDescriptionUpdated_Tr"));
          	  threadTime();
          	  
-         	  logger.info("TC-08 --> Verify blog is getting update by clicking publish button");
+         	  logger.info("TC-08 --> Verify User is able to change upload image");
+         	  blogs.updateCoverImage();
+         	  
+         	  logger.info("TC-09 --> Verify User is able to change thumbnail image");
+         	  blogs.updateThumbnailImage();
+         	  
+         	  logger.info("TC-10 --> Verify blog is getting update by clicking publish button");
          	  blogs.publishBlog();
 
          	  WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Blog updated. Awaiting Approval')]")));
@@ -398,7 +408,7 @@ import pageObjectTr.Login_TR;
     	  
 		}
 
-		@Test(priority=3, dependsOnMethods = {"logInDetails"})
+		@Test(priority=9, dependsOnMethods = {"logInDetails"})
 		void sortByNewestToOldest() {
 
 			try {

@@ -200,11 +200,23 @@ public class Blogs_TR {
   	 
      }
      
+     public void updateCoverImage() {
+    	 
+    	 WebElement uploadImage = driver.findElement(By.xpath("//label[normalize-space()='Add Image for your blog']//following::input[@type='file']"));
+  		 uploadImage.sendKeys("\"C:\\Users\\INX\\OneDrive\\Documents\\Saved Pictures\\10 mb image.jpg\"");
+     }
+     
      public void uploadThumbnailImage() {
     	
     	 WebElement thumbnailImage = driver.findElement(By.xpath("//label[normalize-space()='Add thumbnail image for your blog']//following::input[@type='file']"));
     	 thumbnailImage.sendKeys("C:\\Users\\INX\\OneDrive\\Documents\\Saved Pictures\\test.jpg");
 
+     }
+     
+     public void updateThumbnailImage() {
+    	 
+    	 WebElement thumbnailImage = driver.findElement(By.xpath("//label[normalize-space()='Add thumbnail image for your blog']//following::input[@type='file']"));
+    	 thumbnailImage.sendKeys("\"C:\\Users\\INX\\OneDrive\\Documents\\Saved Pictures\\test2.jpg\"");
      }
      
      public void uploadDescriptionImage() {
@@ -221,7 +233,7 @@ public class Blogs_TR {
  	    WebElement categories = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='Categories:']/following::div[contains(@class,'placeholder')][1]")));
  	    categories.click();
  	    
- 	   WebElement adventureOption = wait.until(ExpectedConditions.presenceOfElementLocated(
+ 	     WebElement adventureOption = wait.until(ExpectedConditions.presenceOfElementLocated(
  			    By.xpath("//li[normalize-space()='Adventure']")));
 
  	   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", adventureOption);

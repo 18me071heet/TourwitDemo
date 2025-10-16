@@ -62,6 +62,7 @@ public class Forums_TR {
 	public void allForum() {
 		
 		WebElement allPostForum = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='All Posts']")));	
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", allPostForum);
 		allPostForum.click();
 		
 	}
@@ -144,7 +145,8 @@ public class Forums_TR {
 		
 		  WebElement sendButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='button']/*[name()='svg']")));
 		  	 ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", sendButton);
-		 	   sendButton.click();
+		  	 
+		  sendButton.click();
 		       	 
 	}
 	
@@ -176,28 +178,26 @@ public class Forums_TR {
 		searchForum.sendKeys(forumTitle);
 		searchForum.sendKeys(Keys.ENTER);
 				
-		   WebElement editButton = wait.until(ExpectedConditions.elementToBeClickable(
-			        By.xpath("//h3[normalize-space()='" + forumTitle + "']/following::button[contains(@class,'min-w-5')][1]")
-			    ));
+		WebElement editButton = wait.until(ExpectedConditions.elementToBeClickable(
+		By.xpath("//h3[normalize-space()='" + forumTitle + "']/following::button[contains(@class,'min-w-5')][1]")));
 		   
-		 	    editButton.click();
+		editButton.click();
 	}
 	
 	public void searchAndDelete(WebDriver driver,String forumTitle) {
 		
 		 WebElement searchForum = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@placeholder='Search by keywords...']")));
 			
-			searchForum.sendKeys(forumTitle);
-			searchForum.sendKeys(Keys.ENTER);
+		 searchForum.sendKeys(forumTitle);
+		 searchForum.sendKeys(Keys.ENTER);
 			
-			WebElement deleteButton = wait.until(ExpectedConditions.elementToBeClickable(
-				    By.xpath("//h3[normalize-space()='" + forumTitle + "']/following::button[contains(@class,'min-w-5')][2]")
-				));
+		 WebElement deleteButton = wait.until(ExpectedConditions.elementToBeClickable(
+		 By.xpath("//h3[normalize-space()='" + forumTitle + "']/following::button[contains(@class,'min-w-5')][2]")));
 			
-			 deleteButton.click();
+		 deleteButton.click();
 			 	    
-			 WebElement confirmDelete = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Confirm Removal']")));  
-			 confirmDelete.click();
+		 WebElement confirmDelete = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Confirm Removal']")));  
+		 confirmDelete.click();
 			
 	}
 	
@@ -258,7 +258,7 @@ public class Forums_TR {
 		
 	}
 	
-	public void followCategory(String categoryName) throws InterruptedException {
+	   public void followCategory(String categoryName) throws InterruptedException {
 		
 	    try {
 	       
@@ -297,38 +297,36 @@ public class Forums_TR {
 	    }
 	}
 
-	 public void categoriesFilter() throws InterruptedException {
-    	 
-  	        Thread.sleep(3000);
-	 	    WebElement categories = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='Categories:']/following::div[contains(@class,'placeholder')][1]")));
-	 	    
-	 	   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", categories);
-	 	    categories.click();
-	 	    
-	 	   WebElement Option = wait.until(ExpectedConditions.presenceOfElementLocated(
-	 			    By.xpath("//li[normalize-space()='My Food']")));
+	    public void categoriesFilter() {
+	     
+	    WebElement categories = wait.until(ExpectedConditions.elementToBeClickable(
+	    By.xpath("//span[normalize-space()='Categories:']/following::div[contains(@class,'placeholder')][1]")));
+	    
+	    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", categories);
+	    categories.click();
+ 
+	    WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
+	    By.xpath("//div[contains(@id,'react-select') and normalize-space()='TravelForum']")));
+	    	  
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", option);
+	    option.click();
+	    
+	}
 
-	 	   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Option);
-		   
-	 	  Thread.sleep(3000);
-	 	   wait.until(ExpectedConditions.elementToBeClickable(Option)).click();
-	 	    
-	 	    Thread.sleep(1000);
-	 		      
-	     }
-	 
-	  public void sortestFilter() throws InterruptedException {
+	    public void sortestFilter() throws InterruptedException {
 		  
-      WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-    
          WebElement filter = wait.until(ExpectedConditions.elementToBeClickable(
          By.xpath("//span[normalize-space()='Sort by:']/following::div[contains(@class,'placeholder')][1]")));
+         
+         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", filter);
          filter.click();
     
          Thread.sleep(2000);
     
          WebElement option = wait.until(ExpectedConditions.visibilityOfElementLocated(
     	 By.xpath("//div[contains(@class,'option') and normalize-space()='Newest']")));
+         
+         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);",option);
    
          option.click();
      
@@ -336,16 +334,41 @@ public class Forums_TR {
     
          WebElement filterAgain = wait.until(ExpectedConditions.elementToBeClickable(
          By.xpath("//span[normalize-space()='Sort by:']/following::div[contains(@class,'placeholder') or contains(@class,'singleValue')]")));
+         
+         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", filterAgain);
          filterAgain.click();
              
          Thread.sleep(2000);
             
          WebElement option2 = wait.until(ExpectedConditions.visibilityOfElementLocated(
          By.xpath("//div[contains(@class,'option') and normalize-space()='Most Viewed']")));
+         
+         ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", option2);
             
          option2.click();
      
 }
+	  
+	    public void subscribeNewsLater(String fname, String email) {
+		  
+		  //input[@placeholder='Enter your name']
+		  
+		  WebElement frstName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@placeholder='Enter your name']")));
+		  frstName.sendKeys(fname);
+		  
+		  WebElement emailAddress = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@placeholder='Enter your email']")));
+		  emailAddress.sendKeys(email);
+		  
+		  WebElement termsClick = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@type='checkbox']")));
+		  termsClick.click();
+		  
+		//  WebElement termsandConditionLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //a[normalize-space()='terms and conditions']")));
+		  //termsandConditionLink.click();
+		  
+	      WebElement subScribeButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //button[normalize-space()='Subscribe']")));
+		  subScribeButton.click();
+		 
+	  }
 	    
 }
 

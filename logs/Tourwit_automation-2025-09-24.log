@@ -1,0 +1,51 @@
+12:32:11.534 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to change apply filter and select the new filter from the dropdown
+12:40:09.590 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+12:40:09.961 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:40:19.117 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+12:40:22.354 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+12:40:25.507 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+12:40:28.682 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+12:40:33.850 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to follow specific category by clicking Follow 
+12:40:33.851 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow
+12:40:33.851 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify more fourms categories are displaying by clicking Load more button
+12:40:50.232 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add first name
+12:40:50.232 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add their email address
+12:40:50.232 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to select Terms and Conditions
+12:40:50.232 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is subscribe news letter by clicking on Subscribe button
+12:40:50.822 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+12:40:57.838 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is navigate to All post
+12:40:58.988 [main] ERROR tc_Tr.Forums_Tr - It is Failed
+12:40:59.012 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+12:40:59.012 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is navigate to All post
+12:41:02.017 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to apply filter by selecting the Newest
+12:41:02.019 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to change apply filter and select the new filter from the dropdown
+12:41:22.561 [main] ERROR tc_Tr.Forums_Tr - It is Failed
+12:44:49.541 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+12:44:49.844 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:44:59.180 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+12:45:02.440 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+12:45:05.584 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+12:45:08.820 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+12:45:14.082 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to follow specific category by clicking Follow 
+12:45:14.084 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow
+12:45:14.085 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify more fourms categories are displaying by clicking Load more button
+12:45:31.753 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add first name
+12:45:31.753 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add their email address
+12:45:31.753 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to select Terms and Conditions
+12:45:31.753 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is subscribe news letter by clicking on Subscribe button
+12:45:33.731 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+12:45:40.741 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is navigate to All post
+12:45:40.975 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify Category filter dropdown is open by clicking on category filter
+12:45:40.975 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to select category from the category dropdown
+12:45:50.087 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+12:45:50.087 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is navigate to All post
+12:45:53.094 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to apply filter by selecting the Newest
+12:45:53.096 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to change apply filter and select the new filter from the dropdown
+12:45:56.610 [main] ERROR tc_Tr.Forums_Tr - It is Failed
+12:55:54.841 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+

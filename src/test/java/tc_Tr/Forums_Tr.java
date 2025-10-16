@@ -46,7 +46,7 @@ import pageObjectTr.Login_TR;
 	   		
 	   	}
 	    
-     //  @Test(priority=2,dependsOnMethods= {"logInDetails"})
+            //  @Test(priority=2,dependsOnMethods= {"logInDetails"})
 	        void createForum() throws InterruptedException {
 	    	
 	    	Forums_TR createForums = new Forums_TR(driver);
@@ -82,10 +82,13 @@ import pageObjectTr.Login_TR;
 		    	logger.info("TC-06 --> Verify Forum is getting created or not by clicking Publish");
 		    	createForums.forumPublishBtn();
 		    	
-		    	WebElement toastMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Forum verification sent to the admin.')]")));
+		    	WebElement toastMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Forum is created successfully.')]")));
 		    	
 		    	String toastTxt = toastMsg.getText();
 		  
+		    	//Forum is created successfully.
+
+
 		    	Assert.assertTrue(toastTxt.contains("Forum verification sent to the admin."), " No similiar toast message is found ");
 		    	
 	    	}
@@ -98,8 +101,8 @@ import pageObjectTr.Login_TR;
 	    		    	
 	    }
        
-       //@Test(priority=3,dependsOnMethods= {"logInDetails"})
-       void searchForum() throws InterruptedException {
+           //@Test(priority=3,dependsOnMethods= {"logInDetails"})
+           void searchForum() throws InterruptedException {
    	
         	Forums_TR createForums = new Forums_TR(driver);
    	
@@ -134,8 +137,8 @@ import pageObjectTr.Login_TR;
    	
    }
 	    
-	 //  @Test(priority=4,dependsOnMethods= {"logInDetails"})
-	    void searchNdEdit() throws InterruptedException {
+	       //  @Test(priority=4,dependsOnMethods= {"logInDetails"})
+	       void searchNdEdit() throws InterruptedException {
 	    	
            Forums_TR createForums = new Forums_TR(driver);
 	       	
@@ -179,7 +182,7 @@ import pageObjectTr.Login_TR;
 	    	
 	    }	
 	    
-	  //  @Test(priority=5,dependsOnMethods= {"logInDetails"})
+	   //  @Test(priority=5,dependsOnMethods= {"logInDetails"})
 	    void searchNdComment() throws InterruptedException {
 	    	
 	    	   Forums_TR createForums = new Forums_TR(driver);
@@ -238,65 +241,66 @@ import pageObjectTr.Login_TR;
 	    	   } 		  	  		  	               	
 	    }
 	    
-	  //   @Test(priority=6,dependsOnMethods= {"logInDetails"})
+	   //   @Test(priority=6,dependsOnMethods= {"logInDetails"})
 	     void searchedAndDelete() throws InterruptedException {
 	    	
 	    	Forums_TR createForums = new Forums_TR(driver);
 	    	
 	        	try {
-	          	   
-	    	        	logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
-	    	   	    	Thread.sleep(5000);
-	    	   	    	createForums.forumNavigation();
-	    	   	    	
-	    	   	    	logger.info("TC-02 --> Verify User is navigate to my forum page");
-	    	   	    	createForums.myForumNavigation();
-	    	   	    	
-	    	   	    	logger.info("TC-03 --> Verify User is able to search forum name");
-	    	   	    	threadTime();
-	    	   	    
-	    	   	    	logger.info("TC-04 --> Verify User is able to delete searched forum by clicking on delete icon");
-	    	   	    	
-	    	   	    	createForums.searchAndDelete(driver, "The Future of Automation Forum");
-	    	   	    	
-	    	   	    	//Removal request submitted for admin approval.
-	    	   	    
-	    	   	    	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
-	    	   	    	
-	    	   	    	WebElement toastMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Removal request submitted for admin approval.')]")));
-		            	
-		            	String toastTxt = toastMsg.getText();
-		            
-		            	Assert.assertTrue(toastTxt.contains("Removal request submitted for admin approval."), "No similiar toast message is found");
-                    
-  	   	            
+	          
+	    	   	logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
+	    	   	Thread.sleep(5000);
+	    	   	createForums.forumNavigation();
+	    	   	
+	    	   	logger.info("TC-02 --> Verify User is navigate to my forum page");
+	    	   	createForums.myForumNavigation();
+	    	   	
+	    	   	logger.info("TC-03 --> Verify User is able to search forum name");
+	    	   	threadTime();
+	    	   
+	    	   	logger.info("TC-04 --> Verify User is able to delete searched forum by clicking on delete icon");
+	    	   	
+	    	   	createForums.searchAndDelete(driver, "The Future of Automation Forum");
+	    	   	
+	    	   	//Removal request submitted for admin approval.
+	    	   
+	    	   	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+	    	   	
+	    	   	WebElement toastMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Removal request submitted for admin approval.')]")));
+		       	
+		       	String toastTxt = toastMsg.getText();
+		       
+		       	Assert.assertTrue(toastTxt.contains("Removal request submitted for admin approval."), "No similiar toast message is found");
+                        
 	         	} catch(Exception e) {
 	    		
-	    		   logger.error("Failed:"+e);
-	        	   Assert.fail("It is failed due to:"+e.getMessage());
+	    		logger.error("Failed:"+e);
+	        	Assert.fail("It is failed due to:"+e.getMessage());
 	    	}
 	    	
 	    }	
 	     
-	     @Test(priority=7,dependsOnMethods= {"logInDetails"})
+         @Test(priority=7,dependsOnMethods= {"logInDetails"})
 	     void followCategory() {
 	    	 
 	    	 Forums_TR createForums = new Forums_TR(driver);
 		    	
 	    	 try {
 	    		
-	    		 logger.info("TC-01 --> Verify User is navigate to the forum page by clicking Forums");
-	    		 Thread.sleep(5000);
-	    		 createForums.forumNavigation();
-	    		 
-	    		 logger.info("TC-02 --> Verify User is able to follow specific category by clicking Follow ");
-	    		 
-	    		 logger.info("TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow");
-	    		 
-	    		 logger.info("TC-04 --> Verify more fourms categories are displaying by clicking Load more button");
-	    		 
-	    		 createForums.followCategory("TravelForum");
-	    	 }
+	    	   logger.info("TC-01 --> Verify User is navigate to the forum page by clicking Forums");
+	    	    
+	    	   Thread.sleep(5000);
+	    	   createForums.forumNavigation();
+	    	   
+	    	   logger.info("TC-02 --> Verify User is able to follow specific category by clicking Follow ");
+	    	   
+	    	   logger.info("TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow");
+	    	   
+	    	   logger.info("TC-04 --> Verify more fourms categories are displaying by clicking Load more button");
+	    	   
+	    	   createForums.followCategory("TravelForum");
+	    	   
+	    	     }
 	    	 
 	    	  catch(Exception e) {
 	    		 
@@ -306,51 +310,48 @@ import pageObjectTr.Login_TR;
 	    	 }
 	     }
 	     
-	   //  @Test(priority=8,dependsOnMethods= {"logInDetails"})
-	     void sortestFilter() {
-	    	 
-	    	 Forums_TR createForums = new Forums_TR(driver);
-	    	 
-	    	 try {
-		    		
-	    		 logger.info("TC-01 --> Verify User is navigate to the forum page by clicking Forums");
-	    		 Thread.sleep(5000);
-	    		 createForums.forumNavigation();
+	     @Test(priority=8,dependsOnMethods= {"logInDetails"})
+	      void subScribeNewsLetter() {
+	    	  
+	    	  Forums_TR createForums = new Forums_TR(driver);
+	    	  
+	    	  try {
+	    		  
 	    		 
-	    	     logger.info("TC-02 --> Verify User is navigate to All post");
-	    	     threadTime();
-	    	     createForums.allForum();
-	    	     
-	    	     logger.info("TC-03 --> Verify User is able to apply filter by selecting the Newest");
-	    	     
-	    	     logger.info("TC-04 --> Verify User is able to change apply filter and select the new filter from the dropdown");
-	    	     createForums.sortestFilter();
-	    	     
-	    	     threadTime();
-	    	     
-	    	 }
-	    	 
-	    	 catch(Exception e) {
+	    		  logger.info("TC-01 --> Verify User is able to add first name");
+	    		  
+	    		  logger.info("TC-02 --> Verify User is able to add their email address");
+	    		  
+	    		  logger.info("TC-03 --> Verify User is able to select Terms and Conditions");
+	    		  
+	    		  logger.info("TC-04 --> Verify User is navigate to Terms and Condition page by clicking Terms and Condition Link");
+	    		  
+	    		  logger.info("TC-05 --> Verify User is subscribe news letter by clicking on Subscribe button");
+	    		  
+	    		  createForums.subscribeNewsLater("Will", "user23@yopmail.com");
 	    		 
-	    		 logger.error("It is Failed");
-	    		 Assert.fail("It is failed due to:" +e.getMessage());
-	    		 
-	    	 }
-	     }
+	     		  
+	    	  } catch(Exception e) {
+	    		  
+	    		  logger.error("It is failed");
+	    		  Assert.fail("It is failed due to:"+e.getMessage());
+	    	  }
+	      }
 	     
-	     @Test(priority=9,dependsOnMethods= {"logInDetails"})
+	   @Test(priority=9,dependsOnMethods= {"logInDetails"})
 	     void categoryFilter() {
 	    	 
-          Forums_TR createForums = new Forums_TR(driver);
-	    	 
+             Forums_TR createForums = new Forums_TR(driver);
+             
 	    	 try {
 		    		
 	    		 logger.info("TC-01 --> Verify User is navigate to the forum page by clicking Forums");
-	    		 Thread.sleep(5000);
-	    		 createForums.forumNavigation();
+	    		 Thread.sleep(4000);
+	    		 		
+	    		// createForums.forumNavigation();
 	    		 
+	    		 threadTime();
 	    	     logger.info("TC-02 --> Verify User is navigate to All post");
-	    	     threadTime();
 	    	     createForums.allForum();
 	    	     
 	    	     logger.info("TC-03 --> Verify Category filter dropdown is open by clicking on category filter");
@@ -367,7 +368,37 @@ import pageObjectTr.Login_TR;
 	    		 logger.error("It is Failed");
 	    		 Assert.fail("It is failed due to:" +e.getMessage());
 	    		 
+	    	 }	    	 
+	     }
+	     
+	     @Test(priority=10,dependsOnMethods= {"logInDetails"})
+	     void sortestFilter() {
+	    	 
+	    	 Forums_TR createForums = new Forums_TR(driver);
+	    	 
+	    	 try {
+		    	
+	    		 logger.info("TC-01 --> Verify User is navigate to the forum page by clicking Forums");
+	    	     //	 createForums.forumNavigation();
+	    		 
+	    	     logger.info("TC-02 --> Verify User is navigate to All post");
+	    	     threadTime();
+	    	     //   createForums.allForum();
+	    	     
+	    	     logger.info("TC-03 --> Verify User is able to apply filter by selecting the Newest");
+	    	     
+	    	     logger.info("TC-04 --> Verify User is able to change apply filter and select the new filter from the dropdown");
+	    	     createForums.sortestFilter();
+	    	     
+	    	     threadTime();
+	    	     
 	    	 }
 	    	 
-	     }
+	    	 catch(Exception e) {
+	    		 
+	    		 logger.error("It is Failed");
+	    		 Assert.fail("It is failed due to:" +e.getMessage());
+	    		 
+	    	 }
+	     }	 
 }

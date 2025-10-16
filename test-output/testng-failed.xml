@@ -10,7 +10,7 @@
       <class name="tc_Tr.Forums_Tr">
         <methods>
           <include name="signUp"/>
-          <include name="categoryFilter"/>
+          <include name="subScribeNewsLetter"/>
           <include name="logInDetails"/>
         </methods>
       </class> <!-- tc_Tr.Forums_Tr -->
