@@ -1,0 +1,48 @@
+17:31:50.281 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+17:32:00.538 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs
+17:32:05.995 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is able to sort blogs by Newest to Oldest
+17:32:05.995 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to sort blogs by Oldest to Newest
+17:32:32.310 [main] ERROR tc_Tr.Blogs_Tr - Failed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //div[@role='option' and normalize-space()='Oldest to Newest'] (tried for 20 second(s) with 500 milliseconds interval)
+17:32:37.342 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to blogs by clicking on Blogs
+17:32:37.343 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify category dropdown is open by clicking cateogy 
+17:32:37.343 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify user is able to select specific category
+17:36:22.246 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:36:22.624 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:36:26.320 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+17:36:31.546 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+17:36:36.706 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+17:36:46.949 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs
+17:36:52.555 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is able to sort blogs by Newest to Oldest
+17:36:52.556 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to sort blogs by Oldest to Newest
+17:37:18.137 [main] ERROR tc_Tr.Blogs_Tr - Failed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //div[@role='option' and normalize-space()='Oldest to Newest'] (tried for 20 second(s) with 500 milliseconds interval)
+17:37:23.153 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to blogs by clicking on Blogs
+17:37:23.153 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify category dropdown is open by clicking cateogy 
+17:37:23.153 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify user is able to select specific category
+17:44:37.671 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:44:38.066 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:44:41.706 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+17:44:46.951 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+17:44:52.119 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+17:45:02.328 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs
+17:45:07.815 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is able to sort blogs by Newest to Oldest
+17:45:07.815 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to sort blogs by Oldest to Newest
+17:45:28.573 [main] ERROR tc_Tr.Blogs_Tr - Failed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //div[@role='option' and contains(.,'Newest')] (tried for 20 second(s) with 500 milliseconds interval)
+17:45:33.597 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to blogs by clicking on Blogs
+17:45:33.597 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify category dropdown is open by clicking cateogy 
+17:45:33.597 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify user is able to select specific category
+17:47:06.953 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:47:07.308 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:47:10.408 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+17:47:15.628 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+17:47:20.788 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+17:47:31.028 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs
+17:47:36.572 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is able to sort blogs by Newest to Oldest
+17:47:36.572 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to sort blogs by Oldest to Newest
+17:47:57.452 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to blogs by clicking on Blogs
+17:47:57.453 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify category dropdown is open by clicking cateogy 

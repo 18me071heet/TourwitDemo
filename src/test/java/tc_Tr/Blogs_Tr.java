@@ -9,6 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import baseClassTr.BaseClassTr;
 import pageObjectTr.Blogs_TR;
+import pageObjectTr.Forums_TR;
 import pageObjectTr.Login_TR;
 
    public class Blogs_Tr extends BaseClassTr {
@@ -48,7 +49,8 @@ import pageObjectTr.Login_TR;
    		
    	}
    	
-   // @Test(priority=2,dependsOnMethods= {"logInDetails"})
+    
+   // @Test(priority=3,dependsOnMethods= {"logInDetails"})
     void createBlog() throws InterruptedException {
    	 	
     	try {
@@ -60,6 +62,11 @@ import pageObjectTr.Login_TR;
     	   	 logger.info("TC-01 --> Verify User is navigate to the blogs page by clicking on Blogs");
     	   	 
     	   	 blogs.blogNavigation(driver);
+    	   	
+    	   	 Thread.sleep(3000);
+    	 	WebElement closeSubs = driver.findElement(By.xpath(" //button[@aria-label='Close popup']//*[name()='svg']"));
+   			closeSubs.click();
+   			
     	   	 
     	   	 logger.info("TC-02 --> Verify Create Blog screen is displaying by clicking on Create Blog");
     	   	 blogs.createBlog();
@@ -132,7 +139,7 @@ import pageObjectTr.Login_TR;
    	
    }
        
-    //@Test(priority=3,dependsOnMethods= {"logInDetails"})
+   // @Test(priority=4,dependsOnMethods= {"logInDetails"})
     void searchBlog() throws InterruptedException {
    	 
    	 Thread.sleep(4000);
@@ -149,7 +156,7 @@ import pageObjectTr.Login_TR;
       	 
     	 logger.info("TC-02 --> Verify User is able to search blogs");
       	 
-      	 blogSearch.searchBlogs("Automation Blog");
+      	 blogSearch.searchBlogs("A road to heaven");
       	 threadTime();
       	 
       	 blogSearch.myBlogs();
@@ -159,7 +166,7 @@ import pageObjectTr.Login_TR;
       	 
       	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
                WebElement blogLink = wait.until(ExpectedConditions
-      	        .elementToBeClickable(By.xpath("//a[contains(text(),'Automation Blog')]")));
+      	        .elementToBeClickable(By.xpath("//a[contains(text(),'A road to heaven')]")));
       
       	 blogLink.click();
        
@@ -174,7 +181,7 @@ import pageObjectTr.Login_TR;
      
     }
    
-  //  @Test(priority=4,dependsOnMethods= {"logInDetails"})
+  //  @Test(priority=5,dependsOnMethods= {"logInDetails"})
     void editBlog() throws InterruptedException {
    	
    	 Thread.sleep(4000);
@@ -218,7 +225,7 @@ import pageObjectTr.Login_TR;
 }
 
     
-  //   @Test(priority=5,dependsOnMethods= {"logInDetails"})
+  //   @Test(priority=6,dependsOnMethods= {"logInDetails"})
      void deleteBlog() throws InterruptedException {
    	 
      Blogs_TR blogs = new Blogs_TR(driver);
@@ -257,7 +264,7 @@ import pageObjectTr.Login_TR;
    	 
     }
     
-  // @Test(priority=6,dependsOnMethods= {"logInDetails"})
+  // @Test(priority=7,dependsOnMethods= {"logInDetails"})
      void searchedandCommentBlog() throws InterruptedException {
     	 
     	 Blogs_TR blogs = new Blogs_TR(driver);
@@ -303,7 +310,7 @@ import pageObjectTr.Login_TR;
     	 
      }
      
-     @Test(priority=7,dependsOnMethods= {"logInDetails"})
+    // @Test(priority=8,dependsOnMethods= {"logInDetails"})
      void searchNdEdit() throws InterruptedException {
     	 
     	  Blogs_TR blogs = new Blogs_TR(driver);
@@ -327,7 +334,7 @@ import pageObjectTr.Login_TR;
          	  logger.info("TC-04 --> Verify Blog is displaying according to searching");
          	  
          	  logger.info("TC-05 --> Verify Edit blog screen is displaying by clicking on Edit icon on the searched blog");
-         	  blogs.searchNdEditBlog(driver, "raatri bazaar new");
+         	  blogs.searchNdEditBlog(driver, "Awesome Mountain Hill");
          	  
          	  logger.info("TC-06 --> Verify User is able to update the blog read time");
          	  blogs.updateBlogReadtime(p.getProperty("blogUpdatedReadTime_Tr"));
@@ -364,7 +371,7 @@ import pageObjectTr.Login_TR;
     	  }  	  
      }
      
-     //@Test(priority=8,dependsOnMethods= {"logInDetails"})
+     //@Test(priority=9,dependsOnMethods= {"logInDetails"})
      void searchNdDelete() throws InterruptedException {
     	 
     	  Blogs_TR blogs = new Blogs_TR(driver);
@@ -408,7 +415,7 @@ import pageObjectTr.Login_TR;
     	  
 		}
 
-		@Test(priority=9, dependsOnMethods = {"logInDetails"})
+		@Test(priority=10, dependsOnMethods = {"logInDetails"})
 		void sortByNewestToOldest() {
 
 			try {
@@ -418,14 +425,52 @@ import pageObjectTr.Login_TR;
                  
                  logger.info("TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs");
 				 blogs.blogNavigation(driver);
+				 
 				 threadTime();
-
-				logger.info("TC-02 --> Verify User is able to sort blogs by Newest to Oldest");
+				 
+				 logger.info("TC-02 --> Verify subscription popup is getting close by clicking cross icon");
+				 WebElement closeSubs = driver.findElement(By.xpath(" //button[@aria-label='Close popup']//*[name()='svg']"));
+			   	 closeSubs.click();
+			   	 
+				logger.info("TC-03 --> Verify User is able to sort blogs by Newest to Oldest");
 				
-				logger.info("TC-03 --> Verify User is able to sort blogs by Oldest to Newest");
+				logger.info("TC-04 --> Verify User is able to sort blogs by Oldest to Newest");
 				blogs.sortestFilter();
 
 			} catch (Exception e) {
+				
+				logger.error("Failed: " + e);
+				Assert.fail("It is failed due to: " + e.getMessage());
+			}
+		}
+		
+		@Test(priority=11,dependsOnMethods= {"logInDetails"})
+		void selectCategoryFilter() {
+			
+			try {
+				
+				Blogs_TR blogs = new Blogs_TR(driver);
+				threadTime();
+				
+				logger.info("TC-01 --> Verify User is navigate to blogs by clicking on Blogs");
+			//	blogs.blogNavigation(driver);
+				
+			 //	 Thread.sleep(3000);
+		    	 //	WebElement closeSubs = driver.findElement(By.xpath(" //button[@aria-label='Close popup']//*[name()='svg']"));
+		   		//	closeSubs.click();
+		   			
+				//logger.info("TC-02 --> Verfiy User is navigate to my blogs by clicking on my blogs");
+				//blogs.myBlogs();
+				
+				logger.info("TC-03 --> Verify category dropdown is open by clicking cateogy ");
+				
+				logger.info("TC-04 --> Verify user is able to select specific category");
+				
+				blogs.categoriesFilter();
+				
+			}
+			
+           catch (Exception e) {
 				
 				logger.error("Failed: " + e);
 				Assert.fail("It is failed due to: " + e.getMessage());

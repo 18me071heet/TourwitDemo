@@ -1,47 +1,46 @@
-12:55:55.228 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-12:56:05.384 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
-12:56:08.764 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
-12:56:11.922 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-12:56:15.138 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
-12:56:20.362 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to follow specific category by clicking Follow 
-12:56:20.363 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow
-12:56:20.364 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify more fourms categories are displaying by clicking Load more button
-12:56:35.283 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add first name
-12:56:35.283 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add their email address
-12:56:35.283 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to select Terms and Conditions
-12:56:35.283 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is subscribe news letter by clicking on Subscribe button
-12:56:39.910 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
-12:56:46.930 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is navigate to All post
-12:56:47.193 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify Category filter dropdown is open by clicking on category filter
-12:56:47.193 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to select category from the category dropdown
-12:56:55.049 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
-12:56:55.049 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is navigate to All post
-12:56:58.055 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to apply filter by selecting the Newest
-12:56:58.056 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to change apply filter and select the new filter from the dropdown
-13:01:28.915 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+17:47:57.453 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify user is able to select specific category
+17:50:26.067 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
 
-13:01:29.256 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-13:01:37.639 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
-13:01:40.851 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
-13:01:43.964 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-13:01:47.112 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add first name
-13:01:47.112 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add their email address
-13:01:47.113 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to select Terms and Conditions
-13:01:47.113 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is subscribe news letter by clicking on Subscribe button
-13:01:48.675 [main] ERROR tc_Tr.Forums_Tr - It is failed
-13:02:19.973 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+17:50:26.468 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:50:29.870 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+17:50:35.089 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+17:50:40.227 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+17:50:50.477 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs
+17:50:55.961 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is able to sort blogs by Newest to Oldest
+17:50:55.961 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to sort blogs by Oldest to Newest
+17:51:23.076 [main] ERROR tc_Tr.Blogs_Tr - Failed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@role='option' and normalize-space()='Oldest to Newest'] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61046}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61046/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 81da0a0a67a31e0c03ab1e0f892bf7b1
+17:51:28.105 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to blogs by clicking on Blogs
+17:51:28.105 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify category dropdown is open by clicking cateogy 
+17:51:28.105 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify user is able to select specific category
+17:53:22.892 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
 
-13:02:20.283 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-13:02:28.785 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
-13:02:32.016 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
-13:02:35.177 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-13:02:38.430 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
-13:02:43.666 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to follow specific category by clicking Follow 
-13:02:43.666 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow
-13:02:43.666 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify more fourms categories are displaying by clicking Load more button
-13:03:02.381 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add first name
-13:03:02.381 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add their email address
-13:03:02.381 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to select Terms and Conditions
-13:03:02.381 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is subscribe news letter by clicking on Subscribe button
+17:53:23.246 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:53:26.718 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+17:53:31.937 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+17:53:37.102 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+17:53:47.324 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs
+17:53:52.976 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is able to sort blogs by Newest to Oldest
+17:53:52.976 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to sort blogs by Oldest to Newest
+17:54:11.767 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to blogs by clicking on Blogs
+17:54:11.770 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify category dropdown is open by clicking cateogy 
+17:54:11.770 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify user is able to select specific category
+17:56:09.420 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:56:09.874 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:56:14.469 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+17:56:19.858 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+17:56:25.033 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+17:56:35.234 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs
+17:56:40.863 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is able to sort blogs by Newest to Oldest
+17:56:40.863 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to sort blogs by Oldest to Newest
+17:56:52.846 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to blogs by clicking on Blogs
+17:56:52.846 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify category dropdown is open by clicking cateogy 
+17:56:52.846 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify user is able to select specific category

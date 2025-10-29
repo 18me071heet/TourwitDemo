@@ -1,0 +1,45 @@
+18:34:46.382 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+18:34:46.782 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+18:34:50.565 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+18:34:55.868 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+18:35:01.026 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+18:35:14.139 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs from Header
+18:35:14.382 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is navigate to the My Blogs by clicking on My Blogs
+18:35:14.590 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to search specific blog
+18:35:14.590 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify Blog is displaying according to searching
+18:35:14.590 [main] INFO  tc_Tr.Blogs_Tr - TC-05 --> Verify Edit blog screen is displaying by clicking on Edit icon on the searched blog
+18:35:38.416 [main] ERROR tc_Tr.Blogs_Tr - Failed
+18:35:43.472 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs
+18:36:04.002 [main] ERROR tc_Tr.Blogs_Tr - Failed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (59b159800cf5d211fbb2f80365fac986)] -> xpath: //a[normalize-space()='Blogs']] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.107, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55555}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55555/devtoo..., se:cdpVersion: 141.0.7390.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 59b159800cf5d211fbb2f80365fac986
+18:36:45.703 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+18:36:46.050 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+18:36:49.170 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+18:36:52.720 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+18:36:55.899 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+18:36:59.155 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+18:37:04.449 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to follow specific category by clicking Follow 
+18:37:04.449 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow
+18:37:04.449 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify more fourms categories are displaying by clicking Load more button
+18:37:09.931 [main] ERROR tc_Tr.Forums_Tr - It is Failed
+18:37:09.959 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add first name
+18:37:09.959 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add their email address
+18:37:09.961 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to select Terms and Conditions
+18:37:09.961 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is navigate to Terms and Condition page by clicking Terms and Condition Link
+18:37:09.961 [main] INFO  tc_Tr.Forums_Tr - TC-05 --> Verify User is subscribe news letter by clicking on Subscribe button
+18:37:30.757 [main] ERROR tc_Tr.Forums_Tr - It is failed
+18:37:30.783 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+18:37:37.791 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is navigate to All post
+18:37:37.798 [main] ERROR tc_Tr.Forums_Tr - It is Failed
+18:37:37.807 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking Forums
+18:37:37.807 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is navigate to All post
+18:37:40.816 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to apply filter by selecting the Newest
+18:37:40.817 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to change apply filter and select the new filter from the dropdown

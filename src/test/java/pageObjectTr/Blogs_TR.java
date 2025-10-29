@@ -1,6 +1,8 @@
 package pageObjectTr;
 
 import java.time.Duration;
+import java.util.regex.Pattern;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -230,24 +232,30 @@ public class Blogs_TR {
      public void categoriesFilter() throws InterruptedException {
     	 
     	   
- 	    WebElement categories = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[normalize-space()='Categories:']/following::div[contains(@class,'placeholder')][1]")));
- 	    categories.click();
- 	    
- 	     WebElement adventureOption = wait.until(ExpectedConditions.presenceOfElementLocated(
- 			    By.xpath("//li[normalize-space()='Adventure']")));
+    	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    	 JavascriptExecutor js = (JavascriptExecutor) driver;
 
- 	   ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", adventureOption);
-		
- 			wait.until(ExpectedConditions.elementToBeClickable(adventureOption)).click();
- 	    
- 	    Thread.sleep(1000);
+   
+    	 WebElement categoryDropdown = wait.until(ExpectedConditions.elementToBeClickable(
+    	 By.xpath("//span[normalize-space(text())='Categories:']/following::div[contains(@id,'react-select') and contains(@class,'placeholder')][1]")));
+    	 categoryDropdown.click();
+
+    	 WebElement adventureOption = wait.until(ExpectedConditions.presenceOfElementLocated(
+    	 By.xpath("//div[contains(@class,'option') and contains(.,'Concert Band')]")));
+
+    	 js.executeScript("arguments[0].scrollIntoView(true);", adventureOption);
+    	 Thread.sleep(500); 
+    	 js.executeScript("arguments[0].click();", adventureOption);
+         Thread.sleep(1000);
  		      
      }
      
      public void sortestFilter() throws InterruptedException {
 
 		Thread.sleep(1000);
+		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
 	
 		WebElement sortDropdownControl = wait.until(ExpectedConditions.elementToBeClickable(
 		By.xpath("//span[normalize-space()='Sort by:']/following-sibling::div//div[contains(@class,'css-kbyv0d-control')]")));
@@ -261,15 +269,21 @@ public class Blogs_TR {
 		
 		newestToOldestOption.click();
 		
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		
+		  WebElement dropdownArrow = wait.until(ExpectedConditions.elementToBeClickable(
+		  By.xpath("(//span[normalize-space()='Sort by:']/following::div[contains(@class,'indicatorContainer')])[last()]")));
+			  
+
+        dropdownArrow.click();
+		   
 		WebElement oldestToOldestOption = wait.until(ExpectedConditions.elementToBeClickable(
 		By.xpath("//div[@role='option' and normalize-space()='Oldest to Newest']")));
 		
 		oldestToOldestOption.click();
 		
      }
-     
+    
      public void searchNdEditBlog(WebDriver driver,String blogTitle) throws InterruptedException {
     	 
     	  WebElement searchBox = wait.until(ExpectedConditions.elementToBeClickable(
@@ -282,7 +296,10 @@ public class Blogs_TR {
             
             WebElement editBlogIcon = wait.until(
             	    ExpectedConditions.elementToBeClickable(
-            	        By.xpath("//a3[normalize-space()='" + blogTitle + "']/ancestor::div[2]//span[contains(@class,'bg-primary')]")));
+            	        By.xpath("//a[normalize-space()='" + blogTitle + "']/ancestor::div[2]//*[contains(@class,'bg-primary') or contains(@class,'edit')]")
+            	    )
+            	);
+
             
            	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", editBlogIcon);
             	editBlogIcon.click();
@@ -309,5 +326,26 @@ public class Blogs_TR {
   		    deleteBlogIcon.click();
   		     
      }	
+     
+     public void subscribeNewsLater(String fname, String email) {
+		  
+		  //input[@placeholder='Enter your name']
+		  
+		  WebElement frstName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@placeholder='Enter your name']")));
+		  frstName.sendKeys(fname);
+		  
+		  WebElement emailAddress = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@placeholder='Enter your email']")));
+		  emailAddress.sendKeys(email);
+		  
+		  WebElement termsClick = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@type='checkbox']")));
+		  termsClick.click();
+		  
+		//  WebElement termsandConditionLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //a[normalize-space()='terms and conditions']")));
+		  //termsandConditionLink.click();
+		  
+	      WebElement subScribeButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //button[normalize-space()='Subscribe']")));
+		  subScribeButton.click();
+		 
+	  }
 }
 
