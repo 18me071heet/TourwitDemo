@@ -1,11 +1,13 @@
 package pageObjectTr;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.regex.Pattern;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -162,6 +164,37 @@ public class Blogs_TR {
 		
 	}
      
+     public void searchNdClickedBlog(WebDriver driver, String blogTitle) {
+    	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+    	    WebElement searchBlog = wait.until(ExpectedConditions.elementToBeClickable(
+    	        By.xpath("//input[@placeholder='Search by keywords...']")));
+    	    searchBlog.clear();
+    	    searchBlog.sendKeys(blogTitle, Keys.ENTER);
+
+    	    // Wait for search results to refresh
+    	    wait.until(ExpectedConditions.presenceOfElementLocated(
+    	        By.xpath("//a[contains(normalize-space(.),'" + blogTitle + "')]")));
+
+    	    // Re-find before clicking (avoids stale reference)
+    	    WebElement searchedBlogClick = wait.until(ExpectedConditions.elementToBeClickable(
+    	        By.xpath("//a[contains(normalize-space(.),'" + blogTitle + "')]")));
+
+    	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", searchedBlogClick);
+
+    	    try {
+    	        searchedBlogClick.click();
+    	        System.out.println("✅ Clicked blog titled: " + blogTitle);
+    	    } catch (StaleElementReferenceException e) {
+    	        System.out.println("⚠️ Stale element, refinding and retrying click...");
+    	        WebElement refreshedElement = wait.until(ExpectedConditions.elementToBeClickable(
+    	            By.xpath("//a[contains(normalize-space(.),'" + blogTitle + "')]")));
+    	        refreshedElement.click();
+    	        System.out.println("✅ Click successful after retry for: " + blogTitle);
+    	    }
+    	}
+
+     
      public void emojiSelect(WebDriver driver) throws InterruptedException {
     	 	 
     	  WebElement smileIcon = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[name()='svg' and contains(@class,'lucide-smile')]")));
@@ -205,7 +238,7 @@ public class Blogs_TR {
      public void updateCoverImage() {
     	 
     	 WebElement uploadImage = driver.findElement(By.xpath("//label[normalize-space()='Add Image for your blog']//following::input[@type='file']"));
-  		 uploadImage.sendKeys("\"C:\\Users\\INX\\OneDrive\\Documents\\Saved Pictures\\10 mb image.jpg\"");
+  		 uploadImage.sendKeys("C:\\Users\\INX\\OneDrive\\Documents\\Saved Pictures\\test2.jpg");
      }
      
      public void uploadThumbnailImage() {
@@ -218,7 +251,7 @@ public class Blogs_TR {
      public void updateThumbnailImage() {
     	 
     	 WebElement thumbnailImage = driver.findElement(By.xpath("//label[normalize-space()='Add thumbnail image for your blog']//following::input[@type='file']"));
-    	 thumbnailImage.sendKeys("\"C:\\Users\\INX\\OneDrive\\Documents\\Saved Pictures\\test2.jpg\"");
+    	 thumbnailImage.sendKeys("C:\\Users\\INX\\OneDrive\\Documents\\Saved Pictures\\testing.png");
      }
      
      public void uploadDescriptionImage() {
@@ -293,40 +326,64 @@ public class Blogs_TR {
     		    
             wait.until(ExpectedConditions.presenceOfElementLocated(
     		        By.xpath("//a[normalize-space()='" + blogTitle + "']")));
+                
+            WebElement editBlogIcon = wait.until(ExpectedConditions.visibilityOfElementLocated(
+            	    By.xpath("(//a[normalize-space()='" + blogTitle + "']/ancestor::div[contains(@class,'relative')][1]//span[contains(@class,'bg-primary')])")
+            	));
             
-            WebElement editBlogIcon = wait.until(
-            	    ExpectedConditions.elementToBeClickable(
-            	        By.xpath("//a[normalize-space()='" + blogTitle + "']/ancestor::div[2]//*[contains(@class,'bg-primary') or contains(@class,'edit')]")
-            	    )
-            	);
-
+         /*   WebElement editBlogIcon = wait.until(ExpectedConditions.visibilityOfElementLocated(
+            	    By.xpath("//a[normalize-space()='" + blogTitle + "']/ancestor::*[self::div or self::section][contains(@class,'relative') or contains(@class,'card') or contains(@class,'flex')][1]//span[contains(@class,'bg-primary') and contains(@class,'p-1')]")
+            	)); */
             
            	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", editBlogIcon);
             	editBlogIcon.click();
   	 
      }
      
-     public void searchNdDeleteBlog(WebDriver driver,String blogTitle) {
-    	 
-    	  WebElement searchBox = wait.until(ExpectedConditions.elementToBeClickable(
-  		        By.xpath("//input[@placeholder='Search by keywords...']")));
-  		    searchBox.clear();
-  		    searchBox.sendKeys(blogTitle, Keys.ENTER);
-  		    
-  		     wait.until(ExpectedConditions.presenceOfElementLocated(
-     		        By.xpath("//a[normalize-space()='" + blogTitle + "']")));
-  		     
-  		   WebElement deleteBlogIcon = wait.until(
-  				    ExpectedConditions.elementToBeClickable(
-  				        By.xpath("//a[normalize-space()='" + blogTitle + "']" +
-  				                 "/ancestor::div[2]" +
-  				                 "//span[contains(@class,'bg-red-700') and contains(@class,'rounded-full')]")));
-  			
-  		   ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", deleteBlogIcon);
-  		    deleteBlogIcon.click();
-  		     
-     }	
      
+     public void searchNdEditBlogs(WebDriver driver, String blogTitle) throws InterruptedException {
+    	 
+    	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+    	    WebElement searchBox = wait.until(ExpectedConditions.elementToBeClickable(
+    	        By.xpath("//input[@placeholder='Search by keywords...']")));
+    	   
+    	    searchBox.sendKeys(blogTitle, Keys.ENTER);
+
+    	    wait.until(ExpectedConditions.presenceOfElementLocated(
+    	        By.xpath("//a[normalize-space()='" + blogTitle + "']")));
+
+    	    WebElement editBlogIcon = wait.until(
+    	        ExpectedConditions.elementToBeClickable(
+    	            By.xpath("//a[normalize-space()='" + blogTitle + "']/ancestor-or-self::div//following::span[contains(@class,'bg-primary') and contains(@class,'p-1') and contains(@class,'bottom-2')][1]")
+    	        ));
+    	    
+    	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", editBlogIcon);
+    	    editBlogIcon.click();
+    	}
+  
+     public void searchAndDeleteBlog(WebDriver driver, String blogTitle) throws InterruptedException {
+    	 
+    	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+   	  
+    	    WebElement searchBox = wait.until(ExpectedConditions.elementToBeClickable(
+    	        By.xpath("//input[@placeholder='Search by keywords...']")));
+    	   
+    	    searchBox.sendKeys(blogTitle, Keys.ENTER);
+
+    	    wait.until(ExpectedConditions.presenceOfElementLocated(
+    	        By.xpath("//a[normalize-space()='" + blogTitle + "']")));
+
+    	    WebElement deleteBlogIcon = wait.until(
+    	        ExpectedConditions.elementToBeClickable(
+    	            By.xpath("//a[normalize-space()='" + blogTitle + "']/ancestor-or-self::div//following::span[contains(@class,'bg-red-700') and contains(@class,'p-1') and contains(@class,'bottom-2')][1]")
+    	        ));
+
+   	       ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", deleteBlogIcon);
+    	    deleteBlogIcon.click();
+   	
+    	}
+
      public void subscribeNewsLater(String fname, String email) {
 		  
 		  //input[@placeholder='Enter your name']
@@ -334,7 +391,7 @@ public class Blogs_TR {
 		  WebElement frstName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@placeholder='Enter your name']")));
 		  frstName.sendKeys(fname);
 		  
-		  WebElement emailAddress = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@placeholder='Enter your email']")));
+		  WebElement emailAddress = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@placeholder='Enter your Email']")));
 		  emailAddress.sendKeys(email);
 		  
 		  WebElement termsClick = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@type='checkbox']")));

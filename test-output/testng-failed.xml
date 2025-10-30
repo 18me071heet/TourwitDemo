@@ -11,7 +11,7 @@
         <methods>
           <include name="logInDetails"/>
           <include name="signUp"/>
-          <include name="sortByNewestToOldest"/>
+          <include name="searchedandCommentBlog"/>
         </methods>
       </class> <!-- tc_Tr.Blogs_Tr -->
     </classes>

@@ -9,7 +9,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import baseClassTr.BaseClassTr;
 import pageObjectTr.Blogs_TR;
-import pageObjectTr.Forums_TR;
 import pageObjectTr.Login_TR;
 
    public class Blogs_Tr extends BaseClassTr {
@@ -181,7 +180,7 @@ import pageObjectTr.Login_TR;
      
     }
    
-  //  @Test(priority=5,dependsOnMethods= {"logInDetails"})
+    //@Test(priority=5,dependsOnMethods= {"logInDetails"})
     void editBlog() throws InterruptedException {
    	
    	 Thread.sleep(4000);
@@ -198,7 +197,7 @@ import pageObjectTr.Login_TR;
        	 Blogs_TR blogSearch = new Blogs_TR(driver);
        	 
        	 logger.info("TC-02 --> Verify User is able to search blogs");
-       	 blogSearch.searchBlogs("Automation Blog");
+       	 blogSearch.searchBlogs("A road to heaven");
        	 threadTime();
        	 
        	 logger.info("Tc-03 --> Verify User is navigate to my blogs");
@@ -264,7 +263,7 @@ import pageObjectTr.Login_TR;
    	 
     }
     
-  // @Test(priority=7,dependsOnMethods= {"logInDetails"})
+    @Test(priority=7,dependsOnMethods= {"logInDetails"})
      void searchedandCommentBlog() throws InterruptedException {
     	 
     	 Blogs_TR blogs = new Blogs_TR(driver);
@@ -274,32 +273,45 @@ import pageObjectTr.Login_TR;
         	 
         	 blogs.blogNavigation(driver);
         	 
+        	 Thread.sleep(3000);
+        	 
+        	 logger.info("Tc -01 Verify User is able to enter name and email address in subscription popup ");
+        	 
+        	 logger.info("TC- 02 --> Verify User is able to select terms and conditions checkbox");
+        	 
+        	 logger.info("TC-03 --> Verify User is able to subscribe news letter by clicking submit button");
+        	 blogs.subscribeNewsLater("Will John", "user23@yopmail.com");
+        	 
+        	 Thread.sleep(2000);
         	 // blogs.myBlogs();
         	 
-        	 logger.info("TC-01 --> Verify User is able to search the specific blog");
+        	 logger.info("TC-04 --> Verify User is able to search the specific blog");
         	 
-        	 logger.info("TC-02 --> Verify User is blog is displaying according to searching ");
+        	 logger.info("TC-05 --> Verify User is blog is displaying according to searching ");
         	 
-        	 logger.info("TC-03 --> Verify User is able to view searched blog");
+        	 logger.info("TC-06 --> Verify User is able to view searched blog");
         	 
         	 threadTime();
         	 
-             blogs.searchandClickedBlog(driver, p.getProperty("blogTitle_Tr"));
+             blogs.searchNdClickedBlog(driver, "Pink Big City");
            
-             logger.info("TC-04 --> Verify User is able to add text in comment field");
+             Thread.sleep(3000);
              
-             logger.info("TC-05 --> Verify Emoji picker is getting open by clicking on Emoji icon");
+             logger.info("TC-07 --> Verify User is able to add text in comment field");
              
-             logger.info("TC-06 --> Verify User is able to search specific emoji ");
+             Thread.sleep(3000);
+             logger.info("TC-08 --> Verify Emoji picker is getting open by clicking on Emoji icon");
              
-             logger.info("TC-07  --. Verify selected emoji is displaying in the comment text field");
+             logger.info("TC-09 --> Verify User is able to search specific emoji ");
+             
+             logger.info("TC-10  --. Verify selected emoji is displaying in the comment text field");
              
              blogs.txtComment(driver, "Good Work , Keep it Up");
              
              threadTime();
              blogs.emojiSelect(driver);
              
-             logger.info("TC-08 --> Verify Comment is getting send by clicking on send icon");
+             logger.info("TC-11 --> Verify Comment is getting send by clicking on send icon");
              blogs.sendComment();
                	 
          } catch(Exception e) {
@@ -310,7 +322,7 @@ import pageObjectTr.Login_TR;
     	 
      }
      
-    // @Test(priority=8,dependsOnMethods= {"logInDetails"})
+   //  @Test(priority=8,dependsOnMethods= {"logInDetails"})
      void searchNdEdit() throws InterruptedException {
     	 
     	  Blogs_TR blogs = new Blogs_TR(driver);
@@ -320,11 +332,19 @@ import pageObjectTr.Login_TR;
     		  WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
         	  threadTime();
         	  
+        	  
         	  WebElement closeIcon = driver.findElement(By.xpath("//button[@aria-label='Close popup']//*[name()='svg']"));
         	  closeIcon.click();
         	  
         	  logger.info("TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs from Header");
          	  blogs.blogNavigation(driver);
+         	  
+         	/*  Thread.sleep(3000);
+			 
+			  logger.info("TC-02 --> Verify subscription popup is getting close by clicking cross icon");
+			  WebElement closeSubs = driver.findElement(By.xpath(" //button[@aria-label='Close popup']//*[name()='svg']"));
+		   	  closeSubs.click();
+		   	 */
          	  
          	  logger.info("TC-02 --> Verify User is navigate to the My Blogs by clicking on My Blogs");
          	  blogs.myBlogs();
@@ -334,7 +354,7 @@ import pageObjectTr.Login_TR;
          	  logger.info("TC-04 --> Verify Blog is displaying according to searching");
          	  
          	  logger.info("TC-05 --> Verify Edit blog screen is displaying by clicking on Edit icon on the searched blog");
-         	  blogs.searchNdEditBlog(driver, "Awesome Mountain Hill");
+         	  blogs.searchNdEditBlogs(driver, "A road to heaven");
          	  
          	  logger.info("TC-06 --> Verify User is able to update the blog read time");
          	  blogs.updateBlogReadtime(p.getProperty("blogUpdatedReadTime_Tr"));
@@ -371,7 +391,7 @@ import pageObjectTr.Login_TR;
     	  }  	  
      }
      
-     //@Test(priority=9,dependsOnMethods= {"logInDetails"})
+    //  @Test(priority=9,dependsOnMethods= {"logInDetails"})
      void searchNdDelete() throws InterruptedException {
     	 
     	  Blogs_TR blogs = new Blogs_TR(driver);
@@ -385,6 +405,13 @@ import pageObjectTr.Login_TR;
         	  
         	  blogs.blogNavigation(driver);
         	  
+        	  Thread.sleep(4000);
+        	  
+        	  logger.info("Verify User is able to close the subscription popup by clicking cross icon");
+        	  WebElement closeSubs = driver.findElement(By.xpath(" //button[@aria-label='Close popup']//*[name()='svg']"));
+			  closeSubs.click();
+			   	 
+			   	 Thread.sleep(2000);
         	  logger.info("TC-02 --> Verify User is navigate to the My Blogs by clicking on My Blogs");
          	  blogs.myBlogs();
               
@@ -394,7 +421,7 @@ import pageObjectTr.Login_TR;
          	  
          	  logger.info("TC-05 --> Verify Delete confirmation popup is displaying by clicking Delete icon on searched record");
          	  
-         	  blogs.searchNdDeleteBlog(driver, "Foodie food");
+         	  blogs. searchAndDeleteBlog(driver, "Steven");
          	  
          	  logger.info("TC-06 --> Verify searched blog is getting deleted or not");
          	  
@@ -415,7 +442,7 @@ import pageObjectTr.Login_TR;
     	  
 		}
 
-		@Test(priority=10, dependsOnMethods = {"logInDetails"})
+		//@Test(priority=10, dependsOnMethods = {"logInDetails"})
 		void sortByNewestToOldest() {
 
 			try {
@@ -444,7 +471,7 @@ import pageObjectTr.Login_TR;
 			}
 		}
 		
-		@Test(priority=11,dependsOnMethods= {"logInDetails"})
+		//@Test(priority=11,dependsOnMethods= {"logInDetails"})
 		void selectCategoryFilter() {
 			
 			try {

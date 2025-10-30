@@ -1,46 +1,6 @@
-17:47:57.453 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify user is able to select specific category
-17:50:26.067 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-17:50:26.468 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-17:50:29.870 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
-17:50:35.089 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
-17:50:40.227 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
-17:50:50.477 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs
-17:50:55.961 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is able to sort blogs by Newest to Oldest
-17:50:55.961 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to sort blogs by Oldest to Newest
-17:51:23.076 [main] ERROR tc_Tr.Blogs_Tr - Failed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@role='option' and normalize-space()='Oldest to Newest'] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '4.32.0', revision: 'd17c8aa950'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61046}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61046/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 81da0a0a67a31e0c03ab1e0f892bf7b1
-17:51:28.105 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to blogs by clicking on Blogs
-17:51:28.105 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify category dropdown is open by clicking cateogy 
-17:51:28.105 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify user is able to select specific category
-17:53:22.892 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-17:53:23.246 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-17:53:26.718 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
-17:53:31.937 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
-17:53:37.102 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
-17:53:47.324 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs
-17:53:52.976 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is able to sort blogs by Newest to Oldest
-17:53:52.976 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to sort blogs by Oldest to Newest
-17:54:11.767 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to blogs by clicking on Blogs
-17:54:11.770 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify category dropdown is open by clicking cateogy 
-17:54:11.770 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify user is able to select specific category
-17:56:09.420 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-17:56:09.874 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-17:56:14.469 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
-17:56:19.858 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
-17:56:25.033 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
-17:56:35.234 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to the Blogs page by clicking on Blogs
-17:56:40.863 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is able to sort blogs by Newest to Oldest
-17:56:40.863 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to sort blogs by Oldest to Newest
-17:56:52.846 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is navigate to blogs by clicking on Blogs
-17:56:52.846 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify category dropdown is open by clicking cateogy 
-17:56:52.846 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify user is able to select specific category
+12:02:54.733 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to view searched blog
+12:03:06.052 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify User is able to add text in comment field
+12:03:09.066 [main] INFO  tc_Tr.Blogs_Tr - TC-05 --> Verify Emoji picker is getting open by clicking on Emoji icon
+12:03:09.068 [main] INFO  tc_Tr.Blogs_Tr - TC-06 --> Verify User is able to search specific emoji 
+12:03:09.068 [main] INFO  tc_Tr.Blogs_Tr - TC-07  --. Verify selected emoji is displaying in the comment text field
+12:03:17.857 [main] INFO  tc_Tr.Blogs_Tr - TC-08 --> Verify Comment is getting send by clicking on send icon

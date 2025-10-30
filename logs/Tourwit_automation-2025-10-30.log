@@ -1,0 +1,57 @@
+11:52:07.620 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is able to search the specific blog
+11:52:07.642 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is blog is displaying according to searching 
+11:52:07.642 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to view searched blog
+11:52:13.300 [main] ERROR tc_Tr.Blogs_Tr - Failed
+11:55:54.239 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+11:55:54.319 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+11:55:57.533 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+11:56:02.831 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+11:56:07.945 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+11:56:21.416 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to subscribe the news letter subscription 
+11:56:24.145 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is able to search the specific blog
+11:56:24.146 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is blog is displaying according to searching 
+11:56:24.146 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to view searched blog
+11:56:29.711 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify User is able to add text in comment field
+11:56:29.711 [main] INFO  tc_Tr.Blogs_Tr - TC-05 --> Verify Emoji picker is getting open by clicking on Emoji icon
+11:56:29.711 [main] INFO  tc_Tr.Blogs_Tr - TC-06 --> Verify User is able to search specific emoji 
+11:56:29.712 [main] INFO  tc_Tr.Blogs_Tr - TC-07  --. Verify selected emoji is displaying in the comment text field
+11:56:41.495 [main] INFO  tc_Tr.Blogs_Tr - TC-08 --> Verify Comment is getting send by clicking on send icon
+11:59:16.954 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+11:59:17.253 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+11:59:20.791 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+11:59:25.998 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+11:59:31.111 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+11:59:44.541 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to subscribe the news letter subscription 
+11:59:47.274 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is able to search the specific blog
+11:59:47.274 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is blog is displaying according to searching 
+11:59:47.274 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to view searched blog
+11:59:55.812 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify User is able to add text in comment field
+11:59:58.828 [main] INFO  tc_Tr.Blogs_Tr - TC-05 --> Verify Emoji picker is getting open by clicking on Emoji icon
+11:59:58.829 [main] INFO  tc_Tr.Blogs_Tr - TC-06 --> Verify User is able to search specific emoji 
+11:59:58.829 [main] INFO  tc_Tr.Blogs_Tr - TC-07  --. Verify selected emoji is displaying in the comment text field
+12:00:19.383 [main] ERROR tc_Tr.Blogs_Tr - Failed
+12:01:11.635 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+12:01:11.920 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:01:15.329 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+12:01:20.518 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+12:01:25.622 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+12:01:39.036 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to subscribe the news letter subscription 
+12:01:41.777 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is able to search the specific blog
+12:01:41.777 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is blog is displaying according to searching 
+12:01:41.777 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to view searched blog
+12:02:18.544 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+12:02:18.837 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:02:28.027 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+12:02:33.256 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+12:02:38.381 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+12:02:51.948 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to subscribe the news letter subscription 
+12:02:54.732 [main] INFO  tc_Tr.Blogs_Tr - TC-01 --> Verify User is able to search the specific blog
+12:02:54.733 [main] INFO  tc_Tr.Blogs_Tr - TC-02 --> Verify User is blog is displaying according to searching 
