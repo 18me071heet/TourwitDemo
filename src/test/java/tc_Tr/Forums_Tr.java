@@ -46,7 +46,7 @@ import pageObjectTr.Login_TR;
 	   		
 	   	}
 	    
-            //  @Test(priority=2,dependsOnMethods= {"logInDetails"})
+           // @Test(priority=2,dependsOnMethods= {"logInDetails"})
 	        void createForum() throws InterruptedException {
 	    	
 	    	Forums_TR createForums = new Forums_TR(driver);
@@ -56,8 +56,17 @@ import pageObjectTr.Login_TR;
 	    		
 	    		logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
 	    		Thread.sleep(5000);
-		    	createForums.forumNavigation();
+		    	createForums.forumNavigation(driver);
 		    	
+		    	Thread.sleep(3000);
+		    	logger.info("Tc -01 Verify User is able to enter name and email address in subscription popup ");
+	        	 
+	        	 logger.info("TC- 02 --> Verify User is able to select terms and conditions checkbox");
+	        	 
+	        	 logger.info("TC-03 --> Verify User is able to subscribe news letter by clicking submit button");
+	        	 createForums.subscribeNewsLater("Will John", "user23@yopmail.com");
+	        	 
+	        	 Thread.sleep(3000);
 		    	logger.info("TC-02 --> Verify Create Forum screen is displaying or not by clicking Create Forum");
 		    	createForums.createForumClick();
 		    	
@@ -65,19 +74,18 @@ import pageObjectTr.Login_TR;
 		    	
 		    	logger.info("TC-03 --> Verify User is able to select forum category and Selected category is displaying or not");
 		    	
-		    
 		    	WebElement forumCategory = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-category-input")));
 		    	forumCategory.click();
-		    	forumCategory.sendKeys("My Food");
+		    	forumCategory.sendKeys("TravelForum");
 
-		    	WebElement option = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@id,'react-select-lazy-category-option') and text()='My Food']")));
+		    	WebElement option = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@id,'react-select-lazy-category-option') and text()='TravelForum']")));
 		    	option.click();
 		    	  	
 		    	logger.info("TC-04 --> Verify User is able to add forum title");
-		    	createForums.createTitle("New Automation Testing Forum");
+		    	createForums.createTitle(p.getProperty("forumTitle_Tr"));
 		    	
 		    	logger.info("TC-05 --> Verify User is able to add forum description");
-		    	createForums.forumDescriptionAdd("Welcome to the new automation testing forum");
+		    	createForums.forumDescriptionAdd(p.getProperty("forumDescription_Tr"));
 		    	
 		    	logger.info("TC-06 --> Verify Forum is getting created or not by clicking Publish");
 		    	createForums.forumPublishBtn();
@@ -89,7 +97,7 @@ import pageObjectTr.Login_TR;
 		    	//Forum is created successfully.
 
 
-		    	Assert.assertTrue(toastTxt.contains("Forum verification sent to the admin."), " No similiar toast message is found ");
+		    	Assert.assertTrue(toastTxt.contains("Forum is created successfully."), " No similiar toast message is found ");
 		    	
 	    	}
 	    	
@@ -112,7 +120,7 @@ import pageObjectTr.Login_TR;
    		
    		    logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
 	    	Thread.sleep(5000);
-	    	createForums.forumNavigation();
+	    	createForums.forumNavigation(driver);
 	    	
 	    	logger.info("TC-02 --> Verify User is navigate to my forum page");
 	    	threadTime();
@@ -137,7 +145,7 @@ import pageObjectTr.Login_TR;
    	
    }
 	    
-	       //  @Test(priority=4,dependsOnMethods= {"logInDetails"})
+	      // @Test(priority=4,dependsOnMethods= {"logInDetails"})
 	       void searchNdEdit() throws InterruptedException {
 	    	
            Forums_TR createForums = new Forums_TR(driver);
@@ -146,8 +154,19 @@ import pageObjectTr.Login_TR;
         	   
         	logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
    	    	Thread.sleep(5000);
-   	    	//createForums.forumNavigation();
+   	    	createForums.forumNavigation(driver);
    	    	
+
+	    	Thread.sleep(3000);
+	    	logger.info("Tc -01 Verify User is able to enter name and email address in subscription popup ");
+        	 
+        	 logger.info("TC- 02 --> Verify User is able to select terms and conditions checkbox");
+        	 
+        	 logger.info("TC-03 --> Verify User is able to subscribe news letter by clicking submit button");
+        	 createForums.subscribeNewsLater("Will John", "user23@yopmail.com");
+        	 
+        	 Thread.sleep(3000);
+        	 
    	    	logger.info("TC-02 --> Verify User is navigate to my forum page");
    	    	createForums.myForumNavigation();
    	    	
@@ -157,7 +176,7 @@ import pageObjectTr.Login_TR;
    	    	
    	    	logger.info("TC-04 --> Verify Edit Forum screen is displaying by clicking edit icon");
    	    	
-   	    	createForums.searchAndEdit(driver, "Sangam Hills");
+   	    	createForums.searchAndEdit(driver, "A road to heaven");
    	    	threadTime();
    	        
  	    	logger.info("TC-05 --> Verify User is able to Edit forum Title");
@@ -165,11 +184,11 @@ import pageObjectTr.Login_TR;
    	    	
    	    	createForums.updateTitle();
    	    	
-   	    	createForums.createTitle(p.getProperty("forumTitle_Tr"));
+   	    	createForums.createTitle(p.getProperty("forumTitleUpdated_Tr"));
    	    	    	
    	    	logger.info("TC-06 --> Verify User is able to Edit forum description");
    	    	
-   	    	createForums.forumDescriptionAdd(p.getProperty("forumDescription_Tr"));
+   	    	createForums.forumDescriptionAdd(p.getProperty("forumDescriptionUpdated_Tr"));
    	    	
    	    	logger.info("TC-07 --> Verify Forum details are getting updated by clicking publish button");
    	    	createForums.forumPublishBtn();
@@ -182,7 +201,7 @@ import pageObjectTr.Login_TR;
 	    	
 	    }	
 	    
-	   //  @Test(priority=5,dependsOnMethods= {"logInDetails"})
+	  // @Test(priority=5,dependsOnMethods= {"logInDetails"})
 	    void searchNdComment() throws InterruptedException {
 	    	
 	    	   Forums_TR createForums = new Forums_TR(driver);
@@ -192,8 +211,14 @@ import pageObjectTr.Login_TR;
 	    	   try {
 	    		   
 	    		   logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
-			       createForums.forumNavigation();
-			    	
+			       createForums.forumNavigation(driver);
+			    
+			  	 Thread.sleep(3000);
+		    	 	WebElement closeSubs = driver.findElement(By.xpath(" //button[@aria-label='Close popup']//*[name()='svg']"));
+		   			closeSubs.click();
+		   			
+		   			Thread.sleep(3000);
+		   			
 		    	   logger.info("TC-01 --> Verify User is navigate to the All post");
 		     	   createForums.allForum();
 		    	   
@@ -205,7 +230,9 @@ import pageObjectTr.Login_TR;
 		      	 
 		      	   threadTime();
 		    	   
-		    	   createForums.searchedNdClick(driver, "New Mountain");
+		    	   createForums.searchedNdClick(driver, "Rain in the Jungle");
+		    	   
+		    	   Thread.sleep(5000);
 		    	   
 		    	   logger.info("TC-05 --> Verify User is able to add text in comment field");
 		           
@@ -215,14 +242,14 @@ import pageObjectTr.Login_TR;
 		           
 		           logger.info("TC-08 --> Verify selected emoji is displaying in the comment text field");
 		           
-		           //  createForums.txtComment(driver, "A very Good Info");
-		          //  threadTime();
-		         //  createForums.addEmoji(driver);
+		            createForums.txtComment(driver, "A very interesting forum");
+		          threadTime();
+		           createForums.addEmoji(driver);
 		                      
 		          logger.info("TC-09 --> Verify Comment is getting send to the specific forum by clicking on send icon");
 		           
-		            //   createForums.sendComment();
-		           //  Thread.sleep(7000);
+		          createForums.sendComment();
+		          Thread.sleep(7000);
 		             
 		  		   threadTime();
 		  		   
@@ -232,7 +259,7 @@ import pageObjectTr.Login_TR;
 		  		   
 		  		  logger.info("TC-13 --> Verify User is able to unfollow user if he is following that user");
 		  		  
-		  		  createForums.userProfile();
+		  		//  createForums.userProfile();
 		  		  
 	    	   } catch(Exception e) {
 	    		   
@@ -241,7 +268,7 @@ import pageObjectTr.Login_TR;
 	    	   } 		  	  		  	               	
 	    }
 	    
-	   //   @Test(priority=6,dependsOnMethods= {"logInDetails"})
+	  //  @Test(priority=6,dependsOnMethods= {"logInDetails"})
 	     void searchedAndDelete() throws InterruptedException {
 	    	
 	    	Forums_TR createForums = new Forums_TR(driver);
@@ -250,8 +277,13 @@ import pageObjectTr.Login_TR;
 	          
 	    	   	logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
 	    	   	Thread.sleep(5000);
-	    	   	createForums.forumNavigation();
+	    	   	createForums.forumNavigation(driver);
 	    	   	
+	    	    Thread.sleep(3000);
+	    	 	WebElement closeSubs = driver.findElement(By.xpath(" //button[@aria-label='Close popup']//*[name()='svg']"));
+	   			closeSubs.click();
+	   			
+	   			Thread.sleep(3000);
 	    	   	logger.info("TC-02 --> Verify User is navigate to my forum page");
 	    	   	createForums.myForumNavigation();
 	    	   	
@@ -260,10 +292,8 @@ import pageObjectTr.Login_TR;
 	    	   
 	    	   	logger.info("TC-04 --> Verify User is able to delete searched forum by clicking on delete icon");
 	    	   	
-	    	   	createForums.searchAndDelete(driver, "The Future of Automation Forum");
+	    	   	createForums.searchAndDelete(driver, "My Original Street Food");
 	    	   	
-	    	   	//Removal request submitted for admin approval.
-	    	   
 	    	   	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 	    	   	
 	    	   	WebElement toastMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Removal request submitted for admin approval.')]")));
@@ -280,7 +310,7 @@ import pageObjectTr.Login_TR;
 	    	
 	    }	
 	     
-         @Test(priority=7,dependsOnMethods= {"logInDetails"})
+       //@Test(priority=7,dependsOnMethods= {"logInDetails"})
 	     void followCategory() {
 	    	 
 	    	 Forums_TR createForums = new Forums_TR(driver);
@@ -289,9 +319,15 @@ import pageObjectTr.Login_TR;
 	    		
 	    	   logger.info("TC-01 --> Verify User is navigate to the forum page by clicking Forums");
 	    	    
-	    	   Thread.sleep(5000);
-	    	   createForums.forumNavigation();
+	    	   Thread.sleep(3000);
+	    	   createForums.forumNavigation(driver);
 	    	   
+	    	   Thread.sleep(3000);
+	    	 	WebElement closeSubs = driver.findElement(By.xpath(" //button[@aria-label='Close popup']//*[name()='svg']"));
+	   			closeSubs.click();
+	   			
+	   			Thread.sleep(3000);
+	   			
 	    	   logger.info("TC-02 --> Verify User is able to follow specific category by clicking Follow ");
 	    	   
 	    	   logger.info("TC-03 --> Verify User is able to unfollow specific category by clicking Unfollow");
@@ -300,7 +336,7 @@ import pageObjectTr.Login_TR;
 	    	   
 	    	   createForums.followCategory("TravelForum");
 	    	   
-	    	     }
+	    	   }
 	    	 
 	    	  catch(Exception e) {
 	    		 
@@ -310,35 +346,8 @@ import pageObjectTr.Login_TR;
 	    	 }
 	     }
 	     
-	     @Test(priority=8,dependsOnMethods= {"logInDetails"})
-	      void subScribeNewsLetter() {
-	    	  
-	    	  Forums_TR createForums = new Forums_TR(driver);
-	    	  
-	    	  try {
-	    		  
-	    		 
-	    		  logger.info("TC-01 --> Verify User is able to add first name");
-	    		  
-	    		  logger.info("TC-02 --> Verify User is able to add their email address");
-	    		  
-	    		  logger.info("TC-03 --> Verify User is able to select Terms and Conditions");
-	    		  
-	    		  logger.info("TC-04 --> Verify User is navigate to Terms and Condition page by clicking Terms and Condition Link");
-	    		  
-	    		  logger.info("TC-05 --> Verify User is subscribe news letter by clicking on Subscribe button");
-	    		  
-	    		  createForums.subscribeNewsLater("Will", "user23@yopmail.com");
-	    		 
-	     		  
-	    	  } catch(Exception e) {
-	    		  
-	    		  logger.error("It is failed");
-	    		  Assert.fail("It is failed due to:"+e.getMessage());
-	    	  }
-	      }
 	     
-	   @Test(priority=9,dependsOnMethods= {"logInDetails"})
+	 // @Test(priority=9,dependsOnMethods= {"logInDetails"})
 	     void categoryFilter() {
 	    	 
              Forums_TR createForums = new Forums_TR(driver);
@@ -348,7 +357,13 @@ import pageObjectTr.Login_TR;
 	    		 logger.info("TC-01 --> Verify User is navigate to the forum page by clicking Forums");
 	    		 Thread.sleep(4000);
 	    		 		
-	    		// createForums.forumNavigation();
+	    		 createForums.forumNavigation(driver);
+	    		
+	    		 Thread.sleep(3000);
+		    	 WebElement closeSubs = driver.findElement(By.xpath(" //button[@aria-label='Close popup']//*[name()='svg']"));
+		   		 closeSubs.click();
+		   			
+		   		 Thread.sleep(3000);
 	    		 
 	    		 threadTime();
 	    	     logger.info("TC-02 --> Verify User is navigate to All post");
@@ -371,7 +386,7 @@ import pageObjectTr.Login_TR;
 	    	 }	    	 
 	     }
 	     
-	     @Test(priority=10,dependsOnMethods= {"logInDetails"})
+	  // @Test(priority=10,dependsOnMethods= {"logInDetails"})
 	     void sortestFilter() {
 	    	 
 	    	 Forums_TR createForums = new Forums_TR(driver);
@@ -401,4 +416,103 @@ import pageObjectTr.Login_TR;
 	    		 
 	    	 }
 	     }	 
-}
+	     
+	   //  @Test(priority=11,dependsOnMethods= {"logInDetails"})
+	     void followUser() throws InterruptedException {
+	    	 
+	    	 Forums_TR createForums = new Forums_TR(driver);
+		       
+	    	   Thread.sleep(3000);
+	    	   
+	    	   try {
+	    		   
+	    		    logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
+			        createForums.forumNavigation(driver);
+			    
+			  	    Thread.sleep(3000);
+		    	 	WebElement closeSubs = driver.findElement(By.xpath(" //button[@aria-label='Close popup']//*[name()='svg']"));
+		   			closeSubs.click();
+		   			
+		   			Thread.sleep(3000);
+		   			
+		    	    logger.info("TC-01 --> Verify User is navigate to the All post");
+		     	    createForums.allForum();
+		    	   
+		    	    logger.info("TC-02 --> Verify User is able to search the specific forum");
+		      	 
+		      	    logger.info("TC-03 --> Verify User is forum is displaying according to searching ");
+		      	 
+		      	    logger.info("TC-04 --> Verify User is able to view searched forum");
+		      	 
+		      	    threadTime();
+		    	   
+		    	    createForums.searchedNdClick(driver, "New Mountain");
+		    	    
+		    	    Thread.sleep(5000);
+		    	   
+		  		   logger.info("TC-05 --> Verify User is navigate to the user profile page by clicking on User Profile logo");
+			  		 
+		  		   logger.info("TC-06 --> Verify User is able to follow user by clicking on Follow");
+		  		   
+		  		   logger.info("TC-07 --> Verify User is able to unfollow user if he is following that user");
+		  		  
+		  		   createForums.userProfile();
+	     
+        } catch(Exception e) {
+	  
+	              logger.error("It is failed");
+	              Assert.fail("It is failed due to:"+e.getMessage());
+	      
+}    	   
+	     }
+	     
+	     @Test(priority=12,dependsOnMethods= {"logInDetails"})
+	     void blockUser() throws InterruptedException {
+	    	 
+	    	 Forums_TR createForums = new Forums_TR(driver);
+		       
+	    	   Thread.sleep(3000);
+	    	   
+	    	  try {
+	    		   
+	    		    logger.info("TC-01 --> Verify User is navigate to the forum page by clicking on Forum ");
+			        createForums.forumNavigation(driver);
+			    
+			  	    Thread.sleep(3000);
+		    	 	WebElement closeSubs = driver.findElement(By.xpath(" //button[@aria-label='Close popup']//*[name()='svg']"));
+		   			closeSubs.click();
+		   			
+		   			Thread.sleep(3000);
+		   			
+		    	    logger.info("TC-01 --> Verify User is navigate to the All post");
+		     	    createForums.allForum();
+		    	   
+		    	    logger.info("TC-02 --> Verify User is able to search the specific forum");
+		      	 
+		      	    logger.info("TC-03 --> Verify User is forum is displaying according to searching ");
+		      	 
+		      	    logger.info("TC-04 --> Verify User is able to view searched forum");
+		      	 
+		      	    threadTime();
+		    	   
+		    	    createForums.searchedNdClick(driver, "New Mountain");
+		    	    
+		    	    Thread.sleep(5000);
+		    	    
+		    	    logger.info("Verify Block option is displaying by clicking on three dot");
+		    	    
+		    	    logger.info("Verify Block user confirmation popup is displaying by clicking block user");
+		    	    
+		    	    logger.info("Verify User is getting block after clicking confirm");
+		    	    
+		    
+		    	    createForums.blockUser();
+		    	    
+	     } catch(Exception e) {
+	   	  
+             logger.error("It is failed");
+             Assert.fail("It is failed due to:"+e.getMessage());
+     
+}    	        
+	     }
+     }

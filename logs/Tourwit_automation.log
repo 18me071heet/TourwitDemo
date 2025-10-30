@@ -1,6 +1,36 @@
-12:02:54.733 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to view searched blog
-12:03:06.052 [main] INFO  tc_Tr.Blogs_Tr - TC-04 --> Verify User is able to add text in comment field
-12:03:09.066 [main] INFO  tc_Tr.Blogs_Tr - TC-05 --> Verify Emoji picker is getting open by clicking on Emoji icon
-12:03:09.068 [main] INFO  tc_Tr.Blogs_Tr - TC-06 --> Verify User is able to search specific emoji 
-12:03:09.068 [main] INFO  tc_Tr.Blogs_Tr - TC-07  --. Verify selected emoji is displaying in the comment text field
-12:03:17.857 [main] INFO  tc_Tr.Blogs_Tr - TC-08 --> Verify Comment is getting send by clicking on send icon
+15:53:10.361 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to search the specific forum
+15:53:10.376 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is forum is displaying according to searching 
+15:53:10.376 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to view searched forum
+15:53:13.989 [main] ERROR tc_Tr.Forums_Tr - It is failed
+15:54:46.762 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+15:54:46.836 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+15:54:51.892 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+15:54:55.365 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+15:54:58.518 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+15:55:04.724 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking on Forum 
+15:55:12.702 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the All post
+15:55:13.199 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to search the specific forum
+15:55:13.200 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is forum is displaying according to searching 
+15:55:13.200 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to view searched forum
+15:55:21.539 [main] INFO  tc_Tr.Forums_Tr - Verify Block option is displaying by clicking on three dot
+15:55:21.539 [main] INFO  tc_Tr.Forums_Tr - Verify Block user confirmation popup is displaying by clicking block user
+15:55:21.539 [main] INFO  tc_Tr.Forums_Tr - Verify User is getting block after clicking confirm
+15:55:42.326 [main] ERROR tc_Tr.Forums_Tr - It is failed
+17:37:27.976 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:37:28.043 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:37:32.389 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
+17:37:35.731 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
+17:37:38.936 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:37:45.154 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking on Forum 
+17:37:53.003 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the All post
+17:37:53.155 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to search the specific forum
+17:37:53.155 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is forum is displaying according to searching 
+17:37:53.155 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to view searched forum
+17:38:01.694 [main] INFO  tc_Tr.Forums_Tr - Verify Block option is displaying by clicking on three dot
+17:38:01.694 [main] INFO  tc_Tr.Forums_Tr - Verify Block user confirmation popup is displaying by clicking block user
+17:38:01.694 [main] INFO  tc_Tr.Forums_Tr - Verify User is getting block after clicking confirm
+17:38:22.877 [main] ERROR tc_Tr.Forums_Tr - It is failed

@@ -49,7 +49,7 @@ import pageObjectTr.Login_TR;
    	}
    	
     
-   // @Test(priority=3,dependsOnMethods= {"logInDetails"})
+   // @Test(priority=2,dependsOnMethods= {"logInDetails"})
     void createBlog() throws InterruptedException {
    	 	
     	try {
@@ -138,7 +138,7 @@ import pageObjectTr.Login_TR;
    	
    }
        
-   // @Test(priority=4,dependsOnMethods= {"logInDetails"})
+   // @Test(priority=3,dependsOnMethods= {"logInDetails"})
     void searchBlog() throws InterruptedException {
    	 
    	 Thread.sleep(4000);
@@ -180,7 +180,7 @@ import pageObjectTr.Login_TR;
      
     }
    
-    //@Test(priority=5,dependsOnMethods= {"logInDetails"})
+    //@Test(priority=4,dependsOnMethods= {"logInDetails"})
     void editBlog() throws InterruptedException {
    	
    	 Thread.sleep(4000);
@@ -224,7 +224,7 @@ import pageObjectTr.Login_TR;
 }
 
     
-  //   @Test(priority=6,dependsOnMethods= {"logInDetails"})
+  //   @Test(priority=5,dependsOnMethods= {"logInDetails"})
      void deleteBlog() throws InterruptedException {
    	 
      Blogs_TR blogs = new Blogs_TR(driver);
@@ -263,7 +263,7 @@ import pageObjectTr.Login_TR;
    	 
     }
     
-    @Test(priority=7,dependsOnMethods= {"logInDetails"})
+    @Test(priority=6,dependsOnMethods= {"logInDetails"})
      void searchedandCommentBlog() throws InterruptedException {
     	 
     	 Blogs_TR blogs = new Blogs_TR(driver);
@@ -322,7 +322,7 @@ import pageObjectTr.Login_TR;
     	 
      }
      
-   //  @Test(priority=8,dependsOnMethods= {"logInDetails"})
+   //  @Test(priority=7,dependsOnMethods= {"logInDetails"})
      void searchNdEdit() throws InterruptedException {
     	 
     	  Blogs_TR blogs = new Blogs_TR(driver);
@@ -391,7 +391,7 @@ import pageObjectTr.Login_TR;
     	  }  	  
      }
      
-    //  @Test(priority=9,dependsOnMethods= {"logInDetails"})
+    //  @Test(priority=8,dependsOnMethods= {"logInDetails"})
      void searchNdDelete() throws InterruptedException {
     	 
     	  Blogs_TR blogs = new Blogs_TR(driver);
@@ -411,7 +411,7 @@ import pageObjectTr.Login_TR;
         	  WebElement closeSubs = driver.findElement(By.xpath(" //button[@aria-label='Close popup']//*[name()='svg']"));
 			  closeSubs.click();
 			   	 
-			   	 Thread.sleep(2000);
+			  Thread.sleep(2000);
         	  logger.info("TC-02 --> Verify User is navigate to the My Blogs by clicking on My Blogs");
          	  blogs.myBlogs();
               
@@ -442,7 +442,7 @@ import pageObjectTr.Login_TR;
     	  
 		}
 
-		//@Test(priority=10, dependsOnMethods = {"logInDetails"})
+		//@Test(priority=9, dependsOnMethods = {"logInDetails"})
 		void sortByNewestToOldest() {
 
 			try {
@@ -471,7 +471,7 @@ import pageObjectTr.Login_TR;
 			}
 		}
 		
-		//@Test(priority=11,dependsOnMethods= {"logInDetails"})
+		//@Test(priority=10,dependsOnMethods= {"logInDetails"})
 		void selectCategoryFilter() {
 			
 			try {

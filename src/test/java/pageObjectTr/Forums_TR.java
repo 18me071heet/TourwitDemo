@@ -2,10 +2,13 @@ package pageObjectTr;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -54,9 +57,22 @@ public class Forums_TR {
 	@FindBy(xpath=" //textarea[@placeholder='What are your thoughts?']")
 	WebElement txtComment;
 	
-	public void forumNavigation() {
+	public void forumNavigation(WebDriver driver) {
 		
-		forumLink.click();
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	    try {
+	        WebElement forumLink = wait.until(ExpectedConditions.elementToBeClickable(
+	            By.xpath("//a[normalize-space()='Forum']")));
+	        forumLink.click();
+	      
+	    } catch (StaleElementReferenceException e) {
+	   
+	        WebElement forumLinkRetry = wait.until(ExpectedConditions.elementToBeClickable(
+	            By.xpath("//a[normalize-space()='Forum']")));
+	        forumLinkRetry.click();
+	       
+	    }
 	}
 	
 	public void allForum() {
@@ -239,19 +255,20 @@ public class Forums_TR {
 	
 	public void blockUser() throws InterruptedException {
 		
-	/*	WebElement editIcon = wait.until(ExpectedConditions.presenceOfElementLocated(
-			    By.xpath("//div[contains(@class,'cursor-pointer') and .//svg[@width='32' and @height='32']]")
-			));
+       WebElement profile = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //div[contains(@class,'rounded-full') and span]")));
 		
-		((JavascriptExecutor) driver).executeScript("arguments[0].click();", editIcon);
+		profile.click();
 		
-		editIcon.click();
-			*/
+		WebElement threeDot = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[contains(@class,'inline-block')]//svg[@width='32' and @height='32']")));
 		
-		Thread.sleep(1000);
+		threeDot.click();
+		        
+		Thread.sleep(2000);
 		
 		WebElement blockOption = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[normalize-space()='Block User']")));
 		blockOption.click();
+		
+		Thread.sleep(2000);
 		
 		WebElement confirmBlock = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //button[normalize-space()='Confirm']")));
 		confirmBlock.click();
@@ -356,7 +373,7 @@ public class Forums_TR {
 		  WebElement frstName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@placeholder='Enter your name']")));
 		  frstName.sendKeys(fname);
 		  
-		  WebElement emailAddress = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@placeholder='Enter your email']")));
+		  WebElement emailAddress = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Enter your Email']")));
 		  emailAddress.sendKeys(email);
 		  
 		  WebElement termsClick = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@type='checkbox']")));

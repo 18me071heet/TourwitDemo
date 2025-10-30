@@ -2,12 +2,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 
-<listeners>
-
-<listener class-name="utilityTr.ExtentReportTR"></listener>
-
-</listeners>
-
  <test thread-count="5" name="Test">
 <parameter name="browser" value="chrome"/>
     
@@ -16,8 +10,8 @@
               <!--    <class name="tc_Tr.SignUp_Tr"/> -->
                <!--  <class name="tc_Tr.LogIn_Tr"/> -->
                <!--  <class name="tc_Tr.ForgotPassword_Tr">-->
-                 <class name="tc_Tr.Blogs_Tr"/>
-                 <!--    <class name="tc_Tr.Forums_Tr"/>-->
+                 <!--   <class name="tc_Tr.Blogs_Tr"/>-->
+                  <class name="tc_Tr.Forums_Tr"/>
                  <!--   <class name="tc_Tr.ContactUs_Tr"></class>-->
 	          <!--   <class name="tc_Tr.BottomNavigation_Tr">-->
             <!--     <class name="tc_Tr.ProductCart_Tr"></class>-->

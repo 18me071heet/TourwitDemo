@@ -165,6 +165,7 @@ public class Blogs_TR {
 	}
      
      public void searchNdClickedBlog(WebDriver driver, String blogTitle) {
+    	 
     	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
     	    WebElement searchBlog = wait.until(ExpectedConditions.elementToBeClickable(
@@ -183,14 +184,14 @@ public class Blogs_TR {
     	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", searchedBlogClick);
 
     	    try {
+    	    	
     	        searchedBlogClick.click();
-    	        System.out.println("✅ Clicked blog titled: " + blogTitle);
+    	       
     	    } catch (StaleElementReferenceException e) {
-    	        System.out.println("⚠️ Stale element, refinding and retrying click...");
-    	        WebElement refreshedElement = wait.until(ExpectedConditions.elementToBeClickable(
+    	         WebElement refreshedElement = wait.until(ExpectedConditions.elementToBeClickable(
     	            By.xpath("//a[contains(normalize-space(.),'" + blogTitle + "')]")));
     	        refreshedElement.click();
-    	        System.out.println("✅ Click successful after retry for: " + blogTitle);
+    	    
     	    }
     	}
 
