@@ -62,6 +62,7 @@ public class Forums_TR {
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 	    try {
+	    	
 	        WebElement forumLink = wait.until(ExpectedConditions.elementToBeClickable(
 	            By.xpath("//a[normalize-space()='Forum']")));
 	        forumLink.click();
@@ -159,8 +160,8 @@ public class Forums_TR {
 		
 		blushEmoji.click();
 		
-		  WebElement sendButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='button']/*[name()='svg']")));
-		  	 ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", sendButton);
+		WebElement sendButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='button']/*[name()='svg']")));
+		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", sendButton);
 		  	 
 		  sendButton.click();
 		       	 
@@ -363,13 +364,11 @@ public class Forums_TR {
          ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", option2);
             
          option2.click();
-     
-}
-	  
+         
+     } 
+	    
 	    public void subscribeNewsLater(String fname, String email) {
-		  
-		  //input[@placeholder='Enter your name']
-		  
+		 
 		  WebElement frstName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@placeholder='Enter your name']")));
 		  frstName.sendKeys(fname);
 		  
@@ -385,8 +384,7 @@ public class Forums_TR {
 	      WebElement subScribeButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //button[normalize-space()='Subscribe']")));
 		  subScribeButton.click();
 		 
-	  }
-	    
+	  }    
 }
 
 

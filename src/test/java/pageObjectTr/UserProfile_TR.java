@@ -199,4 +199,14 @@ public class UserProfile_TR {
 		
 	}
 	
+	public void logOut() {
+		
+		WebElement logOutBtn =  wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //button[normalize-space()='Log out']")));
+		logOutBtn.click();
+		
+		WebElement confirmLogout = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space(text())='Logout']")));
+		confirmLogout.click();
+		
+	}
+	
 }

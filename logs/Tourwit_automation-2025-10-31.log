@@ -1,0 +1,44 @@
+12:33:28.029 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+12:33:28.350 [main] INFO  tc_Tr.ResetPassword_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:33:31.728 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+12:33:34.341 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+12:33:34.533 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+12:33:41.003 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify User is navigate to the profile page
+12:33:44.546 [main] INFO  tc_Tr.ResetPassword_Tr - TC-02 --> Verify Reset Password screen is displaying by clicking Reset Password
+12:33:47.721 [main] INFO  tc_Tr.ResetPassword_Tr - TC-04 --> Verify Validation message is displaying by entering incorrect old password
+12:33:49.878 [main] INFO  tc_Tr.ResetPassword_Tr - TC-05 --> Verify User is able to add new password
+12:33:52.066 [main] INFO  tc_Tr.ResetPassword_Tr - TC-06 --> Verify validation message is displaying by entering different confirm password
+12:33:54.167 [main] INFO  tc_Tr.ResetPassword_Tr - Validation message is displaying:Old password is incorrect
+12:33:54.167 [main] INFO  tc_Tr.ResetPassword_Tr - TC-07 --> Verify Password is getting clear or not after entering old password
+12:33:54.432 [main] INFO  tc_Tr.ResetPassword_Tr - TC-08--> Verify user is able to enter correct old password
+12:33:56.574 [main] INFO  tc_Tr.ResetPassword_Tr - TC-09 --> Verify password is getting changed by clicking reset password
+12:34:06.699 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
+12:34:09.817 [main] INFO  tc_Tr.ResetPassword_Tr - TC-02 --> Verify logout confirmation message is displaying by clicking logout option
+12:34:10.018 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+12:34:11.242 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+12:34:11.423 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+12:34:40.556 [main] ERROR tc_Tr.ResetPassword_Tr - Failed:org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e77e4e0bd5cef8ca533ac432a4f4ad86, findElement [value, using]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53252}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53252/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e77e4e0bd5cef8ca533ac432a4f4ad86
+12:40:09.006 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+12:40:09.359 [main] INFO  tc_Tr.ResetPassword_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:40:12.896 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+12:40:15.279 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+12:40:15.474 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+12:40:21.844 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify User is navigate to the profile page
+12:40:25.349 [main] INFO  tc_Tr.ResetPassword_Tr - TC-02 --> Verify Reset Password screen is displaying by clicking Reset Password
+12:40:28.651 [main] INFO  tc_Tr.ResetPassword_Tr - TC-04 --> Verify Validation message is displaying by entering incorrect old password
+12:40:30.804 [main] INFO  tc_Tr.ResetPassword_Tr - TC-05 --> Verify User is able to add new password
+12:40:32.960 [main] INFO  tc_Tr.ResetPassword_Tr - TC-06 --> Verify validation message is displaying by entering different confirm password
+12:40:34.888 [main] INFO  tc_Tr.ResetPassword_Tr - Validation message is displaying:Old password is incorrect
+12:40:34.888 [main] INFO  tc_Tr.ResetPassword_Tr - TC-07 --> Verify Password is getting clear or not after entering old password
+12:40:35.208 [main] INFO  tc_Tr.ResetPassword_Tr - TC-08--> Verify user is able to enter correct old password
+12:40:37.363 [main] INFO  tc_Tr.ResetPassword_Tr - TC-09 --> Verify password is getting changed by clicking reset password

@@ -2,6 +2,9 @@ package pageObjectTr;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,6 +42,9 @@ public class ResetPassword_TR {
 	@FindBy(xpath="//button[normalize-space()='Reset Password']")
 	WebElement savePassword;
 	
+	@FindBy(id = "dropdownAvatarNameButton")
+	WebElement avtarClick;
+	
 	public void profileClicks(WebDriver driver) {
 		
        WebElement profileBtn = wait.until(ExpectedConditions.elementToBeClickable(btnProfile));
@@ -52,9 +58,16 @@ public class ResetPassword_TR {
 	}
 	
 	public void addOldPassword(String oldPassword) {
-		
-		
+			
 		txtOldPassword.sendKeys(oldPassword);
+	}
+	
+	public void clearOldPassword() {
+		
+		txtOldPassword.clear();
+		txtOldPassword.sendKeys(Keys.CONTROL + "a");
+	    txtOldPassword.sendKeys(Keys.DELETE);
+	    
 	}
 	
 	public void addNewPassword(String newPassword ) {
@@ -73,9 +86,33 @@ public class ResetPassword_TR {
 		txtConfirmPassword.clear();
 	}
 	
-	public void resetPass() {
+	public void avtarClick() {
+		
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		    wait.until(ExpectedConditions.elementToBeClickable(avtarClick));
+		    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", avtarClick);
+	}
+	
+	public void resetPasswordClick() {
 		
 		savePassword.click();
 	}
+	
+	public void logOut() {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
+	    // Step 1: Click "Log out" from dropdown menu
+	    WebElement logOutBtn = wait.until(ExpectedConditions.elementToBeClickable(
+	        By.xpath("//button[normalize-space(text())='Log out']")
+	    ));
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", logOutBtn);
+
+	    // Step 2: Wait for confirmation popup and click "Logout"
+	    WebElement confirmLogout = wait.until(ExpectedConditions.elementToBeClickable(
+	        By.xpath("//div[contains(@class,'flex justify-center')]/button[normalize-space(text())='Logout']")
+	    ));
+	    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", confirmLogout);
+	}
+
 	
 }

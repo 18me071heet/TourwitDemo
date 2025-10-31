@@ -1,36 +1,6 @@
-15:53:10.361 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to search the specific forum
-15:53:10.376 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is forum is displaying according to searching 
-15:53:10.376 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to view searched forum
-15:53:13.989 [main] ERROR tc_Tr.Forums_Tr - It is failed
-15:54:46.762 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-15:54:46.836 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-15:54:51.892 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
-15:54:55.365 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
-15:54:58.518 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-15:55:04.724 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking on Forum 
-15:55:12.702 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the All post
-15:55:13.199 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to search the specific forum
-15:55:13.200 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is forum is displaying according to searching 
-15:55:13.200 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to view searched forum
-15:55:21.539 [main] INFO  tc_Tr.Forums_Tr - Verify Block option is displaying by clicking on three dot
-15:55:21.539 [main] INFO  tc_Tr.Forums_Tr - Verify Block user confirmation popup is displaying by clicking block user
-15:55:21.539 [main] INFO  tc_Tr.Forums_Tr - Verify User is getting block after clicking confirm
-15:55:42.326 [main] ERROR tc_Tr.Forums_Tr - It is failed
-17:37:27.976 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-17:37:28.043 [main] INFO  tc_Tr.Forums_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-17:37:32.389 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is able to add email
-17:37:35.731 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to add password
-17:37:38.936 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-17:37:45.154 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the forum page by clicking on Forum 
-17:37:53.003 [main] INFO  tc_Tr.Forums_Tr - TC-01 --> Verify User is navigate to the All post
-17:37:53.155 [main] INFO  tc_Tr.Forums_Tr - TC-02 --> Verify User is able to search the specific forum
-17:37:53.155 [main] INFO  tc_Tr.Forums_Tr - TC-03 --> Verify User is forum is displaying according to searching 
-17:37:53.155 [main] INFO  tc_Tr.Forums_Tr - TC-04 --> Verify User is able to view searched forum
-17:38:01.694 [main] INFO  tc_Tr.Forums_Tr - Verify Block option is displaying by clicking on three dot
-17:38:01.694 [main] INFO  tc_Tr.Forums_Tr - Verify Block user confirmation popup is displaying by clicking block user
-17:38:01.694 [main] INFO  tc_Tr.Forums_Tr - Verify User is getting block after clicking confirm
-17:38:22.877 [main] ERROR tc_Tr.Forums_Tr - It is failed
+12:40:47.708 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
+12:40:50.890 [main] INFO  tc_Tr.ResetPassword_Tr - TC-02 --> Verify logout confirmation message is displaying by clicking logout option
+12:40:51.107 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+12:40:52.370 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+12:40:52.568 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+12:40:54.922 [main] INFO  tc_Tr.ResetPassword_Tr - ✅ Profile image is displayed successfully after login with new password.
