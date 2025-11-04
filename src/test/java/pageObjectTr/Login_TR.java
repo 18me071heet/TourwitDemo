@@ -95,4 +95,25 @@ public class Login_TR {
 		signUpLink.click();
 	}
 	
+	 public void subscribeNewsLater(String fname, String email) {
+		  
+		  //input[@placeholder='Enter your name']
+		  
+		  WebElement frstName = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@placeholder='Enter your name']")));
+		  frstName.sendKeys(fname);
+		  
+		  WebElement emailAddress = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@placeholder='Enter your Email']")));
+		  emailAddress.sendKeys(email);
+		  
+		  WebElement termsClick = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //input[@type='checkbox']")));
+		  termsClick.click();
+		  
+		//  WebElement termsandConditionLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //a[normalize-space()='terms and conditions']")));
+		  //termsandConditionLink.click();
+		  
+	      WebElement subScribeButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(" //button[normalize-space()='Subscribe']")));
+		  subScribeButton.click();
+		 
+	  }
+	
 }

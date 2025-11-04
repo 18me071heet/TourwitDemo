@@ -53,17 +53,25 @@ public class ResetPassword_Tr extends BaseClassTr{
 		
 		Thread.sleep(3000);
 		login.profileIconClick();
-		
-	   	
-	   
+	  
 			
 		try {
 			
 			logger.info("TC-01 --> Verify User is navigate to the profile page");
 		    resetPass.profileClicks(driver);
-			 Thread.sleep(3000);
+		    
+			/*Thread.sleep(3000);
 			 	WebElement closeSubs = driver.findElement(By.xpath(" //button[@aria-label='Close popup']//*[name()='svg']"));
-					closeSubs.click();
+					closeSubs.click();*/
+		    
+		    Thread.sleep(3000);
+       	 
+       	 logger.info("Tc -01 Verify User is able to enter name and email address in subscription popup ");
+       	 
+       	 logger.info("TC- 02 --> Verify User is able to select terms and conditions checkbox");
+       	 
+       	 logger.info("TC-03 --> Verify User is able to subscribe news letter by clicking submit button");
+       	 login.subscribeNewsLater("Will John", "user23@yopmail.com");
 					
 			logger.info("TC-02 --> Verify Reset Password screen is displaying by clicking Reset Password");
 			Thread.sleep(3000);
@@ -171,16 +179,16 @@ public class ResetPassword_Tr extends BaseClassTr{
       		    login.loginBtn();
       		     Thread.sleep(2000);
       		     
-      		   //  WebElement loginToast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'Login successfull')]")));
+      		    /* WebElement loginToast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'Login successfull')]")));
       		     
-      		  //   String toast = loginToast.getText();
+      		    String toast = loginToast.getText();
       		     
-      		   //  Assert.assertTrue(toast.contains("Login successfull"),"No toast message is displaying");
+      		     Assert.assertTrue(toast.contains("Login successfull"),"No toast message is displaying"); */
       		   
       		     WebElement profileImage = driver.findElement(By.xpath("//img[@alt='Profile']"));
       		     
       		   Assert.assertTrue(profileImage.isDisplayed(), "❌ Profile image not displayed after login.");
-      		    logger.info("✅ Profile image is displayed successfully after login with new password.");     
+      		    logger.info("✅ Profile image is displayed successfully after login with new password.");    
   
 	   	   		
 	   		} catch(Exception e) {

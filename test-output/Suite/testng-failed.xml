@@ -13,6 +13,7 @@
           <include name="logout"/>
           <include name="signUp"/>
           <include name="logInAfterResetPassword"/>
+          <include name="resetPassword"/>
         </methods>
       </class> <!-- tc_Tr.ResetPassword_Tr -->
     </classes>

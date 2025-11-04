@@ -1,6 +1,36 @@
-12:40:47.708 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
-12:40:50.890 [main] INFO  tc_Tr.ResetPassword_Tr - TC-02 --> Verify logout confirmation message is displaying by clicking logout option
-12:40:51.107 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
-12:40:52.370 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
-12:40:52.568 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
-12:40:54.922 [main] INFO  tc_Tr.ResetPassword_Tr - ✅ Profile image is displayed successfully after login with new password.
+18:04:00.973 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+18:04:04.232 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
+18:04:08.249 [main] INFO  tc_Tr.ResetPassword_Tr - TC-02 --> Verify logout confirmation message is displaying by clicking logout option
+18:04:08.458 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+18:04:09.636 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+18:04:09.793 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+18:04:12.190 [main] ERROR tc_Tr.ResetPassword_Tr - Failed:org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //img[@alt='Profile']
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: driver.version: RemoteWebDriver
+18:05:40.989 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+18:05:41.351 [main] INFO  tc_Tr.ResetPassword_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+18:05:44.514 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+18:05:46.758 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+18:05:46.938 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+18:05:53.351 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify User is navigate to the profile page
+18:05:56.579 [main] INFO  tc_Tr.ResetPassword_Tr - Tc -01 Verify User is able to enter name and email address in subscription popup 
+18:05:56.579 [main] INFO  tc_Tr.ResetPassword_Tr - TC- 02 --> Verify User is able to select terms and conditions checkbox
+18:05:56.579 [main] INFO  tc_Tr.ResetPassword_Tr - TC-03 --> Verify User is able to subscribe news letter by clicking submit button
+18:05:57.145 [main] INFO  tc_Tr.ResetPassword_Tr - TC-02 --> Verify Reset Password screen is displaying by clicking Reset Password
+18:06:00.329 [main] INFO  tc_Tr.ResetPassword_Tr - TC-04 --> Verify Validation message is displaying by entering incorrect old password
+18:06:02.467 [main] INFO  tc_Tr.ResetPassword_Tr - TC-05 --> Verify User is able to add new password
+18:06:04.586 [main] INFO  tc_Tr.ResetPassword_Tr - TC-06 --> Verify validation message is displaying by entering different confirm password
+18:06:06.606 [main] INFO  tc_Tr.ResetPassword_Tr - Validation message is displaying:Old password is incorrect
+18:06:06.606 [main] INFO  tc_Tr.ResetPassword_Tr - TC-07 --> Verify Password is getting clear or not after entering old password
+18:06:06.824 [main] INFO  tc_Tr.ResetPassword_Tr - TC-08--> Verify user is able to enter correct old password
+18:06:08.907 [main] INFO  tc_Tr.ResetPassword_Tr - TC-09 --> Verify password is getting changed by clicking reset password
+18:06:18.932 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
+18:06:22.059 [main] INFO  tc_Tr.ResetPassword_Tr - TC-02 --> Verify logout confirmation message is displaying by clicking logout option
+18:06:22.201 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+18:06:23.371 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+18:06:23.560 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+18:06:26.174 [main] INFO  tc_Tr.ResetPassword_Tr - ✅ Profile image is displayed successfully after login with new password.

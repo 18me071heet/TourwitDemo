@@ -1,0 +1,42 @@
+18:00:41.357 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+18:00:44.059 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+18:00:44.208 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+18:00:47.430 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
+18:00:50.752 [main] INFO  tc_Tr.ResetPassword_Tr - TC-02 --> Verify logout confirmation message is displaying by clicking logout option
+18:00:50.970 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+18:00:52.161 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+18:00:52.308 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+18:01:00.330 [main] ERROR tc_Tr.ResetPassword_Tr - Failed:org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=141.0.7390.125)
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [76669f7007692294cbbd50cdef606270, findElement {using=xpath, value=//img[@alt='Profile']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.125, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57155}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57155/devtoo..., se:cdpVersion: 141.0.7390.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 76669f7007692294cbbd50cdef606270
+18:02:44.292 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+18:02:44.592 [main] INFO  tc_Tr.ResetPassword_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+18:02:48.009 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+18:02:50.262 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+18:02:50.466 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+18:02:53.762 [main] INFO  tc_Tr.ResetPassword_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
+18:02:56.886 [main] INFO  tc_Tr.ResetPassword_Tr - TC-02 --> Verify logout confirmation message is displaying by clicking logout option
+18:02:57.079 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+18:02:58.227 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
+18:02:58.359 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to login by clicking on Login Button
+18:03:04.236 [main] ERROR tc_Tr.ResetPassword_Tr - Failed:org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6c60ae5374fd5f7013d88bb8b46f6de9, findElement [value, using]]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.125, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54848}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54848/devtoo..., se:cdpVersion: 141.0.7390.125, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6c60ae5374fd5f7013d88bb8b46f6de9
+18:03:54.583 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+18:03:54.851 [main] INFO  tc_Tr.ResetPassword_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+18:03:58.328 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add email
+18:04:00.841 [main] INFO  tc_Tr.ResetPassword_Tr - Verify User is able to add password
