@@ -1,0 +1,58 @@
+17:33:19.910 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:33:24.163 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
+17:33:29.469 [main] ERROR tc_Tr.UserProfile_Tr - Failed
+17:34:08.971 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:34:09.251 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:34:12.252 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify User is able to add email
+17:34:12.572 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is able to add password
+17:34:12.738 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:34:17.157 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
+17:34:22.562 [main] ERROR tc_Tr.UserProfile_Tr - Failed
+17:35:00.930 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:35:01.203 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:35:03.984 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify User is able to add email
+17:35:04.237 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is able to add password
+17:35:04.525 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:35:08.841 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
+17:35:12.031 [main] ERROR tc_Tr.UserProfile_Tr - Failed
+17:35:41.111 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:35:41.367 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:35:44.015 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify User is able to add email
+17:35:44.242 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is able to add password
+17:35:44.573 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:35:48.878 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
+17:35:53.344 [main] ERROR tc_Tr.UserProfile_Tr - Failed
+17:36:37.488 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:36:37.771 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:36:40.953 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify User is able to add email
+17:36:41.243 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is able to add password
+17:36:41.613 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:36:45.837 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
+17:36:45.878 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is navigate to the profile page by clicking on My profile
+17:36:50.129 [main] INFO  tc_Tr.UserProfile_Tr - Tc -03 Verify User is able to enter name and email address in subscription popup 
+17:36:50.129 [main] INFO  tc_Tr.UserProfile_Tr - TC- 04 --> Verify User is able to select terms and conditions checkbox
+17:36:50.129 [main] INFO  tc_Tr.UserProfile_Tr - TC-05--> Verify User is able to subscribe news letter by clicking submit button
+17:36:51.233 [main] INFO  tc_Tr.UserProfile_Tr - TC-06 --> Verify User is able to Edit their first name
+17:36:52.567 [main] INFO  tc_Tr.UserProfile_Tr - TC-07 --> Verify Update name is getting saved by clicking on Save
+17:36:58.272 [main] INFO  tc_Tr.UserProfile_Tr - TC-08 --> Verify User is able to Edit their last name
+17:36:58.627 [main] ERROR tc_Tr.UserProfile_Tr - Failed
+17:37:58.472 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:37:58.823 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:38:02.025 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify User is able to add email
+17:38:02.354 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is able to add password
+17:38:02.828 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+17:38:07.176 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
+17:38:10.078 [main] ERROR tc_Tr.UserProfile_Tr - Failed
+17:38:29.233 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+

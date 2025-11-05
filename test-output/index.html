@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,22 +103,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tc_Tr.ResetPassword_Tr" class="method navigator-link" hash-for-method="logInAfterResetPassword">logInAfterResetPassword</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tc_Tr.UserProfile_Tr" class="method navigator-link" hash-for-method="editProfile">editProfile</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tc_Tr.ResetPassword_Tr" class="method navigator-link" hash-for-method="logInDetails">logInDetails</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tc_Tr.ResetPassword_Tr" class="method navigator-link" hash-for-method="logout">logout</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tc_Tr.ResetPassword_Tr" class="method navigator-link" hash-for-method="resetPassword">resetPassword</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tc_Tr.UserProfile_Tr" class="method navigator-link" hash-for-method="logInDetails">logInDetails</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -136,14 +126,14 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tc_Tr.ResetPassword_Tr</span>
+              <span class="class-name">tc_Tr.UserProfile_Tr</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="logInAfterResetPassword">
-                  </a> <!-- logInAfterResetPassword -->
-                  <span class="method-name">logInAfterResetPassword</span>
+                  <a name="editProfile">
+                  </a> <!-- editProfile -->
+                  <span class="method-name">editProfile</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -151,20 +141,6 @@
                   <a name="logInDetails">
                   </a> <!-- logInDetails -->
                   <span class="method-name">logInDetails</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="logout">
-                  </a> <!-- logout -->
-                  <span class="method-name">logout</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="resetPassword">
-                  </a> <!-- resetPassword -->
-                  <span class="method-name">resetPassword</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -185,7 +161,7 @@
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;tc_Tr.ResetPassword_Tr&quot;/&gt;
+      &lt;class name=&quot;tc_Tr.UserProfile_Tr&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -225,28 +201,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'resetPassword')
-data.setCell(0, 2, 'tc_Tr.ResetPassword_Tr')
-data.setCell(0, 3, 28683);
+data.setCell(0, 1, 'editProfile')
+data.setCell(0, 2, 'tc_Tr.UserProfile_Tr')
+data.setCell(0, 3, 37907);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'logInDetails')
-data.setCell(1, 2, 'tc_Tr.ResetPassword_Tr')
-data.setCell(1, 3, 5709);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'logInAfterResetPassword')
-data.setCell(2, 2, 'tc_Tr.ResetPassword_Tr')
-data.setCell(2, 3, 3975);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'logout')
-data.setCell(3, 2, 'tc_Tr.ResetPassword_Tr')
-data.setCell(3, 3, 3259);
+data.setCell(1, 2, 'tc_Tr.UserProfile_Tr')
+data.setCell(1, 3, 1278);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 41 seconds</span>
+              <span class="suite-total-time">Total running time: 39 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -272,26 +240,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tc_Tr.ResetPassword_Tr</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tc_Tr.UserProfile_Tr</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">signUp(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">logInDetails</span>
-                <span class="method-start">3137 ms</span>
+                <span class="method-start">3035 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">resetPassword</span>
-                <span class="method-start">8911 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">logout</span>
-                <span class="method-start">37599 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">logInAfterResetPassword</span>
-                <span class="method-start">40866 ms</span>
+                <span class="method-name">editProfile</span>
+                <span class="method-start">4353 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
