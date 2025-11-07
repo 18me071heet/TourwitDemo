@@ -16,6 +16,10 @@ import pageObjectTr.Login_TR;
 public class EditAddress_Tr extends BaseClassTr {
 
 	
+	void threadTime() throws InterruptedException{
+		
+		Thread.sleep(3000);
+	}
 	  @Test(priority=1)
   	   void logInDetails() throws InterruptedException {
   		
@@ -46,63 +50,203 @@ public class EditAddress_Tr extends BaseClassTr {
 	@Test(priority=2,dependsOnMethods= {"logInDetails"})
 	void changeAddress() throws InterruptedException {
 		
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		 Login_TR login = new Login_TR(driver);
 		
-		Login_TR login = new Login_TR(driver);
+		 EditAddress_TR address = new EditAddress_TR(driver);
 		
-		EditAddress_TR address = new EditAddress_TR(driver);
+		 logger.info("TC-01 --> Verify options are dispalying by clicking on profile icon");
+		 Thread.sleep(4000);
+		 login.profileIconClick();
 		
-		logger.info("TC-01 --> Verify options are dispalying by clicking on profile icon");
-		Thread.sleep(4000);
-		login.profileIconClick();
-		
-		logger.info("TC-02 --> Verify profile screen is displaying by clicking edit profile");
-		address.myProfile();
-		
-		logger.info("TC-03 --> Verify Address screen is displaying by clicking saved address");
-		Thread.sleep(5000);
-		address.clickAddress();
-				
-    	//	address.clickDefault();
-		
-		logger.info("TC-04 --> Verify User is able to change first name");
-		address.changeFname("Smith");
-		
-		logger.info("TC-05 --> Verify User is able to change last name");
-		address.changeLname("Johnn");
-		
-		logger.info("TC-06 --> Verify User is able to change phone");
-		address.changePhone("9911991199");
-		
-		logger.info("TC-07 --> Verify User is able to change email address");
-		address.changeEmail("user24@yopmail.com");
-		
-		logger.info("TC-08 --> Verify User is able to change address");
-   	    address.changeAddress("Beside Chruch Street , Outside ray beach");
+		 
+		 logger.info("TC-02 --> Verify profile screen is displaying by clicking edit profile");
+		 address.myProfile();
+		 
+		 Thread.sleep(5000);
+      	 logger.info("Tc -04 Verify User is able to enter name and email address in subscription popup ");
+      	 
+      	 logger.info("TC- 05 --> Verify User is able to select terms and conditions checkbox");
+      	 
+      	 logger.info("TC-06--> Verify User is able to subscribe news letter by clicking submit button");
+      	 login.subscribeNewsLater("Will John", "user23@yopmail.com");
+      	 
+		 logger.info("TC-07 --> Verify Address screen is displaying by clicking saved address");
+		 Thread.sleep(5000);
+		 address.clickAddress();
+			
+	 	 logger.info("TC-08 --> Verify user is able to change country and select country from the list");
+   	     
+   	     WebElement countryList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-countryId-input")));
+   	     countryList.click();
+   	     countryList.sendKeys(p.getProperty("editCountry"));
    	    
-   	    logger.info("TC-09 --> Verify User is able to change and select state from the list ");
+   	     WebElement countrySelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='option' and text()='Australia']")));
+     	 countrySelect.click();
+     	 threadTime();
    	    
-   	    WebElement stateList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-stateId-input")));
-   	    stateList.click();
-   	    stateList.sendKeys("Gujarat");
+   	     logger.info("TC-09 --> Verify User is able to change and select state from the list ");
    	    
-   	    WebElement stateSelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='option' and text()='Gujarat']")));
-   	    stateSelect.click();
+   	     WebElement stateList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-stateId-input")));
+   	     stateList.click();
+   	     stateList.sendKeys(p.getProperty("editState"));
    	    
-   	    logger.info("TC-10 --> Verify User is able to change city and select city from the list");
+   	     WebElement stateSelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='option' and text()='Queensland']")));
+   	     stateSelect.click();
+   	     threadTime();
+   	     
+   	     logger.info("TC-10 --> Verify User is able to change city and select city from the list");
    	    
-   	    WebElement cityList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-cityId-input")));
-   	    cityList.click();
-   	    cityList.sendKeys("Ahmedabad");
+   	     WebElement cityList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-cityId-input")));
+   	     cityList.click();
+   	     cityList.sendKeys(p.getProperty("editCity"));
    	    
-   	    WebElement citySelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='option' and text()='Ahmedabad']")));
-   	    citySelect.click();
+   	     WebElement citySelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='option' and text()='Ascot']")));
+   	     citySelect.click();
+   	     threadTime();
+		 
+   	     logger.info("TC-11 --> Verify User is able to change first name");
+		 address.changeFname(p.getProperty("editFname"));
+		 threadTime();
+		 
+		 logger.info("TC-12 --> Verify User is able to change last name");
+		 address.changeLname(p.getProperty("editLname"));
+		 threadTime();
+		 
+		 logger.info("TC-13 --> Verify User is able to change phone");
+		 address.changePhone(p.getProperty("editPhone"));
+		 threadTime();
+		 
+		 logger.info("TC-14 --> Verify User is able to change email address");
+		 address.changeEmail(p.getProperty("editEmail"));
+		 threadTime();
 		
-		logger.info("TC-11 --> Verify User is able to change zip code");
-		address.changeCode("360011");
+		 logger.info("TC-15 --> Verify User is able to change address");
+	     address.changeAddress(p.getProperty("editAddress"));
+	     threadTime();
+	     
+		 logger.info("TC-16 --> Verify User is able to change zip code");
+		 address.changeCode(p.getProperty("editZip"));
+		 threadTime();
 		
-		logger.info("TC-12 --> Verify change details are getting saved or not");
-		address.saveAddress();
+		 logger.info("TC-17 --> Verify change details are getting saved or not");
+		 address.saveAddress();
+		 
+		 WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Address updated successfully')]")));
+		 String successMsg = toast.getText();
+		 Assert.assertTrue(successMsg.contains("Address updated successfully"), "No success toast msg found");
+		 
+		 wait.until(ExpectedConditions.invisibilityOf(toast));
+		 
+		 logger.info("TC-18 --> Verify user is able to set specific address as default");
+		 
+		 address.setDefaultForUser("Smith Williams");
+		 
+		 WebElement defaultAddressToast = wait.until(
+			        ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'Default address updated successfully')]")));
+		 
+		 String defaultToast = defaultAddressToast.getText();
+		 
+		 logger.info("TC-19 --> Verify success message toast is displaying or not after set default address");
+		 
+		 Assert.assertTrue(defaultToast.contains("Default address updated successfully"), "No similiar toast msg is found");
+		 
+		 wait.until(ExpectedConditions.invisibilityOf(defaultAddressToast));
+		
+	}
+	
+	
+	//@Test(priority=3,dependsOnMethods= {"logInDetails"})
+	void addAddress() throws InterruptedException {
+		
+		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		 Login_TR login = new Login_TR(driver);
+		
+		 EditAddress_TR address = new EditAddress_TR(driver);
+		
+		 logger.info("TC-01 --> Verify options are dispalying by clicking on profile icon");
+		 Thread.sleep(4000);
+		 login.profileIconClick();
+		
+		 
+		 logger.info("TC-02 --> Verify profile screen is displaying by clicking edit profile");
+		 address.myProfile();
+		 
+		 Thread.sleep(5000);
+      	 logger.info("Tc -03 Verify User is able to enter name and email address in subscription popup ");
+      	 
+      	 logger.info("TC- 05 --> Verify User is able to select terms and conditions checkbox");
+      	 
+      	 logger.info("TC-06--> Verify User is able to subscribe news letter by clicking submit button");
+      	 login.subscribeNewsLater("Will John", "user23@yopmail.com");
+      	 
+		 logger.info("TC-07 --> Verify Address screen is displaying by clicking saved address");
+		 Thread.sleep(5000);
+		 address.clickAddNewAddress();
+			
+	 	 logger.info("TC-18 --> Verify user is able to change country and select country from the list");
+   	     
+   	     WebElement countryList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-countryId-input")));
+   	     countryList.click();
+   	     countryList.sendKeys(p.getProperty("editCountry"));
+   	    
+   	     WebElement countrySelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='option' and text()='Australia']")));
+     	 countrySelect.click();
+     	 threadTime();
+   	    
+   	     logger.info("TC-19 --> Verify User is able to change and select state from the list ");
+   	    
+   	     WebElement stateList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-stateId-input")));
+   	     stateList.click();
+   	     stateList.sendKeys(p.getProperty("editState"));
+   	    
+   	     WebElement stateSelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='option' and text()='Queensland']")));
+   	     stateSelect.click();
+   	     threadTime();
+   	     
+   	     logger.info("TC-10--> Verify User is able to change city and select city from the list");
+   	    
+   	     WebElement cityList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-cityId-input")));
+   	     cityList.click();
+   	     cityList.sendKeys(p.getProperty("editCity"));
+   	    
+   	     WebElement citySelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='option' and text()='Ascot']")));
+   	     citySelect.click();
+   	     threadTime();
+		 
+   	     logger.info("TC-11 --> Verify User is able to add first name");
+		 address.addFname(p.getProperty("editFname"));
+		 threadTime();
+		 
+		 logger.info("TC-12 --> Verify User is able to add last name");
+		 address.addLname(p.getProperty("editLname"));
+		 threadTime();
+		 
+		 logger.info("TC-13 --> Verify User is able to add phone number");
+		 address.addPhone(p.getProperty("editPhone"));
+		 threadTime();
+		 
+		 logger.info("TC-14 --> Verify User is able to add email address");
+		 address.addEmail(p.getProperty("editEmail"));
+		 threadTime();
+		
+		 logger.info("TC-15 --> Verify User is able to change address");
+	     address.addAddress(p.getProperty("editAddress"));
+	     threadTime();
+	     
+		 logger.info("TC-16 --> Verify User is able to change zip code");
+		 address.addCode(p.getProperty("editZip"));
+		 threadTime();
+		
+		 logger.info("TC-17 --> Verify change details are getting saved or not");
+		 address.saveAddress();
+		 
+		 WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Address updated successfully')]")));
+		 String successMsg = toast.getText();
+		 Assert.assertTrue(successMsg.contains("Address updated successfully"), "No success toast msg found");
+		 
+		 wait.until(ExpectedConditions.invisibilityOf(toast));
+			
 		
 	}
 }

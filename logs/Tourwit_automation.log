@@ -1,29 +1,4 @@
-17:38:29.521 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-17:38:32.354 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify User is able to add email
-17:38:32.609 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is able to add password
-17:38:32.924 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-17:38:37.199 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
-17:38:40.468 [main] ERROR tc_Tr.UserProfile_Tr - Failed
-17:39:27.549 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-17:39:27.908 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-17:39:30.985 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify User is able to add email
-17:39:31.713 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is able to add password
-17:39:31.910 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-17:39:36.258 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
-17:39:36.333 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is navigate to the profile page by clicking on My profile
-17:39:40.588 [main] INFO  tc_Tr.UserProfile_Tr - Tc -03 Verify User is able to enter name and email address in subscription popup 
-17:39:40.589 [main] INFO  tc_Tr.UserProfile_Tr - TC- 04 --> Verify User is able to select terms and conditions checkbox
-17:39:40.589 [main] INFO  tc_Tr.UserProfile_Tr - TC-05--> Verify User is able to subscribe news letter by clicking submit button
-17:39:41.248 [main] INFO  tc_Tr.UserProfile_Tr - TC-06 --> Verify User is able to Edit their first name
-17:39:42.634 [main] INFO  tc_Tr.UserProfile_Tr - TC-07 --> Verify Update name is getting saved by clicking on Save
-17:39:48.930 [main] INFO  tc_Tr.UserProfile_Tr - TC-08 --> Verify User is able to Edit their last name
-17:39:51.799 [main] INFO  tc_Tr.UserProfile_Tr - TC-09 --> Verify User is able to Edit their Insta Id
-17:39:52.880 [main] INFO  tc_Tr.UserProfile_Tr - TC-10 --> Verify User is able to Edit their Country from Country dropdown
-17:39:57.395 [main] INFO  tc_Tr.UserProfile_Tr - TC-11 --> Verify Selected country is displaying in the country field
-17:40:02.596 [main] INFO  tc_Tr.UserProfile_Tr - TC-12 --> Verify User is able to view their followers list
-17:40:05.599 [main] INFO  tc_Tr.UserProfile_Tr - TC-13 --> Verify User is able to search specific follower
-17:40:05.600 [main] INFO  tc_Tr.UserProfile_Tr - TC-14 --> Verify User is able to view their following list
-17:40:05.789 [main] INFO  tc_Tr.UserProfile_Tr - TC-15 --> Verify User is able to search specific following
-17:40:05.935 [main] INFO  tc_Tr.UserProfile_Tr - TC-16 --> Verify User is able to unfollow user by clicking on Unfollow
+16:19:17.666 [main] INFO  tc_Tr.EditAddress_Tr - TC-15 --> Verify User is able to change zip code
+16:19:20.963 [main] INFO  tc_Tr.EditAddress_Tr - TC-16 --> Verify change details are getting saved or not
+16:19:26.631 [main] INFO  tc_Tr.EditAddress_Tr - TC-17 --> Verify user is able to set specific address as default
+16:19:28.670 [main] INFO  tc_Tr.EditAddress_Tr - TC-18 --> Verify success message toast is displaying or not after set default address
