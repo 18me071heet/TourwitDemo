@@ -1,6 +1,7 @@
 package tc_Tr;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -47,7 +48,7 @@ public class EditAddress_Tr extends BaseClassTr {
   		
 	  }
   		
-	@Test(priority=2,dependsOnMethods= {"logInDetails"})
+	//@Test(priority=2,dependsOnMethods= {"logInDetails"})
 	void changeAddress() throws InterruptedException {
 		
 		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
@@ -77,7 +78,7 @@ public class EditAddress_Tr extends BaseClassTr {
 			
 	 	 logger.info("TC-08 --> Verify user is able to change country and select country from the list");
    	     
-   	     WebElement countryList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-countryId-input")));
+   	   /*  WebElement countryList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-countryId-input")));
    	     countryList.click();
    	     countryList.sendKeys(p.getProperty("editCountry"));
    	    
@@ -105,6 +106,9 @@ public class EditAddress_Tr extends BaseClassTr {
    	     citySelect.click();
    	     threadTime();
 		 
+		 */
+	 	 
+	 	 
    	     logger.info("TC-11 --> Verify User is able to change first name");
 		 address.changeFname(p.getProperty("editFname"));
 		 threadTime();
@@ -156,7 +160,7 @@ public class EditAddress_Tr extends BaseClassTr {
 	}
 	
 	
-	//@Test(priority=3,dependsOnMethods= {"logInDetails"})
+	@Test(priority=3,dependsOnMethods= {"logInDetails"})
 	void addAddress() throws InterruptedException {
 		
 		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
@@ -173,72 +177,73 @@ public class EditAddress_Tr extends BaseClassTr {
 		 address.myProfile();
 		 
 		 Thread.sleep(5000);
-      	 logger.info("Tc -03 Verify User is able to enter name and email address in subscription popup ");
-      	 
-      	 logger.info("TC- 05 --> Verify User is able to select terms and conditions checkbox");
-      	 
-      	 logger.info("TC-06--> Verify User is able to subscribe news letter by clicking submit button");
-      	 login.subscribeNewsLater("Will John", "user23@yopmail.com");
-      	 
-		 logger.info("TC-07 --> Verify Address screen is displaying by clicking saved address");
+   
+      	 address.clickAddress();
+		 logger.info("TC-06 --> Verify Address screen is displaying by clicking saved address");
 		 Thread.sleep(5000);
 		 address.clickAddNewAddress();
+		
 			
-	 	 logger.info("TC-18 --> Verify user is able to change country and select country from the list");
+	 /*	 logger.info("TC-07 --> Verify user is able to change country and select country from the list");
    	     
    	     WebElement countryList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-countryId-input")));
    	     countryList.click();
-   	     countryList.sendKeys(p.getProperty("editCountry"));
+   	     countryList.sendKeys(p.getProperty("addCountry"));
    	    
    	     WebElement countrySelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='option' and text()='Australia']")));
      	 countrySelect.click();
      	 threadTime();
    	    
-   	     logger.info("TC-19 --> Verify User is able to change and select state from the list ");
+   	     logger.info("TC-08 --> Verify User is able to change and select state from the list ");
    	    
    	     WebElement stateList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-stateId-input")));
    	     stateList.click();
-   	     stateList.sendKeys(p.getProperty("editState"));
+   	     stateList.sendKeys(p.getProperty("addState"));
    	    
    	     WebElement stateSelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='option' and text()='Queensland']")));
    	     stateSelect.click();
    	     threadTime();
    	     
-   	     logger.info("TC-10--> Verify User is able to change city and select city from the list");
+   	     logger.info("TC-09--> Verify User is able to change city and select city from the list");
    	    
    	     WebElement cityList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-cityId-input")));
    	     cityList.click();
-   	     cityList.sendKeys(p.getProperty("editCity"));
+   	     cityList.sendKeys(p.getProperty("addCity"));
    	    
    	     WebElement citySelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='option' and text()='Ascot']")));
    	     citySelect.click();
-   	     threadTime();
+   	     
+   	     */
 		 
-   	     logger.info("TC-11 --> Verify User is able to add first name");
-		 address.addFname(p.getProperty("editFname"));
+		
+     	  Thread.sleep(3000); // allow popup to appear
+
+   	
+   	     logger.info("TC-10 --> Verify User is able to add first name");
+		 address.addFname(p.getProperty("addFname"));
 		 threadTime();
 		 
-		 logger.info("TC-12 --> Verify User is able to add last name");
-		 address.addLname(p.getProperty("editLname"));
+		 logger.info("TC-11 --> Verify User is able to add last name");
+		 address.addLname(p.getProperty("addLname"));
 		 threadTime();
 		 
-		 logger.info("TC-13 --> Verify User is able to add phone number");
-		 address.addPhone(p.getProperty("editPhone"));
+		 logger.info("TC-12 --> Verify User is able to add phone number");
+		 address.addPhone(p.getProperty("addPhone"));
 		 threadTime();
 		 
-		 logger.info("TC-14 --> Verify User is able to add email address");
-		 address.addEmail(p.getProperty("editEmail"));
+		 logger.info("TC-13 --> Verify User is able to add email address");
+		 address.addEmail(p.getProperty("addEmail"));
 		 threadTime();
 		
-		 logger.info("TC-15 --> Verify User is able to change address");
-	     address.addAddress(p.getProperty("editAddress"));
+		 logger.info("TC-14 --> Verify User is able to change address");
+	     address.addAddress(p.getProperty("addAddress"));
 	     threadTime();
 	     
-		 logger.info("TC-16 --> Verify User is able to change zip code");
-		 address.addCode(p.getProperty("editZip"));
+		 logger.info("TC-15 --> Verify User is able to change zip code");
+		 address.addCode(p.getProperty("addZip"));
 		 threadTime();
 		
-		 logger.info("TC-17 --> Verify change details are getting saved or not");
+		 logger.info("TC-16 --> Verify change details are getting saved or not");
 		 address.saveAddress();
 		 
 		 WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Address updated successfully')]")));

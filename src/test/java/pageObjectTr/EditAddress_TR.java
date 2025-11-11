@@ -36,24 +36,24 @@ public class EditAddress_TR {
 	@FindBy(xpath="//span[normalize-space()='Saved Addresses']/parent::*")
 	WebElement btnAddress;
 	
-	@FindBy(xpath="//input[@id='firstName']")
+	@FindBy(xpath="//div[@class='app_ModalpopoutBottom']//input[@id='firstName']")
 	WebElement txtFname;
 	
-	@FindBy(xpath="//input[@id='lastName']")
+	@FindBy(xpath="//div[@class='app_ModalpopoutBottom']//input[@id='lastName']")
 	WebElement txtLname;
 	
-	@FindBy(xpath="//input[@id='email']")
+	@FindBy(xpath="//div[@class='app_ModalpopoutBottom']//input[@id='email']")
 	WebElement txtEmail;
 	
-	@FindBy(xpath="//input[@id='mobile']")
+	@FindBy(xpath="//div[@class='app_ModalpopoutBottom']//input[@id='mobile']")
 	WebElement txtPhone;
 	
-	@FindBy(xpath="//input[@id='addressLine']")
+	@FindBy(xpath="//div[@class='app_ModalpopoutBottom']//input[@id='addressLine']")
 	WebElement txtAddress;
 	
-	@FindBy(xpath=" //input[@id='zipCode']")
+	@FindBy(xpath="//div[@class='app_ModalpopoutBottom']//input[@id='zipCode']")
 	WebElement txtCode;
-   
+	
 	@FindBy(xpath="//button[normalize-space()='Save address']")
 	WebElement btnSave;
 	
@@ -62,39 +62,70 @@ public class EditAddress_TR {
    		btnAddress.click();
    	}
    
- 	public void addFname(String fname) {
-  
-   		txtFname.sendKeys(fname);
+   	public void addFname(String fname) {
+   		
+   	    wait.until(ExpectedConditions.visibilityOf(txtFname));
+   	    wait.until(ExpectedConditions.elementToBeClickable(txtFname));
+   	    
+   	    
+   	    txtFname.click();
+   	    txtFname.clear();
+   	    txtFname.sendKeys(fname);
    	}
-   	
- 	 public void addLname(String lname) {
- 		 
-      	txtLname.sendKeys(lname);
-    
-    	}
- 	 
- 	public void addPhone(String phone) {
- 	   
-    	txtPhone.sendKeys(phone);
-    }
- 	
- 	 public void addEmail(String email) {
- 		   
- 		   txtEmail.sendKeys(email);
- 	   }
- 	 
- 	 public void addAddress(String address) {
- 		 
- 	       txtAddress.sendKeys(address);
- 	       
- 	    }
- 	 
- 	 public void addCode(String code) {
- 		
- 	        txtCode.sendKeys(code);
- 	    
- 	   }
+
+   	public void addLname(String lname) {
+   		
+   	 wait.until(ExpectedConditions.visibilityOf(txtLname));
+	 wait.until(ExpectedConditions.elementToBeClickable(txtLname));
+	    
+   	    txtLname.click();
+   	    txtLname.clear();
+   	    txtLname.sendKeys(lname);
+   	}
+
+   	public void addPhone(String phone) {
+   		
+   	 wait.until(ExpectedConditions.visibilityOf(txtPhone));
+   	 wait.until(ExpectedConditions.elementToBeClickable(txtPhone));
+   		
+   	    txtPhone.click();
+   	    txtPhone.clear();
+   	    txtPhone.sendKeys(phone);
+   	}
+
+   	public void addEmail(String email) {
+   		
+   	 wait.until(ExpectedConditions.visibilityOf(txtEmail));
+   	 wait.until(ExpectedConditions.elementToBeClickable(txtEmail));
+   	 
+   	    txtEmail.click();
+   	    txtEmail.clear();
+   	    txtEmail.sendKeys(email);
+   	}
+
+   	public void addAddress(String address1) {
+   		
+   	 wait.until(ExpectedConditions.visibilityOf(txtAddress));
+   	 wait.until(ExpectedConditions.elementToBeClickable(txtAddress));
+   	 
+   		
+   	    txtAddress.click();
+   	    txtAddress.clear();
+   	    txtAddress.sendKeys(address1);
+   	}
+
+   	public void addCode(String zip) {
+   		
+   		wait.until(ExpectedConditions.visibilityOf(txtCode));
+      	 wait.until(ExpectedConditions.elementToBeClickable(txtCode));
+      	 
+   	    txtCode.click();
+   	    txtCode.clear();
+   	    txtCode.sendKeys(zip);
+   	}
+
    	public void changeFname(String fname) {
+   		
    		
    		txtFname.sendKeys(Keys.CONTROL + "a");
    		txtFname.sendKeys(Keys.DELETE);
