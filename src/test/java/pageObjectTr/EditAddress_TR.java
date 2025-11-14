@@ -36,23 +36,44 @@ public class EditAddress_TR {
 	@FindBy(xpath="//span[normalize-space()='Saved Addresses']/parent::*")
 	WebElement btnAddress;
 	
-	@FindBy(xpath="//div[@class='app_ModalpopoutBottom']//input[@id='firstName']")
+	/*@FindBy(xpath="//input[@id='firstName']")
 	WebElement txtFname;
 	
-	@FindBy(xpath="//div[@class='app_ModalpopoutBottom']//input[@id='lastName']")
+	@FindBy(xpath="//input[@id='lastName']")
 	WebElement txtLname;
 	
-	@FindBy(xpath="//div[@class='app_ModalpopoutBottom']//input[@id='email']")
+	@FindBy(xpath="//input[@id='email']")
 	WebElement txtEmail;
 	
-	@FindBy(xpath="//div[@class='app_ModalpopoutBottom']//input[@id='mobile']")
+	@FindBy(xpath="//input[@id='mobile']")
 	WebElement txtPhone;
 	
-	@FindBy(xpath="//div[@class='app_ModalpopoutBottom']//input[@id='addressLine']")
+	@FindBy(xpath="//input[@id='addressLine']")
 	WebElement txtAddress;
 	
-	@FindBy(xpath="//div[@class='app_ModalpopoutBottom']//input[@id='zipCode']")
+	@FindBy(xpath="//input[@id='zipCode']")
 	WebElement txtCode;
+	
+	*/
+	
+	@FindBy(xpath = "//div[contains(@class,'app_ModalpopoutBottom')]//input[@id='firstName']")
+	WebElement txtFname;
+
+	@FindBy(xpath = "//div[contains(@class,'app_ModalpopoutBottom')]//input[@id='lastName']")
+	WebElement txtLname;
+
+	@FindBy(xpath = "//div[contains(@class,'app_ModalpopoutBottom')]//input[@id='email']")
+	WebElement txtEmail;
+
+	@FindBy(xpath = "//div[contains(@class,'app_ModalpopoutBottom')]//input[@id='mobile']")
+	WebElement txtPhone;
+
+	@FindBy(xpath = "//div[contains(@class,'app_ModalpopoutBottom')]//input[@id='addressLine']")
+	WebElement txtAddress;
+
+	@FindBy(xpath = "//div[contains(@class,'app_ModalpopoutBottom')]//input[@id='zipCode']")
+	WebElement txtCode;
+
 	
 	@FindBy(xpath="//button[normalize-space()='Save address']")
 	WebElement btnSave;
@@ -62,7 +83,7 @@ public class EditAddress_TR {
    		btnAddress.click();
    	}
    
-   	public void addFname(String fname) {
+   /*	public void addFname(String fname) {
    		
    	    wait.until(ExpectedConditions.visibilityOf(txtFname));
    	    wait.until(ExpectedConditions.elementToBeClickable(txtFname));
@@ -122,6 +143,44 @@ public class EditAddress_TR {
    	    txtCode.click();
    	    txtCode.clear();
    	    txtCode.sendKeys(zip);
+   	}
+*/
+   	
+   	
+   	public void addFname(String fname) {
+   	    WebElement element = wait.until(ExpectedConditions.visibilityOf(txtFname));
+   	    element.clear();
+   	    element.sendKeys(fname);
+   	}
+
+   	public void addLname(String lname) {
+   	    WebElement element = wait.until(ExpectedConditions.visibilityOf(txtLname));
+   	    element.clear();
+   	    element.sendKeys(lname);
+   	}
+
+   	public void addPhone(String phone) {
+   	    WebElement element = wait.until(ExpectedConditions.visibilityOf(txtPhone));
+   	    element.clear();
+   	    element.sendKeys(phone);
+   	}
+
+   	public void addEmail(String email) {
+   	    WebElement element = wait.until(ExpectedConditions.visibilityOf(txtEmail));
+   	    element.clear();
+   	    element.sendKeys(email);
+   	}
+
+   	public void addAddress(String address1) {
+   	    WebElement element = wait.until(ExpectedConditions.visibilityOf(txtAddress));
+   	    element.clear();
+   	    element.sendKeys(address1);
+   	}
+
+   	public void addCode(String zip) {
+   	    WebElement element = wait.until(ExpectedConditions.visibilityOf(txtCode));
+   	    element.clear();
+   	    element.sendKeys(zip);
    	}
 
    	public void changeFname(String fname) {

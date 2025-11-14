@@ -1,0 +1,59 @@
+16:19:30.151 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:19:30.216 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:19:32.819 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
+16:19:33.092 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
+16:19:33.357 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+16:19:33.636 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
+16:20:03.657 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:20:03.721 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:20:06.459 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
+16:20:06.735 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
+16:20:07.167 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+16:20:07.379 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
+16:20:25.753 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:20:25.817 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:20:29.880 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
+16:20:30.174 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
+16:20:30.307 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+16:20:30.655 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
+16:21:07.350 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:21:07.409 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:21:10.027 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
+16:21:10.522 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
+16:21:10.691 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+16:21:10.921 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
+16:21:51.339 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:21:51.422 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:21:54.082 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
+16:21:54.679 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
+16:21:54.879 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+16:21:55.191 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
+16:22:55.542 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:22:55.616 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:22:58.453 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
+16:22:58.936 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
+16:22:59.139 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+16:22:59.377 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
+16:23:37.198 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:23:37.251 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:23:39.929 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
+16:23:40.199 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
+16:23:40.531 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+16:23:40.834 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
+16:24:00.776 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+

@@ -21,6 +21,7 @@ public class EditAddress_Tr extends BaseClassTr {
 		
 		Thread.sleep(3000);
 	}
+	
 	  @Test(priority=1)
   	   void logInDetails() throws InterruptedException {
   		
@@ -54,13 +55,13 @@ public class EditAddress_Tr extends BaseClassTr {
 		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		 Login_TR login = new Login_TR(driver);
 		
+		 Thread.sleep(3000);
 		 EditAddress_TR address = new EditAddress_TR(driver);
 		
 		 logger.info("TC-01 --> Verify options are dispalying by clicking on profile icon");
 		 Thread.sleep(4000);
 		 login.profileIconClick();
 		
-		 
 		 logger.info("TC-02 --> Verify profile screen is displaying by clicking edit profile");
 		 address.myProfile();
 		 
@@ -78,7 +79,7 @@ public class EditAddress_Tr extends BaseClassTr {
 			
 	 	 logger.info("TC-08 --> Verify user is able to change country and select country from the list");
    	     
-   	   /*  WebElement countryList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-countryId-input")));
+   	     WebElement countryList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-countryId-input")));
    	     countryList.click();
    	     countryList.sendKeys(p.getProperty("editCountry"));
    	    
@@ -105,10 +106,7 @@ public class EditAddress_Tr extends BaseClassTr {
    	     WebElement citySelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='option' and text()='Ascot']")));
    	     citySelect.click();
    	     threadTime();
-		 
-		 */
-	 	 
-	 	 
+		
    	     logger.info("TC-11 --> Verify User is able to change first name");
 		 address.changeFname(p.getProperty("editFname"));
 		 threadTime();
@@ -179,45 +177,57 @@ public class EditAddress_Tr extends BaseClassTr {
 		 Thread.sleep(5000);
    
       	 address.clickAddress();
+      	      	  
 		 logger.info("TC-06 --> Verify Address screen is displaying by clicking saved address");
 		 Thread.sleep(5000);
 		 address.clickAddNewAddress();
 		
-			
-	 /*	 logger.info("TC-07 --> Verify user is able to change country and select country from the list");
-   	     
-   	     WebElement countryList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-countryId-input")));
-   	     countryList.click();
-   	     countryList.sendKeys(p.getProperty("addCountry"));
-   	    
-   	     WebElement countrySelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='option' and text()='Australia']")));
-     	 countrySelect.click();
+	      
+	 	 logger.info("TC-07 --> Verify user is able to change country and select country from the list");
+	 	WebElement country = wait.until(
+	 		    ExpectedConditions.elementToBeClickable(
+	 		        By.id("react-select-lazy-countryId-input")));
+
+	 	
+	 		country.click();
+	 		country.sendKeys("Australia");
+
+	 		
+	 		wait.until(ExpectedConditions.elementToBeClickable(
+	 		    By.xpath("//div[@role='option' and text()='Australia']"))).click();
+	 		
      	 threadTime();
    	    
    	     logger.info("TC-08 --> Verify User is able to change and select state from the list ");
    	    
-   	     WebElement stateList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-stateId-input")));
-   	     stateList.click();
-   	     stateList.sendKeys(p.getProperty("addState"));
-   	    
-   	     WebElement stateSelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='option' and text()='Queensland']")));
-   	     stateSelect.click();
-   	     threadTime();
+   	  WebElement state = wait.until(
+   		    ExpectedConditions.elementToBeClickable(
+   		        By.id("react-select-lazy-stateId-input")
+   		    )
+   		);
+
+   		state.click();
+   		state.sendKeys("Queensland");
+
+   		wait.until(ExpectedConditions.elementToBeClickable(
+   		    By.xpath("//div[@role='option' and text()='Queensland']"))).click();
    	     
    	     logger.info("TC-09--> Verify User is able to change city and select city from the list");
-   	    
-   	     WebElement cityList = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-cityId-input")));
-   	     cityList.click();
-   	     cityList.sendKeys(p.getProperty("addCity"));
-   	    
-   	     WebElement citySelect = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@role='option' and text()='Ascot']")));
-   	     citySelect.click();
    	     
-   	     */
-		 
-		
-     	  Thread.sleep(3000); // allow popup to appear
+   	  WebElement city = wait.until(
+   		    ExpectedConditions.elementToBeClickable(
+   		        By.id("react-select-lazy-cityId-input")));
 
+   		city.click();
+   		city.sendKeys("Ascot");
+
+   		wait.until(ExpectedConditions.elementToBeClickable(
+   		    By.xpath("//div[@role='option' and text()='Ascot']"))).click();
+   	     
+     	 Thread.sleep(3000); // allow popup to appear
+         
+     	  wait.until(ExpectedConditions.visibilityOfElementLocated(
+     		        By.xpath("//div[contains(@class,'app_ModalpopoutBottom')]//input[@id='firstName']")));
    	
    	     logger.info("TC-10 --> Verify User is able to add first name");
 		 address.addFname(p.getProperty("addFname"));
@@ -250,8 +260,6 @@ public class EditAddress_Tr extends BaseClassTr {
 		 String successMsg = toast.getText();
 		 Assert.assertTrue(successMsg.contains("Address updated successfully"), "No success toast msg found");
 		 
-		 wait.until(ExpectedConditions.invisibilityOf(toast));
-			
-		
+		 wait.until(ExpectedConditions.invisibilityOf(toast));	
 	}
 }
