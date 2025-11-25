@@ -1,7 +1,6 @@
 package tc_Tr;
 
 import java.time.Duration;
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -9,7 +8,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import baseClassTr.BaseClassTr;
 import pageObjectTr.EditAddress_TR;
 import pageObjectTr.Login_TR;
@@ -49,7 +47,7 @@ public class EditAddress_Tr extends BaseClassTr {
   		
 	  }
   		
-	//@Test(priority=2,dependsOnMethods= {"logInDetails"})
+	@Test(priority=2,dependsOnMethods= {"logInDetails"})
 	void changeAddress() throws InterruptedException {
 		
 		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
@@ -158,7 +156,7 @@ public class EditAddress_Tr extends BaseClassTr {
 	}
 	
 	
-	@Test(priority=3,dependsOnMethods= {"logInDetails"})
+//	@Test(priority=3,dependsOnMethods= {"logInDetails"})
 	void addAddress() throws InterruptedException {
 		
 		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
@@ -184,37 +182,28 @@ public class EditAddress_Tr extends BaseClassTr {
 		
 	      
 	 	 logger.info("TC-07 --> Verify user is able to change country and select country from the list");
-	 	WebElement country = wait.until(
-	 		    ExpectedConditions.elementToBeClickable(
-	 		        By.id("react-select-lazy-countryId-input")));
+	 	 WebElement country = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-countryId-input")));
 
-	 	
-	 		country.click();
-	 		country.sendKeys("Australia");
-
-	 		
-	 		wait.until(ExpectedConditions.elementToBeClickable(
-	 		    By.xpath("//div[@role='option' and text()='Australia']"))).click();
+         country.click();
+	 	 country.sendKeys("Australia");
+	
+	 	 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='option' and text()='Australia']"))).click();
 	 		
      	 threadTime();
    	    
    	     logger.info("TC-08 --> Verify User is able to change and select state from the list ");
    	    
-   	  WebElement state = wait.until(
-   		    ExpectedConditions.elementToBeClickable(
-   		        By.id("react-select-lazy-stateId-input")
-   		    )
-   		);
+   	    WebElement state = wait.until(
+   		    ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-stateId-input") ));
 
    		state.click();
    		state.sendKeys("Queensland");
 
-   		wait.until(ExpectedConditions.elementToBeClickable(
-   		    By.xpath("//div[@role='option' and text()='Queensland']"))).click();
+   		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='option' and text()='Queensland']"))).click();
    	     
    	     logger.info("TC-09--> Verify User is able to change city and select city from the list");
    	     
-   	  WebElement city = wait.until(
+   	     WebElement city = wait.until(
    		    ExpectedConditions.elementToBeClickable(
    		        By.id("react-select-lazy-cityId-input")));
 
@@ -224,10 +213,9 @@ public class EditAddress_Tr extends BaseClassTr {
    		wait.until(ExpectedConditions.elementToBeClickable(
    		    By.xpath("//div[@role='option' and text()='Ascot']"))).click();
    	     
-     	 Thread.sleep(3000); // allow popup to appear
+     	 Thread.sleep(3000); 
          
-     	  wait.until(ExpectedConditions.visibilityOfElementLocated(
-     		        By.xpath("//div[contains(@class,'app_ModalpopoutBottom')]//input[@id='firstName']")));
+     	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'app_ModalpopoutBottom')]//input[@id='firstName']")));
    	
    	     logger.info("TC-10 --> Verify User is able to add first name");
 		 address.addFname(p.getProperty("addFname"));
@@ -261,5 +249,6 @@ public class EditAddress_Tr extends BaseClassTr {
 		 Assert.assertTrue(successMsg.contains("Address updated successfully"), "No success toast msg found");
 		 
 		 wait.until(ExpectedConditions.invisibilityOf(toast));	
+		 
 	}
 }

@@ -94,7 +94,7 @@ public class ResetPassword_Tr extends BaseClassTr{
 			
 		    WebElement errorOldMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'Old password is incorrect')]")));
 		    
-		    Assert.assertTrue(errorOldMsg.isDisplayed(), "No Validation message is displaying");
+		    Assert.assertTrue(errorOldMsg.isDisplayed(), "No any Validation message is displaying");
 		    logger.info("Validation message is displaying:"+errorOldMsg.getText());
 		    
 		/*	WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(text(),'Passwords must match')]")));
