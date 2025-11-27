@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Nov 14 15:18:12 IST 2025</td>
+<td>Started on:</td><td>Wed Nov 26 18:22:42 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>39 seconds (39551 ms)</td>
+<tr><td>Total time:</td><td>35 seconds (35157 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,27 +76,30 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tc_Tr.EditAddress_Tr.addAddress()'><b>addAddress</b><br>Test class: tc_Tr.EditAddress_Tr</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: react-select-lazy-countryId-input (tried for 20 second(s) with 500 milliseconds interval)
+<td title='tc_Tr.Blogs_Tr.searchedandCommentBlog()'><b>searchedandCommentBlog</b><br>Test class: tc_Tr.Blogs_Tr</td>
+<td><div><pre>java.lang.AssertionError: It is failed due to:invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=142.0.7444.176)
 Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.134, chrome: {chromedriverVersion: 142.0.7444.162 (c076baf266c..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56789}, goog:processID: 1360, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56789/devtoo..., se:cdpVersion: 142.0.7444.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8d35cfdb4765e60e7413a4f71ebc4ec7
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at tc_Tr.EditAddress_Tr.addAddress(EditAddress_Tr.java:187)
+Command: [17e6930b13d5fd0a37124eae85f9403e, findElement {using=xpath, value= //input[@placeholder=&apos;Enter your name&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59876}, goog:processID: 29628, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59876/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 17e6930b13d5fd0a37124eae85f9403e
+	at tc_Tr.Blogs_Tr.searchedandCommentBlog(Blogs_Tr.java:320)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1872034717", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1872034717'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: react-select-lazy-countryId-input (tried for 20 second(s) with 500 milliseconds interval)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1640458320", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1640458320'><pre>java.lang.AssertionError: It is failed due to:invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=142.0.7444.176)
 Build info: version: &apos;4.32.0&apos;, revision: &apos;d17c8aa950&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.134, chrome: {chromedriverVersion: 142.0.7444.162 (c076baf266c..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56789}, goog:processID: 1360, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56789/devtoo..., se:cdpVersion: 142.0.7444.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8d35cfdb4765e60e7413a4f71ebc4ec7
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at tc_Tr.EditAddress_Tr.addAddress(EditAddress_Tr.java:187)
+Command: [17e6930b13d5fd0a37124eae85f9403e, findElement {using=xpath, value= //input[@placeholder=&apos;Enter your name&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59876}, goog:processID: 29628, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59876/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 17e6930b13d5fd0a37124eae85f9403e
+	at org.testng.Assert.fail(Assert.java:111)
+	at tc_Tr.Blogs_Tr.searchedandCommentBlog(Blogs_Tr.java:320)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -124,8 +127,8 @@ Session ID: 8d35cfdb4765e60e7413a4f71ebc4ec7
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>34</td>
-<td>tc_Tr.EditAddress_Tr@78365cfa</td></tr>
+<td>14</td>
+<td>tc_Tr.Blogs_Tr@7ac2e39b</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -136,10 +139,10 @@ Session ID: 8d35cfdb4765e60e7413a4f71ebc4ec7
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tc_Tr.EditAddress_Tr.logInDetails()'><b>logInDetails</b><br>Test class: tc_Tr.EditAddress_Tr</td>
+<td title='tc_Tr.Blogs_Tr.logInDetails()'><b>logInDetails</b><br>Test class: tc_Tr.Blogs_Tr</td>
 <td></td>
-<td>1</td>
-<td>tc_Tr.EditAddress_Tr@78365cfa</td></tr>
+<td>15</td>
+<td>tc_Tr.Blogs_Tr@7ac2e39b</td></tr>
 </table><p>
 </body>
 </html>

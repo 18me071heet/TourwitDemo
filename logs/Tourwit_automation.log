@@ -1,35 +1,3 @@
-15:04:20.956 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-15:04:21.242 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
-15:04:50.797 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-15:04:51.102 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-15:04:53.772 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
-15:04:54.188 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
-15:04:54.595 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-15:04:54.952 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
-15:04:59.011 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify profile screen is displaying by clicking edit profile
-15:05:04.343 [main] INFO  tc_Tr.EditAddress_Tr - TC-06 --> Verify Address screen is displaying by clicking saved address
-15:05:09.574 [main] INFO  tc_Tr.EditAddress_Tr - TC-07 --> Verify user is able to change country and select country from the list
-15:08:28.290 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-15:08:28.663 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-15:08:31.657 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
-15:08:31.970 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
-15:08:32.422 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-15:08:32.698 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
-15:08:36.773 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify profile screen is displaying by clicking edit profile
-15:08:42.096 [main] INFO  tc_Tr.EditAddress_Tr - TC-06 --> Verify Address screen is displaying by clicking saved address
-15:08:47.326 [main] INFO  tc_Tr.EditAddress_Tr - TC-07 --> Verify user is able to change country and select country from the list
-15:18:12.738 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-15:18:13.070 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-15:18:16.507 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
-15:18:17.103 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
-15:18:17.263 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
-15:18:17.616 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
-15:18:21.671 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify profile screen is displaying by clicking edit profile
-15:18:27.037 [main] INFO  tc_Tr.EditAddress_Tr - TC-06 --> Verify Address screen is displaying by clicking saved address
-15:18:32.236 [main] INFO  tc_Tr.EditAddress_Tr - TC-07 --> Verify user is able to change country and select country from the list
+18:23:11.660 [main] INFO  tc_Tr.Blogs_Tr - TC- 02 --> Verify User is able to select terms and conditions checkbox
+18:23:11.679 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to subscribe news letter by clicking submit button
+18:23:18.119 [main] ERROR tc_Tr.Blogs_Tr - Failed

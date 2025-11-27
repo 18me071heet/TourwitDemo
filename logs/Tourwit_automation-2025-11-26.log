@@ -1,0 +1,57 @@
+18:14:07.982 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+18:14:11.227 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
+18:14:11.580 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
+18:14:11.817 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+18:14:12.074 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
+18:15:16.474 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+18:15:16.530 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+18:15:19.096 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
+18:15:19.419 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
+18:15:19.740 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+18:15:20.017 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
+18:15:50.007 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+18:15:50.061 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+18:15:53.241 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
+18:15:53.574 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
+18:15:53.836 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+18:15:54.038 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
+18:16:17.884 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+18:16:17.945 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+18:16:27.282 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
+18:16:27.510 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
+18:16:27.622 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+18:16:27.756 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
+18:16:31.851 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify profile screen is displaying by clicking edit profile
+18:17:13.198 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+18:17:13.260 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+18:17:16.017 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify User is able to add email
+18:17:16.405 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify User is able to add password
+18:17:16.735 [main] INFO  tc_Tr.EditAddress_Tr - TC-03 --> Verify User is able to login by clicking on Login Button
+18:17:16.930 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
+18:20:54.992 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+18:20:55.049 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+18:20:57.946 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+18:21:03.146 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+18:21:08.262 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+18:21:21.752 [main] INFO  tc_Tr.Blogs_Tr - Tc -01 Verify User is able to enter name and email address in subscription popup 
+18:21:21.752 [main] INFO  tc_Tr.Blogs_Tr - TC- 02 --> Verify User is able to select terms and conditions checkbox
+18:21:21.752 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to subscribe news letter by clicking submit button
+18:21:26.487 [main] ERROR tc_Tr.Blogs_Tr - Failed
+18:22:42.955 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+18:22:43.006 [main] INFO  tc_Tr.Blogs_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+18:22:47.793 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add email
+18:22:52.995 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to add password
+18:22:58.133 [main] INFO  tc_Tr.Blogs_Tr - Verify User is able to login by clicking on Login Button
+18:23:11.660 [main] INFO  tc_Tr.Blogs_Tr - Tc -01 Verify User is able to enter name and email address in subscription popup 

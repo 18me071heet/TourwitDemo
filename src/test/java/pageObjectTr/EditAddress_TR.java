@@ -36,6 +36,9 @@ public class EditAddress_TR {
 	@FindBy(xpath="//span[normalize-space()='Saved Addresses']/parent::*")
 	WebElement btnAddress;
 	
+	@FindBy(xpath="//span[contains(text(),'Saved Addresses')]")
+	WebElement savedAddress;
+	
 	/*@FindBy(xpath="//input[@id='firstName']")
 	WebElement txtFname;
 	
@@ -81,6 +84,11 @@ public class EditAddress_TR {
    	public void clickAddress() {
    		
    		btnAddress.click();
+   	}
+   	
+   	public void clickSavedAddress() {
+   		
+   		savedAddress.click();
    	}
    
    /*	public void addFname(String fname) {

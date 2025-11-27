@@ -3,7 +3,9 @@ package tc_Tr;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -47,7 +49,7 @@ public class EditAddress_Tr extends BaseClassTr {
   		
 	  }
   		
-	@Test(priority=2,dependsOnMethods= {"logInDetails"})
+	//@Test(priority=2,dependsOnMethods= {"logInDetails"})
 	void changeAddress() throws InterruptedException {
 		
 		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
@@ -156,7 +158,7 @@ public class EditAddress_Tr extends BaseClassTr {
 	}
 	
 	
-//	@Test(priority=3,dependsOnMethods= {"logInDetails"})
+	@Test(priority=3,dependsOnMethods= {"logInDetails"})
 	void addAddress() throws InterruptedException {
 		
 		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
@@ -172,26 +174,37 @@ public class EditAddress_Tr extends BaseClassTr {
 		 logger.info("TC-02 --> Verify profile screen is displaying by clicking edit profile");
 		 address.myProfile();
 		 
-		 Thread.sleep(5000);
+		 Thread.sleep(3000);
    
-      	 address.clickAddress();
+		 address.clickSavedAddress();
       	      	  
 		 logger.info("TC-06 --> Verify Address screen is displaying by clicking saved address");
 		 Thread.sleep(5000);
 		 address.clickAddNewAddress();
 		
-	      
-	 	 logger.info("TC-07 --> Verify user is able to change country and select country from the list");
-	 	 WebElement country = wait.until(ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-countryId-input")));
+		 Thread.sleep(3000);
+		 
+		 logger.info("TC-07 --> Verify user is able to select country from the country dropdown");
+		// CLICK DROPDOWN
+		 WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(
+		         By.xpath("//div[@id='react-select-lazy-countryId-placeholder']/parent::div")
+		 ));
+		 dropdown.click();
+		 Thread.sleep(500);
 
-         country.click();
-	 	 country.sendKeys("Australia");
+		 // TYPE USING ACTIVE ELEMENT (React sets focus automatically)
+		 WebElement activeInput = driver.switchTo().activeElement();
+		 activeInput.sendKeys("Australia");
+		 Thread.sleep(1000);
+
+		 // SELECT OPTION
+		 WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
+		         By.xpath("//div[@role='option' and contains(.,'Australia')]")
+		 ));
+		 option.click();
+
 	
-	 	 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='option' and text()='Australia']"))).click();
-	 		
-     	 threadTime();
-   	    
-   	     logger.info("TC-08 --> Verify User is able to change and select state from the list ");
+   	   /*  logger.info("TC-08 --> Verify User is able to change and select state from the list ");
    	    
    	    WebElement state = wait.until(
    		    ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-stateId-input") ));
@@ -212,6 +225,8 @@ public class EditAddress_Tr extends BaseClassTr {
 
    		wait.until(ExpectedConditions.elementToBeClickable(
    		    By.xpath("//div[@role='option' and text()='Ascot']"))).click();
+   		    
+   		    */
    	     
      	 Thread.sleep(3000); 
          
