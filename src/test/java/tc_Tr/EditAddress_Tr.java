@@ -3,9 +3,7 @@ package tc_Tr;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -141,7 +139,7 @@ public class EditAddress_Tr extends BaseClassTr {
 		 threadTime();
 		
 		 logger.info("TC-17 --> Verify change details are getting saved or not");
-		 address.saveAddress();
+		 address.clickSaveAddressJS();
 		 
 		 WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Address updated successfully')]")));
 		 String successMsg = toast.getText();
@@ -197,8 +195,7 @@ public class EditAddress_Tr extends BaseClassTr {
 		 logger.info("TC-07 --> Verify user is able to select country from the country dropdown");
 		// CLICK DROPDOWN
 		 WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(
-		         By.xpath("//div[@id='react-select-lazy-countryId-placeholder']/parent::div")
-		 ));
+		         By.xpath("//div[@id='react-select-lazy-countryId-placeholder']/parent::div")));
 		 dropdown.click();
 		 Thread.sleep(500);
 
@@ -209,18 +206,16 @@ public class EditAddress_Tr extends BaseClassTr {
 
 		 // SELECT OPTION
 		 WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
-		         By.xpath("//div[@role='option' and contains(.,'Canada')]")
-		 ));
+		         By.xpath("//div[@role='option' and contains(.,'Canada')]") ));
 		 option.click();
 
 	
    	  logger.info("TC-08 --> Verify User is able to change and select state from the list ");
    	    
    	     WebElement Statedropdown = wait.until(ExpectedConditions.elementToBeClickable(
-		         By.xpath("//div[@id='react-select-lazy-stateId-placeholder']/parent::div")
-		 ));
+		         By.xpath("//div[@id='react-select-lazy-stateId-placeholder']/parent::div")));
    	     
-   	      Statedropdown.click();
+   	     Statedropdown.click();
 		 Thread.sleep(500);
 		 
 		
@@ -229,8 +224,7 @@ public class EditAddress_Tr extends BaseClassTr {
 		 Thread.sleep(1000);
 
 		 WebElement stateOption = wait.until(ExpectedConditions.elementToBeClickable(
-		         By.xpath("//div[@role='option' and contains(.,'Alberta')]")
-		 ));
+		         By.xpath("//div[@role='option' and contains(.,'Alberta')]") ));
 		 stateOption.click();
    	     
 		 logger.info("TC-09 --> Verify User is able to change and select city  from the list ");
@@ -238,23 +232,21 @@ public class EditAddress_Tr extends BaseClassTr {
          
      	
      			 WebElement cityDropdown = wait.until(ExpectedConditions.elementToBeClickable(
-     			         By.xpath("//div[@id='react-select-lazy-cityId-placeholder']/parent::div")
-     			 ));
-     			cityDropdown.click();
+     			         By.xpath("//div[@id='react-select-lazy-cityId-placeholder']/parent::div")));
+     			 cityDropdown.click();
      			 Thread.sleep(500);
 
      			
      			 WebElement cityInput = driver.switchTo().activeElement();
-     			cityInput.sendKeys("Bassano");
+     			 cityInput.sendKeys("Bassano");
      			 Thread.sleep(1000);
 
      			
      			 WebElement cityOption = wait.until(ExpectedConditions.elementToBeClickable(
-     			         By.xpath("//div[@role='option' and contains(.,'Bassano')]")
-     			 ));
-     			cityOption.click();
+     			         By.xpath("//div[@role='option' and contains(.,'Bassano')]")));
+     			 cityOption.click();
      			 
-     	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'app_ModalpopoutBottom')]//input[@id='firstName']")));
+     	 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'app_ModalpopoutBottom')]//input[@id='firstName']")));
    	
    	     logger.info("TC-10 --> Verify User is able to add first name");
 		 address.addFname(p.getProperty("addFname"));
@@ -289,7 +281,6 @@ public class EditAddress_Tr extends BaseClassTr {
 		 
 		 wait.until(ExpectedConditions.invisibilityOf(toast));	
 		 
-		
 		 
 	}
 }

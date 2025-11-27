@@ -1,29 +1,45 @@
-11:23:37.537 [main] INFO  tc_Tr.EditAddress_Tr - TC-08 --> Verify User is able to change and select state from the list 
-11:23:40.367 [main] INFO  tc_Tr.EditAddress_Tr - TC-09 --> Verify User is able to change and select city  from the list 
-11:23:45.943 [main] INFO  tc_Tr.EditAddress_Tr - TC-10 --> Verify User is able to add first name
-11:23:49.207 [main] INFO  tc_Tr.EditAddress_Tr - TC-11 --> Verify User is able to add last name
-11:23:52.487 [main] INFO  tc_Tr.EditAddress_Tr - TC-12 --> Verify User is able to add phone number
-11:23:55.818 [main] INFO  tc_Tr.EditAddress_Tr - TC-13 --> Verify User is able to add email address
-11:23:59.231 [main] INFO  tc_Tr.EditAddress_Tr - TC-14 --> Verify User is able to change address
-11:24:02.745 [main] INFO  tc_Tr.EditAddress_Tr - TC-15 --> Verify User is able to change zip code
-11:24:06.024 [main] INFO  tc_Tr.EditAddress_Tr - TC-16 --> Verify change details are getting saved or not
-11:28:52.537 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+12:23:52.475 [main] INFO  tc_Tr.SettingsPage_TR - Verify User is able to add email
+12:23:57.707 [main] INFO  tc_Tr.SettingsPage_TR - Verify User is able to add password
+12:24:02.894 [main] INFO  tc_Tr.SettingsPage_TR - Verify User is able to login by clicking on Login Button
+12:24:08.147 [main] INFO  tc_Tr.SettingsPage_TR - TC-01 --> Verify options are displaying by clicking on profile icon
+12:24:13.232 [main] INFO  tc_Tr.SettingsPage_TR - TC-02 --> Verify user is navigate to their profile page by clicking on my profile
+12:24:18.506 [main] INFO  tc_Tr.SettingsPage_TR - TC-03 --> Verify user is navigate to the settings page by clicking on settings
+12:24:23.742 [main] INFO  tc_Tr.SettingsPage_TR - TC-04 --> Verify user is able to turn on / off New Blog post notification settings
+12:24:29.111 [main] INFO  tc_Tr.SettingsPage_TR - TC-05 --> Verify user is able to turn on /off New Forum Post notification settings
+12:24:34.429 [main] INFO  tc_Tr.SettingsPage_TR - TC-06 --> Verify user is able to turn on /off Blog Likes notification settings
+12:24:39.752 [main] INFO  tc_Tr.SettingsPage_TR - TC-07 --> Verify user is able to turn on /off Blog Comments notification settings
+12:24:45.078 [main] INFO  tc_Tr.SettingsPage_TR - TC-08 --> Verify user is able to turn on /off Forum Comments notification settings
+12:24:50.386 [main] INFO  tc_Tr.SettingsPage_TR - TC-09 --> Verify user is able to turn on /off Forum Likes notification settings
+12:24:55.690 [main] INFO  tc_Tr.SettingsPage_TR - TC-10 --> Verify user is able to turn on /off Comments Like notification settings
+12:25:01.000 [main] INFO  tc_Tr.SettingsPage_TR - TC-11 --> Verify user is able to turn on /off Comments Replies notification settings
+12:44:32.615 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
 
-11:28:52.920 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-11:28:56.243 [main] INFO  tc_Tr.EditAddress_Tr - Verify User is able to add email
-11:28:59.642 [main] INFO  tc_Tr.EditAddress_Tr - Verify User is able to add password
-11:29:02.805 [main] INFO  tc_Tr.EditAddress_Tr - Verify User is able to login by clicking on Login Button
-11:29:06.033 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
-11:29:10.101 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify profile screen is displaying by clicking edit profile
-11:29:13.752 [main] INFO  tc_Tr.EditAddress_Tr - TC-06 --> Verify Address screen is displaying by clicking saved address
-11:29:22.043 [main] INFO  tc_Tr.EditAddress_Tr - TC-07 --> Verify user is able to select country from the country dropdown
-11:29:25.191 [main] INFO  tc_Tr.EditAddress_Tr - TC-08 --> Verify User is able to change and select state from the list 
-11:29:27.577 [main] INFO  tc_Tr.EditAddress_Tr - TC-09 --> Verify User is able to change and select city  from the list 
-11:29:33.837 [main] INFO  tc_Tr.EditAddress_Tr - TC-10 --> Verify User is able to add first name
-11:29:37.114 [main] INFO  tc_Tr.EditAddress_Tr - TC-11 --> Verify User is able to add last name
-11:29:40.478 [main] INFO  tc_Tr.EditAddress_Tr - TC-12 --> Verify User is able to add phone number
-11:29:43.894 [main] INFO  tc_Tr.EditAddress_Tr - TC-13 --> Verify User is able to add email address
-11:29:47.455 [main] INFO  tc_Tr.EditAddress_Tr - TC-14 --> Verify User is able to change address
-11:29:51.170 [main] INFO  tc_Tr.EditAddress_Tr - TC-15 --> Verify User is able to change zip code
-11:29:54.465 [main] INFO  tc_Tr.EditAddress_Tr - TC-16 --> Verify change details are getting saved or not
+12:44:33.104 [main] INFO  tc_Tr.SettingsPage_TR - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:44:37.801 [main] INFO  tc_Tr.SettingsPage_TR - Verify User is able to add email
+12:44:43.344 [main] INFO  tc_Tr.SettingsPage_TR - Verify User is able to add password
+12:44:48.553 [main] INFO  tc_Tr.SettingsPage_TR - Verify User is able to login by clicking on Login Button
+12:44:53.787 [main] INFO  tc_Tr.SettingsPage_TR - TC-01 --> Verify options are displaying by clicking on profile icon
+12:44:58.903 [main] INFO  tc_Tr.SettingsPage_TR - TC-02 --> Verify user is navigate to their profile page by clicking on my profile
+12:45:04.246 [main] INFO  tc_Tr.SettingsPage_TR - TC-03 --> Verify user is navigate to the settings page by clicking on settings
+12:45:09.410 [main] INFO  tc_Tr.SettingsPage_TR - TC-04 --> Verify user is able to turn on / off New Blog post notification settings
+12:45:14.751 [main] INFO  tc_Tr.SettingsPage_TR - TC-05 --> Verify user is able to turn on /off New Forum Post notification settings
+12:45:19.993 [main] INFO  tc_Tr.SettingsPage_TR - TC-06 --> Verify user is able to turn on /off Blog Likes notification settings
+12:45:26.633 [main] INFO  tc_Tr.SettingsPage_TR - TC-07 --> Verify user is able to turn on /off Blog Comments notification settings
+12:45:31.998 [main] INFO  tc_Tr.SettingsPage_TR - TC-08 --> Verify user is able to turn on /off Forum Comments notification settings
+12:45:37.290 [main] INFO  tc_Tr.SettingsPage_TR - TC-09 --> Verify user is able to turn on /off Forum Likes notification settings
+12:45:42.610 [main] INFO  tc_Tr.SettingsPage_TR - TC-10 --> Verify user is able to turn on /off Comments Like notification settings
+12:45:47.946 [main] INFO  tc_Tr.SettingsPage_TR - TC-11 --> Verify user is able to turn on /off Comments Replies notification settings
+12:57:13.090 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+12:57:13.472 [main] INFO  tc_Tr.LogIn_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:57:17.717 [main] INFO  tc_Tr.LogIn_Tr - Verify User is able to add email
+12:57:21.096 [main] INFO  tc_Tr.LogIn_Tr - Verify User is able to add password
+12:57:24.293 [main] INFO  tc_Tr.LogIn_Tr - Verify User is able to login by clicking on Login Button
+12:57:48.139 [main] ERROR tc_Tr.LogIn_Tr - Failed :org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(text(),'Invalid email or password')] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.176, chrome: {chromedriverVersion: 142.0.7444.175 (302067f14a4..., userDataDir: C:\Users\INX\AppData\Local\...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60796}, goog:processID: 10268, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60796/devtoo..., se:cdpVersion: 142.0.7444.176, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e982e52b3b4f31196b2355e0a41a3224

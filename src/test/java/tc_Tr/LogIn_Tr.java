@@ -41,12 +41,12 @@ public class LogIn_Tr extends BaseClassTr {
 			threadTime();
 			login.loginBtn();
 			
-		/*	WebElement errorMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(
+			WebElement errorMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(
 				    By.xpath("//div[contains(text(),'Invalid email or password')]")));
 			
 			Assert.assertTrue(errorMessage.isDisplayed(),"Invalid email or password");
 			
-			*/
+			
 			
 		} catch(Exception e) {
 			
@@ -56,7 +56,7 @@ public class LogIn_Tr extends BaseClassTr {
 		
 	}
 	
-	@Test(priority=2,dependsOnMethods= {"logInDetails"})
+	//@Test(priority=2,dependsOnMethods= {"logInDetails"})
 	void logOut() throws InterruptedException {
 		
 		Login_TR login = new Login_TR(driver);

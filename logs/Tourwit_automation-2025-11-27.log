@@ -1,52 +1,50 @@
-11:15:06.290 [main] INFO  tc_Tr.EditAddress_Tr - Verify User is able to login by clicking on Login Button
-11:15:09.479 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
-11:15:13.637 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify profile screen is displaying by clicking edit profile
-11:15:17.440 [main] INFO  tc_Tr.EditAddress_Tr - TC-06 --> Verify Address screen is displaying by clicking saved address
-11:15:25.695 [main] INFO  tc_Tr.EditAddress_Tr - TC-07 --> Verify user is able to select country from the country dropdown
-11:15:28.786 [main] INFO  tc_Tr.EditAddress_Tr - TC-08 --> Verify User is able to change and select state from the list 
-11:15:31.120 [main] INFO  tc_Tr.EditAddress_Tr - TC-09 --> Verify User is able to change and select city  from the list 
-11:15:36.708 [main] INFO  tc_Tr.EditAddress_Tr - TC-10 --> Verify User is able to add first name
-11:15:40.016 [main] INFO  tc_Tr.EditAddress_Tr - TC-11 --> Verify User is able to add last name
-11:15:43.294 [main] INFO  tc_Tr.EditAddress_Tr - TC-12 --> Verify User is able to add phone number
-11:15:46.643 [main] INFO  tc_Tr.EditAddress_Tr - TC-13 --> Verify User is able to add email address
-11:15:50.056 [main] INFO  tc_Tr.EditAddress_Tr - TC-14 --> Verify User is able to change address
-11:15:53.571 [main] INFO  tc_Tr.EditAddress_Tr - TC-15 --> Verify User is able to change zip code
-11:15:56.784 [main] INFO  tc_Tr.EditAddress_Tr - TC-16 --> Verify change details are getting saved or not
-11:18:54.334 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+12:09:37.564 [main] INFO  tc_Tr.SettingsPage_TR - Verify User is able to add password
+12:09:42.764 [main] INFO  tc_Tr.SettingsPage_TR - Verify User is able to login by clicking on Login Button
+12:09:48.039 [main] INFO  tc_Tr.SettingsPage_TR - TC-01 --> Verify options are displaying by clicking on profile icon
+12:09:53.158 [main] INFO  tc_Tr.SettingsPage_TR - TC-02 --> Verify user is navigate to their profile page by clicking on my profile
+12:09:58.416 [main] INFO  tc_Tr.SettingsPage_TR - TC-03 --> Verify user is navigate to the settings page by clicking on settings
+12:10:03.610 [main] INFO  tc_Tr.SettingsPage_TR - TC-04 --> Verify user is able to turn off Blog post notification settings
+12:10:33.605 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
 
-11:18:54.405 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-11:18:59.490 [main] INFO  tc_Tr.EditAddress_Tr - Verify User is able to add email
-11:19:02.749 [main] INFO  tc_Tr.EditAddress_Tr - Verify User is able to add password
-11:19:05.885 [main] INFO  tc_Tr.EditAddress_Tr - Verify User is able to login by clicking on Login Button
-11:19:09.113 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
-11:19:13.194 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify profile screen is displaying by clicking edit profile
-11:19:17.099 [main] INFO  tc_Tr.EditAddress_Tr - TC-06 --> Verify Address screen is displaying by clicking saved address
-11:19:25.321 [main] INFO  tc_Tr.EditAddress_Tr - TC-07 --> Verify user is able to select country from the country dropdown
-11:19:28.592 [main] INFO  tc_Tr.EditAddress_Tr - TC-08 --> Verify User is able to change and select state from the list 
-11:19:31.143 [main] INFO  tc_Tr.EditAddress_Tr - TC-09 --> Verify User is able to change and select city  from the list 
-11:19:37.277 [main] INFO  tc_Tr.EditAddress_Tr - TC-10 --> Verify User is able to add first name
-11:19:40.624 [main] INFO  tc_Tr.EditAddress_Tr - TC-11 --> Verify User is able to add last name
-11:19:43.987 [main] INFO  tc_Tr.EditAddress_Tr - TC-12 --> Verify User is able to add phone number
-11:19:47.434 [main] INFO  tc_Tr.EditAddress_Tr - TC-13 --> Verify User is able to add email address
-11:19:50.948 [main] INFO  tc_Tr.EditAddress_Tr - TC-14 --> Verify User is able to change address
-11:19:54.561 [main] INFO  tc_Tr.EditAddress_Tr - TC-15 --> Verify User is able to change zip code
-11:19:57.923 [main] INFO  tc_Tr.EditAddress_Tr - TC-16 --> Verify change details are getting saved or not
-11:21:54.693 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+12:10:33.680 [main] INFO  tc_Tr.SettingsPage_TR - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:10:42.969 [main] INFO  tc_Tr.SettingsPage_TR - Verify User is able to add email
+12:10:48.243 [main] INFO  tc_Tr.SettingsPage_TR - Verify User is able to add password
+12:10:53.446 [main] INFO  tc_Tr.SettingsPage_TR - Verify User is able to login by clicking on Login Button
+12:10:58.733 [main] INFO  tc_Tr.SettingsPage_TR - TC-01 --> Verify options are displaying by clicking on profile icon
+12:11:03.817 [main] INFO  tc_Tr.SettingsPage_TR - TC-02 --> Verify user is navigate to their profile page by clicking on my profile
+12:11:09.039 [main] INFO  tc_Tr.SettingsPage_TR - TC-03 --> Verify user is navigate to the settings page by clicking on settings
+12:11:14.247 [main] INFO  tc_Tr.SettingsPage_TR - TC-04 --> Verify user is able to turn off Blog post notification settings
+12:13:32.619 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
 
-11:21:54.753 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-11:21:57.638 [main] INFO  tc_Tr.EditAddress_Tr - Verify User is able to add email
-11:22:00.936 [main] INFO  tc_Tr.EditAddress_Tr - Verify User is able to add password
-11:22:04.087 [main] INFO  tc_Tr.EditAddress_Tr - Verify User is able to login by clicking on Login Button
-11:23:06.257 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+12:13:32.678 [main] INFO  tc_Tr.SettingsPage_TR - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:13:35.645 [main] INFO  tc_Tr.SettingsPage_TR - Verify User is able to add email
+12:13:40.919 [main] INFO  tc_Tr.SettingsPage_TR - Verify User is able to add password
+12:13:46.140 [main] INFO  tc_Tr.SettingsPage_TR - Verify User is able to login by clicking on Login Button
+12:13:51.394 [main] INFO  tc_Tr.SettingsPage_TR - TC-01 --> Verify options are displaying by clicking on profile icon
+12:13:56.484 [main] INFO  tc_Tr.SettingsPage_TR - TC-02 --> Verify user is navigate to their profile page by clicking on my profile
+12:14:01.720 [main] INFO  tc_Tr.SettingsPage_TR - TC-03 --> Verify user is navigate to the settings page by clicking on settings
+12:14:06.979 [main] INFO  tc_Tr.SettingsPage_TR - TC-04 --> Verify user is able to turn off Blog post notification settings
+12:21:42.873 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
 
-11:23:06.314 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-11:23:09.018 [main] INFO  tc_Tr.EditAddress_Tr - Verify User is able to add email
-11:23:12.362 [main] INFO  tc_Tr.EditAddress_Tr - Verify User is able to add password
-11:23:15.504 [main] INFO  tc_Tr.EditAddress_Tr - Verify User is able to login by clicking on Login Button
-11:23:18.711 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
-11:23:22.820 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify profile screen is displaying by clicking edit profile
-11:23:26.230 [main] INFO  tc_Tr.EditAddress_Tr - TC-06 --> Verify Address screen is displaying by clicking saved address
-11:23:34.469 [main] INFO  tc_Tr.EditAddress_Tr - TC-07 --> Verify user is able to select country from the country dropdown
+12:21:42.941 [main] INFO  tc_Tr.SettingsPage_TR - >>> @BeforeClass executed, initializing driver with browser: chrome
+12:21:46.703 [main] INFO  tc_Tr.SettingsPage_TR - Verify User is able to add email
+12:21:51.931 [main] INFO  tc_Tr.SettingsPage_TR - Verify User is able to add password
+12:21:57.115 [main] INFO  tc_Tr.SettingsPage_TR - Verify User is able to login by clicking on Login Button
+12:22:02.326 [main] INFO  tc_Tr.SettingsPage_TR - TC-01 --> Verify options are displaying by clicking on profile icon
+12:22:07.430 [main] INFO  tc_Tr.SettingsPage_TR - TC-02 --> Verify user is navigate to their profile page by clicking on my profile
+12:22:12.645 [main] INFO  tc_Tr.SettingsPage_TR - TC-03 --> Verify user is navigate to the settings page by clicking on settings
+12:22:17.837 [main] INFO  tc_Tr.SettingsPage_TR - TC-04 --> Verify user is able to turn on / off New Blog post notification settings
+12:22:23.165 [main] INFO  tc_Tr.SettingsPage_TR - TC-05 --> Verify user is able to turn on /off New Forum Post notification settings
+12:22:28.524 [main] INFO  tc_Tr.SettingsPage_TR - TC-06 --> Verify user is able to turn on /off Blog Likes notification settings
+12:22:33.834 [main] INFO  tc_Tr.SettingsPage_TR - TC-07 --> Verify user is able to turn on /off Blog Comments notification settings
+12:22:39.154 [main] INFO  tc_Tr.SettingsPage_TR - TC-08 --> Verify user is able to turn on /off Forum Comments notification settings
+12:22:44.460 [main] INFO  tc_Tr.SettingsPage_TR - TC-09 --> Verify user is able to turn on /off Forum Likes notification settings
+12:22:49.739 [main] INFO  tc_Tr.SettingsPage_TR - TC-10 --> Verify user is able to turn on /off Comments Like notification settings
+12:22:55.083 [main] INFO  tc_Tr.SettingsPage_TR - TC-11 --> Verify user is able to turn on /off Comments Replies notification settings
+12:23:49.070 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+12:23:49.474 [main] INFO  tc_Tr.SettingsPage_TR - >>> @BeforeClass executed, initializing driver with browser: chrome

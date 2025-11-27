@@ -6,6 +6,10 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -15,6 +19,8 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+
+import baseClassTr.BaseClassTr;
 
 public class ExtentReportTR implements ITestListener {
 
@@ -41,7 +47,7 @@ public class ExtentReportTR implements ITestListener {
 		 extent.attachReporter(sparkReporter);
 		 
 		 
-		 extent.setSystemInfo("Application", "Toruwit");
+		 extent.setSystemInfo("Application", "Test");
 		 extent.setSystemInfo("Module Name", "M3 Milestones");
 		 extent.setSystemInfo("Sub Module", "User");
 		 extent.setSystemInfo("User Name",System.getProperty("user.name"));
@@ -77,6 +83,24 @@ public class ExtentReportTR implements ITestListener {
 			    test.assignCategory(result.getMethod().getGroups());
 			    test.log(Status.FAIL, "Test Case is Failed:"+ result.getName());
 			    test.log(Status.INFO, "Test Case is Failed due to :"+ result.getThrowable().getMessage());
+			    
+			    try {
+			        Object currentClass = result.getInstance();
+			        WebDriver driver = ((BaseClassTr) currentClass).driver; // cast to your base class that has driver
+
+			        TakesScreenshot ts = (TakesScreenshot) driver;
+			        File src = ts.getScreenshotAs(OutputType.FILE);
+
+			        String screenshotPath = System.getProperty("user.dir") + "/screenshots/" + result.getMethod().getMethodName() + ".png";
+			        File dest = new File(screenshotPath);
+			        FileUtils.copyFile(src, dest);
+
+			        // Attach to report
+			        test.addScreenCaptureFromPath(screenshotPath);
+
+			    } catch (Exception e) {
+			        e.printStackTrace();
+			    }
 	
 		  }
 

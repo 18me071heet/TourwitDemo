@@ -48,12 +48,12 @@ import pageObjectTr.Signup_TR;
 	    
 	    WebElement countryInput = wait.until(ExpectedConditions
 		           .elementToBeClickable(By.id("react-select-lazy-country-input")));
-		       countryInput.click();
-		       countryInput.sendKeys("India");
+		countryInput.click();
+		countryInput.sendKeys("India");
 
 		       WebElement countryOption = wait.until(ExpectedConditions
 		           .visibilityOfElementLocated(By.xpath("//div[contains(@id,'react-select-lazy-country-option') and text()='India']")));
-		       countryOption.click();
+		 countryOption.click();
 		       
 		       
 		logger.info("TC-06 --> Verify User is able to fill Insta Id");
@@ -93,7 +93,7 @@ import pageObjectTr.Signup_TR;
   	*/
     		
 		
-	      logger.info("TC-09 --> Verify User is able to select terms and conditions");
+	        logger.info("TC-09 --> Verify User is able to select terms and conditions");
 			threadTime();
 		    WebElement terms = wait.until(ExpectedConditions.elementToBeClickable(By.id("ToCAgreed")));
 		    terms.click();
