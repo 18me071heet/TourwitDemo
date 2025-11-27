@@ -22,34 +22,43 @@ public class EditAddress_Tr extends BaseClassTr {
 		Thread.sleep(3000);
 	}
 	
-	  @Test(priority=1)
-  	   void logInDetails() throws InterruptedException {
+	
+	@Test
+	void logInDetails() throws InterruptedException {
+		
+		Login_TR login = new Login_TR(driver);
+		
+		try {
+			
+			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+			logger.info("Verify User is able to add email");
+			threadTime();
+			login.addEmail(p.getProperty("email_tr"));
+			
+			logger.info("Verify User is able to add password");
+			threadTime();
+			login.addPass(p.getProperty("password_tr"));
+			
+			logger.info("Verify User is able to login by clicking on Login Button");
+			threadTime();
+			login.loginBtn();
+			
+		/*	WebElement errorMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(
+				    By.xpath("//div[contains(text(),'Invalid email or password')]")));
+			
+			Assert.assertTrue(errorMessage.isDisplayed(),"Invalid email or password");
+			
+			*/
+			
+		} catch(Exception e) {
+			
+			logger.error("Failed :"+e);
+			Assert.fail("Failed due to:"+e.getMessage());
+		}
+		
+	}
   		
-  		Login_TR login = new Login_TR(driver);
-  		
-  		try {
-  			
-  			logger.info("TC-01 --> Verify User is able to add email");
-	   		
-	   		login.addEmail(p.getProperty("email_tr"));
-	   		
-	   		logger.info("TC-02 --> Verify User is able to add password");
-	   		
-	   		login.addPass(p.getProperty("password_tr"));
-	   		
-	   		logger.info("TC-03 --> Verify User is able to login by clicking on Login Button");
-	   		
-	   		login.loginBtn();
-	   		
-  		}  catch(Exception e) {
-  			
-  			logger.error("Failed:"+e);
-  			Assert.fail("Failed due to:"+e.getMessage());
-  		}
-  		
-	  }
-  		
-	//@Test(priority=2,dependsOnMethods= {"logInDetails"})
+	//@Test(priority=2)
 	void changeAddress() throws InterruptedException {
 		
 		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
@@ -161,6 +170,7 @@ public class EditAddress_Tr extends BaseClassTr {
 	@Test(priority=3,dependsOnMethods= {"logInDetails"})
 	void addAddress() throws InterruptedException {
 		
+		 
 		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
 		 Login_TR login = new Login_TR(driver);
 		
@@ -194,42 +204,56 @@ public class EditAddress_Tr extends BaseClassTr {
 
 		 // TYPE USING ACTIVE ELEMENT (React sets focus automatically)
 		 WebElement activeInput = driver.switchTo().activeElement();
-		 activeInput.sendKeys("Australia");
+		 activeInput.sendKeys("Canada");
 		 Thread.sleep(1000);
 
 		 // SELECT OPTION
 		 WebElement option = wait.until(ExpectedConditions.elementToBeClickable(
-		         By.xpath("//div[@role='option' and contains(.,'Australia')]")
+		         By.xpath("//div[@role='option' and contains(.,'Canada')]")
 		 ));
 		 option.click();
 
 	
-   	   /*  logger.info("TC-08 --> Verify User is able to change and select state from the list ");
+   	  logger.info("TC-08 --> Verify User is able to change and select state from the list ");
    	    
-   	    WebElement state = wait.until(
-   		    ExpectedConditions.elementToBeClickable(By.id("react-select-lazy-stateId-input") ));
-
-   		state.click();
-   		state.sendKeys("Queensland");
-
-   		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='option' and text()='Queensland']"))).click();
+   	     WebElement Statedropdown = wait.until(ExpectedConditions.elementToBeClickable(
+		         By.xpath("//div[@id='react-select-lazy-stateId-placeholder']/parent::div")
+		 ));
    	     
-   	     logger.info("TC-09--> Verify User is able to change city and select city from the list");
-   	     
-   	     WebElement city = wait.until(
-   		    ExpectedConditions.elementToBeClickable(
-   		        By.id("react-select-lazy-cityId-input")));
+   	      Statedropdown.click();
+		 Thread.sleep(500);
+		 
+		
+		 WebElement activeState = driver.switchTo().activeElement();
+		 activeState.sendKeys("Alberta");
+		 Thread.sleep(1000);
 
-   		city.click();
-   		city.sendKeys("Ascot");
-
-   		wait.until(ExpectedConditions.elementToBeClickable(
-   		    By.xpath("//div[@role='option' and text()='Ascot']"))).click();
-   		    
-   		    */
+		 WebElement stateOption = wait.until(ExpectedConditions.elementToBeClickable(
+		         By.xpath("//div[@role='option' and contains(.,'Alberta')]")
+		 ));
+		 stateOption.click();
    	     
+		 logger.info("TC-09 --> Verify User is able to change and select city  from the list ");
      	 Thread.sleep(3000); 
          
+     	
+     			 WebElement cityDropdown = wait.until(ExpectedConditions.elementToBeClickable(
+     			         By.xpath("//div[@id='react-select-lazy-cityId-placeholder']/parent::div")
+     			 ));
+     			cityDropdown.click();
+     			 Thread.sleep(500);
+
+     			
+     			 WebElement cityInput = driver.switchTo().activeElement();
+     			cityInput.sendKeys("Bassano");
+     			 Thread.sleep(1000);
+
+     			
+     			 WebElement cityOption = wait.until(ExpectedConditions.elementToBeClickable(
+     			         By.xpath("//div[@role='option' and contains(.,'Bassano')]")
+     			 ));
+     			cityOption.click();
+     			 
      	  wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(@class,'app_ModalpopoutBottom')]//input[@id='firstName']")));
    	
    	     logger.info("TC-10 --> Verify User is able to add first name");
@@ -257,13 +281,15 @@ public class EditAddress_Tr extends BaseClassTr {
 		 threadTime();
 		
 		 logger.info("TC-16 --> Verify change details are getting saved or not");
-		 address.saveAddress();
+		 address.clickSaveAddressJS();
 		 
 		 WebElement toast = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[contains(text(),'Address updated successfully')]")));
 		 String successMsg = toast.getText();
 		 Assert.assertTrue(successMsg.contains("Address updated successfully"), "No success toast msg found");
 		 
 		 wait.until(ExpectedConditions.invisibilityOf(toast));	
+		 
+		
 		 
 	}
 }

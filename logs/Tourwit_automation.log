@@ -1,3 +1,29 @@
-18:23:11.660 [main] INFO  tc_Tr.Blogs_Tr - TC- 02 --> Verify User is able to select terms and conditions checkbox
-18:23:11.679 [main] INFO  tc_Tr.Blogs_Tr - TC-03 --> Verify User is able to subscribe news letter by clicking submit button
-18:23:18.119 [main] ERROR tc_Tr.Blogs_Tr - Failed
+11:23:37.537 [main] INFO  tc_Tr.EditAddress_Tr - TC-08 --> Verify User is able to change and select state from the list 
+11:23:40.367 [main] INFO  tc_Tr.EditAddress_Tr - TC-09 --> Verify User is able to change and select city  from the list 
+11:23:45.943 [main] INFO  tc_Tr.EditAddress_Tr - TC-10 --> Verify User is able to add first name
+11:23:49.207 [main] INFO  tc_Tr.EditAddress_Tr - TC-11 --> Verify User is able to add last name
+11:23:52.487 [main] INFO  tc_Tr.EditAddress_Tr - TC-12 --> Verify User is able to add phone number
+11:23:55.818 [main] INFO  tc_Tr.EditAddress_Tr - TC-13 --> Verify User is able to add email address
+11:23:59.231 [main] INFO  tc_Tr.EditAddress_Tr - TC-14 --> Verify User is able to change address
+11:24:02.745 [main] INFO  tc_Tr.EditAddress_Tr - TC-15 --> Verify User is able to change zip code
+11:24:06.024 [main] INFO  tc_Tr.EditAddress_Tr - TC-16 --> Verify change details are getting saved or not
+11:28:52.537 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+11:28:52.920 [main] INFO  tc_Tr.EditAddress_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+11:28:56.243 [main] INFO  tc_Tr.EditAddress_Tr - Verify User is able to add email
+11:28:59.642 [main] INFO  tc_Tr.EditAddress_Tr - Verify User is able to add password
+11:29:02.805 [main] INFO  tc_Tr.EditAddress_Tr - Verify User is able to login by clicking on Login Button
+11:29:06.033 [main] INFO  tc_Tr.EditAddress_Tr - TC-01 --> Verify options are dispalying by clicking on profile icon
+11:29:10.101 [main] INFO  tc_Tr.EditAddress_Tr - TC-02 --> Verify profile screen is displaying by clicking edit profile
+11:29:13.752 [main] INFO  tc_Tr.EditAddress_Tr - TC-06 --> Verify Address screen is displaying by clicking saved address
+11:29:22.043 [main] INFO  tc_Tr.EditAddress_Tr - TC-07 --> Verify user is able to select country from the country dropdown
+11:29:25.191 [main] INFO  tc_Tr.EditAddress_Tr - TC-08 --> Verify User is able to change and select state from the list 
+11:29:27.577 [main] INFO  tc_Tr.EditAddress_Tr - TC-09 --> Verify User is able to change and select city  from the list 
+11:29:33.837 [main] INFO  tc_Tr.EditAddress_Tr - TC-10 --> Verify User is able to add first name
+11:29:37.114 [main] INFO  tc_Tr.EditAddress_Tr - TC-11 --> Verify User is able to add last name
+11:29:40.478 [main] INFO  tc_Tr.EditAddress_Tr - TC-12 --> Verify User is able to add phone number
+11:29:43.894 [main] INFO  tc_Tr.EditAddress_Tr - TC-13 --> Verify User is able to add email address
+11:29:47.455 [main] INFO  tc_Tr.EditAddress_Tr - TC-14 --> Verify User is able to change address
+11:29:51.170 [main] INFO  tc_Tr.EditAddress_Tr - TC-15 --> Verify User is able to change zip code
+11:29:54.465 [main] INFO  tc_Tr.EditAddress_Tr - TC-16 --> Verify change details are getting saved or not

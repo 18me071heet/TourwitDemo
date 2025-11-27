@@ -247,10 +247,11 @@ public class EditAddress_TR {
 	   btnProfile.click();
    }
   
-   public void saveAddress() {
-	  
-	   btnSave.click();
-   }
+   public void clickSaveAddressJS() {
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].scrollIntoView(true);", btnSave);
+	    js.executeScript("arguments[0].click();", btnSave);
+	}
    
    public String getUserFname() {
 	   return txtFname.getText().trim();

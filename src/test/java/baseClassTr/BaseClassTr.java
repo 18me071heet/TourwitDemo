@@ -3,12 +3,14 @@ package baseClassTr;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Map;
 import java.util.Properties;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.AfterClass;
@@ -51,7 +53,29 @@ public class BaseClassTr {
 		p.load(file);
 		
 		  if (br.equalsIgnoreCase("chrome")) {
-	            driver = new ChromeDriver();
+			  
+			  ChromeOptions options = new ChromeOptions();
+
+	            // Removes "Chrome is being controlled by automated test software"
+	            options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+	            options.setExperimentalOption("useAutomationExtension", false);
+
+	            options.setExperimentalOption("prefs", Map.of(
+	                    "credentials_enable_service", false,
+	                    "profile.password_manager_enabled", false
+	                ));
+
+	            // Prevent React/Next from blocking automated login
+	            options.addArguments("--disable-blink-features=AutomationControlled");
+	            options.addArguments("--disable-infobars");
+	            options.addArguments("--disable-notifications");
+	            options.addArguments("--start-maximized");
+
+	            // Needed for stable cookie/localstorage behavior
+	            options.addArguments("--disable-features=IsolateOrigins,site-per-process");
+	            driver = new ChromeDriver(options);
+	            
+	            
 	        } else if (br.equalsIgnoreCase("firefox")) {
 	            driver = new FirefoxDriver();
 	        } else {
