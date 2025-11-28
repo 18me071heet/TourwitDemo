@@ -52,7 +52,7 @@ public class UserProfile_Tr extends BaseClassTr{
 			
 		}
 	 
-	 @Test(priority=2,dependsOnMethods= {"logInDetails"})
+	// @Test(priority=2,dependsOnMethods= {"logInDetails"})
 	 void editProfile() throws InterruptedException {
 		 
 		 try {
@@ -193,5 +193,36 @@ public class UserProfile_Tr extends BaseClassTr{
 			 
 		 }
 		
+	 }
+	 
+	 @Test(priority=4)
+	 void changeProfileImage() throws InterruptedException
+	 
+	 {
+		 
+		 Login_TR login = new Login_TR(driver);
+		 
+		 UserProfile_TR profile = new UserProfile_TR(driver);
+		 
+		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		 
+		 threadTime();
+		 logger.info("TC-01 --> Verify Options are displaying by clicking on profile icon");
+		 
+		 login.avtarClick();
+		 
+		 logger.info("TC-02 --> Verify User is navigate to the profile page by clicking on My profile");
+		 profile.myProfileClick();
+
+		 
+		 threadTime();
+		 
+		 logger.info("TC-03 --> Verify User is able to change their profile image or not from their local storage");
+		 
+		 profile.changeProfileImage();
+		 
+		 
+		 
+		 
 	 }
 }

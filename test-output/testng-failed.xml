@@ -7,13 +7,12 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="tc_Tr.BlockUser_Tr">
+      <class name="tc_Tr.UserProfile_Tr">
         <methods>
+          <include name="changeProfileImage"/>
           <include name="signUp"/>
-          <include name="logInDetails"/>
-          <include name="blockMember"/>
         </methods>
-      </class> <!-- tc_Tr.BlockUser_Tr -->
+      </class> <!-- tc_Tr.UserProfile_Tr -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

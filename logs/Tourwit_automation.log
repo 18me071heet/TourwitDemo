@@ -1,17 +1,30 @@
-14:55:46.940 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is navigate to the block memeber screen 
-14:55:51.463 [main] INFO  tc_Tr.BlockUser_Tr - TC-03 --> Verify User is able to search any block memeber
-14:55:51.581 [main] INFO  tc_Tr.BlockUser_Tr - TC-04 --> Verify Unblock user confirm popup is displaying by clicking UnBlock
-14:55:55.736 [main] INFO  tc_Tr.BlockUser_Tr - TC-05 --> Verify User is able to Unblock user by clicking confirm
-14:59:23.964 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+16:04:42.031 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
 
-14:59:24.349 [main] INFO  tc_Tr.BlockUser_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-14:59:35.240 [main] INFO  tc_Tr.BlockUser_Tr - Verify User is able to add email
-14:59:39.500 [main] INFO  tc_Tr.BlockUser_Tr - Verify User is able to add password
-14:59:43.632 [main] INFO  tc_Tr.BlockUser_Tr - Verify User is able to login by clicking on Login Button
-14:59:47.828 [main] INFO  tc_Tr.BlockUser_Tr - TC-01 --> Verify options are displaying by clicking on profile icon
-14:59:51.933 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is navigate to profile screen by clicking My Profile
-14:59:52.244 [main] INFO  tc_Tr.BlockUser_Tr - TC-02 --> Verify User is navigate to the block memeber screen 
-14:59:57.107 [main] INFO  tc_Tr.BlockUser_Tr - TC-03 --> Verify User is able to search any block memeber
-14:59:57.306 [main] INFO  tc_Tr.BlockUser_Tr - TC-04 --> Verify Unblock user confirm popup is displaying by clicking UnBlock
-15:00:01.506 [main] INFO  tc_Tr.BlockUser_Tr - TC-05 --> Verify User is able to Unblock user by clicking confirm
+16:04:42.304 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:04:45.067 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to add email
+16:04:49.295 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to add password
+16:04:53.446 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to login by clicking on Login Button
+16:05:01.605 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
+16:05:01.766 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is navigate to the profile page by clicking on My profile
+16:05:06.050 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to change their profile image or not from their local storage
+16:08:18.998 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:08:19.315 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:08:22.685 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to add email
+16:08:26.944 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to add password
+16:08:31.054 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to login by clicking on Login Button
+16:08:39.253 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
+16:08:39.433 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is navigate to the profile page by clicking on My profile
+16:08:43.744 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to change their profile image or not from their local storage
+16:10:46.020 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+16:10:46.320 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+16:10:49.865 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to add email
+16:10:54.123 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to add password
+16:10:58.270 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to login by clicking on Login Button
+16:11:06.478 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
+16:11:06.739 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is navigate to the profile page by clicking on My profile
+16:11:11.076 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to change their profile image or not from their local storage

@@ -67,6 +67,21 @@ public class Login_TR {
 		    ((JavascriptExecutor) driver).executeScript("arguments[0].click();", icon);
 	}
 	
+	public void avtarClick() {
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
+		WebElement menuButton = wait.until(
+		    ExpectedConditions.presenceOfElementLocated(
+		        By.xpath("//button[@id='dropdownAvatarNameButton']")
+		    )
+		);
+
+		menuButton.click();
+
+		
+	}
+	
 	public void logOut() {
 		
 		WebElement logOut = wait.until(ExpectedConditions.elementToBeClickable(btnLogOut));

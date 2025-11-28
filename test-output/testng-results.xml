@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-11-28T14:59:23 IST" name="Suite" finished-at="2025-11-28T15:00:06 IST" duration-ms="42979">
+  <suite started-at="2025-11-28T16:10:46 IST" name="Suite" finished-at="2025-11-28T16:11:11 IST" duration-ms="25365">
     <groups>
     </groups>
-    <test started-at="2025-11-28T14:59:23 IST" name="Test" finished-at="2025-11-28T15:00:06 IST" duration-ms="42979">
-      <class name="tc_Tr.BlockUser_Tr">
-        <test-method is-config="true" signature="signUp(java.lang.String)[pri:0, instance:tc_Tr.BlockUser_Tr@78365cfa]" started-at="2025-11-28T14:59:24 IST" name="signUp" finished-at="2025-11-28T14:59:35 IST" duration-ms="10829" status="PASS">
+    <test started-at="2025-11-28T16:10:46 IST" name="Test" finished-at="2025-11-28T16:11:11 IST" duration-ms="25365">
+      <class name="tc_Tr.UserProfile_Tr">
+        <test-method is-config="true" signature="signUp(java.lang.String)[pri:0, instance:tc_Tr.UserProfile_Tr@5c10f1c3]" started-at="2025-11-28T16:10:46 IST" name="signUp" finished-at="2025-11-28T16:10:49 IST" duration-ms="3495" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUp -->
-        <test-method signature="logInDetails()[pri:0, instance:tc_Tr.BlockUser_Tr@78365cfa]" started-at="2025-11-28T14:59:35 IST" name="logInDetails" finished-at="2025-11-28T14:59:47 IST" duration-ms="12625" status="PASS">
+        <test-method signature="logInDetails()[pri:0, instance:tc_Tr.UserProfile_Tr@5c10f1c3]" started-at="2025-11-28T16:10:49 IST" name="logInDetails" finished-at="2025-11-28T16:11:02 IST" duration-ms="12632" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logInDetails -->
-        <test-method signature="blockMember()[pri:2, instance:tc_Tr.BlockUser_Tr@78365cfa]" started-at="2025-11-28T14:59:47 IST" name="blockMember" finished-at="2025-11-28T15:00:06 IST" depends-on-methods="tc_Tr.BlockUser_Tr.logInDetails" duration-ms="19117" status="PASS">
+        <test-method signature="changeProfileImage()[pri:4, instance:tc_Tr.UserProfile_Tr@5c10f1c3]" started-at="2025-11-28T16:11:02 IST" name="changeProfileImage" finished-at="2025-11-28T16:11:11 IST" duration-ms="8923" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- blockMember -->
-      </class> <!-- tc_Tr.BlockUser_Tr -->
+        </test-method> <!-- changeProfileImage -->
+      </class> <!-- tc_Tr.UserProfile_Tr -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

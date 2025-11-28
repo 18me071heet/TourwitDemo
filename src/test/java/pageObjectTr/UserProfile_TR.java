@@ -48,6 +48,9 @@ public class UserProfile_TR {
 	@FindBy(xpath="//button[normalize-space()='Unfollow']")
 	WebElement unFollowUser;
 	
+	@FindBy(xpath="//label[contains(@class,'cursor-pointer')]//div[contains(@class,'absolute') and .//svg]")
+	WebElement editIconProfileLogo;
+	
 	public void myProfileClick() {
 		
 		WebElement profileBtn = wait.until(ExpectedConditions.elementToBeClickable(btnProfile));
@@ -208,5 +211,30 @@ public class UserProfile_TR {
 		confirmLogout.click();
 		
 	}
+	
+	public void changeProfileImage() {
+
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	    // 1. Click edit icon
+	    WebElement editIcon = wait.until(
+	        ExpectedConditions.elementToBeClickable(
+	            By.xpath("//div[normalize-space()='TQ']/following-sibling::div[contains(@class,'p-2')]")
+	        )
+	    );
+	    editIcon.click();
+
+	    // 2. Upload image
+	    WebElement fileInput = wait.until(
+	        ExpectedConditions.presenceOfElementLocated(
+	            By.xpath("//input[@type='file']")
+	        )
+	    );
+
+	    fileInput.sendKeys("C:\\Users\\INX\\OneDrive\\Documents\\Saved Pictures\\test.jpg");
+	}
+
+
+
 	
 }
