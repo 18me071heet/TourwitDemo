@@ -222,8 +222,8 @@ import pageObjectTr.Login_TR;
 			       createForums.forumNavigation(driver);
 			    
 			  	   Thread.sleep(3000);
-		    	 	WebElement closeSubs = driver.findElement(By.xpath(" //button[@aria-label='Close popup']//*[name()='svg']"));
-		   			closeSubs.click();
+		    	 //	WebElement closeSubs = driver.findElement(By.xpath(" //button[@aria-label='Close popup']//*[name()='svg']"));
+		   			//closeSubs.click();
 		   			
 		   			Thread.sleep(3000);
 		   			
@@ -250,7 +250,7 @@ import pageObjectTr.Login_TR;
 		           
 		           logger.info("TC-08 --> Verify selected emoji is displaying in the comment text field");
 		           
-		            createForums.txtComment(driver, "A very interesting forum");
+		            createForums.txtComment(driver, "Inspiring");
 		          threadTime();
 		           createForums.addEmoji(driver);
 		                      

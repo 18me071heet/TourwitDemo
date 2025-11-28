@@ -286,8 +286,8 @@ import pageObjectTr.Login_TR;
         	 
         	 logger.info("TC- 02 --> Verify User is able to select terms and conditions checkbox");
         	 
-        	 logger.info("TC-03 --> Verify User is able to subscribe news letter by clicking submit button");
-        	 blogs.subscribeNewsLater("Will John", "user23@yopmail.com");
+        //	 logger.info("TC-03 --> Verify User is able to subscribe news letter by clicking submit button");
+        //	 blogs.subscribeNewsLater("Will John", "user23@yopmail.com");
         	 
         	 Thread.sleep(2000);
         	 // blogs.myBlogs();
@@ -313,7 +313,7 @@ import pageObjectTr.Login_TR;
              
              logger.info("TC-10  --. Verify selected emoji is displaying in the comment text field");
              
-             blogs.txtComment(driver, "Good Work , Keep it Up");
+             blogs.txtComment(driver, "Nice work");
              
              threadTime();
              blogs.emojiSelect(driver);

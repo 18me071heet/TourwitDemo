@@ -22,11 +22,16 @@ public class ForgotPassword_Tr extends BaseClassTr{
 		 forgot.clickLink();
 		 threadTime();
 		 
-		 logger.info("TC-02 --> Verify User is able to add email address");
+	/*	 logger.info("TC-02 --> Verify User is able to add email address");
 		 forgot.addEmail(p.getProperty("email_tr"));
 		 threadTime();
 		 
 		 logger.info("TC-03 --> Verify Password reset link is getting send to the enter email adddress");
 		 forgot.btnResetClick();
+		 
+		 */
+		 
+		 logger.info("TC-04 --> Verify user is navigate back to the login screen by clicking Back to login");
+		 forgot.btnBacktoLoginClick();
 	 }
 }

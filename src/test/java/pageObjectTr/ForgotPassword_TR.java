@@ -24,6 +24,9 @@ public class ForgotPassword_TR {
 	@FindBy(xpath="//button[normalize-space()='Reset Password']")
 	WebElement btnReset;
 	
+	@FindBy(xpath="//button[normalize-space(text())='Back to login']")
+	WebElement btnBacktoLogin;
+	
 	public void clickLink() {
 		
 		forgotPasswordLink.click();
@@ -39,6 +42,10 @@ public class ForgotPassword_TR {
 		btnReset.click();
 	}
 	
+	public void btnBacktoLoginClick() {
+		
+		btnBacktoLogin.click();
+	}
 
 	
 }

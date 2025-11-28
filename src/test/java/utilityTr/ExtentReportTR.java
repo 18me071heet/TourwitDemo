@@ -36,17 +36,14 @@ public class ExtentReportTR implements ITestListener {
 		 
 		 rep = "Tourwit-Report-" + timeStemp + ".html";
 		 
-		 
 		 sparkReporter = new ExtentSparkReporter(".//reports//" + rep);
 		 sparkReporter.config().setDocumentTitle("Tourwit");
 		 sparkReporter.config().setReportName("Tourwit modules testing");
 		 sparkReporter.config().setTheme(Theme.DARK);
-		 
-		 
+		 	 
 		 extent =new ExtentReports();
 		 extent.attachReporter(sparkReporter);
-		 
-		 
+		 	 
 		 extent.setSystemInfo("Application", "Test");
 		 extent.setSystemInfo("Module Name", "M3 Milestones");
 		 extent.setSystemInfo("Sub Module", "User");
@@ -69,7 +66,6 @@ public class ExtentReportTR implements ITestListener {
 		 
 		  }
 
-		
 	   public void onTestSuccess(ITestResult result) {
 			  
 		    test=extent.createTest(result.getMethod().getMethodName());
@@ -104,9 +100,7 @@ public class ExtentReportTR implements ITestListener {
 	
 		  }
 
-		  
-		  
-		  public void onTestSkipped(ITestResult result) {
+			  public void onTestSkipped(ITestResult result) {
 			  
 			    test=extent.createTest(result.getMethod().getMethodName());
 			    test.assignCategory(result.getMethod().getGroups());
