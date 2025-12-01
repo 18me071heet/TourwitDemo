@@ -56,7 +56,7 @@ public class LogIn_Tr extends BaseClassTr {
 		
 	}
 	
-	//@Test(priority=2,dependsOnMethods= {"logInDetails"})
+    @Test(priority=2,dependsOnMethods= {"logInDetails"})
 	void logOut() throws InterruptedException {
 		
 		Login_TR login = new Login_TR(driver);

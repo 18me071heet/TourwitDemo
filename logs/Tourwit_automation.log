@@ -1,30 +1,43 @@
-16:04:42.031 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+17:30:20.263 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-01 --> Verify User email is filled 
+17:30:23.652 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-02 --> Verify User password is filled
+17:30:26.840 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-03 --> Verify User is able to login with valid email and password
+17:30:53.600 [main] WARN  tc_Tr.DataProviderLogIn_Tr - Profile icon not found → Checking for toast error...
+17:33:05.203 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
 
-16:04:42.304 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-16:04:45.067 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to add email
-16:04:49.295 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to add password
-16:04:53.446 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to login by clicking on Login Button
-16:05:01.605 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
-16:05:01.766 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is navigate to the profile page by clicking on My profile
-16:05:06.050 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to change their profile image or not from their local storage
-16:08:18.998 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+17:33:05.593 [main] INFO  tc_Tr.DataProviderLogIn_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:33:09.467 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-01 --> Verify User email is filled 
+17:33:13.116 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-02 --> Verify User password is filled
+17:33:16.527 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-03 --> Verify User is able to login with valid email and password
+17:33:43.257 [main] WARN  tc_Tr.DataProviderLogIn_Tr - Profile icon not found → Checking for toast error...
+17:33:43.283 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-01 --> Verify User email is filled 
+17:33:46.591 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-02 --> Verify User password is filled
+17:33:49.848 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-03 --> Verify User is able to login with valid email and password
+17:34:16.583 [main] WARN  tc_Tr.DataProviderLogIn_Tr - Profile icon not found → Checking for toast error...
+17:34:16.593 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-01 --> Verify User email is filled 
+17:34:19.847 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-02 --> Verify User password is filled
+17:34:23.101 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-03 --> Verify User is able to login with valid email and password
+17:34:29.291 [main] INFO  tc_Tr.DataProviderLogIn_Tr - Login Successful → Logging out now
+17:34:32.743 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-01 --> Verify User email is filled 
+17:34:36.321 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-02 --> Verify User password is filled
+17:34:39.568 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-03 --> Verify User is able to login with valid email and password
+17:34:45.739 [main] INFO  tc_Tr.DataProviderLogIn_Tr - Login Successful → Logging out now
+17:38:09.332 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
   C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
 
-16:08:19.315 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-16:08:22.685 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to add email
-16:08:26.944 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to add password
-16:08:31.054 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to login by clicking on Login Button
-16:08:39.253 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
-16:08:39.433 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is navigate to the profile page by clicking on My profile
-16:08:43.744 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to change their profile image or not from their local storage
-16:10:46.020 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
-  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
-
-16:10:46.320 [main] INFO  tc_Tr.UserProfile_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
-16:10:49.865 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to add email
-16:10:54.123 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to add password
-16:10:58.270 [main] INFO  tc_Tr.UserProfile_Tr - Verify User is able to login by clicking on Login Button
-16:11:06.478 [main] INFO  tc_Tr.UserProfile_Tr - TC-01 --> Verify Options are displaying by clicking on profile icon
-16:11:06.739 [main] INFO  tc_Tr.UserProfile_Tr - TC-02 --> Verify User is navigate to the profile page by clicking on My profile
-16:11:11.076 [main] INFO  tc_Tr.UserProfile_Tr - TC-03 --> Verify User is able to change their profile image or not from their local storage
+17:38:09.644 [main] INFO  tc_Tr.DataProviderUtility_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:38:15.310 [main] INFO  tc_Tr.DataProviderUtility_Tr - TC-01 --> Verify User email is filled
+17:38:18.660 [main] INFO  tc_Tr.DataProviderUtility_Tr - TC-02 --> Verify User password is filled
+17:38:21.964 [main] INFO  tc_Tr.DataProviderUtility_Tr - TC-03 --> Verify User is logged in by entering valid email and password
+17:38:35.455 [main] INFO  tc_Tr.DataProviderUtility_Tr - TC-01 --> Verify User email is filled
+17:38:38.952 [main] INFO  tc_Tr.DataProviderUtility_Tr - TC-02 --> Verify User password is filled
+17:38:42.174 [main] INFO  tc_Tr.DataProviderUtility_Tr - TC-03 --> Verify User is logged in by entering valid email and password
+17:38:55.746 [main] INFO  tc_Tr.DataProviderUtility_Tr - TC-01 --> Verify User email is filled
+17:38:59.269 [main] INFO  tc_Tr.DataProviderUtility_Tr - TC-02 --> Verify User password is filled
+17:39:02.488 [main] INFO  tc_Tr.DataProviderUtility_Tr - TC-03 --> Verify User is logged in by entering valid email and password
+17:39:12.189 [main] INFO  tc_Tr.DataProviderUtility_Tr - TC-01 --> Verify User email is filled
+17:39:15.711 [main] INFO  tc_Tr.DataProviderUtility_Tr - TC-02 --> Verify User password is filled
+17:39:18.981 [main] INFO  tc_Tr.DataProviderUtility_Tr - TC-03 --> Verify User is logged in by entering valid email and password
+17:39:32.389 [main] INFO  tc_Tr.DataProviderUtility_Tr - TC-01 --> Verify User email is filled
+17:39:35.854 [main] INFO  tc_Tr.DataProviderUtility_Tr - TC-02 --> Verify User password is filled
+17:39:39.079 [main] INFO  tc_Tr.DataProviderUtility_Tr - TC-03 --> Verify User is logged in by entering valid email and password

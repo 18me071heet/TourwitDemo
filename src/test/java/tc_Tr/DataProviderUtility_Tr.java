@@ -9,6 +9,14 @@ import utilityTr.DataProviderTR;
 
 public class DataProviderUtility_Tr extends BaseClassTr {
 
+	
+	 void threadTime() throws InterruptedException {
+	 	   
+	 	   Thread.sleep(3000);
+	 	   
+	     }
+	 
+	 
 	@Test(dataProvider="DP",dataProviderClass=DataProviderTR.class)
 	void logInTR(String email,String password,String exp) throws InterruptedException {
 		
@@ -17,12 +25,15 @@ public class DataProviderUtility_Tr extends BaseClassTr {
 		Login_TR logins = new Login_TR(driver);
 		
 		logger.info("TC-01 --> Verify User email is filled");
+		threadTime();
 		login.setEmail(email);
 		
 		logger.info("TC-02 --> Verify User password is filled");
+		threadTime();
 		login.setPass(password);
 		
 		logger.info("TC-03 --> Verify User is logged in by entering valid email and password");
+		threadTime();
 		login.logIn();
 		
 		if(exp.equalsIgnoreCase("Valid")) {
@@ -69,8 +80,7 @@ public class DataProviderUtility_Tr extends BaseClassTr {
 				Assert.fail("After Invalid credentials user is still able to logged in ");
 			}
 			
-		}
-			 		
+		}		 		
 	}
 		
 	}

@@ -30,28 +30,38 @@ public class HomePage_Tr extends BaseClassTr {
 	}
 	 
 	 
-	 @Test(priority=1)
-	   void logInDetails() throws InterruptedException {
+   @Test
+	void logInDetails() throws InterruptedException {
 		
 		Login_TR login = new Login_TR(driver);
 		
 		try {
 			
-			logger.info("TC-01 --> Verify User is able to add email");
-           login.addEmail(p.getProperty("email_tr"));
-	   		
-	   		logger.info("TC-02 --> Verify User is able to add password");
-	   		login.addPass(p.getProperty("password_tr"));
-	   		
-	   		logger.info("TC-03 --> Verify User is able to login by clicking on Login Button");
-           login.loginBtn();
-	   		
-		}  catch(Exception e) {
+			WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+			logger.info("Verify User is able to add email");
+			threadTime();
+			login.addEmail(p.getProperty("email_tr"));
 			
-			logger.error("Failed:"+e);
+			logger.info("Verify User is able to add password");
+			threadTime();
+			login.addPass(p.getProperty("password_tr"));
+			
+			logger.info("Verify User is able to login by clicking on Login Button");
+			threadTime();
+			login.loginBtn();
+			
+		/*	WebElement errorMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(
+				    By.xpath("//div[contains(text(),'Invalid email or password')]")));
+			
+			Assert.assertTrue(errorMessage.isDisplayed(),"Invalid email or password");
+			
+			*/
+			
+		} catch(Exception e) {
+			
+			logger.error("Failed :"+e);
 			Assert.fail("Failed due to:"+e.getMessage());
 		}
-		
 		
 	}
 	 

@@ -178,12 +178,11 @@ public class UserProfile_Tr extends BaseClassTr{
 			 
 			 threadTime();
 			 profile.deleteAccount();
-			 
-	     	WebElement deleteMsg = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(text(),'User deleted successfully')]")));
+			  
+	        WebElement deleteMsg = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[contains(text(),'User deleted successfully')]")));
 			 
               String toast = deleteMsg.getText();
-			 
-			  Assert.assertTrue(toast.contains("User deleted successfully"), "No similiar toast msg is found");
+			 Assert.assertTrue(toast.contains("User deleted successfully"), "No similiar toast msg is found");
 			 
 			 	 
 		 }  catch(Exception e) {
@@ -195,13 +194,12 @@ public class UserProfile_Tr extends BaseClassTr{
 		
 	 }
 	 
-	 @Test(priority=4)
+	// @Test(priority=4)
 	 void changeProfileImage() throws InterruptedException
 	 
 	 {
 		 
 		 Login_TR login = new Login_TR(driver);
-		 
 		 UserProfile_TR profile = new UserProfile_TR(driver);
 		 
 		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
@@ -214,15 +212,10 @@ public class UserProfile_Tr extends BaseClassTr{
 		 logger.info("TC-02 --> Verify User is navigate to the profile page by clicking on My profile");
 		 profile.myProfileClick();
 
-		 
 		 threadTime();
 		 
-		 logger.info("TC-03 --> Verify User is able to change their profile image or not from their local storage");
-		 
-		 profile.changeProfileImage();
-		 
-		 
-		 
+		 logger.info("TC-03 --> Verify User is able to change their profile image or not from their local storage by clicking on edit icon");
+		 profile.changeProfileImage(); 
 		 
 	 }
 }

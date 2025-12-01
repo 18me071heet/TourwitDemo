@@ -1,0 +1,52 @@
+17:08:39.614 [main] INFO  tc_Tr.DataProviderLogIn_Tr - Login Successful → Logging out now
+17:08:40.004 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-01 --> Verify User email is filled 
+17:12:43.724 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:12:43.804 [main] INFO  tc_Tr.DataProviderLogIn_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:12:48.751 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-01 --> Verify User email is filled 
+17:12:52.339 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-02 --> Verify User password is filled
+17:12:55.679 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-03 --> Verify User is able to login with valid email and password
+17:13:19.477 [main] WARN  tc_Tr.DataProviderLogIn_Tr - Profile icon not found → Checking for toast error...
+17:13:50.206 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-01 --> Verify User email is filled 
+17:13:53.627 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-02 --> Verify User password is filled
+17:13:57.012 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-03 --> Verify User is able to login with valid email and password
+17:14:20.755 [main] WARN  tc_Tr.DataProviderLogIn_Tr - Profile icon not found → Checking for toast error...
+17:14:51.405 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-01 --> Verify User email is filled 
+17:14:54.738 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-02 --> Verify User password is filled
+17:14:58.113 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-03 --> Verify User is able to login with valid email and password
+17:15:03.686 [main] INFO  tc_Tr.DataProviderLogIn_Tr - Login Successful → Logging out now
+17:15:34.748 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-01 --> Verify User email is filled 
+17:16:55.060 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:16:55.131 [main] INFO  tc_Tr.DataProviderLogIn_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:16:58.683 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-01 --> Verify User email is filled 
+17:17:02.509 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-02 --> Verify User password is filled
+17:17:05.812 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-03 --> Verify User is able to login with valid email and password
+17:17:29.713 [main] WARN  tc_Tr.DataProviderLogIn_Tr - Profile icon not found → Checking for toast error...
+17:17:29.738 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-01 --> Verify User email is filled 
+17:17:33.261 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-02 --> Verify User password is filled
+17:17:36.608 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-03 --> Verify User is able to login with valid email and password
+17:18:00.410 [main] WARN  tc_Tr.DataProviderLogIn_Tr - Profile icon not found → Checking for toast error...
+17:18:00.418 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-01 --> Verify User email is filled 
+17:18:03.750 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-02 --> Verify User password is filled
+17:18:07.411 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-03 --> Verify User is able to login with valid email and password
+17:18:13.030 [main] INFO  tc_Tr.DataProviderLogIn_Tr - Login Successful → Logging out now
+17:18:13.527 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-01 --> Verify User email is filled 
+17:28:53.548 [main] INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Users\INX\OneDrive\Documents\My Automation Learning\TourWitDemo\testng.xml
+
+17:28:53.607 [main] INFO  tc_Tr.DataProviderLogIn_Tr - >>> @BeforeClass executed, initializing driver with browser: chrome
+17:28:57.002 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-01 --> Verify User email is filled 
+17:29:00.539 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-02 --> Verify User password is filled
+17:29:04.010 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-03 --> Verify User is able to login with valid email and password
+17:29:30.757 [main] WARN  tc_Tr.DataProviderLogIn_Tr - Profile icon not found → Checking for toast error...
+17:29:30.768 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-01 --> Verify User email is filled 
+17:29:34.019 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-02 --> Verify User password is filled
+17:29:37.211 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-03 --> Verify User is able to login with valid email and password
+17:30:03.920 [main] WARN  tc_Tr.DataProviderLogIn_Tr - Profile icon not found → Checking for toast error...
+17:30:03.924 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-01 --> Verify User email is filled 
+17:30:07.219 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-02 --> Verify User password is filled
+17:30:10.423 [main] INFO  tc_Tr.DataProviderLogIn_Tr - TC-03 --> Verify User is able to login with valid email and password
+17:30:16.634 [main] INFO  tc_Tr.DataProviderLogIn_Tr - Login Successful → Logging out now

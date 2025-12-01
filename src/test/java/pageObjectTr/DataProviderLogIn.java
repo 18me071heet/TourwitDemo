@@ -1,6 +1,8 @@
 package pageObjectTr;
 
 import java.time.Duration;
+
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,11 +32,16 @@ public class DataProviderLogIn {
 	@FindBy(xpath="//button[normalize-space()='Login to your account']")
 	WebElement btnLogin;
 	
+	private void forceClear(WebElement element) {
+		element.sendKeys(Keys.CONTROL + "a");
+		element.sendKeys(Keys.DELETE);
+	}
+
 	public void setEmail(String email) {
 		
 	  
 	    wait.until(ExpectedConditions.visibilityOf(txtEmail));
-	    txtEmail.clear();
+	    forceClear(txtEmail);
 	    txtEmail.sendKeys(email);
 	}
 	
@@ -42,7 +49,7 @@ public class DataProviderLogIn {
 		
 	
 		 wait.until(ExpectedConditions.visibilityOf(txtPass));
-		 txtPass.clear();
+		 forceClear(txtPass);
 		 txtPass.sendKeys(password);
 	}
 	

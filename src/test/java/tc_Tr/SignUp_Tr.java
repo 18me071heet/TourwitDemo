@@ -51,7 +51,7 @@ import pageObjectTr.Signup_TR;
 		countryInput.click();
 		countryInput.sendKeys("India");
 
-		       WebElement countryOption = wait.until(ExpectedConditions
+		  WebElement countryOption = wait.until(ExpectedConditions
 		           .visibilityOfElementLocated(By.xpath("//div[contains(@id,'react-select-lazy-country-option') and text()='India']")));
 		 countryOption.click();
 		       

@@ -212,25 +212,23 @@ public class UserProfile_TR {
 		
 	}
 	
-	public void changeProfileImage() {
+	public void changeProfileImage() throws InterruptedException {
 
 	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
 	    // 1. Click edit icon
 	    WebElement editIcon = wait.until(
 	        ExpectedConditions.elementToBeClickable(
-	            By.xpath("//div[normalize-space()='TQ']/following-sibling::div[contains(@class,'p-2')]")
-	        )
-	    );
+	            By.xpath("//div[normalize-space()='TQ']/following-sibling::div[contains(@class,'p-2')]")));
 	    editIcon.click();
-
+        
+	    Thread.sleep(3000);
+	    
 	    // 2. Upload image
 	    WebElement fileInput = wait.until(
-	        ExpectedConditions.presenceOfElementLocated(
-	            By.xpath("//input[@type='file']")
-	        )
-	    );
-
+	        ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='file']")));
+ 
+	    Thread.sleep(3000);
 	    fileInput.sendKeys("C:\\Users\\INX\\OneDrive\\Documents\\Saved Pictures\\test.jpg");
 	}
 
